@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+~$*
+
+# MATLAB
+*.asv
+slprj/
+*.slxc
+
+# LaTeX build products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Generated or temporary outputs
+data/processed/*
+!data/processed/.gitkeep
+projects/*/outputs/*
+!projects/*/outputs/.gitkeep
+results/generated/*
+!results/generated/.gitkeep
+tmp/
+
+# Source-only materials that must not enter this repository
+研赛内部资料/
+研赛内部资料.zip
+**/.git/
+
