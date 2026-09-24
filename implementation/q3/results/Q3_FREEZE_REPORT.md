@@ -85,6 +85,7 @@ The formal Q3 pipeline uses frozen Q2 routes, C2-A constrained temporal repair, 
 
 - revision recorded in q3_final: `94154eb01e06a40abb5df8a4d1044019b92ae7b3`
 - freeze commit message: `Freeze Q3 validated reproducible solution`
+- freeze commit: `8cfe013`
 
 ## 12. Freeze checklist
 
