@@ -1,5 +1,5 @@
 {
-  "baseline": 0.11253547668457031,
-  "formal": 40.05173182487488,
+  "baseline": 0.10646438598632812,
+  "formal": 40.35221743583679,
   "formal_method": "per-sid 3-stage lexicographic exact set partitioning"
 }

@@ -64,6 +64,7 @@ def evaluate_batches(batches: list[dict], method: str) -> dict:
     btab = boxes.set_index("box")
     rows: list[dict] = []
     mass_fail, qmax_fail, vol_fail, energy_fail, time_fail = [], [], [], [], []
+    energy_identity_failures: list = []
     for k, b in enumerate(batches):
         g, sid, pack = b["gtype"], b["sid"], list(b["boxes"])
         gt = types[g]
@@ -87,7 +88,7 @@ def evaluate_batches(batches: list[dict], method: str) -> dict:
         if e_tot > lim_e + 1e-9:
             energy_fail.append(k)
         if abs(e_tot - (e_out + e_back)) > ENERGY_IDENTITY_TOL:
-            energy_fail.append(f"{k}:identity")
+            energy_identity_failures.append(k)
         op = t_prep + t_fly_out + t_hand + t_fly_back
         op_ok = (abs(op - (t_prep + t_fly_out + t_hand + t_fly_back)) <= TIME_TOL
                  and all(v == v and v >= -TIME_TOL
@@ -114,14 +115,17 @@ def evaluate_batches(batches: list[dict], method: str) -> dict:
                      "operation_time_identity_pass": bool(op_ok),
                      "binding_constraint": binding})
     for name, lst in (("mass", mass_fail), ("qmax", qmax_fail), ("volume", vol_fail),
-                      ("energy", energy_fail), ("operation_time", time_fail)):
+                      ("energy", energy_fail), ("operation_time", time_fail),
+                      ("energy_identity", energy_identity_failures)):
         if lst:
             failures.append(f"{name}_failures={lst}")
     checks["all_mass_constraints_pass"] = not mass_fail
     checks["all_qmax_constraints_pass"] = not qmax_fail
     checks["all_volume_constraints_pass"] = not vol_fail
     checks["all_energy_constraints_pass"] = not energy_fail
-    checks["all_energy_identities_pass"] = True
+    checks["all_energy_identities_pass"] = (
+        len(energy_identity_failures) == 0
+    )
     checks["all_operation_time_checks_pass"] = not time_fail
 
     T = pd.DataFrame(rows)
@@ -161,8 +165,7 @@ def main() -> int:
         ev["metrics"]["solve_time_s"] = t
     pd.DataFrame([rb["metrics"], rf["metrics"]]).to_csv(
         RES / "q1_method_comparison.csv", index=False)
-    pd.DataFrame(rf_sol.get("pareto", [])).to_csv(
-        RES / "q1_pareto_candidates.csv", index=False)
+    # L1/L2/L3 阶段指标文件唯一由 solve_q1.py 生成，评价器不再重复写旧误命名文件。
     (RES / "q1_method_times.json").write_text(json.dumps(
         {"baseline": base_time, "formal": formal_time,
          "formal_method": "per-sid 3-stage lexicographic exact set partitioning"},

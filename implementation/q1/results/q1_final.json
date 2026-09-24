@@ -37,7 +37,7 @@
     "avg_volume_utilization": 0.7717929984779301,
     "max_trip_energy_kwh": 6.149595578174152,
     "min_energy_margin_kwh": 0.25040442182584854,
-    "solve_time_s": 40.05173182487488
+    "solve_time_s": 40.35221743583679
   },
   "optimality": {
     "total_stages": 45,
