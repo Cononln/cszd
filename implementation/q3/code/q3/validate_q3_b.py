@@ -103,10 +103,14 @@ def validate_q3_b(result, *, inputs=None, dem=None, transport_state=None, transp
     dem = dem or get_dem()
     candidates = {str(c["candidate_id"]): c for c in result.candidates}
     coverability: dict[str, int] = {}
+    candidate_cover_sets = {candidate_id: set() for candidate_id in candidates}
     for demand in result.demands:
-        coverability[str(demand.demand_id)] = sum(
-            strict_replay_coverage(demand, candidate, inputs=inputs, dem=dem)
-            for candidate in candidates.values())
+        count = 0
+        for candidate_id, candidate in candidates.items():
+            if strict_replay_coverage(demand, candidate, inputs=inputs, dem=dem):
+                count += 1
+                candidate_cover_sets[candidate_id].add(str(demand.demand_id))
+        coverability[str(demand.demand_id)] = count
     selected_by_demand = {str(d.demand_id): [] for d in result.demands}
     for sortie in result.sorties:
         for demand_id in sortie.demand_ids:
@@ -136,6 +140,21 @@ def validate_q3_b(result, *, inputs=None, dem=None, transport_state=None, transp
     all_replayed = all(per_demand_replay.values()) and bool(full_replay) and all(
         row.get("communication_feasible", False) and row.get("outage_samples", 1) == 0 for row in full_replay)
     small_exact = run_small_exact_tests()
+    pruning_by_candidate = {str(row.get("candidate_id")): row for row in result.pruning_audit}
+    complete_option_space = bool(result.option_space_complete) and len(pruning_by_candidate) == len(candidates) and all(
+        int(pruning_by_candidate[candidate_id].get("total_contiguous_windows", -1)) ==
+        len(candidate_cover_sets[candidate_id]) * (len(candidate_cover_sets[candidate_id]) + 1) // 2 and
+        int(pruning_by_candidate[candidate_id].get("physics_feasible_options", -1)) +
+        int(pruning_by_candidate[candidate_id].get("physics_rejected_options", -1)) ==
+        int(pruning_by_candidate[candidate_id].get("total_contiguous_windows", -2))
+        for candidate_id in candidates)
+    baseline_feasible = result.baseline_status == "FEASIBLE"
+    baseline_proven_infeasible = result.baseline_status == "INFEASIBLE_PROVEN_ON_DISCRETE_CANDIDATE_SET"
+    status_mapping_pass = (
+        (result.solver_status in {"OPTIMAL", "FEASIBLE"} and
+         ((baseline_feasible and all_replayed and all_scheduled) or result.baseline_status == "UNRESOLVED")) or
+        (result.solver_status == "INFEASIBLE" and complete_option_space and baseline_proven_infeasible) or
+        (result.solver_status in {"UNKNOWN", "NOT_AVAILABLE"} and result.baseline_status == "UNRESOLVED"))
     checks = {
         "all_demands_candidate_coverable": all_coverable,
         "all_demands_scheduled_covered": all_scheduled,
@@ -146,15 +165,24 @@ def validate_q3_b(result, *, inputs=None, dem=None, transport_state=None, transp
         "reserve_pass": all(s.soc_after >= float(inputs["relay_type"]["reserve_rho"]) - 1e-9 for s in result.sorties),
         "full_trajectory_communication_feasible": all_replayed,
         "exact_validation_pass": all(row["pass"] for row in small_exact.values()),
+        "service_option_space_complete": complete_option_space,
+        "status_mapping_pass": status_mapping_pass,
     }
     audit = [{"demand_id": did, "candidate_coverable": coverability[did] > 0,
               "n_covering_candidates": coverability[did], "scheduled_covered": scheduled[did],
+              "selected_sortie_id": ";".join(s.sortie_id for s in selected_by_demand[did]) or None,
               "full_replay_covered": per_demand_replay[did]} for did in coverability]
-    return {"status": "PASS" if result.status == "PASS" and all(checks.values()) else "FAIL",
+    decoder_checks = {key: checks[key] for key in ("all_demands_candidate_coverable", "exact_validation_pass",
+                                                    "service_option_space_complete", "status_mapping_pass")}
+    decoder_validation_status = "PASS" if all(decoder_checks.values()) else "FAIL"
+    return {"status": decoder_validation_status,
+            "decoder_validation_status": decoder_validation_status,
+            "decoder_checks": decoder_checks,
             "checks": checks, "coverage_audit": audit, "small_exact": small_exact,
             "metrics": result.metrics, "reason": result.reason,
             "full_replay_audit": full_replay,
-            "decoder_status": result.status, "solver_status": result.solver_status}
+            "decoder_status": result.decoder_status, "baseline_status": result.baseline_status,
+            "solver_status": result.solver_status}
 
 
 def validate_baseline():

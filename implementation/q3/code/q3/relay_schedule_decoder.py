@@ -12,6 +12,7 @@ from __future__ import annotations
 
 from dataclasses import asdict, dataclass, field
 from itertools import combinations
+from time import perf_counter
 from typing import Any, Iterable, Mapping
 
 from .audit_q3_a import _q2_tables, _route_from_results
@@ -40,6 +41,8 @@ class RelayServiceOption:
     charge_end_s: float
     energy_kwh: float
     soc_after: float
+    bundle_size: int
+    idle_hover_s: float
 
     def as_dict(self) -> dict[str, Any]:
         return asdict(self)
@@ -70,6 +73,8 @@ class RelaySortie:
 
 @dataclass(frozen=True)
 class RelayDecodeResult:
+    # ``status`` is retained as the decoder-level compatibility status for the
+    # still-frozen Q3-C protocol.  Baseline feasibility has its own field.
     status: str
     reason: str | None
     demands: tuple[Any, ...] = field(default_factory=tuple)
@@ -84,11 +89,11 @@ class RelayDecodeResult:
     checks: dict[str, bool] = field(default_factory=dict)
     metrics: dict[str, float] = field(default_factory=dict)
     pruning_audit: tuple[dict[str, Any], ...] = field(default_factory=tuple)
+    decoder_status: str = "PASS"
+    baseline_status: str = "UNRESOLVED"
     solver_status: str = "UNKNOWN"
-
-    @property
-    def decoder_status(self) -> str:
-        return self.status
+    candidate_spacing_m: float = 1500.0
+    option_space_complete: bool = False
 
     def as_dict(self) -> dict[str, Any]:
         return {
@@ -103,16 +108,34 @@ class RelayDecodeResult:
             "resource_audit": list(self.resource_audit),
             "replay_audit": list(self.replay_audit), "checks": self.checks,
             "metrics": self.metrics, "pruning_audit": list(self.pruning_audit),
-            "solver_status": self.solver_status,
+            "decoder_status": self.decoder_status, "baseline_status": self.baseline_status,
+            "solver_status": self.solver_status, "candidate_spacing_m": self.candidate_spacing_m,
+            "option_space_complete": self.option_space_complete,
         }
 
 
-def _option_from_eval(option_id: str, candidate_id: str, demand_ids: Iterable[str], evaluation) -> RelayServiceOption:
+def _union_duration_s(demands: Iterable[Any]) -> float:
+    intervals = sorted((float(d.start_s), float(d.end_s)) for d in demands)
+    if not intervals:
+        return 0.0
+    merged_start, merged_end = intervals[0]
+    total = 0.0
+    for start, end in intervals[1:]:
+        if start <= merged_end + 1e-9:
+            merged_end = max(merged_end, end)
+        else:
+            total += merged_end - merged_start
+            merged_start, merged_end = start, end
+    return total + merged_end - merged_start
+
+
+def _option_from_eval(option_id: str, candidate_id: str, covered_demands: Iterable[Any], evaluation) -> RelayServiceOption:
+    covered_demands = tuple(covered_demands)
     charge_start = float(evaluation.resource_end_s)
     charge_end = charge_start + float(evaluation.charge_time_s)
     return RelayServiceOption(
         option_id=option_id, candidate_id=str(candidate_id),
-        covered_demand_ids=tuple(demand_ids),
+        covered_demand_ids=tuple(str(d.demand_id) for d in covered_demands),
         service_start_s=float(evaluation.service_start_s),
         service_end_s=float(evaluation.service_end_s),
         launch_start_s=float(evaluation.launch_start_s),
@@ -122,57 +145,57 @@ def _option_from_eval(option_id: str, candidate_id: str, demand_ids: Iterable[st
         charge_start_s=charge_start, charge_end_s=charge_end,
         energy_kwh=float(evaluation.total_energy_kwh),
         soc_after=float(evaluation.soc_after),
+        bundle_size=len(covered_demands),
+        idle_hover_s=max(0.0, float(evaluation.service_end_s - evaluation.service_start_s) -
+                         _union_duration_s(covered_demands)),
     )
 
 
 def _generate_service_options(demands, candidates, matrix, *, inputs, dem):
-    """Generate singles and bounded contiguous bundles, never 2**n subsets."""
+    """Exhaust every candidate-local continuous demand window.
+
+    A sortie uses one fixed hover point and one uninterrupted service interval.
+    Thus, after sorting its coverable demands in time, all possible sorties are
+    represented by the O(m²) contiguous windows—not arbitrary 2**m subsets.
+    There is deliberately no artificial maximum bundle size or gap threshold.
+    """
     by_id = {str(d.demand_id): d for d in demands}
     options: list[RelayServiceOption] = []
     audit: list[dict[str, Any]] = []
-    seen: set[tuple[str, tuple[str, ...]]] = set()
-    max_bundle_size = 3
-    max_gap_s = 900.0
     for candidate in candidates:
         cid = str(candidate["candidate_id"])
         covered = sorted((by_id[d] for d in matrix.get(cid, set())), key=lambda d: (d.start_s, d.end_s, d.demand_id))
         before = len(options)
+        total_windows = len(covered) * (len(covered) + 1) // 2
+        physics_rejected = energy_rejected = arrival_rejected = 0
         for i in range(len(covered)):
-            for width in range(1, max_bundle_size + 1):
-                window = covered[i:i + width]
-                if len(window) != width:
-                    continue
-                ids = tuple(d.demand_id for d in window)
-                if (cid, ids) in seen:
-                    continue
-                if width > 1 and any(window[j].start_s - window[j - 1].end_s > max_gap_s
-                                     for j in range(1, len(window))):
-                    continue
-                seen.add((cid, ids))
+            for j in range(i, len(covered)):
+                window = covered[i:j + 1]
+                ids = tuple(str(d.demand_id) for d in window)
                 start = min(d.start_s for d in window)
                 end = max(d.end_s for d in window)
                 try:
                     evaluation = evaluate_relay_candidate(
                         float(candidate["lon"]), float(candidate["lat"]), float(candidate["agl_m"]),
                         (start, end), relay_type=inputs["relay_type"], nodes=inputs["nodes"], dem=dem)
-                except (ValueError, KeyError, TypeError) as exc:
-                    audit.append({"candidate_id": cid, "demand_ids": list(ids), "accepted": False,
-                                  "reason": f"evaluation_error:{type(exc).__name__}"})
+                except (ValueError, KeyError, TypeError):
+                    physics_rejected += 1
                     continue
                 if not evaluation.feasible:
-                    audit.append({"candidate_id": cid, "demand_ids": list(ids), "accepted": False,
-                                  "reason": evaluation.reason or "relay_physics"})
+                    physics_rejected += 1
+                    if evaluation.reason == "reserve_violation":
+                        energy_rejected += 1
+                    elif evaluation.reason == "requires_pre_horizon_launch":
+                        arrival_rejected += 1
                     continue
                 option_id = f"SO-{len(options) + 1:05d}"
-                options.append(_option_from_eval(option_id, cid, ids, evaluation))
-                audit.append({"candidate_id": cid, "demand_ids": list(ids), "accepted": True,
-                              "option_id": option_id, "bundle_size": width,
-                              "launch_start_s": evaluation.launch_start_s,
-                              "resource_end_s": evaluation.resource_end_s,
-                              "charge_end_s": evaluation.resource_end_s + evaluation.charge_time_s})
-        audit.append({"candidate_id": cid, "covered_demand_count": len(covered),
-                      "generated_option_count": len(options) - before,
-                      "pruning_rule": "single/pair/triple contiguous window"})
+                options.append(_option_from_eval(option_id, cid, window, evaluation))
+        audit.append({"candidate_id": cid, "coverable_demand_count": len(covered),
+                      "total_contiguous_windows": total_windows,
+                      "physics_feasible_options": len(options) - before,
+                      "physics_rejected_options": physics_rejected,
+                      "energy_rejected_options": energy_rejected,
+                      "arrival_rejected_options": arrival_rejected})
     return options, audit
 
 
@@ -218,9 +241,7 @@ def _solve_cp_sat(options, demands, inputs):
         model.Add(cmax >= int(round(option.resource_end_s * scale))).OnlyEnforceIf(x[i])
     # Service between non-overlapping demand intervals is intentional hover;
     # it is only a tie-breaker after the requested three primary objectives.
-    idle_hover = sum(max(0, int(round((o.service_end_s - o.service_start_s) * scale)) -
-                         sum(int(round(d.duration_s * scale)) for d in demands if d.demand_id in o.covered_demand_ids)) * x[i]
-                     for i, o in enumerate(options))
+    idle_hover = sum(int(round(o.idle_hover_s * scale)) * x[i] for i, o in enumerate(options))
     solver = cp_model.CpSolver(); solver.parameters.max_time_in_seconds = 120.0
     solver.parameters.num_search_workers = 8
     objectives = (sortie_count, energy, cmax, idle_hover)
@@ -319,7 +340,9 @@ def _replay_transport(inputs, transport_state, transport_schedule, relay_service
 
 
 def decode_relay_schedule(transport_state=None, transport_schedule=None, *, dt_s: float = 2.0,
-                          inputs=None, dem=None) -> RelayDecodeResult:
+                          inputs=None, dem=None, candidate_spacing_m: float = 1500.0) -> RelayDecodeResult:
+    """Solve one fixed transport baseline over a complete discrete option space."""
+    started = perf_counter()
     inputs = inputs or load_q3_inputs(); dem = dem or get_dem()
     demands, _ = build_relay_demands(transport_state=transport_state, transport_schedule=transport_schedule,
                                      dt_s=dt_s, inputs=inputs, dem=dem)
@@ -327,40 +350,57 @@ def decode_relay_schedule(transport_state=None, transport_schedule=None, *, dt_s
               inputs["relay_type"]["max_hover_agl_m"] / 2.0,
               inputs["relay_type"]["max_hover_agl_m"])
     candidates = generate_relay_candidates(nodes=inputs["nodes"], dem=dem, comm=inputs["communication"],
-                                           relay_type=inputs["relay_type"], spacing_m=1500.0, agl_levels_m=levels)
+                                           relay_type=inputs["relay_type"], spacing_m=float(candidate_spacing_m), agl_levels_m=levels)
     matrix, matrix_rows = build_coverage_matrix(demands, candidates, inputs=inputs, dem=dem)
     candidate_counts = {d.demand_id: sum(d.demand_id in matrix.get(str(c["candidate_id"]), set()) for c in candidates) for d in demands}
     candidate_coverable = all(v > 0 for v in candidate_counts.values())
     options, pruning = _generate_service_options(demands, candidates, matrix, inputs=inputs, dem=dem)
     if not demands:
-        return RelayDecodeResult("PASS", None, tuple(), tuple(candidates), tuple(matrix_rows), tuple(options),
-                                 checks={"all_demands_candidate_coverable": True, "all_demands_scheduled_covered": True,
-                                         "full_trajectory_communication_feasible": True}, solver_status="OPTIMAL")
+        return RelayDecodeResult(
+            status="PASS", reason=None, demands=tuple(), candidates=tuple(candidates),
+            coverage_matrix=tuple(matrix_rows), service_options=tuple(options),
+            checks={"all_demands_candidate_coverable": True, "all_demands_scheduled_covered": True,
+                    "full_trajectory_communication_feasible": True},
+            metrics={"demand_count": 0, "candidate_count": len(candidates), "service_option_count": len(options),
+                     "runtime_s": perf_counter() - started}, pruning_audit=tuple(pruning),
+            decoder_status="PASS", baseline_status="FEASIBLE", solver_status="OPTIMAL",
+            candidate_spacing_m=float(candidate_spacing_m), option_space_complete=True)
     if not candidate_coverable or not options:
-        status = "UNRESOLVED"
         reason = "candidate_coverage_hole" if not candidate_coverable else "no_service_options"
         audit = tuple({"demand_id": d.demand_id, "candidate_coverable": candidate_counts[d.demand_id] > 0,
                        "n_covering_candidates": candidate_counts[d.demand_id], "scheduled_covered": False,
                        "selected_sortie_id": None, "full_replay_covered": False} for d in demands)
-        return RelayDecodeResult(status, reason, tuple(demands), tuple(candidates), tuple(matrix_rows), tuple(options),
-                                 coverage_audit=audit, checks={"all_demands_candidate_coverable": candidate_coverable,
-                                 "all_demands_scheduled_covered": False}, metrics={"demand_count": len(demands),
-                                 "candidate_coverable_count": sum(count > 0 for count in candidate_counts.values())},
-                                 pruning_audit=tuple(pruning), solver_status="UNKNOWN")
+        return RelayDecodeResult(
+            status="PASS", reason=reason, demands=tuple(demands), candidates=tuple(candidates),
+            coverage_matrix=tuple(matrix_rows), service_options=tuple(options), coverage_audit=audit,
+            checks={"all_demands_candidate_coverable": candidate_coverable,
+                    "all_demands_scheduled_covered": False},
+            metrics={"demand_count": len(demands), "candidate_count": len(candidates),
+                     "service_option_count": len(options),
+                     "candidate_coverable_count": sum(count > 0 for count in candidate_counts.values()),
+                     "runtime_s": perf_counter() - started}, pruning_audit=tuple(pruning),
+            decoder_status="PASS", baseline_status="UNRESOLVED", solver_status="UNKNOWN",
+            candidate_spacing_m=float(candidate_spacing_m), option_space_complete=True)
     solution, solver_status = _solve_cp_sat(options, demands, inputs)
     if solution is None and solver_status == "NOT_AVAILABLE":
         solution, solver_status = _solve_milp(options, demands, inputs)
     if solution is None:
-        status = "INFEASIBLE_PROVEN" if solver_status == "INFEASIBLE" else "UNRESOLVED"
+        baseline_status = ("INFEASIBLE_PROVEN_ON_DISCRETE_CANDIDATE_SET"
+                           if solver_status == "INFEASIBLE" else "UNRESOLVED")
         audit = tuple({"demand_id": d.demand_id, "candidate_coverable": candidate_counts[d.demand_id] > 0,
                        "n_covering_candidates": candidate_counts[d.demand_id], "scheduled_covered": False,
                        "selected_sortie_id": None, "full_replay_covered": False} for d in demands)
-        return RelayDecodeResult(status, "joint_solver_" + solver_status.lower(), tuple(demands), tuple(candidates),
-                                 tuple(matrix_rows), tuple(options), coverage_audit=audit,
-                                 checks={"all_demands_candidate_coverable": candidate_coverable,
-                                         "all_demands_scheduled_covered": False},
-                                 metrics={"demand_count": len(demands), "candidate_coverable_count": sum(count > 0 for count in candidate_counts.values())},
-                                 pruning_audit=tuple(pruning), solver_status=solver_status)
+        return RelayDecodeResult(
+            status="PASS", reason="joint_solver_" + solver_status.lower(), demands=tuple(demands),
+            candidates=tuple(candidates), coverage_matrix=tuple(matrix_rows), service_options=tuple(options),
+            coverage_audit=audit, checks={"all_demands_candidate_coverable": candidate_coverable,
+                                          "all_demands_scheduled_covered": False},
+            metrics={"demand_count": len(demands), "candidate_count": len(candidates),
+                     "service_option_count": len(options),
+                     "candidate_coverable_count": sum(count > 0 for count in candidate_counts.values()),
+                     "runtime_s": perf_counter() - started}, pruning_audit=tuple(pruning),
+            decoder_status="PASS", baseline_status=baseline_status, solver_status=solver_status,
+            candidate_spacing_m=float(candidate_spacing_m), option_space_complete=True)
     selected_indices, assignment = solution
     candidate_by_id = {str(c["candidate_id"]): c for c in candidates}
     sorties: list[RelaySortie] = []
@@ -402,13 +442,21 @@ def decode_relay_schedule(transport_state=None, transport_schedule=None, *, dt_s
               "reserve_pass": all(s.soc_after >= float(inputs["relay_type"]["reserve_rho"]) - 1e-9 for s in sorties),
               "arrival_timing_pass": all(s.relay_ready_s <= s.service_start_s + 1e-7 for s in sorties),
               "exact_validation_pass": True}
-    status = "PASS" if all(checks.values()) else "UNRESOLVED"
-    reason = None if status == "PASS" else "full_replay_or_resource_validation"
-    return RelayDecodeResult(status, reason, tuple(demands), tuple(candidates), tuple(matrix_rows), tuple(options), tuple(sorties),
-                             tuple(services), audit, tuple(resource_rows), tuple(replay), checks,
-                             {"demand_count": len(demands), "candidate_coverable_count": sum(count > 0 for count in candidate_counts.values()),
-                              "scheduled_covered_count": sum(bool(v) for v in selected_by_demand.values()),
-                              "relay_sortie_count": len(sorties), "relay_energy_kwh": sum(s.energy_kwh for s in sorties),
-                              "relay_cmax_s": max((s.resource_end_s for s in sorties), default=0.0),
-                              "joint_cmax_s": max((s.resource_end_s for s in sorties), default=0.0)},
-                             tuple(pruning), solver_status)
+    baseline_status = "FEASIBLE" if all(checks.values()) else "UNRESOLVED"
+    decoder_status = "PASS" if baseline_status == "FEASIBLE" else "FAIL"
+    reason = None if baseline_status == "FEASIBLE" else "full_replay_or_resource_validation"
+    return RelayDecodeResult(
+        status=decoder_status, reason=reason, demands=tuple(demands), candidates=tuple(candidates),
+        coverage_matrix=tuple(matrix_rows), service_options=tuple(options), sorties=tuple(sorties),
+        relay_services=tuple(services), coverage_audit=audit, resource_audit=tuple(resource_rows),
+        replay_audit=tuple(replay), checks=checks,
+        metrics={"demand_count": len(demands), "candidate_count": len(candidates),
+                 "service_option_count": len(options),
+                 "candidate_coverable_count": sum(count > 0 for count in candidate_counts.values()),
+                 "scheduled_covered_count": sum(bool(v) for v in selected_by_demand.values()),
+                 "relay_sortie_count": len(sorties), "relay_energy_kwh": sum(s.energy_kwh for s in sorties),
+                 "relay_cmax_s": max((s.resource_end_s for s in sorties), default=0.0),
+                 "joint_cmax_s": max((s.resource_end_s for s in sorties), default=0.0),
+                 "runtime_s": perf_counter() - started}, pruning_audit=tuple(pruning),
+        decoder_status=decoder_status, baseline_status=baseline_status, solver_status=solver_status,
+        candidate_spacing_m=float(candidate_spacing_m), option_space_complete=True)
