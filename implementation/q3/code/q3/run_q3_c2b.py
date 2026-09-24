@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 
 from .c2_seed_builder import run_c2b
@@ -9,7 +10,8 @@ from .run_q3_c2 import _candidate_log, _csv, _json, _write_seed_outputs
 
 
 def run() -> dict:
-    root = Path(__file__).resolve().parents[2] / "results"
+    configured = os.environ.get("Q3_RESULTS_DIR")
+    root = Path(configured).resolve() if configured else Path(__file__).resolve().parents[2] / "results"
     root.mkdir(parents=True, exist_ok=True)
     result = run_c2b()
     _json(root / "q3_c2b_candidates.json", result)

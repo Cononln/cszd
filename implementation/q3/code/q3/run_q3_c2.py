@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import csv
 import json
+import os
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -14,7 +15,8 @@ from .transport_adapter import (decode_transport_candidate, load_q2_formal_state
 
 
 def _root() -> Path:
-    path = Path(__file__).resolve().parents[2] / "results"
+    configured = os.environ.get("Q3_RESULTS_DIR")
+    path = Path(configured).resolve() if configured else Path(__file__).resolve().parents[2] / "results"
     path.mkdir(parents=True, exist_ok=True)
     return path
 

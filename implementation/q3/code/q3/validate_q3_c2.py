@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 from typing import Any
 
@@ -16,7 +17,8 @@ from .validate_q3_b import validate_q3_b
 
 
 def _results_root() -> Path:
-    return Path(__file__).resolve().parents[2] / "results"
+    configured = os.environ.get("Q3_RESULTS_DIR")
+    return Path(configured).resolve() if configured else Path(__file__).resolve().parents[2] / "results"
 
 
 def _state(payload: dict[str, Any]) -> Q2State:
@@ -41,6 +43,8 @@ def _schedule(payload: dict[str, Any]) -> ScheduleResult:
 def validate_q3_c2(seed_path: Path | None = None) -> dict[str, Any]:
     path = seed_path or (_results_root() / "q3_c2_feasible_seed.json")
     payload = json.loads(path.read_text(encoding="utf-8"))
+    if "selected_solution" in payload:
+        payload = {"status": "PASS", **payload["selected_solution"]}
     state, schedule = _state(payload), _schedule(payload)
     transport = validate_solution(state, schedule)
     relay_state, relay_schedule = relay_decoder_contract(state, schedule)
