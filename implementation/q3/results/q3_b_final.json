@@ -1,17 +1,20 @@
 {
   "phase": "Q3-B",
-  "status": "INFEASIBLE",
-  "reason": "relay_uav_or_energy_component_overlap",
-  "checks": {
-    "all_demands_covered": true,
-    "resources": false,
-    "status_consistent": true
-  },
+  "decoder_status": "INFEASIBLE_PROVEN",
+  "baseline_status": "INFEASIBLE_PROVEN",
+  "solver_status": "INFEASIBLE",
+  "all_demands_candidate_coverable": true,
+  "all_demands_scheduled_covered": false,
+  "full_trajectory_communication_feasible": false,
+  "relay_uav_overlap_zero": true,
+  "energy_component_overlap_zero": true,
+  "charging_pass": true,
+  "reserve_pass": true,
+  "exact_validation_pass": true,
   "metrics": {
-    "demand_count": 19
+    "demand_count": 19,
+    "candidate_coverable_count": 19
   },
-  "baseline": "Q2 formal",
-  "baseline_feasible": false,
   "q3_a_regression": "PASS",
   "q3_c_formal_optimization_entered": "NO"
 }

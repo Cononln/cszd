@@ -1,3 +1,5 @@
-﻿case_id,solver_status,exact_sorties,decoder_sorties,pass
-B-Small-1,OPTIMAL,1,1,True
-B-Small-2,OPTIMAL,1,1,True
+﻿case_id,solver_status,sortie_count,energy_kwh,completion_s,expected_status,expected_sortie_count,pass
+B-Small-1,OPTIMAL,2,2.2,660,OPTIMAL,2,True
+B-Small-2,OPTIMAL,1,1.1,260,OPTIMAL,1,True
+B-Small-3,INFEASIBLE,,,,INFEASIBLE,,True
+B-Small-4,INFEASIBLE,,,,INFEASIBLE,,True
