@@ -250,10 +250,29 @@ def run(args):
     completed = [result for result in results if result.status == "PASS" and result.schedule is not None]
     if not completed:
         raise RuntimeError("no formal ALNS seed returned a feasible schedule")
-    pareto, candidate_rows, pareto_rows = _global_pareto(completed, normalization)
+    pareto, candidate_rows, _search_pareto_rows = _global_pareto(completed, normalization)
     if not pareto:
         raise RuntimeError("global Pareto archive unexpectedly empty")
-    formal = pareto[0]  # minimum fixed normalized distance to ideal
+    # Search/acceptance keeps the pre-run anchor normalization fixed.  Final
+    # representative selection is a separate decision step: recompute ideal
+    # and nadir from the *final global nondominated set* so every Pareto metric
+    # lies in [0, 1] and "better than a warm-up anchor" is never penalized by
+    # squaring a negative normalized value.
+    selection_normalization = Normalization.from_metrics(
+        [item["metrics"] for item in pareto]
+    )
+    pareto.sort(key=lambda item: (
+        selection_normalization.ideal_distance(item["metrics"]),
+        str(item["solution_id"]),
+    ))
+    formal = pareto[0]
+    pareto_rows = [{
+        "source_seed": item["seed"],
+        "solution_id": item["solution_id"],
+        "iteration": item.get("iteration", ""),
+        **item["metrics"],
+        "normalized_ideal_distance": selection_normalization.ideal_distance(item["metrics"]),
+    } for item in pareto]
     formal_state, formal_schedule = formal["state"], formal["schedule"]
     formal_validation = validate_solution(formal_state, formal_schedule)
 
@@ -328,8 +347,11 @@ def run(args):
                                       if row["exact_status"] == "OPTIMAL"), default=float("nan"))}
     final = {"phase": "Q2", "status": "PASS" if frozen else ("SMOKE_PASS" if args.mode == "smoke" else "FAIL"),
              "run_mode": args.mode, "formal_solution_id": formal["solution_id"], "metrics": formal["metrics"],
-             "formal_selection": {"rule": "minimum normalized distance to ideal point from global nondominated archive",
-                                  **normalization.as_dict()}, "route_structure": route_structure,
+             "formal_selection": {
+                 "rule": "minimum normalized distance to ideal point using final global Pareto ideal/nadir",
+                 **selection_normalization.as_dict(),
+                 "search_normalization": normalization.as_dict(),
+             }, "route_structure": route_structure,
              "exact_validation_summary": exact_summary, "checks": all_checks,
              "runtime": cfg | {"wall_time_total_s": profile["wall_time_total_s"], "requested_seeds": len(seeds),
                                 "completed_seeds": len(completed), "failed_seeds": len(errors)},
@@ -342,7 +364,7 @@ def run(args):
               "- Pareto: seed archives globally de-duplicated and non-dominated filtered.",
               "- repair: delta energy/time/trip/risk and all stop positions are evaluated.",
               "- schedule: WTD then Cmax lexicographic CP-SAT stages.",
-              "- normalization: fixed anchor-derived ideal/nadir and ideal-distance selection.", "",
+              "- normalization: fixed anchor-derived bounds are used during search; final representative selection recomputes ideal/nadir from the global Pareto set.", "",
               "## Gate E", json.dumps(formal_validation["checks"], ensure_ascii=False), "",
               "## Exact validation", json.dumps(exact_rows, ensure_ascii=False, indent=2), "",
               "Q1 source files were not modified by this Q2 revision."]
