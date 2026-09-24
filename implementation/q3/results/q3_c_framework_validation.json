@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "tests": {
+    "joint_cmax_arithmetic": true,
+    "joint_energy_arithmetic": true,
+    "transport_infeasible_short_circuit": true,
+    "relay_infeasible_short_circuit": true,
+    "cache_distinguishes_start_time": true,
+    "cache_retrieves_same_signature": true,
+    "stub_only_test_protocol": true,
+    "fixed_normalization": true
+  },
+  "formal_optimization_entered": false,
+  "real_decoder_connected": false
+}
