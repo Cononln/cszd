@@ -1,0 +1,17 @@
+{
+  "phase": "Q3-B",
+  "status": "INFEASIBLE",
+  "reason": "relay_uav_or_energy_component_overlap",
+  "checks": {
+    "all_demands_covered": true,
+    "resources": false,
+    "status_consistent": true
+  },
+  "metrics": {
+    "demand_count": 19
+  },
+  "baseline": "Q2 formal",
+  "baseline_feasible": false,
+  "q3_a_regression": "PASS",
+  "q3_c_formal_optimization_entered": "NO"
+}

@@ -1,0 +1,3 @@
+﻿case_id,solver_status,exact_sorties,decoder_sorties,pass
+B-Small-1,OPTIMAL,1,1,True
+B-Small-2,OPTIMAL,1,1,True
