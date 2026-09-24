@@ -7,7 +7,7 @@ O01；正式路线解释为 ``O01 -> stop_sequence -> O01``。后续阶段负责
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Mapping, Sequence
+from typing import Any, Mapping, Sequence
 
 
 @dataclass(frozen=True)
@@ -65,14 +65,43 @@ class ScheduleAssignment:
 
 
 @dataclass(frozen=True)
+class ScheduleResult:
+    """Deterministic result of the Q2-C resource decoder.
+
+    ``assignments`` is intentionally kept as a small public contract while
+    ``trip_records`` contains the complete event timeline used by Q2-E.  The
+    records are plain dictionaries so they can be written to JSON/CSV without
+    making the domain model depend on a particular solver implementation.
+    """
+
+    status: str
+    assignments: tuple[ScheduleAssignment, ...] = field(default_factory=tuple)
+    trip_records: tuple[Mapping[str, Any], ...] = field(default_factory=tuple)
+    metrics: Mapping[str, float] = field(default_factory=dict)
+    checks: Mapping[str, bool] = field(default_factory=dict)
+    solver_status: str = "UNKNOWN"
+    runtime_s: float = 0.0
+
+    def __iter__(self):
+        # Backwards-compatible convenience for callers that previously
+        # expected ``decode_schedule`` to return a sequence of assignments.
+        return iter(self.assignments)
+
+
+@dataclass(frozen=True)
 class Q2State:
     """ALNS state: only transport structure belongs in the outer chromosome."""
 
     trips: tuple[RoutePlan, ...] = field(default_factory=tuple)
+    unassigned: tuple[str, ...] = field(default_factory=tuple)
 
     @property
     def box_ids(self) -> tuple[str, ...]:
         return tuple(box for trip in self.trips for box in trip.box_ids)
+
+    @property
+    def all_box_ids(self) -> tuple[str, ...]:
+        return self.box_ids + tuple(self.unassigned)
 
 
 @dataclass(frozen=True)

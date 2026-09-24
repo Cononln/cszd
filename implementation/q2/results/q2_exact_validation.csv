@@ -1,0 +1,4 @@
+﻿instance,n_boxes,exact_status,exact_objective_Cmax_s,alns_objective_Cmax_s,gap,validator_status
+fixed_singleton_3,3,OPTIMAL,2365.744762011775,2365.744762011775,0.0,PASS
+fixed_singleton_5,5,OPTIMAL,3727.244762011775,3727.244762011775,0.0,PASS
+fixed_singleton_10,10,OPTIMAL,6282.844762011775,6282.844762011775,0.0,PASS

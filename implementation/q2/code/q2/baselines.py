@@ -1,17 +1,20 @@
-"""Q2 comparison-method interfaces.
-
-The Q1 single-stop solution will be used as a baseline only after the common
-Q2 route evaluator and schedule decoder are validated. It is not frozen as the
-Q2 feasible region.
-"""
+"""Comparison structures evaluated through the same Q2-B/C chain."""
 from __future__ import annotations
 
+import numpy as np
+
+from .alns_solver import _destroy_random, _repair, build_initial_state
 from .models import Q2State
 
 
-def q1_single_stop_baseline() -> Q2State:
-    raise NotImplementedError("Q2-A only: baseline decoder starts after Q2-C")
+def q1_single_stop_baseline(seed: int = 20260924) -> Q2State:
+    """Single-service-area structure (packing is only for capacity feasibility)."""
+    return build_initial_state(seed)
 
 
-def legacy_random_neighborhood_baseline() -> Q2State:
-    raise NotImplementedError("Q2-A only: legacy baseline is comparison-only")
+def legacy_random_neighborhood_baseline(seed: int = 20260924) -> Q2State:
+    """Reproduce the legacy random-neighborhood idea with the formal evaluator."""
+    rng = np.random.default_rng(seed)
+    state = build_initial_state(seed)
+    partial = _destroy_random(state, 0.15, rng)
+    return _repair(partial, rng, mode="cheapest")

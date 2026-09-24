@@ -1,4 +1,4 @@
-# Q2 正式实现（Q2-B 路线物理阶段）
+# Q2 正式实现（Q2-B–E 冻结版）
 
 Q2 是异构运输无人机的多点、多架次、共享电池联合调度问题。本目录是唯一正式
 Q2 实现的入口。A/raw 与 B/super 仅作为供体和审计依据，不在仓库中维护第二套
@@ -6,7 +6,7 @@ Q2 实现的入口。A/raw 与 B/super 仅作为供体和审计依据，不在�
 
 ## 当前阶段
 
-当前分支为 `q2/q2-a-foundation`，已完成 Q2-A 和 Q2-B：
+当前分支为 `q2/q2-a-foundation`，已完成 Q2-A、Q2-B、Q2-C、Q2-D 和 Q2-E：
 
 - 对 GitHub 的 Q1 正式公共层和本地 A/B 供体进行来源审计；
 - 登记 HARD、DERIVED 和 MODELING CHOICE 约束；
@@ -35,13 +35,13 @@ Q2 不得新增 `q2_physics.py`、`q2_dem.py` 或第二份能耗公式。当前
 `route_evaluator.py` 已调用 `common.route.leg_time` 与 `common.route.leg_energy`，
 并对多点路线逐航段传递剩余载荷。
 
-## 后续阶段门
+## 已冻结阶段
 
-1. Q2-C：实现 UAV/共享电池 CP-SAT 调度器和硬截止检查；
-2. Q2-D：接入自适应 ALNS、访问顺序邻域和 Pareto archive；
-3. Q2-E：独立事件仿真、方法比较、小规模精确验证和正式解冻结。
+1. Q2-C：CP-SAT 安排 8 架实体 UAV、按机型共享电池、SOC 和两阶段充电；
+2. Q2-D：固定参考尺度的自适应 ALNS、destroy/repair、访问顺序邻域和 Pareto archive；
+3. Q2-E：独立事件重放、方法比较、小规模精确检查和正式解冻结。
 
-在 Q2-B/C 通过前，不生成正式路线、WTD、Cmax、能耗或 Pareto 结果。
+`results/q2_final.json` 的 `status=PASS` 才表示 Q2 数值模型正式冻结；Q2 后续不进入 Q3。
 
 ## 运行 Q2-B 审计
 
@@ -49,4 +49,13 @@ Q2 不得新增 `q2_physics.py`、`q2_dem.py` 或第二份能耗公式。当前
 python implementation/q2/code/q2/audit_q2_b.py
 ```
 
-正式求解入口暂时不执行优化；`run_q2.py` 会明确提示当前阶段状态。
+## 运行 Q2-C–E
+
+```powershell
+python implementation/q2/code/q2/run_q2.py --mode formal
+```
+
+调试时可使用 `--mode smoke --serial`。正式结果会写入 `results/` 的
+`q2_solution_*`、`q2_uav_timeline.csv`、`q2_battery_timeline.csv`、
+`q2_method_comparison.csv`、`q2_pareto.csv`、`q2_multiseed.csv`、
+`q2_exact_validation.csv` 和 `q2_final.json`。

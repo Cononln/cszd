@@ -1,0 +1,203 @@
+{
+  "phase": "Q2",
+  "status": "PASS",
+  "run_mode": "formal",
+  "formal_solution_id": "seed-20260925",
+  "metrics": {
+    "WTD": 491437.69967409596,
+    "Cmax_s": 12813.427822427877,
+    "total_energy_kwh": 107.60322797016207,
+    "n_trips": 41.0,
+    "total_operation_time_s": 69867.17788120094
+  },
+  "checks": {
+    "all_boxes_delivered_once": true,
+    "missing_boxes": true,
+    "duplicate_boxes": true,
+    "no_split_boxes": true,
+    "unknown_boxes": true,
+    "mass_pass": true,
+    "volume_pass": true,
+    "energy_pass": true,
+    "return_reserve_pass": true,
+    "route_energy_recomputed": true,
+    "delivery_recomputed": true,
+    "first_deadlines_pass": true,
+    "medical_deadlines_pass": true,
+    "uav_type_pass": true,
+    "uav_overlap_zero": true,
+    "battery_type_pass": true,
+    "battery_count_pass": true,
+    "battery_overlap_zero": true,
+    "soc_pass": true,
+    "charge_pass": true,
+    "charge_before_reuse_pass": true,
+    "solver_validator_consistent": true,
+    "multi_seed_completed": true,
+    "small_exact_validation_completed": true
+  },
+  "runtime": {
+    "cpu_count": 12,
+    "seed_workers": 1,
+    "cp_sat_workers": 1,
+    "parallel_mode": false,
+    "wall_time_total_s": 23.140568400005577,
+    "requested_seeds": 5,
+    "completed_seeds": 5,
+    "failed_seeds": 0
+  },
+  "gate_c": {
+    "phase": "Q2-C",
+    "status": "PASS",
+    "solver_status": "FEASIBLE",
+    "checks": {
+      "uav_type": true,
+      "uav_overlap": true,
+      "battery_overlap": true,
+      "battery_type": true,
+      "soc": true,
+      "charge_before_reuse": true
+    },
+    "charge_audit": {
+      "A": {
+        "soc": [
+          0.0,
+          0.45,
+          0.89,
+          0.9,
+          0.95,
+          1.0
+        ],
+        "charge_time_s": [
+          1800.0,
+          1215.0,
+          643.0,
+          629.9999999999998,
+          315.0000000000003,
+          0.0
+        ],
+        "pass": true
+      },
+      "B": {
+        "soc": [
+          0.0,
+          0.45,
+          0.89,
+          0.9,
+          0.95,
+          1.0
+        ],
+        "charge_time_s": [
+          2400.0,
+          1620.0,
+          857.3333333333334,
+          839.9999999999998,
+          420.00000000000034,
+          0.0
+        ],
+        "pass": true
+      },
+      "C": {
+        "soc": [
+          0.0,
+          0.45,
+          0.89,
+          0.9,
+          0.95,
+          1.0
+        ],
+        "charge_time_s": [
+          3000.0,
+          2025.0000000000002,
+          1071.6666666666667,
+          1049.9999999999995,
+          525.0000000000005,
+          0.0
+        ],
+        "pass": true
+      },
+      "status": "PASS"
+    },
+    "n_trips": 41,
+    "uav_count": 8,
+    "battery_counts": {
+      "A": 6,
+      "B": 4,
+      "C": 4
+    }
+  },
+  "gate_e": {
+    "phase": "Q2-E",
+    "status": "PASS",
+    "checks": {
+      "all_boxes_delivered_once": true,
+      "missing_boxes": true,
+      "duplicate_boxes": true,
+      "no_split_boxes": true,
+      "unknown_boxes": true,
+      "mass_pass": true,
+      "volume_pass": true,
+      "energy_pass": true,
+      "return_reserve_pass": true,
+      "route_energy_recomputed": true,
+      "delivery_recomputed": true,
+      "first_deadlines_pass": true,
+      "medical_deadlines_pass": true,
+      "uav_type_pass": true,
+      "uav_overlap_zero": true,
+      "battery_type_pass": true,
+      "battery_count_pass": true,
+      "battery_overlap_zero": true,
+      "soc_pass": true,
+      "charge_pass": true,
+      "charge_before_reuse_pass": true,
+      "solver_validator_consistent": true
+    },
+    "metrics": {
+      "WTD": 491437.699674096,
+      "Cmax_s": 12813.427822427877,
+      "total_energy_kwh": 107.60322797016208,
+      "n_trips": 41.0
+    },
+    "solver_metrics": {
+      "WTD": 491437.69967409596,
+      "Cmax_s": 12813.427822427877,
+      "total_energy_kwh": 107.60322797016207,
+      "n_trips": 41.0,
+      "total_operation_time_s": 69867.17788120094
+    },
+    "n_trips": 41,
+    "n_boxes": 80,
+    "delivered_records": 80,
+    "solver_status": "FEASIBLE"
+  },
+  "exact_validation": [
+    {
+      "instance": "fixed_singleton_3",
+      "n_boxes": 3,
+      "exact_status": "OPTIMAL",
+      "exact_objective_Cmax_s": 2365.744762011775,
+      "alns_objective_Cmax_s": 2365.744762011775,
+      "gap": 0.0,
+      "validator_status": "PASS"
+    },
+    {
+      "instance": "fixed_singleton_5",
+      "n_boxes": 5,
+      "exact_status": "OPTIMAL",
+      "exact_objective_Cmax_s": 3727.244762011775,
+      "alns_objective_Cmax_s": 3727.244762011775,
+      "gap": 0.0,
+      "validator_status": "PASS"
+    },
+    {
+      "instance": "fixed_singleton_10",
+      "n_boxes": 10,
+      "exact_status": "OPTIMAL",
+      "exact_objective_Cmax_s": 6282.844762011775,
+      "alns_objective_Cmax_s": 6282.844762011775,
+      "gap": 0.0,
+      "validator_status": "PASS"
+    }
+  ]
+}

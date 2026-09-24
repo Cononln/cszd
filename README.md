@@ -12,7 +12,8 @@
 | Q1-2 | 最大安全载荷（待确认后运行） | Q1-1 | `implementation/q1/results/` |
 | Q1-3/Q1-5 | 组批、敏感性、出图与验证 | Q1-2 | 待进入 |
 | Q2-A/B | 供体审计、约束登记与多点路线物理 | Q1 | `implementation/q2/results/` |
-| Q2-C–Q4 | 暂不维护核心求解 | Q1/Q2 | 待阶段验收后进入 |
+| Q2-C–E | UAV/电池调度、Formal ALNS、独立验收 | Q1/Q2-B | `implementation/q2/results/` |
+| Q3–Q4 | 暂不修改核心求解 | Q1/Q2 | 待 Q2 冻结后进入 |
 
 依赖关系：`Q1 → Q2 → Q3 → Q4`。各项目通过 `schemas/` 中约定的 CSV/JSON 接口交换结果，不直接读取其他项目的临时文件。
 
@@ -42,8 +43,9 @@ tests/                     公共回归测试
 - `implementation/q1/results/`：审查报告、航段参数和能耗检查结果。
 - `implementation/q2/`：Q2-A/B 唯一正式骨架、供体审计和路线物理验收。
 
-Q1 已完成此前阶段验收。Q2-A/B 已建立基础骨架并通过路线物理审计；在 Q2-C
-通过前，不运行 Q2 资源调度或正式路线优化，也不修改 Q3/Q4 核心代码。
+Q1 已完成此前阶段验收。Q2-A/B 已通过路线物理审计，Q2-C–E 已完成资源解码、
+Formal ALNS 和独立重放验收；`implementation/q2/results/q2_final.json` 是 Q2
+冻结状态。Q3/Q4 核心代码未修改。
 
 ## 快速开始
 

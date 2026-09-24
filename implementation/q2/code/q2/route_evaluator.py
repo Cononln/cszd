@@ -9,6 +9,7 @@ leg_energy、多站交接累积、逐站送达偏移、可行性），不做 UAV
 from __future__ import annotations
 
 import sys
+from functools import lru_cache
 from collections.abc import Mapping, Sequence
 from pathlib import Path
 
@@ -128,3 +129,26 @@ def evaluate_route(
         energy_feasible=energy_feasible,
         route_feasible=mass_feasible and volume_feasible and energy_feasible,
     )
+
+
+@lru_cache(maxsize=20000)
+def evaluate_route_cached(
+    gtype: str,
+    stop_sequence: tuple[str, ...],
+    boxes_by_stop: tuple[tuple[str, tuple[str, ...]], ...],
+) -> RouteEvaluation:
+    """Memoized Q2-B evaluation for ALNS candidates.
+
+    The cache key is canonical and contains the exact box IDs, so this is only
+    memoization of the formal evaluator (never an approximation).  A fresh
+    mapping is reconstructed on every cache miss; callers must treat returned
+    mappings as read-only.
+    """
+    grouped = {sid: tuple(boxes) for sid, boxes in boxes_by_stop}
+    return evaluate_route(gtype, stop_sequence, grouped)
+
+
+def route_cache_info() -> dict[str, int]:
+    info = evaluate_route_cached.cache_info()
+    return {"hits": int(info.hits), "misses": int(info.misses),
+            "maxsize": int(info.maxsize or 0), "currsize": int(info.currsize)}
