@@ -3,7 +3,9 @@ from __future__ import annotations
 
 import numpy as np
 
-from .alns_solver import _destroy_random, _destroy_related, _destroy_worst, _remove_ids
+from .alns_solver import (_destroy_high_energy, _destroy_high_wtd, _destroy_random,
+                          _destroy_related, _destroy_stop, _destroy_whole_route,
+                          _remove_ids)
 from .models import Q2State
 
 
@@ -16,30 +18,22 @@ def destroy_related_boxes(state: Q2State, fraction: float, seed: int) -> Q2State
 
 
 def destroy_worst_route(state: Q2State, seed: int) -> Q2State:
-    return _destroy_worst(state, 0.18, np.random.default_rng(seed))
+    return _destroy_high_energy(state, 0.18, np.random.default_rng(seed))
 
 
 def destroy_high_wtd(state: Q2State, seed: int) -> Q2State:
-    return _destroy_worst(state, 0.12, np.random.default_rng(seed))
+    # Standalone API lacks a schedule; callers in the formal loop pass it to
+    # the schedule-aware implementation directly.
+    return destroy_worst_route(state, seed)
 
 
 def destroy_high_energy_route(state: Q2State, seed: int) -> Q2State:
-    return _destroy_worst(state, 0.18, np.random.default_rng(seed))
+    return _destroy_high_energy(state, 0.18, np.random.default_rng(seed))
 
 
 def destroy_whole_route(state: Q2State, seed: int) -> Q2State:
-    rng = np.random.default_rng(seed)
-    if not state.trips:
-        return state
-    trip = state.trips[int(rng.integers(0, len(state.trips)))]
-    return _remove_ids(state, set(trip.box_ids))
+    return _destroy_whole_route(state, np.random.default_rng(seed))
 
 
 def destroy_stop(state: Q2State, seed: int) -> Q2State:
-    rng = np.random.default_rng(seed)
-    stops = [s for t in state.trips for s in t.stop_sequence]
-    if not stops:
-        return state
-    sid = stops[int(rng.integers(0, len(stops)))]
-    return _remove_ids(state, {b for t in state.trips for s in t.stop_sequence
-                               if s == sid for b in t.boxes_by_stop[s]})
+    return _destroy_stop(state, np.random.default_rng(seed))

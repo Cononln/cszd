@@ -7,7 +7,6 @@ either the CP-SAT decoder or its documented minimal-environment fallback.
 """
 from __future__ import annotations
 
-import copy
 import math
 import time
 from dataclasses import dataclass, field
@@ -17,15 +16,18 @@ import numpy as np
 
 from .deadlines import hard_deadline
 from .models import Q2State, RoutePlan
+from .normalization import METRIC_KEYS, Normalization
 from .route_evaluator import evaluate_route_cached, route_cache_info
 from .schedule_decoder import decode_schedule
 
 
 G_TYPES = ("A", "B", "C")
-REFERENCE = {"WTD": 1.0e4, "Cmax_s": 2.0e4,
-             "total_energy_kwh": 100.0, "n_trips": 80.0}
-WEIGHTS = {"WTD": 0.30, "Cmax_s": 0.30,
-           "total_energy_kwh": 0.20, "n_trips": 0.20}
+WEIGHT_VECTORS = {
+    "balanced": {"WTD": .25, "Cmax_s": .25, "total_energy_kwh": .25, "n_trips": .25},
+    "time-focused": {"WTD": .40, "Cmax_s": .30, "total_energy_kwh": .15, "n_trips": .15},
+    "energy-focused": {"WTD": .20, "Cmax_s": .20, "total_energy_kwh": .40, "n_trips": .20},
+    "trip-focused": {"WTD": .20, "Cmax_s": .20, "total_energy_kwh": .20, "n_trips": .40},
+}
 
 
 @dataclass
@@ -39,6 +41,9 @@ class SeedResult:
     pareto: list[dict[str, Any]] = field(default_factory=list)
     runtime_s: float = 0.0
     error: str | None = None
+    weight_name: str = "balanced"
+    operator_stats: list[dict[str, Any]] = field(default_factory=list)
+    multistop_audit: list[dict[str, Any]] = field(default_factory=list)
 
 
 def _box_table():
@@ -134,14 +139,20 @@ def build_initial_state(seed: int = 20260924) -> Q2State:
     return Q2State(tuple(trips))
 
 
-def objective(metrics: dict[str, float]) -> float:
+def objective(metrics: dict[str, float], normalization: Normalization | None = None,
+              weights: dict[str, float] | None = None) -> float:
     """Fixed-reference normalized weighted Tchebycheff scalarization."""
-    return max(WEIGHTS[k] * float(metrics.get(k, 0.0)) / REFERENCE[k]
-               for k in WEIGHTS)
+    if normalization is None:
+        # Compatibility fallback; formal runs always pass anchor-derived bounds.
+        normalization = Normalization.from_metrics([{
+            "WTD": 0.0, "Cmax_s": 0.0, "total_energy_kwh": 0.0, "n_trips": 0.0},
+            {"WTD": 1.0, "Cmax_s": 1.0, "total_energy_kwh": 1.0, "n_trips": 1.0},
+        ])
+    return normalization.scalar(metrics, weights or WEIGHT_VECTORS["balanced"])
 
 
 def dominates(a: dict[str, float], b: dict[str, float]) -> bool:
-    keys = tuple(REFERENCE)
+    keys = METRIC_KEYS
     return all(float(a[k]) <= float(b[k]) + 1e-9 for k in keys) and \
         any(float(a[k]) < float(b[k]) - 1e-9 for k in keys)
 
@@ -198,8 +209,7 @@ def _destroy_related(state: Q2State, fraction: float, rng: np.random.Generator) 
     related = [b for b in boxes if b.startswith(sid + "-")]
     n_remove = max(1, int(round(len(boxes) * fraction)))
     rng.shuffle(related)
-    return _destroy_random(Q2State(tuple(state.trips), tuple(related[:n_remove])),
-                           1.0, rng) if False else _remove_ids(state, set(related[:n_remove]))
+    return _remove_ids(state, set(related[:n_remove]))
 
 
 def _remove_ids(state: Q2State, removed: set[str]) -> Q2State:
@@ -210,10 +220,10 @@ def _remove_ids(state: Q2State, removed: set[str]) -> Q2State:
         grouped = {s: b for s, b in grouped.items() if b}
         if grouped:
             trips.append(RoutePlan(trip.gtype, tuple(grouped), grouped))
-    return Q2State(tuple(trips), tuple(sorted(removed)))
+    return Q2State(tuple(trips), tuple(sorted(set(state.unassigned) | removed)))
 
 
-def _destroy_worst(state: Q2State, fraction: float, rng: np.random.Generator) -> Q2State:
+def _destroy_high_energy(state: Q2State, fraction: float, rng: np.random.Generator) -> Q2State:
     scored = []
     for trip in state.trips:
         ev = _route_eval(trip)
@@ -228,62 +238,181 @@ def _destroy_worst(state: Q2State, fraction: float, rng: np.random.Generator) ->
     return _remove_ids(state, removed)
 
 
-def _repair(state: Q2State, rng: np.random.Generator, *, mode: str = "cheapest") -> Q2State:
-    from common.data import load_boxes
-    table = _box_table()
-    trips = list(state.trips)
-    unassigned = list(state.unassigned)
-    if mode == "deadline-first":
-        unassigned.sort(key=lambda b: float(hard_deadline(table[b]) or 1e12))
-    else:
-        rng.shuffle(unassigned)
-    for box in unassigned:
-        row = table[box]
-        sid = str(row["sid"])
-        candidates = []
-        for idx, trip in enumerate(trips):
-            # Insertion may retype a route and may append a new service stop;
-            # this is what lets ALNS explore heterogeneous multi-stop batches.
-            order = tuple(trip.stop_sequence) if sid in trip.stop_sequence else \
-                tuple(trip.stop_sequence) + (sid,)
-            for g in G_TYPES:
-                grouped = {s: tuple(trip.boxes_by_stop[s]) for s in trip.stop_sequence}
+_destroy_worst = _destroy_high_energy  # backwards-compatible operator alias
+
+
+def _destroy_high_wtd(state: Q2State, schedule, fraction: float,
+                      rng: np.random.Generator) -> Q2State:
+    contribution = {str(r["trip_id"]): float(r["wtd_contribution"])
+                    for r in schedule.trip_records}
+    ranked = sorted(enumerate(state.trips),
+                    key=lambda x: contribution.get(f"T{x[0] + 1:03d}", 0.0), reverse=True)
+    n = max(1, int(round(len(state.box_ids) * fraction)))
+    removed: set[str] = set()
+    for _, trip in ranked:
+        removed.update(trip.box_ids)
+        if len(removed) >= n:
+            break
+    return _remove_ids(state, removed)
+
+
+def _destroy_whole_route(state: Q2State, rng: np.random.Generator) -> Q2State:
+    if not state.trips:
+        return state
+    trip = state.trips[int(rng.integers(0, len(state.trips)))]
+    return _remove_ids(state, set(trip.box_ids))
+
+
+def _destroy_stop(state: Q2State, rng: np.random.Generator) -> Q2State:
+    stops = [(sid, trip) for trip in state.trips for sid in trip.stop_sequence]
+    if not stops:
+        return state
+    sid, _ = stops[int(rng.integers(0, len(stops)))]
+    removed = {box for trip in state.trips if sid in trip.stop_sequence
+               for box in trip.boxes_by_stop[sid]}
+    return _remove_ids(state, removed)
+
+
+def _deadline_risk(trip: RoutePlan, table: dict[str, dict[str, Any]]) -> float:
+    """Safe lower-bound tardiness risk used only to rank insertions."""
+    ev = _route_eval(trip)
+    risk = 0.0
+    for sid, offset in ev.delivery_offset_by_sid.items():
+        for box in trip.boxes_by_stop[sid]:
+            deadline = hard_deadline(table[box])
+            if deadline is not None:
+                risk += max(0.0, float(offset) - float(deadline)) / 60.0
+    return risk
+
+
+def _candidate_score(delta_e: float, delta_t: float, delta_n: int, risk: float) -> float:
+    """Incremental repair ranking; final acceptance always uses the decoder."""
+    return float(delta_e) + 0.002 * float(delta_t) + 6.0 * int(delta_n) + 100.0 * float(risk)
+
+
+def _enumerate_insertions(trips: list[RoutePlan], box: str,
+                          table: dict[str, dict[str, Any]]) -> tuple[list[dict[str, Any]], dict[str, int]]:
+    """Evaluate every stop position and use delta route cost, never absolute cost."""
+    sid = str(table[box]["sid"])
+    audit = {"candidate_routes_evaluated": 0, "multistop_candidates_evaluated": 0,
+             "multistop_candidates_feasible": 0}
+    candidates: list[dict[str, Any]] = []
+    for idx, old in enumerate(trips):
+        old_ev = _route_eval(old)
+        orders = [tuple(old.stop_sequence)] if sid in old.stop_sequence else [
+            tuple(old.stop_sequence[:pos]) + (sid,) + tuple(old.stop_sequence[pos:])
+            for pos in range(len(old.stop_sequence) + 1)
+        ]
+        for order in orders:
+            for gtype in G_TYPES:
+                grouped = {s: tuple(old.boxes_by_stop[s]) for s in old.stop_sequence}
                 grouped.setdefault(sid, tuple())
                 grouped[sid] = grouped[sid] + (box,)
+                audit["candidate_routes_evaluated"] += 1
+                if len(order) > 1:
+                    audit["multistop_candidates_evaluated"] += 1
                 try:
-                    candidate = RoutePlan(g, order, grouped)
-                    ev = _route_eval(candidate)
+                    new = RoutePlan(gtype, order, grouped)
+                    ev = _route_eval(new)
                 except ValueError:
                     continue
-                if ev.route_feasible:
-                    score = (float(ev.total_route_energy_kwh),
-                             float(ev.route_duration_s), len(order), idx)
-                    candidates.append((score, idx, candidate))
-        # New trips are always considered; max_stops is not a formal bound.
-        for g in G_TYPES:
-            try:
-                candidate = RoutePlan(g, (sid,), {sid: (box,)})
-                ev = _route_eval(candidate)
-            except ValueError:
-                continue
-            if ev.route_feasible:
-                gp = {"A": 0.0, "B": 1.0, "C": 2.0}[g]
-                candidates.append(((float(ev.total_route_energy_kwh), gp, len(trips)),
-                                  len(trips), candidate))
-        if not candidates:
-            return Q2State(tuple(trips), tuple(unassigned[unassigned.index(box):]))
-        _, idx, candidate = min(candidates, key=lambda x: x[0])
-        if idx == len(trips):
-            trips.append(candidate)
+                if not ev.route_feasible:
+                    continue
+                if len(order) > 1:
+                    audit["multistop_candidates_feasible"] += 1
+                delta_e = float(ev.total_route_energy_kwh) - float(old_ev.total_route_energy_kwh)
+                delta_t = float(ev.route_duration_s) - float(old_ev.route_duration_s)
+                risk = _deadline_risk(new, table)
+                candidates.append({"trip_index": idx, "route": new, "is_new": False,
+                                   "delta_e": delta_e, "delta_t": delta_t, "delta_n": 0,
+                                   "risk": risk,
+                                   "base_score": _candidate_score(delta_e, delta_t, 0, risk)})
+    # New trips are explicit alternatives with ΔN=1, not implicit singleton
+    # preference.  No max-stop limit is imposed on existing insertions.
+    for gtype in G_TYPES:
+        audit["candidate_routes_evaluated"] += 1
+        try:
+            new = RoutePlan(gtype, (sid,), {sid: (box,)})
+            ev = _route_eval(new)
+        except ValueError:
+            continue
+        if not ev.route_feasible:
+            continue
+        risk = _deadline_risk(new, table)
+        candidates.append({"trip_index": len(trips), "route": new, "is_new": True,
+                           "delta_e": float(ev.total_route_energy_kwh),
+                           "delta_t": float(ev.route_duration_s), "delta_n": 1,
+                           "risk": risk,
+                           "base_score": _candidate_score(float(ev.total_route_energy_kwh),
+                                                          float(ev.route_duration_s), 1, risk)})
+    return candidates, audit
+
+
+def _choose_insertion(candidates: list[dict[str, Any]], mode: str) -> dict[str, Any] | None:
+    if not candidates:
+        return None
+    if mode == "energy-aware":
+        return min(candidates, key=lambda c: (c["delta_e"], c["delta_t"], c["delta_n"], c["risk"]))
+    if mode == "new-trip":
+        new_only = [c for c in candidates if c["is_new"]]
+        return min(new_only or candidates, key=lambda c: (c["risk"], c["delta_e"], c["delta_t"]))
+    if mode == "deadline-first":
+        return min(candidates, key=lambda c: (c["risk"], c["base_score"], c["delta_n"]))
+    return min(candidates, key=lambda c: (c["base_score"], c["delta_e"], c["delta_t"]))
+
+
+def _repair(state: Q2State, rng: np.random.Generator, *, mode: str = "cheapest-delta",
+            with_audit: bool = False):
+    """Distinct ALNS repairs with all cross-service insertion positions explored."""
+    table = _box_table()
+    trips = list(state.trips)
+    remaining = list(state.unassigned)
+    audit = {"candidate_routes_evaluated": 0, "multistop_candidates_evaluated": 0,
+             "multistop_candidates_feasible": 0}
+    if mode == "deadline-first":
+        remaining.sort(key=lambda b: (float(hard_deadline(table[b]) or table[b]["t_exp"]), b))
+    elif mode != "regret-2":
+        rng.shuffle(remaining)
+    while remaining:
+        if mode == "regret-2":
+            listings = []
+            for box in remaining:
+                candidates, item_audit = _enumerate_insertions(trips, box, table)
+                for key, value in item_audit.items():
+                    audit[key] += value
+                ordered = sorted(candidates, key=lambda c: c["base_score"])
+                if not ordered:
+                    continue
+                regret = (ordered[1]["base_score"] - ordered[0]["base_score"]
+                          if len(ordered) > 1 else 1e9)
+                listings.append((regret, box, ordered[0]))
+            if not listings:
+                result = Q2State(tuple(trips), tuple(sorted(remaining)))
+                return (result, audit) if with_audit else result
+            _, box, chosen = max(listings, key=lambda x: (x[0], -x[2]["risk"]))
         else:
-            trips[idx] = candidate
-    return Q2State(tuple(trips))
+            box = remaining[0]
+            candidates, item_audit = _enumerate_insertions(trips, box, table)
+            for key, value in item_audit.items():
+                audit[key] += value
+            chosen = _choose_insertion(candidates, mode)
+            if chosen is None:
+                result = Q2State(tuple(trips), tuple(sorted(remaining)))
+                return (result, audit) if with_audit else result
+        if chosen["is_new"]:
+            trips.append(chosen["route"])
+        else:
+            trips[int(chosen["trip_index"])] = chosen["route"]
+        remaining.remove(box)
+    result = Q2State(tuple(trips))
+    return (result, audit) if with_audit else result
 
 
 def _local_stop_search(state: Q2State, current_schedule, *, cp_workers: int,
-                       seed: int, decoder_time_limit_s: float) -> tuple[Q2State, Any]:
+                       seed: int, decoder_time_limit_s: float,
+                       normalization: Normalization, weights: dict[str, float]) -> tuple[Q2State, Any]:
     best_state, best_schedule = state, current_schedule
-    best_obj = objective(dict(best_schedule.metrics))
+    best_obj = objective(dict(best_schedule.metrics), normalization, weights)
     for i, trip in enumerate(state.trips):
         if len(trip.stop_sequence) < 2:
             continue
@@ -306,84 +435,138 @@ def _local_stop_search(state: Q2State, current_schedule, *, cp_workers: int,
             candidate_state = Q2State(tuple(trips))
             schedule = evaluate_state(candidate_state, cp_workers=cp_workers,
                                       decoder_time_limit_s=decoder_time_limit_s, seed=seed)
-            if schedule is not None and objective(dict(schedule.metrics)) < best_obj - 1e-10:
+            if schedule is not None and objective(dict(schedule.metrics), normalization, weights) < best_obj - 1e-10:
                 best_state, best_schedule = candidate_state, schedule
-                best_obj = objective(dict(schedule.metrics))
+                best_obj = objective(dict(schedule.metrics), normalization, weights)
     return best_state, best_schedule
 
 
+def _route_structure_metrics(state: Q2State) -> dict[str, float]:
+    sizes = [len(trip.stop_sequence) for trip in state.trips]
+    multi = [size for size in sizes if size > 1]
+    return {"n_multistop_trips": float(len(multi)),
+            "max_stops_per_trip": float(max(sizes, default=0)),
+            "mean_stops_per_trip": float(sum(sizes) / len(sizes) if sizes else 0.0)}
+
+
 def solve_formal(seed: int = 20260924, *, time_limit_s: float = 30.0,
-                 iterations: int | None = None, cp_workers: int = 1) -> SeedResult:
+                 iterations: int | None = None, cp_workers: int = 1,
+                 normalization: Normalization | None = None,
+                 weight_name: str = "balanced") -> SeedResult:
     started = time.perf_counter()
     rng = np.random.default_rng(seed)
+    weights = dict(WEIGHT_VECTORS[weight_name])
     state = build_initial_state(seed)
     decoder_limit = min(5.0, max(0.5, time_limit_s / 8.0))
     current_schedule = evaluate_state(state, cp_workers=cp_workers,
                                       decoder_time_limit_s=decoder_limit, seed=seed)
     if current_schedule is None:
         return SeedResult(seed, "INFEASIBLE", state, runtime_s=time.perf_counter() - started,
-                          error="initial state could not be decoded")
+                          error="initial state could not be decoded", weight_name=weight_name)
+    if normalization is None:
+        normalization = Normalization.from_metrics([dict(current_schedule.metrics)])
     best_state, best_schedule = state, current_schedule
     archive = update_archive([], {"seed": seed, "metrics": dict(current_schedule.metrics),
-                                 "state": state})
+                                 "state": state, "schedule": current_schedule,
+                                 "iteration": -1, "solution_id": f"seed-{seed}-init"})
     hist = []
     n_iter = iterations if iterations is not None else (max(20, min(80, int(time_limit_s * 2))))
-    destroy_names = ("random", "related", "worst")
-    repair_names = ("cheapest", "deadline-first")
+    destroy_names = ("random", "related", "high-wtd", "high-energy", "whole-route", "stop-removal")
+    repair_names = ("cheapest-delta", "regret-2", "deadline-first", "energy-aware", "new-trip")
     dw = np.ones(len(destroy_names), dtype=float)
     rw = np.ones(len(repair_names), dtype=float)
+    stats = {(kind, name): {"times_used": 0, "times_accepted": 0,
+                             "times_improved": 0, "times_global_best": 0,
+                             "final_weight": 1.0}
+             for kind, names in (("destroy", destroy_names), ("repair", repair_names))
+             for name in names}
+    multistop_audit: list[dict[str, Any]] = []
     temperature = 1.0
-    cur_obj = objective(dict(current_schedule.metrics))
+    cur_obj = objective(dict(current_schedule.metrics), normalization, weights)
     for it in range(n_iter):
         if time.perf_counter() - started >= time_limit_s:
             break
         di = int(rng.choice(len(destroy_names), p=dw / dw.sum()))
         ri = int(rng.choice(len(repair_names), p=rw / rw.sum()))
+        destroy_name, repair_name = destroy_names[di], repair_names[ri]
+        stats[("destroy", destroy_name)]["times_used"] += 1
+        stats[("repair", repair_name)]["times_used"] += 1
         frac = float(rng.uniform(0.08, 0.22))
-        if destroy_names[di] == "random":
+        if destroy_name == "random":
             partial = _destroy_random(state, frac, rng)
-        elif destroy_names[di] == "related":
+        elif destroy_name == "related":
             partial = _destroy_related(state, frac, rng)
+        elif destroy_name == "high-wtd":
+            partial = _destroy_high_wtd(state, current_schedule, frac, rng)
+        elif destroy_name == "high-energy":
+            partial = _destroy_high_energy(state, frac, rng)
+        elif destroy_name == "whole-route":
+            partial = _destroy_whole_route(state, rng)
         else:
-            partial = _destroy_worst(state, frac, rng)
-        candidate = _repair(partial, rng, mode=repair_names[ri])
+            partial = _destroy_stop(state, rng)
+        candidate, repair_audit = _repair(partial, rng, mode=repair_name, with_audit=True)
         schedule = evaluate_state(candidate, cp_workers=cp_workers,
                                   decoder_time_limit_s=decoder_limit, seed=seed + it + 1)
+        audit_row = {"seed": seed, "iteration": it, "destroy": destroy_name,
+                     "repair": repair_name, **repair_audit,
+                     "multistop_candidates_accepted": 0,
+                     "best_multistop_solution_seen": _route_structure_metrics(best_state)["n_multistop_trips"] > 0}
         if schedule is None:
             dw[di] *= 0.995
             rw[ri] *= 0.995
+            multistop_audit.append(audit_row)
             continue
-        cand_obj = objective(dict(schedule.metrics))
+        cand_obj = objective(dict(schedule.metrics), normalization, weights)
+        was_improvement = cand_obj < cur_obj - 1e-10
         accept = cand_obj <= cur_obj or rng.random() < math.exp(
             -(cand_obj - cur_obj) / max(temperature, 1e-6))
         reward = 0.0
         if accept:
+            audit_row["multistop_candidates_accepted"] = int(
+                _route_structure_metrics(candidate)["n_multistop_trips"] > 0)
             state, current_schedule, cur_obj = candidate, schedule, cand_obj
+            stats[("destroy", destroy_name)]["times_accepted"] += 1
+            stats[("repair", repair_name)]["times_accepted"] += 1
             reward = 1.0
-            if cand_obj < objective(dict(best_schedule.metrics)) - 1e-10:
+            if was_improvement:
+                stats[("destroy", destroy_name)]["times_improved"] += 1
+                stats[("repair", repair_name)]["times_improved"] += 1
+                reward = 3.0
+            if cand_obj < objective(dict(best_schedule.metrics), normalization, weights) - 1e-10:
                 best_state, best_schedule, reward = candidate, schedule, 5.0
-        if accept:
-            dw[di] = 0.8 * dw[di] + 0.2 * max(reward, 0.1)
-            rw[ri] = 0.8 * rw[ri] + 0.2 * max(reward, 0.1)
+                stats[("destroy", destroy_name)]["times_global_best"] += 1
+                stats[("repair", repair_name)]["times_global_best"] += 1
             archive = update_archive(archive, {"seed": seed, "iteration": it,
                                                "metrics": dict(schedule.metrics),
-                                               "state": candidate})
+                                               "state": candidate, "schedule": schedule,
+                                               "solution_id": f"seed-{seed}-iter-{it}"})
+        dw[di] = 0.8 * dw[di] + 0.2 * reward
+        rw[ri] = 0.8 * rw[ri] + 0.2 * reward
         if it % 10 == 0 and current_schedule is not None:
             state2, sched2 = _local_stop_search(state, current_schedule,
                                                  cp_workers=cp_workers, seed=seed,
-                                                 decoder_time_limit_s=decoder_limit)
-            if sched2 is not None and objective(dict(sched2.metrics)) < cur_obj:
+                                                 decoder_time_limit_s=decoder_limit,
+                                                 normalization=normalization, weights=weights)
+            if sched2 is not None and objective(dict(sched2.metrics), normalization, weights) < cur_obj:
                 state, current_schedule = state2, sched2
-                cur_obj = objective(dict(sched2.metrics))
-                if cur_obj < objective(dict(best_schedule.metrics)):
+                cur_obj = objective(dict(sched2.metrics), normalization, weights)
+                if cur_obj < objective(dict(best_schedule.metrics), normalization, weights):
                     best_state, best_schedule = state2, sched2
+        audit_row["best_multistop_solution_seen"] = _route_structure_metrics(best_state)["n_multistop_trips"] > 0
+        multistop_audit.append(audit_row)
         temperature *= 0.995
         hist.append({"iteration": it, "accepted": bool(accept),
                      "objective": float(cur_obj), "n_trips": int(current_schedule.metrics["n_trips"])})
+    operator_rows = []
+    for (kind, name), row in stats.items():
+        row["final_weight"] = float(dw[destroy_names.index(name)] if kind == "destroy"
+                                     else rw[repair_names.index(name)])
+        operator_rows.append({"seed": seed, "operator_type": kind,
+                              "operator_name": name, **row})
     return SeedResult(seed, "PASS", best_state, best_schedule,
-                      dict(best_schedule.metrics), hist,
-                      [{"seed": x["seed"], "metrics": x["metrics"]} for x in archive],
-                      time.perf_counter() - started)
+                      dict(best_schedule.metrics), hist, archive,
+                      time.perf_counter() - started, weight_name=weight_name,
+                      operator_stats=operator_rows, multistop_audit=multistop_audit)
 
 
 def solve_formal_q2(*, seed: int = 20260924, time_limit_s: float = 600.0) -> Q2State:

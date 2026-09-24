@@ -80,6 +80,8 @@ class ScheduleResult:
     metrics: Mapping[str, float] = field(default_factory=dict)
     checks: Mapping[str, bool] = field(default_factory=dict)
     solver_status: str = "UNKNOWN"
+    stage_statuses: Mapping[str, str] = field(default_factory=dict)
+    solver_metrics: Mapping[str, float] = field(default_factory=dict)
     runtime_s: float = 0.0
 
     def __iter__(self):

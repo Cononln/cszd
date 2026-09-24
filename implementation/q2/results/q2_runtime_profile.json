@@ -1,13 +1,14 @@
 {
   "route_cache": {
-    "hits": 10287,
-    "misses": 9919,
+    "hits": 137290,
+    "misses": 24838,
     "maxsize": 20000,
-    "currsize": 9919
+    "currsize": 20000
   },
   "seed_workers": 1,
   "cp_workers": 1,
-  "wall_time_total_s": 23.140568400005577,
-  "completed_seeds": 5,
+  "parallel_fallback_reason": null,
+  "wall_time_total_s": 109.0411450000247,
+  "completed_seeds": 8,
   "failed_seeds": 0
 }

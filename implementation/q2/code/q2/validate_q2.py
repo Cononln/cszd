@@ -26,7 +26,7 @@ from common.physics import charge_time  # noqa: E402
 from .deadlines import hard_deadline  # noqa: E402
 from .models import Q2State, ScheduleResult  # noqa: E402
 from .route_evaluator import evaluate_route_cached  # noqa: E402
-from .schedule_decoder import decode_schedule  # noqa: E402
+from .schedule_decoder import battery_reuse_rows, decode_schedule  # noqa: E402
 
 TOL = 1e-5
 
@@ -115,6 +115,8 @@ def validate_solution(state: Q2State, schedule: ScheduleResult | None = None,
                         int(str(r["battery_id"]).split("-")[-1]) <=
                         int(battery_cfg[r["gtype"]]["n"]) for r in records)
     battery_overlap = all(_overlap(v) for v in by_battery.values())
+    reuse_audit = battery_reuse_rows(records)
+    charge_before_reuse = all(float(row["margin_s"]) >= -TOL for row in reuse_audit)
     soc_pass = True
     charge_pass = True
     for trip, record in zip(state.trips, records):
@@ -142,7 +144,7 @@ def validate_solution(state: Q2State, schedule: ScheduleResult | None = None,
         "uav_type_pass": uav_type, "uav_overlap_zero": uav_overlap,
         "battery_type_pass": battery_type, "battery_count_pass": battery_count,
         "battery_overlap_zero": battery_overlap, "soc_pass": soc_pass,
-        "charge_pass": charge_pass, "charge_before_reuse_pass": battery_overlap,
+        "charge_pass": charge_pass, "charge_before_reuse_pass": charge_before_reuse,
         "solver_validator_consistent": consistency,
     }
     return {
@@ -151,4 +153,7 @@ def validate_solution(state: Q2State, schedule: ScheduleResult | None = None,
         "solver_metrics": solver_metrics, "n_trips": len(records),
         "n_boxes": len(expected_ids), "delivered_records": len(delivered),
         "solver_status": schedule.solver_status,
+        "solver_stage_statuses": dict(schedule.stage_statuses),
+        "solver_grid_metrics": dict(schedule.solver_metrics),
+        "battery_reuse_audit": reuse_audit,
     }

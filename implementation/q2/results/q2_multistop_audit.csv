@@ -1,0 +1,13 @@
+﻿seed,iteration,destroy,repair,candidate_routes_evaluated,multistop_candidates_evaluated,multistop_candidates_feasible,multistop_candidates_accepted,best_multistop_solution_seen
+20260924,0,random,cheapest-delta,2589,2463,819,1,True
+20260925,0,random,cheapest-delta,2127,2019,551,1,True
+20260926,0,stop-removal,new-trip,2880,2520,1367,0,False
+20260926,1,stop-removal,cheapest-delta,2295,2250,994,1,True
+20260927,0,random,deadline-first,1272,1209,649,0,False
+20260927,1,stop-removal,new-trip,1107,1044,243,0,False
+20260928,0,high-energy,cheapest-delta,1737,1677,274,1,True
+20260928,1,high-energy,energy-aware,1998,1962,305,1,True
+20260929,0,high-wtd,energy-aware,1875,1803,421,1,True
+20260930,0,high-wtd,regret-2,9597,9267,2027,1,True
+20260930,1,high-wtd,cheapest-delta,1839,1767,521,0,True
+20261001,0,high-energy,energy-aware,1731,1671,228,1,True
