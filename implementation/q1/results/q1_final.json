@@ -17,7 +17,8 @@
     "all_volume_constraints_pass": true,
     "all_energy_constraints_pass": true,
     "all_energy_identities_pass": true,
-    "all_operation_time_checks_pass": true
+    "all_operation_time_checks_pass": true,
+    "all_solver_stages_optimal": true
   },
   "failures": [],
   "assigned_boxes": 80,
@@ -36,8 +37,19 @@
     "avg_volume_utilization": 0.7717929984779301,
     "max_trip_energy_kwh": 6.149595578174152,
     "min_energy_margin_kwh": 0.25040442182584854,
-    "solve_time_s": 43.37947630882263
+    "solve_time_s": 40.05173182487488
   },
+  "optimality": {
+    "total_stages": 45,
+    "optimal_stages": 45,
+    "feasible_only_stages": 0,
+    "unknown_stages": 0,
+    "infeasible_stages": 0,
+    "all_stages_optimal": true
+  },
+  "optimality_wording": "精确词典序最优",
+  "theoretical_trip_lower_bound": 18,
+  "theoretical_bound_note": "按各服务区质量/体积分别取整求和的诊断下界，不约束正式解",
   "formal_better_or_equal_baseline_lex": true,
   "sensitivity_qmax_scale": [
     {
