@@ -11,8 +11,8 @@
 | Q1-1 | 基础物理模型审查 | 官方数据与 DEM | `implementation/q1/results/` |
 | Q1-2 | 最大安全载荷（待确认后运行） | Q1-1 | `implementation/q1/results/` |
 | Q1-3/Q1-5 | 组批、敏感性、出图与验证 | Q1-2 | 待进入 |
-| Q2-A | 供体审计、约束登记与正式骨架 | Q1 | `implementation/q2/results/` |
-| Q2-B–Q4 | 暂不维护核心求解 | Q1/Q2 | 待阶段验收后进入 |
+| Q2-A/B | 供体审计、约束登记与多点路线物理 | Q1 | `implementation/q2/results/` |
+| Q2-C–Q4 | 暂不维护核心求解 | Q1/Q2 | 待阶段验收后进入 |
 
 依赖关系：`Q1 → Q2 → Q3 → Q4`。各项目通过 `schemas/` 中约定的 CSV/JSON 接口交换结果，不直接读取其他项目的临时文件。
 
@@ -29,7 +29,7 @@ paper/                     论文正文与图表
 docs/                      赛题和协作文档
 scripts/run_pipeline.py    按依赖顺序运行所有已实现子项目
 implementation/q1/         Q1 逐问验收代码与结果
-implementation/q2/         Q2-A 唯一正式骨架与审计结果
+implementation/q2/         Q2-A/B 唯一正式骨架与路线审计结果
 tests/                     公共回归测试
 ```
 
@@ -40,10 +40,10 @@ tests/                     公共回归测试
 - `implementation/q1/code/common/`：Q1 所需的数据、DEM、航段和能耗公共物理层；
 - `implementation/q1/code/q1/audit_physics.py`：Phase Q1-1 基础物理审查；
 - `implementation/q1/results/`：审查报告、航段参数和能耗检查结果。
-- `implementation/q2/`：Q2-A 唯一正式骨架、供体审计和数据/约束登记。
+- `implementation/q2/`：Q2-A/B 唯一正式骨架、供体审计和路线物理验收。
 
-Q1 已完成此前阶段验收。Q2-A 已建立基础骨架；在 Q2-B/C 通过前，不运行 Q2
-正式路线优化或资源调度，也不修改 Q3/Q4 核心代码。
+Q1 已完成此前阶段验收。Q2-A/B 已建立基础骨架并通过路线物理审计；在 Q2-C
+通过前，不运行 Q2 资源调度或正式路线优化，也不修改 Q3/Q4 核心代码。
 
 ## 快速开始
 
