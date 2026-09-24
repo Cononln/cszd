@@ -12,6 +12,8 @@ from .joint_cache import canonical_signature
 from .joint_solver import solve_joint_alns
 from .relay_decoder_protocol import Q3BRelayDecoderAdapter, RelayDecoderStub
 from .joint_validator import validate_joint_candidate
+from .transport_adapter import (decode_transport_candidate, load_q2_formal_state,
+                                relay_decoder_contract)
 
 
 def _formal_solver_is_gated():
@@ -33,12 +35,48 @@ def _synthetic_transport_validation():
                     "total_energy_kwh": 1.0, "n_trips": 1}}
 
 
-def run_c1_integration_tests():
-    """Exercise the real adapter and formal validator without entering ALNS."""
+def run_real_q2_formal_integration_test():
+    """C1 regression of the real Q2 formal state through the real Q3-B path."""
     adapter = Q3BRelayDecoderAdapter()
-    real_result = adapter.decode_relay_schedule([], {}, candidate_spacing_m=1500.0)
+    state = load_q2_formal_state()
+    schedule, transport_validation = decode_transport_candidate(state, cp_workers=1, time_limit_s=60.0, seed=0)
+    relay_state, relay_schedule = relay_decoder_contract(state, schedule)
+    relay_result = adapter.decode_relay_schedule(relay_state, relay_schedule, candidate_spacing_m=1500.0)
+    joint = validate_joint_candidate(transport_validation, relay_result)
+    expected = "INFEASIBLE_PROVEN_ON_DISCRETE_CANDIDATE_SET"
+    return {"chain_invoked": True, "q2_formal_state_reconstructed": len(state.trips) == 25 and len(state.box_ids) == 80,
+            "transport_decode_pass": schedule.status in {"PASS", "FEASIBLE"},
+            "transport_validation_pass": transport_validation.get("status") == "PASS",
+            "relay_decoder_status": relay_result.decoder_status,
+            "relay_baseline_status": relay_result.baseline_status,
+            "status_consistent": relay_result.decoder_status == "PASS" and
+                                 relay_result.baseline_status == expected and
+                                 joint["status"] == "INFEASIBLE_PROVEN",
+            "joint_status": joint["status"]}
+
+
+def run_direct_only_regression():
+    """Verify that Direct-only candidates are not rejected for empty relay replay."""
+    direct_relay = {"baseline_status": "FEASIBLE", "metrics": {
+        "demand_count": 0, "relay_cmax_s": 0.0, "relay_energy_kwh": 0.0, "relay_sortie_count": 0},
+        "checks": {"full_trajectory_communication_feasible": True}, "sorties": (), "replay_audit": ()}
+    direct_joint = validate_joint_candidate(_synthetic_transport_validation(), direct_relay)
+    transport = {"WTD": 2.0, "Cmax_s": 20.0, "total_energy_kwh": 1.5, "n_trips": 2}
+    zero_metrics = joint_metrics(transport, direct_relay["metrics"])
+    false_positive = {"baseline_status": "FEASIBLE", "metrics": {
+        "demand_count": 1, "relay_cmax_s": 0.0, "relay_energy_kwh": 0.0, "relay_sortie_count": 0},
+        "checks": {"full_trajectory_communication_feasible": True}, "sorties": (), "replay_audit": ()}
+    rejected = validate_joint_candidate(_synthetic_transport_validation(), false_positive)
+    return {"candidate_pass": direct_joint["status"] == "PASS",
+            "zero_relay_sorties_pass": zero_metrics.relay_n_sorties == 0 and zero_metrics.relay_energy_kwh == 0.0,
+            "zero_relay_metrics_pass": zero_metrics.joint_Cmax_s == 20.0 and zero_metrics.total_energy_kwh == 1.5,
+            "nonzero_demand_empty_replay_rejected": rejected["status"] == "INFEASIBLE_PROVEN"}
+
+
+def run_c1_integration_tests():
+    """Synthetic cache/validator regression retained alongside the real chain."""
     synthetic_relay = {"baseline_status": "FEASIBLE", "metrics": {
-        "relay_cmax_s": 20.0, "relay_energy_kwh": 0.2, "relay_sortie_count": 1},
+        "demand_count": 1, "relay_cmax_s": 20.0, "relay_energy_kwh": 0.2, "relay_sortie_count": 1},
         "sorties": ({"relay_id": "R1", "energy_component_id": "EC-01", "launch_start_s": 0.0,
                       "resource_end_s": 10.0, "charge_end_s": 20.0, "soc_after": 0.9,
                       "relay_ready_s": 2.0, "service_start_s": 2.0},),
@@ -56,9 +94,7 @@ def run_c1_integration_tests():
                                       transport_schedule={"T1": 0}, transport_validation=_synthetic_transport_validation(),
                                       transport_metrics={"WTD": 0.0, "Cmax_s": 20.0, "total_energy_kwh": 1.0, "n_trips": 1},
                                       cache=cache)
-    return {"real_decoder_invoked": getattr(real_result, "decoder_status", None) == "PASS",
-            "real_decoder_baseline_status": getattr(real_result, "baseline_status", None),
-            "formal_validator_pass": validator["status"] == "PASS",
+    return {"formal_validator_pass": validator["status"] == "PASS",
             "joint_evaluation_pass": first.feasible and second.feasible,
             "cache_hit_after_repeat": cache.schedule_hits == 1,
             "cache_sha256_deterministic": canonical_signature({"a": [1, 2]}) == canonical_signature({"a": [1, 2]})}
@@ -78,6 +114,8 @@ def run_framework_tests():
     before = type("State", (), {"trips": (Box(("B1",)), Box(("B2",)))})()
     real_adapter = Q3BRelayDecoderAdapter()
     integration = run_c1_integration_tests()
+    real_q2 = run_real_q2_formal_integration_test()
+    direct_only = run_direct_only_regression()
     tests = {
         "joint_cmax_arithmetic": metrics.joint_Cmax_s == 120.0,
         "joint_energy_arithmetic": metrics.total_energy_kwh == 4.5,
@@ -101,14 +139,23 @@ def run_framework_tests():
         "formal_solver_gate": _formal_solver_is_gated(),
         "real_decoder_adapter_identity": real_adapter.decoder_function.__module__.endswith("relay_schedule_decoder") and
                                          bool(formal_decoder_identity(real_adapter)),
-        "c1_real_decoder_invoked": integration["real_decoder_invoked"],
+        "real_q2_formal_chain_invoked": real_q2["chain_invoked"],
+        "real_q2_formal_state_reconstructed": real_q2["q2_formal_state_reconstructed"],
+        "real_q2_transport_decode_pass": real_q2["transport_decode_pass"],
+        "real_q2_transport_validation_pass": real_q2["transport_validation_pass"],
+        "real_q2_relay_status_consistent": real_q2["status_consistent"],
         "c1_formal_validator_pass": integration["formal_validator_pass"],
         "c1_cache_hit": integration["cache_hit_after_repeat"],
+        "direct_only_candidate_pass": direct_only["candidate_pass"],
+        "zero_relay_sorties_pass": direct_only["zero_relay_sorties_pass"],
+        "zero_relay_metrics_pass": direct_only["zero_relay_metrics_pass"],
+        "nonzero_demand_empty_replay_rejected": direct_only["nonzero_demand_empty_replay_rejected"],
     }
     return {"status": "READY" if all(tests.values()) else "FAIL",
             "validation_status": "PASS" if all(tests.values()) else "FAIL", "tests": tests,
             "formal_optimization_entered": False, "real_decoder_connected": True,
-            "c1_integration": integration}
+            "c1_integration": integration, "c1_real_q2_formal": real_q2,
+            "direct_only_regression": direct_only}
 
 
 if __name__ == "__main__":

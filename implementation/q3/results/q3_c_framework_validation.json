@@ -18,19 +18,41 @@
     "relay_unresolved_short_circuit": true,
     "formal_solver_gate": true,
     "real_decoder_adapter_identity": true,
-    "c1_real_decoder_invoked": true,
+    "real_q2_formal_chain_invoked": true,
+    "real_q2_formal_state_reconstructed": true,
+    "real_q2_transport_decode_pass": true,
+    "real_q2_transport_validation_pass": true,
+    "real_q2_relay_status_consistent": true,
     "c1_formal_validator_pass": true,
-    "c1_cache_hit": true
+    "c1_cache_hit": true,
+    "direct_only_candidate_pass": true,
+    "zero_relay_sorties_pass": true,
+    "zero_relay_metrics_pass": true,
+    "nonzero_demand_empty_replay_rejected": true
   },
   "formal_optimization_entered": false,
   "real_decoder_connected": true,
   "c1_integration": {
-    "real_decoder_invoked": true,
-    "real_decoder_baseline_status": "FEASIBLE",
     "formal_validator_pass": true,
     "joint_evaluation_pass": true,
     "cache_hit_after_repeat": true,
     "cache_sha256_deterministic": true
+  },
+  "c1_real_q2_formal": {
+    "chain_invoked": true,
+    "q2_formal_state_reconstructed": true,
+    "transport_decode_pass": true,
+    "transport_validation_pass": true,
+    "relay_decoder_status": "PASS",
+    "relay_baseline_status": "INFEASIBLE_PROVEN_ON_DISCRETE_CANDIDATE_SET",
+    "status_consistent": true,
+    "joint_status": "INFEASIBLE_PROVEN"
+  },
+  "direct_only_regression": {
+    "candidate_pass": true,
+    "zero_relay_sorties_pass": true,
+    "zero_relay_metrics_pass": true,
+    "nonzero_demand_empty_replay_rejected": true
   },
   "c1_integration_status": "PASS"
 }

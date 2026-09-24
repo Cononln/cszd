@@ -54,8 +54,17 @@ def _relay_checks(relay_result, *, reserve_rho: float = 0.2) -> dict[str, bool]:
     relay_audit["relay_uav_overlap"] = no_overlap(relay_groups)
     relay_audit["energy_component_overlap"] = no_overlap(component_groups)
     replay = relay_result.get("replay_audit", ()) if isinstance(relay_result, Mapping) else getattr(relay_result, "replay_audit", ())
-    relay_audit["full_communication"] = bool(replay) and all(
-        bool(row.get("communication_feasible", False)) and int(row.get("outage_samples", 1)) == 0 for row in replay)
+    metrics = relay_result.get("metrics", {}) if isinstance(relay_result, Mapping) else getattr(relay_result, "metrics", {})
+    demand_count = int((metrics or {}).get("demand_count", -1))
+    decoder_full_communication = bool((checks or {}).get("full_trajectory_communication_feasible", False))
+    if status == "FEASIBLE" and demand_count == 0:
+        # A no-blind-demand candidate correctly has no relay timeline to
+        # replay.  It still needs explicit Q3-B confirmation of Direct-only
+        # communication, not an inference from zero sorties.
+        relay_audit["full_communication"] = decoder_full_communication
+    else:
+        relay_audit["full_communication"] = bool(replay) and all(
+            bool(row.get("communication_feasible", False)) and int(row.get("outage_samples", 1)) == 0 for row in replay)
     return {key: bool(value) for key, value in relay_audit.items()}
 
 
