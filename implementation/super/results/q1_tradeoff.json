@@ -1,0 +1,497 @@
+{
+ "schemes": {
+  "架次优先": {
+   "n_trips": 18,
+   "energy": 63.0162,
+   "cum_time_h": 9.182
+  },
+  "能耗优先": {
+   "n_trips": 23,
+   "energy": 62.5263,
+   "cum_time_h": 11.462
+  },
+  "加权w=0.1": {
+   "n_trips": 18,
+   "energy": 63.0162,
+   "cum_time_h": 9.182
+  },
+  "加权w=0.3": {
+   "n_trips": 18,
+   "energy": 63.0162,
+   "cum_time_h": 9.182
+  },
+  "加权w=0.5": {
+   "n_trips": 18,
+   "energy": 63.0162,
+   "cum_time_h": 9.182
+  },
+  "加权w=0.7": {
+   "n_trips": 18,
+   "energy": 63.0162,
+   "cum_time_h": 9.182
+  },
+  "加权w=0.9": {
+   "n_trips": 18,
+   "energy": 63.0162,
+   "cum_time_h": 9.182
+  }
+ },
+ "picks": {
+  "最少架次": [
+   {
+    "sid": "S001",
+    "gtype": "C",
+    "k": 2,
+    "energy": 5.9229,
+    "cum_time_h": 0.8955,
+    "max_load": 78.0,
+    "min_load": 76.0,
+    "load_std": 1.0
+   },
+   {
+    "sid": "S002",
+    "gtype": "C",
+    "k": 2,
+    "energy": 10.40557,
+    "cum_time_h": 1.0972,
+    "max_load": 42.0,
+    "min_load": 39.0,
+    "load_std": 1.5
+   },
+   {
+    "sid": "S003",
+    "gtype": "C",
+    "k": 2,
+    "energy": 10.48941,
+    "cum_time_h": 1.2796,
+    "max_load": 42.0,
+    "min_load": 39.0,
+    "load_std": 1.5
+   },
+   {
+    "sid": "S004",
+    "gtype": "C",
+    "k": 1,
+    "energy": 6.1496,
+    "cum_time_h": 0.6427,
+    "max_load": 59.0,
+    "min_load": 59.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S005",
+    "gtype": "C",
+    "k": 1,
+    "energy": 4.21359,
+    "cum_time_h": 0.5197,
+    "max_load": 59.0,
+    "min_load": 59.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S006",
+    "gtype": "C",
+    "k": 1,
+    "energy": 2.5966,
+    "cum_time_h": 0.4337,
+    "max_load": 59.0,
+    "min_load": 59.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S007",
+    "gtype": "C",
+    "k": 1,
+    "energy": 3.4082,
+    "cum_time_h": 0.5297,
+    "max_load": 45.0,
+    "min_load": 45.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S008",
+    "gtype": "C",
+    "k": 1,
+    "energy": 5.8274,
+    "cum_time_h": 0.6106,
+    "max_load": 45.0,
+    "min_load": 45.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S009",
+    "gtype": "B",
+    "k": 1,
+    "energy": 2.093,
+    "cum_time_h": 0.4323,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S010",
+    "gtype": "B",
+    "k": 1,
+    "energy": 1.8203,
+    "cum_time_h": 0.4307,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S011",
+    "gtype": "B",
+    "k": 1,
+    "energy": 1.07131,
+    "cum_time_h": 0.3292,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S012",
+    "gtype": "B",
+    "k": 1,
+    "energy": 2.75085,
+    "cum_time_h": 0.5346,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S013",
+    "gtype": "B",
+    "k": 1,
+    "energy": 1.82331,
+    "cum_time_h": 0.4194,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S014",
+    "gtype": "B",
+    "k": 1,
+    "energy": 2.13918,
+    "cum_time_h": 0.5193,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S015",
+    "gtype": "B",
+    "k": 1,
+    "energy": 2.30494,
+    "cum_time_h": 0.5076,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   }
+  ],
+  "最低能耗": [
+   {
+    "sid": "S001",
+    "gtype": "C",
+    "k": 2,
+    "energy": 5.9229,
+    "cum_time_h": 0.8955,
+    "max_load": 78.0,
+    "min_load": 76.0,
+    "load_std": 1.0
+   },
+   {
+    "sid": "S002",
+    "gtype": "B",
+    "k": 4,
+    "energy": 10.11751,
+    "cum_time_h": 1.9508,
+    "max_load": 22.0,
+    "min_load": 17.0,
+    "load_std": 2.046
+   },
+   {
+    "sid": "S003",
+    "gtype": "B",
+    "k": 4,
+    "energy": 10.38478,
+    "cum_time_h": 2.2442,
+    "max_load": 22.0,
+    "min_load": 17.0,
+    "load_std": 2.046
+   },
+   {
+    "sid": "S004",
+    "gtype": "C",
+    "k": 1,
+    "energy": 6.1496,
+    "cum_time_h": 0.6427,
+    "max_load": 59.0,
+    "min_load": 59.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S005",
+    "gtype": "C",
+    "k": 1,
+    "energy": 4.21359,
+    "cum_time_h": 0.5197,
+    "max_load": 59.0,
+    "min_load": 59.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S006",
+    "gtype": "C",
+    "k": 1,
+    "energy": 2.5966,
+    "cum_time_h": 0.4337,
+    "max_load": 59.0,
+    "min_load": 59.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S007",
+    "gtype": "C",
+    "k": 1,
+    "energy": 3.4082,
+    "cum_time_h": 0.5297,
+    "max_load": 45.0,
+    "min_load": 45.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S008",
+    "gtype": "B",
+    "k": 2,
+    "energy": 5.73023,
+    "cum_time_h": 1.0724,
+    "max_load": 25.0,
+    "min_load": 20.0,
+    "load_std": 2.5
+   },
+   {
+    "sid": "S009",
+    "gtype": "B",
+    "k": 1,
+    "energy": 2.093,
+    "cum_time_h": 0.4323,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S010",
+    "gtype": "B",
+    "k": 1,
+    "energy": 1.8203,
+    "cum_time_h": 0.4307,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S011",
+    "gtype": "B",
+    "k": 1,
+    "energy": 1.07131,
+    "cum_time_h": 0.3292,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S012",
+    "gtype": "B",
+    "k": 1,
+    "energy": 2.75085,
+    "cum_time_h": 0.5346,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S013",
+    "gtype": "B",
+    "k": 1,
+    "energy": 1.82331,
+    "cum_time_h": 0.4194,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S014",
+    "gtype": "B",
+    "k": 1,
+    "energy": 2.13918,
+    "cum_time_h": 0.5193,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S015",
+    "gtype": "B",
+    "k": 1,
+    "energy": 2.30494,
+    "cum_time_h": 0.5076,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   }
+  ],
+  "均衡方案": [
+   {
+    "sid": "S001",
+    "gtype": "C",
+    "k": 2,
+    "energy": 5.9229,
+    "cum_time_h": 0.8955,
+    "max_load": 78.0,
+    "min_load": 76.0,
+    "load_std": 1.0
+   },
+   {
+    "sid": "S002",
+    "gtype": "C",
+    "k": 2,
+    "energy": 10.40557,
+    "cum_time_h": 1.0972,
+    "max_load": 42.0,
+    "min_load": 39.0,
+    "load_std": 1.5
+   },
+   {
+    "sid": "S003",
+    "gtype": "C",
+    "k": 2,
+    "energy": 10.48941,
+    "cum_time_h": 1.2796,
+    "max_load": 42.0,
+    "min_load": 39.0,
+    "load_std": 1.5
+   },
+   {
+    "sid": "S004",
+    "gtype": "C",
+    "k": 1,
+    "energy": 6.1496,
+    "cum_time_h": 0.6427,
+    "max_load": 59.0,
+    "min_load": 59.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S005",
+    "gtype": "C",
+    "k": 1,
+    "energy": 4.21359,
+    "cum_time_h": 0.5197,
+    "max_load": 59.0,
+    "min_load": 59.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S006",
+    "gtype": "C",
+    "k": 1,
+    "energy": 2.5966,
+    "cum_time_h": 0.4337,
+    "max_load": 59.0,
+    "min_load": 59.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S007",
+    "gtype": "C",
+    "k": 1,
+    "energy": 3.4082,
+    "cum_time_h": 0.5297,
+    "max_load": 45.0,
+    "min_load": 45.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S008",
+    "gtype": "C",
+    "k": 1,
+    "energy": 5.8274,
+    "cum_time_h": 0.6106,
+    "max_load": 45.0,
+    "min_load": 45.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S009",
+    "gtype": "B",
+    "k": 1,
+    "energy": 2.093,
+    "cum_time_h": 0.4323,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S010",
+    "gtype": "B",
+    "k": 1,
+    "energy": 1.8203,
+    "cum_time_h": 0.4307,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S011",
+    "gtype": "B",
+    "k": 1,
+    "energy": 1.07131,
+    "cum_time_h": 0.3292,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S012",
+    "gtype": "B",
+    "k": 1,
+    "energy": 2.75085,
+    "cum_time_h": 0.5346,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S013",
+    "gtype": "B",
+    "k": 1,
+    "energy": 1.82331,
+    "cum_time_h": 0.4194,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S014",
+    "gtype": "B",
+    "k": 1,
+    "energy": 2.13918,
+    "cum_time_h": 0.5193,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   },
+   {
+    "sid": "S015",
+    "gtype": "B",
+    "k": 1,
+    "energy": 2.30494,
+    "cum_time_h": 0.5076,
+    "max_load": 25.0,
+    "min_load": 25.0,
+    "load_std": 0.0
+   }
+  ]
+ }
+}

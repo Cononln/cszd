@@ -41,9 +41,18 @@ projects/*/outputs/*
 results/generated/*
 !results/generated/.gitkeep
 tmp/
+implementation/**/figures/*.png
+implementation/**/figures/*.jpg
+implementation/**/figures/*.jpeg
+implementation/**/figures/*.svg
+implementation/**/figures_plus/*.png
+implementation/**/figures_plus/*.jpg
+implementation/**/figures_plus/*.jpeg
+implementation/**/figures_plus/*.svg
+implementation/**/__pycache__/
+implementation/**/*.pkl
 
 # Source-only materials that must not enter this repository
 研赛内部资料/
 研赛内部资料.zip
 **/.git/
-

@@ -1,0 +1,41 @@
+[
+ {
+  "scale": 0.8,
+  "T_full_A": 1440.0,
+  "T_full_B": 1920.0,
+  "T_full_C": 2400.0,
+  "n_trips": 24,
+  "energy": 85.9085,
+  "makespan": 9105.0,
+  "on_time_rate": 1.0,
+  "late_boxes": 0,
+  "first_violation": 0.0,
+  "runtime_s": 240.0
+ },
+ {
+  "scale": 1.0,
+  "T_full_A": 1800.0,
+  "T_full_B": 2400.0,
+  "T_full_C": 3000.0,
+  "n_trips": 22,
+  "energy": 73.0325,
+  "makespan": 7852.0,
+  "on_time_rate": 1.0,
+  "late_boxes": 0,
+  "first_violation": 0.0,
+  "runtime_s": 228.5
+ },
+ {
+  "scale": 1.2,
+  "T_full_A": 2160.0,
+  "T_full_B": 2880.0,
+  "T_full_C": 3600.0,
+  "n_trips": 24,
+  "energy": 75.8429,
+  "makespan": 7407.0,
+  "on_time_rate": 0.95,
+  "late_boxes": 4,
+  "first_violation": 0.0,
+  "runtime_s": 249.1
+ }
+]

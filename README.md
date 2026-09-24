@@ -27,8 +27,19 @@ results/submission/        官方提交模板与最终提交文件
 paper/                     论文正文与图表
 docs/                      赛题和协作文档
 scripts/run_pipeline.py    按依赖顺序运行所有已实现子项目
+implementation/raw/        原始实现：多组候选算法及其结果
+implementation/super/      进阶实现：模块化 Q1-Q4 主流程及其结果
 tests/                     公共回归测试
 ```
+
+## 已有实现
+
+用户提供的两套实现经文件哈希核对，并非同一套代码。仓库将它们分别保存为：
+
+- `implementation/raw/`：原始实验实现，保留各问题的候选求解脚本和数值结果；
+- `implementation/super/`：进阶主实现，包含公共物理内核、Q1-Q4、敏感性分析和提交表生成器。
+
+两套实现都读取根目录 `data/raw/`。结果图不进入版本控制，已有 CSV、JSON、TXT 和 XLSX 数值结果予以保留。
 
 ## 快速开始
 
@@ -54,4 +65,3 @@ python scripts/run_pipeline.py --from q1 --to q4
 - 表格数据：调度中心与服务区、通信链路参数、物资需求与配送时限、运输无人机、中继无人机。
 - 地理数据：镇龙乡及周边村镇、水系、水体、道路与 30 m DEM，包含 CSV/MAT/TIF 及说明文件。
 - 最终结果必须回填 `results/submission/结果提交模板.xlsx` 的六个工作表。
-

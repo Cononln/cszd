@@ -1,0 +1,143 @@
+[
+ {
+  "case": "基准",
+  "M": 8.0,
+  "L_obs": 10.0,
+  "P_th": -90.0,
+  "n_outage": 21,
+  "outage_s": 16810.4,
+  "n_backhaul_ok": 665,
+  "n_props": 9854,
+  "min_drones": 3,
+  "n_relay_trips": 3,
+  "relay_energy": 4.3957,
+  "n_uncovered": 0,
+  "uncovered_s": 0.0,
+  "status": "OPTIMAL",
+  "trail": [
+   {
+    "n_drones": 2,
+    "status": "FEASIBLE",
+    "feasible": false,
+    "n_uncovered": 1,
+    "runtime_s": 209.4
+   },
+   {
+    "n_drones": 3,
+    "status": "OPTIMAL",
+    "feasible": true,
+    "n_uncovered": 0,
+    "runtime_s": 79.0
+   }
+  ],
+  "runtime_s": 328.5
+ },
+ {
+  "case": "衰落裕量收紧",
+  "M": 12.0,
+  "L_obs": 10.0,
+  "P_th": -86.0,
+  "n_outage": 27,
+  "outage_s": 21487.0,
+  "n_backhaul_ok": 511,
+  "n_props": 8557,
+  "min_drones": null,
+  "n_relay_trips": null,
+  "relay_energy": null,
+  "n_uncovered": null,
+  "uncovered_s": 0.0,
+  "status": "NO_FULL_COVER",
+  "trail": [
+   {
+    "n_drones": 2,
+    "status": "UNKNOWN",
+    "feasible": false,
+    "n_uncovered": null,
+    "runtime_s": 202.0
+   },
+   {
+    "n_drones": 3,
+    "status": "OPTIMAL",
+    "feasible": false,
+    "n_uncovered": 2,
+    "runtime_s": 100.1
+   },
+   {
+    "n_drones": 4,
+    "status": "OPTIMAL",
+    "feasible": false,
+    "n_uncovered": 2,
+    "runtime_s": 116.7
+   },
+   {
+    "n_drones": 5,
+    "status": "FEASIBLE",
+    "feasible": false,
+    "n_uncovered": 2,
+    "runtime_s": 140.7
+   },
+   {
+    "n_drones": 6,
+    "status": "FEASIBLE",
+    "feasible": false,
+    "n_uncovered": 2,
+    "runtime_s": 140.7
+   }
+  ],
+  "runtime_s": 724.4
+ },
+ {
+  "case": "遮挡损耗加大",
+  "M": 8.0,
+  "L_obs": 15.0,
+  "P_th": -90.0,
+  "n_outage": 27,
+  "outage_s": 22030.8,
+  "n_backhaul_ok": 494,
+  "n_props": 18841,
+  "min_drones": null,
+  "n_relay_trips": null,
+  "relay_energy": null,
+  "n_uncovered": null,
+  "uncovered_s": 0.0,
+  "status": "NO_FULL_COVER",
+  "trail": [
+   {
+    "n_drones": 2,
+    "status": "FEASIBLE",
+    "feasible": false,
+    "n_uncovered": 5,
+    "runtime_s": 198.7
+   },
+   {
+    "n_drones": 3,
+    "status": "FEASIBLE",
+    "feasible": false,
+    "n_uncovered": 2,
+    "runtime_s": 145.4
+   },
+   {
+    "n_drones": 4,
+    "status": "FEASIBLE",
+    "feasible": false,
+    "n_uncovered": 2,
+    "runtime_s": 149.7
+   },
+   {
+    "n_drones": 5,
+    "status": "FEASIBLE",
+    "feasible": false,
+    "n_uncovered": 2,
+    "runtime_s": 153.8
+   },
+   {
+    "n_drones": 6,
+    "status": "FEASIBLE",
+    "feasible": false,
+    "n_uncovered": 2,
+    "runtime_s": 164.1
+   }
+  ],
+  "runtime_s": 851.6
+ }
+]

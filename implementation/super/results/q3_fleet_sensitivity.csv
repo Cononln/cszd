@@ -1,0 +1,4 @@
+﻿case,M,L_obs,P_th,n_outage,outage_s,n_backhaul_ok,n_props,min_drones,n_relay_trips,relay_energy,n_uncovered,uncovered_s,status,runtime_s
+基准,8.0,10.0,-90.0,21,16810.4,665,9854,3.0,3.0,4.3957,0.0,0.0,OPTIMAL,328.5
+衰落裕量收紧,12.0,10.0,-86.0,27,21487.0,511,8557,,,,,0.0,NO_FULL_COVER,724.4
+遮挡损耗加大,8.0,15.0,-90.0,27,22030.8,494,18841,,,,,0.0,NO_FULL_COVER,851.6

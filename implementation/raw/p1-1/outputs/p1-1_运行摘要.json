@@ -1,0 +1,22 @@
+{
+  "数据目录": "C:\\Users\\24404\\PycharmProjects\\pythonProject1\\2026年研赛D题\\无人机应急物资运输基础数据",
+  "DEM": "C:\\Users\\24404\\PycharmProjects\\pythonProject1\\2026年研赛D题\\镇龙乡地理空间数据\\镇龙乡及周边地理数据\\数字高程模型数据（DEM）\\镇龙乡及周边30米DEM.tif",
+  "服务区数": 15,
+  "货箱数": 80,
+  "基准返航余量": 0.2,
+  "第1小问基准方案": {
+    "架次数": 18,
+    "总能耗_kWh": 63.439283343319445,
+    "累计作业时间_s": 33092.273706012864,
+    "目标值": 18.0,
+    "求解状态": "S001: greedy large-column fallback; S002: Optimization terminated successfully. (HiGHS Status 7: Optimal); S003: Optimization terminated successfully. (HiGHS Status 7: Optimal); S004: Optimization terminated successfully. (HiGHS Status 7: Optimal); S005: Optimization terminated successfully. (HiGHS Status 7: Optimal); S006: Optimization terminated successfully. (HiGHS Status 7: Optimal); S007: Optimization terminated successfully. (HiGHS Status 7: Optimal); S008: Optimization terminated successfully. (HiGHS Status 7: Optimal); S009: Optimization terminated successfully. (HiGHS Status 7: Optimal); S010: Optimization terminated successfully. (HiGHS Status 7: Optimal); S011: Optimization terminated successfully. (HiGHS Status 7: Optimal); S012: Optimization terminated successfully. (HiGHS Status 7: Optimal); S013: Optimization terminated successfully. (HiGHS Status 7: Optimal); S014: Optimization terminated successfully. (HiGHS Status 7: Optimal); S015: Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+  },
+  "第2小问均衡方案": {
+    "架次数": 19,
+    "总能耗_kWh": 59.79902107690747,
+    "累计作业时间_s": 33881.51641795416
+  },
+  "输出目录": "C:\\Users\\24404\\PycharmProjects\\pythonProject1\\2026年研赛D题\\p1-1\\outputs",
+  "图形目录": "C:\\Users\\24404\\PycharmProjects\\pythonProject1\\2026年研赛D题\\p1-1\\figures",
+  "说明": "本程序使用附录给定的等效航程反推水平能耗，下降附加能耗按题设取0。"
+}

@@ -1,0 +1,82 @@
+{
+ "atoms": [
+  [
+   "S002",
+   "S003",
+   "S004",
+   "S005",
+   "S007",
+   "S008",
+   "S009",
+   "S010",
+   "S013",
+   "S015"
+  ],
+  [
+   "S001",
+   "S014"
+  ],
+  [
+   "S006",
+   "S011"
+  ],
+  [
+   "S012"
+  ]
+ ],
+ "inventory": {
+  "drones": {
+   "A": 4,
+   "B": 2,
+   "C": 2
+  },
+  "batteries": {
+   "A": 6,
+   "B": 4,
+   "C": 4
+  },
+  "relay_drones": 2,
+  "relay_modules": 6
+ },
+ "summary": [
+  {
+   "k": 2,
+   "best_partition": "组1{S002,S003,S004,S005,S007,S008,S009,S010,S013,S015,S006,S011,S012} | 组2{S001,S014}",
+   "score": 0.6636541899229574,
+   "scale": 32,
+   "gap": 4,
+   "imbalance": 0.6915465341907693,
+   "redundancy": 2
+  },
+  {
+   "k": 3,
+   "best_partition": "组1{S002,S003,S004,S005,S007,S008,S009,S010,S013,S015,S006,S011} | 组2{S001,S014} | 组3{S012}",
+   "score": 0.7856164936735438,
+   "scale": 36,
+   "gap": 7,
+   "imbalance": 0.9939229077612808,
+   "redundancy": 1
+  }
+ ],
+ "baseline_k1": {
+  "k": 1,
+  "scale": 28,
+  "gap": 1,
+  "drones": {
+   "A": 4,
+   "B": 2,
+   "C": 2
+  },
+  "batteries": {
+   "A": 6,
+   "B": 4,
+   "C": 4
+  },
+  "relay_drones": 3,
+  "relay_modules": 3
+ },
+ "n_legal_partitions": {
+  "2": 7,
+  "3": 6
+ }
+}

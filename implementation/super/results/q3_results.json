@@ -1,0 +1,71 @@
+{
+ "summary": {
+  "n_transport_trips": 22,
+  "n_relay_trips": 3,
+  "transport_energy": 73.0323,
+  "relay_energy": 4.4643,
+  "total_energy": 77.4966,
+  "relay_energy_ratio": 0.0576,
+  "makespan": 7901.7,
+  "makespan_h": 2.195,
+  "n_outage": 21,
+  "outage_total_s": 16810.4,
+  "n_uncovered": 0,
+  "selfcheck": "通过",
+  "n_relay_drones_used": 3,
+  "n_modules_used": 3,
+  "cover_engine": "CP-SAT(OPTIMAL, 机队扩充)",
+  "greedy_ref": {
+   "n_relay_trips": 3,
+   "n_uncovered": 0
+  },
+  "runtime_s": 195.6
+ },
+ "relays": [
+  {
+   "relay_trip_id": "Q3-R01",
+   "rid": "R02",
+   "module": "M01",
+   "t_takeoff": 267.1629616229516,
+   "lon": 109.27916656785067,
+   "lat": 23.031436480255778,
+   "alt": 725.9746398925781,
+   "t_link_done": 755.0,
+   "t_service_end": 3968.7087459793565,
+   "t_return": 4455.56867101412,
+   "energy": 1.2497906678317037,
+   "dur": 3213.7087459793565,
+   "soc_end": 0.6094404163025926
+  },
+  {
+   "relay_trip_id": "Q3-R02",
+   "rid": "R01",
+   "module": "M02",
+   "t_takeoff": 293.0938262430329,
+   "lon": 109.20107186494755,
+   "lat": 23.042288941051268,
+   "alt": 750.2997741699219,
+   "t_link_done": 761.0,
+   "t_service_end": 7424.985343023183,
+   "t_return": 7901.686266739461,
+   "energy": 2.2829976344929,
+   "dur": 6663.985343023183,
+   "soc_end": 0.2865632392209688
+  },
+  {
+   "relay_trip_id": "Q3-R03",
+   "rid": "R03",
+   "module": "M03",
+   "t_takeoff": 2683.0274556338277,
+   "lon": 109.23621448125395,
+   "lat": 23.06037637571042,
+   "alt": 633.2217407226562,
+   "t_link_done": 3161.0,
+   "t_service_end": 5332.1064301133165,
+   "t_return": 5801.372452873044,
+   "energy": 0.9314889978199753,
+   "dur": 2171.1064301133165,
+   "soc_end": 0.7089096881812578
+  }
+ ]
+}

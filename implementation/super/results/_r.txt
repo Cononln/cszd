@@ -1,0 +1,12 @@
+{
+ "relay_fleet": "   rid rtype home\n0  R01     R  O01\n1  R02     R  O01",
+ "rmod": "{'n': 6, 't_full': 1800.0}",
+ "comm": {
+  "f": 2400.0,
+  "Lsys": 3.0,
+  "Lobs": 10.0,
+  "Psens": -98.0,
+  "M": 8.0,
+  "Pth": -90.0
+ }
+}
