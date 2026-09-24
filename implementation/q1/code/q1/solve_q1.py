@@ -44,7 +44,7 @@ def build_batches(method: str) -> tuple[list[dict], dict]:
     boxes = load_boxes()
     qeff, types = qb.load_qeff()
     batches: list[dict] = []
-    aux: dict = {"stages": {"L1": [], "L2": [], "L3": []}}
+    aux: dict = {"stages": {"L1": [], "L2": [], "L3": []}, "solver_status": []}
     for sid in sid_list():
         sub = boxes[boxes["sid"] == sid]
         if method == "baseline":
@@ -56,6 +56,8 @@ def build_batches(method: str) -> tuple[list[dict], dict]:
             for lv in ("L1", "L2", "L3"):
                 aux["stages"][lv] += [{"sid": sid, "gtype": g, "boxes": list(p)}
                                       for g, p in res["stages"][lv]]
+                aux["solver_status"].append({"sid": sid, "stage": lv,
+                                             **res["status"][lv]})
         else:
             raise ValueError(method)
         for g, pack in chosen:
@@ -284,7 +286,7 @@ def solve_q1(method: str = "formal") -> dict:
            "metrics": batch_metrics(batches),
            "solve_time_s": time.time() - t0}
     if method == "formal":
-        # Pareto 链：L1/L2/L3 阶段覆盖的真实指标（阶段求解时已达各阶段最优）
+        # L1/L2/L3 阶段覆盖的真实指标（各阶段已达该阶段最优）
         boxes_all = load_boxes()
         pareto = []
         for lv in ("L1", "L2", "L3"):
@@ -298,6 +300,7 @@ def solve_q1(method: str = "formal") -> dict:
             pareto.append({"variant": f"formal_{lv}", "n_trips": len(stage),
                            "total_energy_kwh": e, "total_operation_time_s": t})
         out["pareto"] = pareto
+        out["solver_status"] = aux["solver_status"]
     return out
 
 
@@ -307,6 +310,11 @@ def main() -> int:
     for method in ("baseline", "formal"):
         sol = solve_q1(method)
         times[method] = sol["solve_time_s"]
+        if method == "formal":
+            pd.DataFrame(sol["solver_status"]).to_csv(
+                RES / "q1_solver_status.csv", index=False)
+            pd.DataFrame(sol["pareto"]).to_csv(
+                RES / "q1_lexicographic_stages.csv", index=False)
         print(f"{method}: N={sol['metrics']['n_trips']} "
               f"E={sol['metrics']['total_energy_kwh']:.3f}kWh "
               f"T={sol['metrics']['total_operation_time_s']:.1f}s "

@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
-"""Q1-3 Step B：单服务区候选架次生成 + 精确集合划分组批。
+"""Q1-3 Step B：单服务区候选架次生成 + 三阶段严格词典序精确集合划分。
+
+三阶段严格词典序：
+L1 最少架次
+L2 在最少架次下最小总能耗
+L3 在前两层约束下最小累计作业时间
+各阶段目标纯净，不混入其他指标。
 
 模型（主方案只用单服务区架次 O01->Si->O01，使 qmax(g,s) 可直接作能量边界）：
 * 质量：sum(m) <= Qeff[g][s] = min(Qg, qmax(g,s))，并防御性检查 sum(m) <= Qg；
 * 体积：sum(v) <= Vg（独立约束，不折算）；
 * 覆盖：每箱恰好进入一个架次，不拆分、不重复、不遗漏。
-
-方法：
-* baseline_ffd(...)：按（首批优先，截止早优先，优先级高优先）排序后 FFD；
-* exact_cover(...)：可行子集全枚举（递归剪枝）+ OR-Tools CP-SAT 精确集合划分，
-  主目标最少架次，次目标最小质量闲置。规模：单服务区至多 15 箱。
 """
 from __future__ import annotations
 
@@ -152,12 +153,13 @@ def candidate_batches(sid_boxes: pd.DataFrame, qeff: dict,
 
 def exact_cover_lex(sid_boxes: pd.DataFrame, qeff: dict, types: dict,
                     time_limit_s: float = 60.0, seed: int = 7) -> dict:
-    """单服务区三阶段词典序精确集合划分。
+    """单服务区三阶段严格词典序精确集合划分（目标纯净，无混合项）。
 
     L1: min 架次 -> N*；L2: 架次=N* 下 min 总能耗 -> E*；
     L3: 架次=N*、能耗<=E*+容差 下 min 累计作业时间。
-    返回 {"cover": L3 正式覆盖, "stages": {"L1":.., "L2":.., "L3":..},
-    "metrics": {"L1":(N,E,T), ...}}，供 Pareto 权衡分析。
+    返回 {"cover": L3 正式覆盖, "stages": {...}, "metrics": {...},
+    "status": {Lv: {"status":..., "objective_value":..., "wall_time_s":...,
+    "n_candidates":...}}}。
     """
     if not HAS_CPSAT:
         raise RuntimeError("OR-Tools CP-SAT not available")
@@ -166,6 +168,7 @@ def exact_cover_lex(sid_boxes: pd.DataFrame, qeff: dict, types: dict,
     cands = candidate_batches(sid_boxes, qeff, types)
     e_int = [int(round(c["energy"] * E_SCALE)) for c in cands]
     t_int = [int(round(c["optime"] * T_SCALE)) for c in cands]
+    n_cand = len(cands)
 
     def _solve(extra=(), objective=None):
         model = cp_model.CpModel()
@@ -180,25 +183,30 @@ def exact_cover_lex(sid_boxes: pd.DataFrame, qeff: dict, types: dict,
         solver.parameters.random_seed = seed
         solver.parameters.num_search_workers = 8
         st = solver.Solve(model)
-        if st not in (cp_model.OPTIMAL, cp_model.FEASIBLE):
-            raise RuntimeError(f"CP-SAT failed for {sid}: {st}")
-        return [i for i in range(len(cands)) if solver.Value(x[i]) > 0], st
+        name = {cp_model.OPTIMAL: "OPTIMAL", cp_model.FEASIBLE: "FEASIBLE",
+                cp_model.INFEASIBLE: "INFEASIBLE",
+                cp_model.UNKNOWN: "UNKNOWN"}.get(st, f"STATUS_{int(st)}")
+        if st == cp_model.INFEASIBLE:
+            raise RuntimeError(f"CP-SAT infeasible for {sid}")
+        sel = [i for i in range(len(cands)) if solver.Value(x[i]) > 0]
+        return sel, {"status": name,
+                     "objective_value": float(solver.ObjectiveValue()),
+                     "wall_time_s": float(solver.WallTime()),
+                     "n_candidates": n_cand}
 
     n_var = lambda x: sum(x)
     e_var = lambda x: sum(x[i] * e_int[i] for i in range(len(cands)))
     t_var = lambda x: sum(x[i] * t_int[i] for i in range(len(cands)))
-    waste = [int(round((qeff[c["gtype"]][sid] - c["mass"]) * 1000)) for c in cands]
-    w_var = lambda x: sum(x[i] * waste[i] for i in range(len(cands)))
 
-    sel1, _ = _solve(objective=lambda x: n_var(x) * 10 ** 9 + w_var(x))
+    sel1, st1 = _solve(objective=lambda x: n_var(x))
     n_star = len(sel1)
-    sel2, _ = _solve(extra=(lambda x: n_var(x) == n_star,),
-                      objective=lambda x: e_var(x) * 10 ** 3 + w_var(x))
+    sel2, st2 = _solve(extra=(lambda x: n_var(x) == n_star,),
+                        objective=lambda x: e_var(x))
     e_star = sum(e_int[i] for i in sel2)
     eps = max(1, int(round(ENERGY_TOL_KWH * E_SCALE)))
-    sel3, _ = _solve(
+    sel3, st3 = _solve(
         extra=(lambda x: n_var(x) == n_star, lambda x: e_var(x) <= e_star + eps),
-        objective=lambda x: t_var(x) * 10 ** 3 + w_var(x))
+        objective=lambda x: t_var(x))
 
     def _cover(sel):
         return [(cands[i]["gtype"], cands[i]["boxes"]) for i in sel]
@@ -211,7 +219,8 @@ def exact_cover_lex(sid_boxes: pd.DataFrame, qeff: dict, types: dict,
 
     return {"cover": _cover(sel3),
             "stages": {"L1": _cover(sel1), "L2": _cover(sel2), "L3": _cover(sel3)},
-            "metrics": {"L1": _met(sel1), "L2": _met(sel2), "L3": _met(sel3)}}
+            "metrics": {"L1": _met(sel1), "L2": _met(sel2), "L3": _met(sel3)},
+            "status": {"L1": st1, "L2": st2, "L3": st3}}
 
 
 def binding_of(mass: float, vol: float, lim_m: float, lim_v: float) -> str:

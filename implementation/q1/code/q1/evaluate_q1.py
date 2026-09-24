@@ -89,8 +89,12 @@ def evaluate_batches(batches: list[dict], method: str) -> dict:
         if abs(e_tot - (e_out + e_back)) > ENERGY_IDENTITY_TOL:
             energy_fail.append(f"{k}:identity")
         op = t_prep + t_fly_out + t_hand + t_fly_back
-        if not all(v >= -TIME_TOL for v in (t_prep, t_fly_out, t_hand, t_fly_back, op)):
+        op_ok = (abs(op - (t_prep + t_fly_out + t_hand + t_fly_back)) <= TIME_TOL
+                 and all(v == v and v >= -TIME_TOL
+                         for v in (t_prep, t_fly_out, t_hand, t_fly_back, op)))
+        if not op_ok:
             time_fail.append(k)
+        e_id_ok = abs(e_tot - (e_out + e_back)) <= ENERGY_IDENTITY_TOL
         lim_m = min(float(gt["Q"]), qeff[(g, sid)])
         um, uv = m / lim_m, v / float(gt["V"])
         binding = ("BOTH_CAPACITY" if um >= 1 - 1e-9 and uv >= 1 - 1e-9
@@ -106,7 +110,8 @@ def evaluate_batches(batches: list[dict], method: str) -> dict:
                      "operation_time_s": op, "outbound_energy_kwh": e_out,
                      "return_energy_kwh": e_back, "total_energy_kwh": e_tot,
                      "energy_limit_kwh": lim_e, "energy_margin_kwh": lim_e - e_tot,
-                     "energy_identity_pass": True, "time_identity_pass": True,
+                     "energy_identity_pass": bool(e_id_ok),
+                     "operation_time_identity_pass": bool(op_ok),
                      "binding_constraint": binding})
     for name, lst in (("mass", mass_fail), ("qmax", qmax_fail), ("volume", vol_fail),
                       ("energy", energy_fail), ("operation_time", time_fail)):
@@ -200,6 +205,31 @@ def main() -> int:
     S.to_csv(RES / "q1_service_summary.csv", index=False)
 
     m, checks = rf["metrics"], rf["checks"]
+    # 最优性审计：45 个阶段状态全部来自求解器记录
+    st = pd.read_csv(RES / "q1_solver_status.csv")
+    opt = {"total_stages": int(len(st)),
+           "optimal_stages": int((st["status"] == "OPTIMAL").sum()),
+           "feasible_only_stages": int((st["status"] == "FEASIBLE").sum()),
+           "unknown_stages": int((st["status"] == "UNKNOWN").sum()),
+           "infeasible_stages": int((st["status"] == "INFEASIBLE").sum())}
+    opt["all_stages_optimal"] = (
+        opt["total_stages"] == 45 and opt["optimal_stages"] == 45
+        and opt["feasible_only_stages"] == 0 and opt["unknown_stages"] == 0
+        and opt["infeasible_stages"] == 0)
+    checks["all_solver_stages_optimal"] = opt["all_stages_optimal"]
+    exact_word = ("精确词典序最优" if opt["all_stages_optimal"]
+                  else "OPTIMALITY_NOT_PROVEN（当前最好可行解）")
+    # 理论架次下界诊断（按质量/体积分别取整，仅诊断，不约束正式解）
+    boxes_lb = load_boxes()
+    qeff_lb = load_qeff()
+    types_lb = load_transport_types()
+    lb = 0
+    for sid, grp in boxes_lb.groupby("sid"):
+        max_q = max(qeff_lb[(g, sid)] for g in types_lb)
+        max_v = max(float(types_lb[g]["V"]) for g in types_lb)
+        import math
+        lb += max(1, math.ceil(grp["mass"].sum() / max_q - 1e-9),
+                  math.ceil(grp["vol"].sum() / max_v - 1e-12))
     status = "PASS" if (not rf["failures"] and all(checks.values())) else "FAIL"
     # 固定方案鲁棒性：qmax 收紧后当前方案违例架次数（静态检查，不重优化）
     cap = pd.read_csv(CAP_CSV, encoding="utf-8-sig")
@@ -224,6 +254,10 @@ def main() -> int:
              "split_definition": ("逐箱清单以完整 box ID 为最小不可拆单元；"
                                   "拆分通过重复分配/派生 ID 检查间接验证"),
              "metrics": m,
+             "optimality": opt,
+             "optimality_wording": exact_word,
+             "theoretical_trip_lower_bound": int(lb),
+             "theoretical_bound_note": "按各服务区质量/体积分别取整求和的诊断下界，不约束正式解",
              "formal_better_or_equal_baseline_lex": not lex_better(rb["metrics"], m),
              "sensitivity_qmax_scale": sens}
     final["sensitivity_qmax_scale"] = sens
@@ -240,6 +274,7 @@ def main() -> int:
             ("能量约束", checks["all_energy_constraints_pass"]),
             ("能量恒等式", checks["all_energy_identities_pass"]),
             ("作业时间计算", checks["all_operation_time_checks_pass"]),
+            ("求解器阶段最优", checks["all_solver_stages_optimal"]),
             ("电池规则", "VERIFIED（Q1 不要求动态电池调度，见 §8）")]
     bm = rb["metrics"]
     rep = ["# Q1-3 正式报告（题意校正版：词典序三目标）", "",
@@ -271,12 +306,21 @@ def main() -> int:
             "- 分服务区明细见 q1_service_summary.csv，架次明细见 q1_solution_trips.csv", "",
             "## 9. 完整性审计", "", "| 检查项 | 结果 |", "| --- | --- |"]
     rep += [f"| {k} | {'PASS' if v is True else v} |" for k, v in rows]
-    rep += ["", "## 10. 返航安全余量敏感性（固定方案鲁棒性）",
+    rep += ["", "## 10. 最优性审计",
+            f"- 求解阶段总数 45，最优 {opt['optimal_stages']}，仅可行 "
+            f"{opt['feasible_only_stages']}，未知 {opt['unknown_stages']}，"
+            f"不可行 {opt['infeasible_stages']}",
+            f"- 结论用词：{exact_word}",
+            "- 候选空间完整性：每个服务区对三种机型枚举全部质量体积可行的非空货箱子集，"
+            "因此在单服务区直接往返模型下集合划分候选架次空间完整；"
+            "L1/L2/L3 阶段指标见 q1_lexicographic_stages.csv，求解器记录见 q1_solver_status.csv",
+            f"- 理论架次下界（诊断）：{int(lb)}，正式解 {m['n_trips']} 架次", ""]
+    rep += ["", "## 11. 返航安全余量敏感性（固定方案鲁棒性）",
             "该结果仅用于判断当前最优方案对安全边界收紧的鲁棒性，"
             "不代表每个安全余量水平下重新优化后的最优结果。"]
     for s in sens:
         rep.append(f"- epsilon = {s['epsilon']:.0%}：违例架次 = {s['trips_violated']}")
-    rep += ["", "## 11. 阶段结论",
+    rep += ["", "## 12. 阶段结论",
             f"- failures = {rf['failures'] if rf['failures'] else '无'}",
             f"- 结论：{'PASS：Q1 数值模型可以冻结' if status == 'PASS' and lex_ok else 'FAIL：Q1-3 仍需返修'}", ""]
     (RES / "q1_final_report.md").write_text("\n".join(rep), encoding="utf-8")
