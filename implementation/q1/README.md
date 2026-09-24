@@ -20,3 +20,13 @@ python implementation/q1/code/q1/audit_physics.py
 ```
 
 结果写入 `results/`。Q1-1 当前全部 PASS；用户确认后才进入 Q1-2。
+
+## Q1 结果与出图
+
+冻结结果的统一绘图入口为 `code/q1/plot_q1_results.py`。该脚本仅读取
+`results/` 下的 Q1 CSV/JSON，输出主图、补充图及 PDF/SVG/PNG 和审计清单到
+`figures/`，不会重新运行求解器。
+
+```powershell
+python implementation/q1/code/q1/plot_q1_results.py
+```
