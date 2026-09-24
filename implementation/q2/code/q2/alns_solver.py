@@ -452,11 +452,15 @@ def _route_structure_metrics(state: Q2State) -> dict[str, float]:
 def solve_formal(seed: int = 20260924, *, time_limit_s: float = 30.0,
                  iterations: int | None = None, cp_workers: int = 1,
                  normalization: Normalization | None = None,
-                 weight_name: str = "balanced") -> SeedResult:
+                 weight_name: str = "balanced",
+                 initial_state: Q2State | None = None) -> SeedResult:
     started = time.perf_counter()
     rng = np.random.default_rng(seed)
     weights = dict(WEIGHT_VECTORS[weight_name])
-    state = build_initial_state(seed)
+    # Full formal runs use the canonical 80-box initializer.  Small exact
+    # benchmarks may inject a restricted feasible state so the *same* ALNS
+    # engine is evaluated on exactly the benchmark box set.
+    state = initial_state if initial_state is not None else build_initial_state(seed)
     decoder_limit = min(5.0, max(0.5, time_limit_s / 8.0))
     current_schedule = evaluate_state(state, cp_workers=cp_workers,
                                       decoder_time_limit_s=decoder_limit, seed=seed)
