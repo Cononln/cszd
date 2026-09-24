@@ -1,7 +1,7 @@
 # D 题代码实现
 
-旧的 A/raw 与 B/super 两套上传代码已清理。当前仓库按照逐问验收制，只维护
-Q1 的正式实现；Q2–Q4 在 Q1 全部 PASS 前不进入代码修改。
+旧的 A/raw 与 B/super 两套上传代码已清理。当前仓库按照逐问验收制维护唯一正式
+实现：Q1 已冻结，Q2 当前只进入 Q2-A 基础阶段；Q3/Q4 暂不修改核心代码。
 
 ## Q1
 
@@ -18,3 +18,15 @@ python implementation/q1/code/q1/audit_physics.py
 
 Q1-1 已通过数据、DEM、巡航高度、能耗、载荷航程单调性和返航安全余量检查。
 最大安全载荷和组批代码需在阶段确认后再加入。
+
+## Q2-A
+
+- `q2/code/q2/`：多点路线、硬截止、资源解码和 ALNS 的阶段化接口骨架；
+- `q2/results/`：A/B 供体审计、约束登记和真实数据审计；
+- 当前不运行 Q2 正式优化，不生成 Q2 最优路线。
+
+运行 Q2-A 数据审计：
+
+```powershell
+python implementation/q2/code/q2/audit_q2_a.py
+```

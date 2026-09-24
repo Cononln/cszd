@@ -1,0 +1,11 @@
+# Q2 与 Q1 共用的运行依赖
+matplotlib
+numpy
+openpyxl
+ortools
+pandas
+rasterio
+seaborn
+
+# Q2-D 使用；Q2-A 不调用优化器
+alns>=1.1
