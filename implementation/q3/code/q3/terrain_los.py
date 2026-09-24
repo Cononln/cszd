@@ -12,6 +12,8 @@ class LosEvaluation:
     blocked: bool
     min_clearance_m: float
     critical_location: dict[str, float] | None
+    # Horizontal profile distance. Propagation distance is recorded separately
+    # as ``LinkEvaluation.distance_3d_m`` in communication.py.
     distance_m: float
     n_terrain_samples: int
 

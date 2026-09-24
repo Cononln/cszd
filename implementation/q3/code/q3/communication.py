@@ -5,8 +5,16 @@ from dataclasses import asdict, dataclass, field
 from typing import Any, Iterable, Mapping
 
 import math
+import sys
+from pathlib import Path
 
 from .terrain_los import LosEvaluation, evaluate_los
+
+HERE = Path(__file__).resolve()
+Q1_CODE = HERE.parents[4] / "implementation" / "q1" / "code"
+if str(Q1_CODE) not in sys.path:
+    sys.path.insert(0, str(Q1_CODE))
+from common.dem import planar_m  # noqa: E402
 
 DIRECT = "DIRECT"
 RELAY = "RELAY"
@@ -20,7 +28,12 @@ class LinkEvaluation:
     loss_limit_db: float
     margin_db: float
     blocked: bool
+    # ``distance_m`` is retained as a compatibility alias for the propagation
+    # distance and is always the 3-D Euclidean distance.  LOS keeps its own
+    # horizontal profile distance because terrain sampling is horizontal.
     distance_m: float
+    horizontal_distance_m: float
+    distance_3d_m: float
     forward_loss_limit_db: float
     reverse_loss_limit_db: float
     los: LosEvaluation
@@ -62,24 +75,44 @@ def directional_loss_limit_db(tx: Mapping[str, float], rx: Mapping[str, float],
         float(comm["system_loss_db"]) - float(comm["threshold_dbm"])
 
 
+def link_distance_3d_m(point_a: tuple[float, float, float],
+                       point_b: tuple[float, float, float]) -> float:
+    """Return the endpoint-to-endpoint Euclidean distance in 3-D (metres).
+
+    ``evaluate_los`` deliberately parameterises its terrain profile by the
+    horizontal distance.  Free-space path loss, however, uses the actual
+    straight-line distance between the communication antennas.
+    """
+    horizontal = planar_m(float(point_a[0]), float(point_a[1]),
+                          float(point_b[0]), float(point_b[1]))
+    vertical = float(point_b[2]) - float(point_a[2])
+    return float(math.hypot(horizontal, vertical))
+
+
 def evaluate_bidirectional_link(point_a: tuple[float, float, float],
                                 point_b: tuple[float, float, float],
                                 interface_a: Mapping[str, float],
                                 interface_b: Mapping[str, float],
                                 comm: Mapping[str, Any], *, dem,
-                                los_step_m: float = 10.0) -> LinkEvaluation:
-    los = evaluate_los(point_a, point_b, dem=dem, step_m=los_step_m)
+                                los_step_m: float = 10.0,
+                                endpoint_buffer_m: float = 30.0) -> LinkEvaluation:
+    los = evaluate_los(point_a, point_b, dem=dem, step_m=los_step_m,
+                       endpoint_buffer_m=endpoint_buffer_m)
     forward = directional_loss_limit_db(interface_a, interface_b, comm)
     reverse = directional_loss_limit_db(interface_b, interface_a, comm)
     limit = min(forward, reverse)
-    path_loss = fspl_db(float(comm["frequency_mhz"]), los.distance_m)
+    horizontal_distance = float(los.distance_m)
+    distance_3d = link_distance_3d_m(point_a, point_b)
+    path_loss = fspl_db(float(comm["frequency_mhz"]), distance_3d)
     if los.blocked:
         path_loss += float(comm["obstruction_loss_db"])
     margin = limit - path_loss
     return LinkEvaluation(available=bool(path_loss <= limit + 1e-12),
                           path_loss_db=float(path_loss), loss_limit_db=float(limit),
                           margin_db=float(margin), blocked=bool(los.blocked),
-                          distance_m=float(los.distance_m),
+                          distance_m=distance_3d,
+                          horizontal_distance_m=horizontal_distance,
+                          distance_3d_m=distance_3d,
                           forward_loss_limit_db=float(forward),
                           reverse_loss_limit_db=float(reverse), los=los)
 
@@ -108,7 +141,8 @@ def _relay_point(service: Mapping[str, Any]) -> tuple[float, float, float]:
 def evaluate_transport_communication(samples: Iterable[Mapping[str, Any]], *, comm: Mapping[str, Any],
                                      nodes, dem, dt_s: float,
                                      relay_services: Iterable[Mapping[str, Any]] | None = None,
-                                     los_step_m: float = 10.0) -> CommunicationEvaluation:
+                                     los_step_m: float = 10.0,
+                                     endpoint_buffer_m: float = 30.0) -> CommunicationEvaluation:
     """Check continuous communication for every supplied trajectory sample.
 
     A relay service has no capacity field: one service may cover simultaneous
@@ -122,7 +156,8 @@ def evaluate_transport_communication(samples: Iterable[Mapping[str, Any]], *, co
         point = (float(sample["x_lon"]), float(sample["y_lat"]), float(sample["z_m"]))
         direct = evaluate_bidirectional_link(point, gateway, comm["interfaces"]["U"],
                                               comm["interfaces"]["G01"], comm,
-                                              dem=dem, los_step_m=los_step_m)
+                                              dem=dem, los_step_m=los_step_m,
+                                              endpoint_buffer_m=endpoint_buffer_m)
         selected_service = None
         relay_margin = float("-inf")
         if not direct.available:
@@ -132,10 +167,12 @@ def evaluate_transport_communication(samples: Iterable[Mapping[str, Any]], *, co
                 rpoint = _relay_point(service)
                 access = evaluate_bidirectional_link(point, rpoint, comm["interfaces"]["U"],
                                                       comm["interfaces"]["RA"], comm,
-                                                      dem=dem, los_step_m=los_step_m)
+                                                      dem=dem, los_step_m=los_step_m,
+                                                      endpoint_buffer_m=endpoint_buffer_m)
                 backhaul = evaluate_bidirectional_link(rpoint, gateway, comm["interfaces"]["RB"],
                                                         comm["interfaces"]["G01"], comm,
-                                                        dem=dem, los_step_m=los_step_m)
+                                                        dem=dem, los_step_m=los_step_m,
+                                                        endpoint_buffer_m=endpoint_buffer_m)
                 candidate_margin = min(access.margin_db, backhaul.margin_db)
                 if access.available and backhaul.available and (
                         selected_service is None or candidate_margin > relay_margin):

@@ -9,6 +9,7 @@
     "trajectory_climb_cruise_descent": true,
     "handover_communication_checked": true,
     "dem_los": true,
+    "three_dimensional_distance": true,
     "fspl_and_bidirectional_budget": true,
     "direct_relay_outage_logic": true,
     "mid_segment_outage_detected": true,
@@ -17,17 +18,29 @@
     "relay_energy": true,
     "relay_reserve": true,
     "energy_component_charging": true,
-    "dt_sensitivity_documented": true
+    "dt_sensitivity_documented": true,
+    "endpoint_buffer_sensitivity": true,
+    "alltrip_q2baseline_audit": true
   },
+  "communication_distance_model": "3D Euclidean",
+  "endpoint_buffer_default_m": 30.0,
+  "endpoint_buffer_sensitivity_status": "PASS",
+  "endpoint_buffer_flip_count": 0,
+  "max_dt_coverage_difference": 0.0018322896589377247,
+  "max_dt_blind_duration_difference_s": 2.0,
   "relay_uav_count": 2,
   "energy_component_count": 6,
   "real_routes_checked": 4,
   "direct_blind_interval_count": 3,
   "direct_blind_duration_s": 3511.760399834728,
+  "relay_candidate_count_before": 135,
   "relay_candidate_count": 135,
-  "relay_candidate_audit_count": 135,
-  "relay_feasible_candidate_count": 135,
+  "coverage_candidate_count_before": 121,
   "relay_coverage_candidate_count": 121,
+  "candidate_validation_status": "PASS",
+  "blind_interval_validation_status": "PASS",
+  "alltrip_q2baseline_count": 25,
+  "alltrip_direct_feasible_count": 6,
   "trajectory_dt_s": [
     5.0,
     2.0,
@@ -35,5 +48,5 @@
   ],
   "q2_source_modified": "NO",
   "q2_physics_modified": "NO",
-  "note": "Q3-A stops before joint transport-relay optimisation; Q2 is used only as a route baseline for audits."
+  "note": "Q3-A stops before joint transport-relay optimisation; Q2 is only a route baseline for audits."
 }
