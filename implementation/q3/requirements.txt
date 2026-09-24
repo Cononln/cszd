@@ -1,0 +1,3 @@
+# Q3 uses the shared physical and communication dependencies plus a joint MILP solver.
+-r ../q1/requirements.txt
+scipy
