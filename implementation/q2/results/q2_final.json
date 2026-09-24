@@ -2,38 +2,53 @@
   "phase": "Q2",
   "status": "PASS",
   "run_mode": "formal",
-  "formal_solution_id": "seed-20260925-best",
+  "formal_solution_id": "seed-20260930-iter-0",
   "metrics": {
-    "WTD": 14791.774700396316,
-    "Cmax_s": 11992.999291929716,
-    "total_energy_kwh": 79.33154169469012,
-    "n_trips": 29.0,
-    "total_operation_time_s": 51509.78800583729
+    "WTD": 6228.862797380436,
+    "Cmax_s": 9612.3086367231,
+    "total_energy_kwh": 70.1181675670078,
+    "n_trips": 25.0,
+    "total_operation_time_s": 45796.642832170495
   },
   "formal_selection": {
-    "rule": "minimum normalized distance to ideal point from global nondominated archive",
+    "rule": "minimum normalized distance to ideal point using final global Pareto ideal/nadir",
     "ideal": {
-      "WTD": 7413.192535394137,
-      "Cmax_s": 9799.538476712547,
-      "total_energy_kwh": 77.27429885832598,
-      "n_trips": 28.0
+      "WTD": 5953.7177499610625,
+      "Cmax_s": 9510.800249159249,
+      "total_energy_kwh": 69.92733585559016,
+      "n_trips": 22.0
     },
     "nadir": {
-      "WTD": 629529.7144957957,
-      "Cmax_s": 20797.399291929716,
-      "total_energy_kwh": 109.51414164475945,
-      "n_trips": 43.0
+      "WTD": 213730.95096904945,
+      "Cmax_s": 13306.708636723099,
+      "total_energy_kwh": 81.97043047417402,
+      "n_trips": 27.0
     },
-    "rho": 0.005
+    "rho": 0.005,
+    "search_normalization": {
+      "ideal": {
+        "WTD": 7413.192535394137,
+        "Cmax_s": 9799.538476712547,
+        "total_energy_kwh": 77.27429885832598,
+        "n_trips": 28.0
+      },
+      "nadir": {
+        "WTD": 291892.3875050912,
+        "Cmax_s": 33920.9634517862,
+        "total_energy_kwh": 109.51414164475945,
+        "n_trips": 43.0
+      },
+      "rho": 0.005
+    }
   },
   "route_structure": {
     "n_multistop_trips": 5.0,
     "max_stops": 2.0,
-    "mean_stops_per_trip": 1.1724137931034482
+    "mean_stops_per_trip": 1.2
   },
   "exact_validation_summary": {
     "n_optimal_instances": 2,
-    "max_gap": 0.507042961621295
+    "max_gap": 0.145292731195679
   },
   "checks": {
     "all_boxes_delivered_once": true,
@@ -68,10 +83,10 @@
   "runtime": {
     "cpu_count": 12,
     "seed_workers": 1,
-    "cp_sat_workers": 1,
-    "parallel_mode": false,
-    "parallel_fallback_reason": null,
-    "wall_time_total_s": 109.0411450000247,
+    "cp_sat_workers": 4,
+    "parallel_mode": true,
+    "parallel_fallback_reason": "ProcessPool unavailable: PermissionError",
+    "wall_time_total_s": 147.58508300001267,
     "requested_seeds": 8,
     "completed_seeds": 8,
     "failed_seeds": 0
@@ -79,16 +94,16 @@
   "gate_c": {
     "phase": "Q2-C",
     "status": "PASS",
-    "solver_status": "WTD:FEASIBLE;Cmax:UNKNOWN",
+    "solver_status": "WTD:OPTIMAL;Cmax:OPTIMAL",
     "stage_statuses": {
-      "WTD": "FEASIBLE",
-      "Cmax": "UNKNOWN"
+      "WTD": "OPTIMAL",
+      "Cmax": "OPTIMAL"
     },
     "solver_grid_metrics": {
-      "WTD_stage1_grid": 14791.4,
-      "WTD_stage2_grid": 14791.4,
+      "WTD_stage1_grid": 6228.2,
+      "WTD_stage2_grid": 6228.2,
       "WTD_stage1_locked": 1.0,
-      "Cmax_grid_s": 11993.0
+      "Cmax_grid_s": 9612.4
     },
     "checks": {
       "uav_type": true,
@@ -158,7 +173,7 @@
       },
       "status": "PASS"
     },
-    "n_trips": 29,
+    "n_trips": 25,
     "note": "For the 80-box fixed-route schedule, FEASIBLE means best-known valid schedule; it is not a global optimality claim."
   },
   "gate_e": {
@@ -189,94 +204,67 @@
       "solver_validator_consistent": true
     },
     "metrics": {
-      "WTD": 14791.774700396316,
-      "Cmax_s": 11992.999291929716,
-      "total_energy_kwh": 79.33154169469013,
-      "n_trips": 29.0
+      "WTD": 6228.862797380436,
+      "Cmax_s": 9612.3086367231,
+      "total_energy_kwh": 70.11816756700782,
+      "n_trips": 25.0
     },
     "solver_metrics": {
-      "WTD": 14791.774700396316,
-      "Cmax_s": 11992.999291929716,
-      "total_energy_kwh": 79.33154169469012,
-      "n_trips": 29.0,
-      "total_operation_time_s": 51509.78800583729
+      "WTD": 6228.862797380436,
+      "Cmax_s": 9612.3086367231,
+      "total_energy_kwh": 70.1181675670078,
+      "n_trips": 25.0,
+      "total_operation_time_s": 45796.642832170495
     },
-    "n_trips": 29,
+    "n_trips": 25,
     "n_boxes": 80,
     "delivered_records": 80,
-    "solver_status": "WTD:FEASIBLE;Cmax:UNKNOWN",
+    "solver_status": "WTD:OPTIMAL;Cmax:OPTIMAL",
     "solver_stage_statuses": {
-      "WTD": "FEASIBLE",
-      "Cmax": "UNKNOWN"
+      "WTD": "OPTIMAL",
+      "Cmax": "OPTIMAL"
     },
     "solver_grid_metrics": {
-      "WTD_stage1_grid": 14791.4,
-      "WTD_stage2_grid": 14791.4,
+      "WTD_stage1_grid": 6228.2,
+      "WTD_stage2_grid": 6228.2,
       "WTD_stage1_locked": 1.0,
-      "Cmax_grid_s": 11993.0
+      "Cmax_grid_s": 9612.4
     },
     "battery_reuse_audit": [
       {
         "battery_id": "BAT-A-06",
         "previous_trip": "T001",
         "previous_charge_end": 2192.508647086876,
-        "next_trip": "T008",
-        "next_start": 3918.9,
-        "margin_s": 1726.3913529131241,
-        "pass": true
-      },
-      {
-        "battery_id": "BAT-C-04",
-        "previous_trip": "T002",
-        "previous_charge_end": 4357.215759417021,
-        "next_trip": "T009",
-        "next_start": 4602.9,
-        "margin_s": 245.68424058297842,
-        "pass": true
-      },
-      {
-        "battery_id": "BAT-C-04",
-        "previous_trip": "T009",
-        "previous_charge_end": 9111.877516799837,
-        "next_trip": "T011",
-        "next_start": 9112.0,
-        "margin_s": 0.1224832001626055,
+        "next_trip": "T019",
+        "next_start": 6694.3,
+        "margin_s": 4501.791352913124,
         "pass": true
       },
       {
         "battery_id": "BAT-C-03",
         "previous_trip": "T003",
-        "previous_charge_end": 2819.351561211336,
-        "next_trip": "T015",
-        "next_start": 2827.8,
-        "margin_s": 8.448438788664134,
-        "pass": true
-      },
-      {
-        "battery_id": "BAT-B-04",
-        "previous_trip": "T004",
-        "previous_charge_end": 3656.6857157567165,
-        "next_trip": "T021",
-        "next_start": 3911.0,
-        "margin_s": 254.3142842432835,
+        "previous_charge_end": 4511.704076210021,
+        "next_trip": "T009",
+        "next_start": 4511.8,
+        "margin_s": 0.09592378997876949,
         "pass": true
       },
       {
         "battery_id": "BAT-C-02",
         "previous_trip": "T005",
-        "previous_charge_end": 5851.112521690549,
-        "next_trip": "T017",
-        "next_start": 5851.2,
-        "margin_s": 0.08747830945048918,
+        "previous_charge_end": 6021.087656119327,
+        "next_trip": "T011",
+        "next_start": 6021.2,
+        "margin_s": 0.11234388067259715,
         "pass": true
       },
       {
-        "battery_id": "BAT-B-03",
-        "previous_trip": "T025",
-        "previous_charge_end": 5775.310083693774,
+        "battery_id": "BAT-B-04",
+        "previous_trip": "T018",
+        "previous_charge_end": 4515.989590249282,
         "next_trip": "T006",
-        "next_start": 5775.4,
-        "margin_s": 0.08991630622585944,
+        "next_start": 5092.4,
+        "margin_s": 576.4104097507179,
         "pass": true
       },
       {
@@ -284,80 +272,71 @@
         "previous_trip": "T013",
         "previous_charge_end": 2892.7854827440206,
         "next_trip": "T007",
-        "next_start": 3470.5,
-        "margin_s": 577.7145172559794,
+        "next_start": 3025.8,
+        "margin_s": 133.01451725597963,
         "pass": true
       },
       {
-        "battery_id": "BAT-C-01",
-        "previous_trip": "T007",
-        "previous_charge_end": 8233.354637357259,
-        "next_trip": "T023",
-        "next_start": 10850.9,
-        "margin_s": 2617.5453626427407,
-        "pass": true
-      },
-      {
-        "battery_id": "BAT-A-03",
+        "battery_id": "BAT-A-04",
         "previous_trip": "T012",
         "previous_charge_end": 2191.8995403542476,
-        "next_trip": "T014",
+        "next_trip": "T008",
         "next_start": 2192.0,
         "margin_s": 0.10045964575238031,
         "pass": true
       },
       {
         "battery_id": "BAT-A-01",
+        "previous_trip": "T014",
+        "previous_charge_end": 4090.131096995131,
+        "next_trip": "T024",
+        "next_start": 4726.8,
+        "margin_s": 636.6689030048692,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-A-01",
         "previous_trip": "T024",
-        "previous_charge_end": 3464.862012285833,
+        "previous_charge_end": 7907.653337796596,
         "next_trip": "T016",
-        "next_start": 3760.9,
-        "margin_s": 296.03798771416723,
+        "next_start": 7912.8,
+        "margin_s": 5.146662203404048,
         "pass": true
       },
       {
-        "battery_id": "BAT-A-01",
-        "previous_trip": "T016",
-        "previous_charge_end": 7353.0896545164505,
-        "next_trip": "T022",
-        "next_start": 7616.7,
-        "margin_s": 263.6103454835493,
+        "battery_id": "BAT-B-03",
+        "previous_trip": "T021",
+        "previous_charge_end": 3783.427468054169,
+        "next_trip": "T015",
+        "next_start": 3794.2,
+        "margin_s": 10.772531945830906,
         "pass": true
       },
       {
-        "battery_id": "BAT-A-01",
+        "battery_id": "BAT-B-02",
         "previous_trip": "T022",
-        "previous_charge_end": 9667.129256640454,
-        "next_trip": "T018",
-        "next_start": 9667.3,
-        "margin_s": 0.17074335954566777,
+        "previous_charge_end": 2966.7344167506444,
+        "next_trip": "T025",
+        "next_start": 3060.6,
+        "margin_s": 93.8655832493555,
         "pass": true
       },
       {
         "battery_id": "BAT-B-02",
-        "previous_trip": "T026",
-        "previous_charge_end": 3128.4630023068503,
-        "next_trip": "T027",
-        "next_start": 3540.7,
-        "margin_s": 412.23699769314953,
-        "pass": true
-      },
-      {
-        "battery_id": "BAT-B-02",
-        "previous_trip": "T027",
-        "previous_charge_end": 6738.085540635027,
-        "next_trip": "T019",
-        "next_start": 7855.2,
-        "margin_s": 1117.1144593649724,
+        "previous_trip": "T025",
+        "previous_charge_end": 6743.045117637893,
+        "next_trip": "T017",
+        "next_start": 7328.4,
+        "margin_s": 585.3548823621068,
         "pass": true
       },
       {
         "battery_id": "BAT-B-01",
-        "previous_trip": "T028",
-        "previous_charge_end": 5041.055945342727,
-        "next_trip": "T029",
-        "next_start": 5964.3,
-        "margin_s": 923.2440546572734,
+        "previous_trip": "T023",
+        "previous_charge_end": 5387.832821388201,
+        "next_trip": "T020",
+        "next_start": 5754.5,
+        "margin_s": 366.6671786117986,
         "pass": true
       }
     ]
@@ -366,12 +345,12 @@
     {
       "instance": "Small-1",
       "n_service_areas": 3,
-      "n_boxes": 5,
+      "n_boxes": 3,
       "exact_status": "OPTIMAL",
-      "exact_objective": 0.129623345413112,
-      "alns_objective": 0.1953479503666364,
-      "absolute_gap": 0.06572460495352442,
-      "relative_gap": 0.507042961621295,
+      "exact_objective": 0.2118533977969583,
+      "alns_objective": 0.2118533977969583,
+      "absolute_gap": 0.0,
+      "relative_gap": 0.0,
       "comparison_status": "PASS",
       "benchmark_normalization": {
         "ideal": {
@@ -382,32 +361,35 @@
         },
         "nadir": {
           "WTD": 1.0,
-          "Cmax_s": 3926.149615416045,
-          "total_energy_kwh": 7.44638960495836,
-          "n_trips": 5.0
+          "Cmax_s": 2495.5496154160455,
+          "total_energy_kwh": 4.039889118363298,
+          "n_trips": 3.0
         },
         "rho": 0.005
       },
       "exact_WTD": 0.0,
-      "exact_Cmax_s": 1873.4697880341996,
-      "exact_energy_kwh": 3.8147557183576732,
+      "exact_Cmax_s": 2088.2464662596676,
+      "exact_energy_kwh": 3.1846057879736778,
       "exact_n_trips": 2,
       "alns_WTD": 0.0,
-      "alns_Cmax_s": 2804.80815020461,
-      "alns_energy_kwh": 5.763133928749468,
-      "alns_n_trips": 1,
+      "alns_Cmax_s": 2088.2464662596676,
+      "alns_energy_kwh": 3.1846057879736778,
+      "alns_n_trips": 2,
+      "alns_status": "PASS",
+      "alns_weight_profile": "balanced",
+      "alns_runtime_s": 0.6870765000057872,
       "validator_status": "PASS",
-      "evaluated_structures": 3773
+      "evaluated_structures": 93
     },
     {
       "instance": "Small-2",
-      "n_service_areas": 4,
+      "n_service_areas": 3,
       "n_boxes": 4,
       "exact_status": "OPTIMAL",
-      "exact_objective": 0.18478554261664518,
-      "alns_objective": 0.2518458473948996,
-      "absolute_gap": 0.06706030477825445,
-      "relative_gap": 0.3629088284107664,
+      "exact_objective": 0.1653796019425106,
+      "alns_objective": 0.1894080559927922,
+      "absolute_gap": 0.02402845405028159,
+      "relative_gap": 0.145292731195679,
       "comparison_status": "PASS",
       "benchmark_normalization": {
         "ideal": {
@@ -418,22 +400,25 @@
         },
         "nadir": {
           "WTD": 1.0,
-          "Cmax_s": 2884.5570700296776,
-          "total_energy_kwh": 6.271097617350606,
+          "Cmax_s": 2866.9725500934887,
+          "total_energy_kwh": 5.861111083043017,
           "n_trips": 4.0
         },
         "rho": 0.005
       },
       "exact_WTD": 0.0,
-      "exact_Cmax_s": 2106.375287086362,
-      "exact_energy_kwh": 4.514585682134122,
+      "exact_Cmax_s": 1873.4697880341996,
+      "exact_energy_kwh": 3.6551816496976164,
       "exact_n_trips": 2,
       "alns_WTD": 0.0,
-      "alns_Cmax_s": 2884.5570700296776,
-      "alns_energy_kwh": 2.9892937427675874,
-      "alns_n_trips": 1,
+      "alns_Cmax_s": 2148.2464662596676,
+      "alns_energy_kwh": 3.4119487783821363,
+      "alns_n_trips": 2,
+      "alns_status": "PASS",
+      "alns_weight_profile": "balanced",
+      "alns_runtime_s": 0.6807051000068896,
       "validator_status": "PASS",
-      "evaluated_structures": 646
+      "evaluated_structures": 573
     },
     {
       "instance": "Small-3",
@@ -441,7 +426,7 @@
       "n_boxes": 8,
       "exact_status": "FEASIBLE",
       "exact_objective": 0.24614830922424802,
-      "alns_objective": 0.1797680273860844,
+      "alns_objective": 0.1459461162519049,
       "absolute_gap": NaN,
       "relative_gap": NaN,
       "comparison_status": "UNRESOLVED",
@@ -465,61 +450,64 @@
       "exact_energy_kwh": 11.77205228066623,
       "exact_n_trips": 6,
       "alns_WTD": 0.0,
-      "alns_Cmax_s": 2974.6240711505484,
-      "alns_energy_kwh": 8.60819126218902,
-      "alns_n_trips": 2,
+      "alns_Cmax_s": 3213.2496154160453,
+      "alns_energy_kwh": 6.969990740763403,
+      "alns_n_trips": 3,
+      "alns_status": "PASS",
+      "alns_weight_profile": "balanced",
+      "alns_runtime_s": 0.8435406000062358,
       "validator_status": "PASS",
-      "evaluated_structures": 331
+      "evaluated_structures": 451
     }
   ],
   "multiseed_summary": {
     "WTD": {
-      "best": 14791.774700396316,
-      "median": 87635.47172345461,
-      "mean": 139816.3512261637,
-      "std": 175846.9862549975
+      "best": 5953.7177499610625,
+      "median": 32479.757343998524,
+      "mean": 94042.99206293699,
+      "std": 159683.65093285055
     },
     "Cmax_s": {
-      "best": 9589.423959490892,
-      "median": 11139.560188989457,
-      "mean": 11641.064059172557,
-      "std": 1328.2236417052231
+      "best": 9510.800249159249,
+      "median": 11865.67179299671,
+      "mean": 14073.198730363923,
+      "std": 7607.818674981358
     },
     "total_energy_kwh": {
-      "best": 70.57480010239354,
-      "median": 82.68948289882243,
-      "mean": 83.92309448852562,
-      "std": 8.239398648187167
+      "best": 70.32272327490749,
+      "median": 81.54200016635059,
+      "mean": 82.24550916315232,
+      "std": 6.552827116720144
     },
     "n_trips": {
-      "best": 23.0,
+      "best": 25.0,
       "median": 29.0,
-      "mean": 28.875,
-      "std": 3.059309562630104
+      "mean": 28.625,
+      "std": 1.79843682124227
     }
   },
   "normalization_anchors": [
     {
       "anchor_name": "Q2_single_stop",
-      "WTD": 629529.7144957957,
-      "Cmax_s": 20797.399291929716,
+      "WTD": 291892.3875050912,
+      "Cmax_s": 33920.9634517862,
       "total_energy_kwh": 95.35881824993719,
       "n_trips": 31.0,
       "n_multistop_trips": 0.0,
       "max_stops": 1.0,
       "mean_stops_per_trip": 1.0,
-      "runtime_s": 3.098059400013881
+      "runtime_s": 3.1534943000006024
     },
     {
       "anchor_name": "warmup_cheapest-delta",
-      "WTD": 219981.1783132653,
-      "Cmax_s": 11148.570393305345,
+      "WTD": 51373.302457842234,
+      "Cmax_s": 10064.070393305345,
       "total_energy_kwh": 77.27429885832598,
       "n_trips": 28.0,
       "n_multistop_trips": 5.0,
       "max_stops": 2.0,
       "mean_stops_per_trip": 1.1785714285714286,
-      "runtime_s": 3.014927699987311,
+      "runtime_s": 3.0570959000033326,
       "anchor_role": "min-total_energy_kwh min-n_trips"
     },
     {
@@ -531,30 +519,30 @@
       "n_multistop_trips": 7.0,
       "max_stops": 2.0,
       "mean_stops_per_trip": 1.2413793103448276,
-      "runtime_s": 3.0148589000164066,
+      "runtime_s": 2.1299677999923006,
       "anchor_role": "min-WTD min-Cmax_s"
     },
     {
       "anchor_name": "warmup_regret-2",
-      "WTD": 286851.40966670774,
-      "Cmax_s": 14373.43400068497,
+      "WTD": 24649.964058362526,
+      "Cmax_s": 13579.299291929718,
       "total_energy_kwh": 84.67436444324909,
       "n_trips": 31.0,
       "n_multistop_trips": 4.0,
       "max_stops": 2.0,
       "mean_stops_per_trip": 1.1290322580645162,
-      "runtime_s": 3.0155716000008397
+      "runtime_s": 3.059649599978002
     },
     {
       "anchor_name": "warmup_new-trip",
-      "WTD": 620564.0875472532,
-      "Cmax_s": 16383.770393305344,
+      "WTD": 59430.63532617185,
+      "Cmax_s": 15458.970393305344,
       "total_energy_kwh": 109.51414164475945,
       "n_trips": 43.0,
       "n_multistop_trips": 0.0,
       "max_stops": 1.0,
       "mean_stops_per_trip": 1.0,
-      "runtime_s": 3.0171404000138864
+      "runtime_s": 3.0446342000213917
     }
   ]
 }
