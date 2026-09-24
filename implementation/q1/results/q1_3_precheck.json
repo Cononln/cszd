@@ -1,0 +1,188 @@
+{
+  "phase": "Q1-3-PRECHECK",
+  "scope": "真实输入审计与容量接口状态；未执行正式组批与优化",
+  "boxes": {
+    "checks": {
+      "n_boxes_is_80": true,
+      "box_id_unique": true,
+      "sid_legal": true,
+      "mass_positive": true,
+      "vol_positive": true,
+      "first_field_bool": true,
+      "all_pass": true
+    },
+    "stats": {
+      "n_boxes": 80,
+      "n_sids_covered": 15,
+      "total_mass_kg": 758.0,
+      "total_volume_m3": 2.011,
+      "max_single_mass_kg": 14.0,
+      "max_single_vol_m3": 0.035,
+      "by_sid": [
+        {
+          "sid": "S001",
+          "n_boxes": 15,
+          "mass_kg": 154.0,
+          "vol_m3": 0.394
+        },
+        {
+          "sid": "S002",
+          "n_boxes": 8,
+          "mass_kg": 81.0,
+          "vol_m3": 0.21100000000000002
+        },
+        {
+          "sid": "S003",
+          "n_boxes": 8,
+          "mass_kg": 81.0,
+          "vol_m3": 0.21100000000000002
+        },
+        {
+          "sid": "S004",
+          "n_boxes": 6,
+          "mass_kg": 59.0,
+          "vol_m3": 0.156
+        },
+        {
+          "sid": "S005",
+          "n_boxes": 6,
+          "mass_kg": 59.0,
+          "vol_m3": 0.156
+        },
+        {
+          "sid": "S006",
+          "n_boxes": 6,
+          "mass_kg": 59.0,
+          "vol_m3": 0.156
+        },
+        {
+          "sid": "S007",
+          "n_boxes": 5,
+          "mass_kg": 45.0,
+          "vol_m3": 0.129
+        },
+        {
+          "sid": "S008",
+          "n_boxes": 5,
+          "mass_kg": 45.0,
+          "vol_m3": 0.129
+        },
+        {
+          "sid": "S009",
+          "n_boxes": 3,
+          "mass_kg": 25.0,
+          "vol_m3": 0.067
+        },
+        {
+          "sid": "S010",
+          "n_boxes": 3,
+          "mass_kg": 25.0,
+          "vol_m3": 0.067
+        },
+        {
+          "sid": "S011",
+          "n_boxes": 3,
+          "mass_kg": 25.0,
+          "vol_m3": 0.067
+        },
+        {
+          "sid": "S012",
+          "n_boxes": 3,
+          "mass_kg": 25.0,
+          "vol_m3": 0.067
+        },
+        {
+          "sid": "S013",
+          "n_boxes": 3,
+          "mass_kg": 25.0,
+          "vol_m3": 0.067
+        },
+        {
+          "sid": "S014",
+          "n_boxes": 3,
+          "mass_kg": 25.0,
+          "vol_m3": 0.067
+        },
+        {
+          "sid": "S015",
+          "n_boxes": 3,
+          "mass_kg": 25.0,
+          "vol_m3": 0.067
+        }
+      ],
+      "first": {
+        "n_first_boxes": 30,
+        "first_sids": [
+          "S001",
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S011",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        "first_mass_kg": 255.0,
+        "first_volume_m3": 0.5850000000000001,
+        "all_first_have_deadline": true
+      }
+    }
+  },
+  "transport_types": {
+    "checks": {
+      "n_types_is_3": true,
+      "fields_present": true,
+      "Q_positive": true,
+      "V_positive": true,
+      "all_pass": true
+    },
+    "summary": {
+      "A": {
+        "Q": 25.0,
+        "V": 0.06
+      },
+      "B": {
+        "Q": 30.0,
+        "V": 0.073
+      },
+      "C": {
+        "Q": 80.0,
+        "V": 0.25
+      }
+    }
+  },
+  "capacity_interface": {
+    "path": "D:\\Users\\29919\\Documents\\科研\\cszd\\implementation\\q1\\results\\q1_capacity.csv",
+    "status": "Q1_2_RESULT_AVAILABLE_BUT_NOT_YET_APPROVED",
+    "structural": {
+      "has_required_columns": true,
+      "n_rows_is_45": true,
+      "n_sids_is_15": true,
+      "each_sid_has_3_gtypes": true,
+      "gtypes_are_ABC": true,
+      "qmax_positive": true,
+      "qmax_within_rated": true,
+      "qmax_ratio_in_range": true,
+      "status_legal": true,
+      "qmax_feasible_all": true,
+      "all_structural_pass": true
+    },
+    "counts": {
+      "n_rows": 45,
+      "by_status": {
+        "RATED_CAPACITY": 39,
+        "ENERGY_LIMITED": 6
+      }
+    },
+    "approved_gate": false
+  },
+  "formal_solve_ready": false,
+  "formal_solve_blocker": "Q1_2_RESULT_AVAILABLE_BUT_NOT_YET_APPROVED"
+}
