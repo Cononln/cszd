@@ -1,0 +1,49 @@
+{
+  "phase": "Q1-3",
+  "status": "PASS",
+  "n_boxes": 80,
+  "assigned_boxes": 80,
+  "duplicate_boxes": 0,
+  "missing_boxes": 0,
+  "split_boxes": 0,
+  "first_batch_late": 0,
+  "all_mass_constraints_pass": true,
+  "all_volume_constraints_pass": true,
+  "all_energy_constraints_pass": true,
+  "all_schedule_constraints_pass": true,
+  "metrics": {
+    "method": "formal",
+    "feasible": true,
+    "n_boxes": 80,
+    "n_trips": 18,
+    "first_on_time_rate": 1.0,
+    "first_batch_late": 0,
+    "max_first_lateness_s": 0.0,
+    "weighted_tardiness": 50815.56401282317,
+    "average_delivery_time_s": 4088.9439709636636,
+    "Cmax_s": 8969.73003988684,
+    "total_energy_kwh": 60.25921434421615,
+    "avg_mass_utilization": 0.8170932905736592,
+    "avg_volume_utilization": 0.7544809741248099,
+    "solve_time_s": 35.43476867675781,
+    "eval_time_s": 0.028487443923950195,
+    "fails": []
+  },
+  "sensitivity_qmax_scale": [
+    {
+      "epsilon": 0.01,
+      "trips_violated": 0,
+      "note": "no re-optimization; sensitivity only"
+    },
+    {
+      "epsilon": 0.03,
+      "trips_violated": 1,
+      "note": "no re-optimization; sensitivity only"
+    },
+    {
+      "epsilon": 0.05,
+      "trips_violated": 1,
+      "note": "no re-optimization; sensitivity only"
+    }
+  ]
+}
