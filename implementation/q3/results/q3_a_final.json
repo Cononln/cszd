@@ -1,0 +1,39 @@
+{
+  "phase": "Q3-A",
+  "status": "PASS",
+  "checks": {
+    "q2_common_reuse": true,
+    "q2_files_unmodified": true,
+    "relay_data_audit": true,
+    "communication_parameter_audit": true,
+    "trajectory_climb_cruise_descent": true,
+    "handover_communication_checked": true,
+    "dem_los": true,
+    "fspl_and_bidirectional_budget": true,
+    "direct_relay_outage_logic": true,
+    "mid_segment_outage_detected": true,
+    "blind_interval_extraction": true,
+    "relay_candidate_geometry": true,
+    "relay_energy": true,
+    "relay_reserve": true,
+    "energy_component_charging": true,
+    "dt_sensitivity_documented": true
+  },
+  "relay_uav_count": 2,
+  "energy_component_count": 6,
+  "real_routes_checked": 4,
+  "direct_blind_interval_count": 3,
+  "direct_blind_duration_s": 3511.760399834728,
+  "relay_candidate_count": 135,
+  "relay_candidate_audit_count": 135,
+  "relay_feasible_candidate_count": 135,
+  "relay_coverage_candidate_count": 121,
+  "trajectory_dt_s": [
+    5.0,
+    2.0,
+    1.0
+  ],
+  "q2_source_modified": "NO",
+  "q2_physics_modified": "NO",
+  "note": "Q3-A stops before joint transport-relay optimisation; Q2 is used only as a route baseline for audits."
+}
