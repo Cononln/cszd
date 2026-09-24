@@ -12,7 +12,7 @@ import itertools
 import time
 from typing import Any
 
-from .alns_solver import _repair, objective
+from .alns_solver import _repair, objective, solve_formal
 from .deadlines import hard_deadline
 from .models import Q2State, RoutePlan
 from .normalization import Normalization
@@ -139,14 +139,28 @@ def run_exact_benchmarks(normalization: Normalization, *, cp_workers: int = 1,
                                      mode="new-trip", with_audit=True)
         singleton_schedule = decode_schedule(singleton_state, cp_workers=cp_workers,
                                              time_limit_s=max(0.5, budget / 3), fixed_seed=n_boxes + 100)
-        alns_state, _ = _repair(Q2State(tuple(), tuple(chosen)),
-                                __import__("numpy").random.default_rng(20260924 + n_boxes),
-                                mode="regret-2", with_audit=True)
-        alns_schedule = decode_schedule(alns_state, cp_workers=cp_workers,
-                                        time_limit_s=max(0.5, budget / 3), fixed_seed=n_boxes)
+        # Build an independent warm-up structure only to establish a local
+        # fixed normalization.  The reported "ALNS" comparator below is the
+        # real formal adaptive ALNS engine, not a one-shot repair heuristic.
+        warmup_state, _ = _repair(Q2State(tuple(), tuple(chosen)),
+                                  __import__("numpy").random.default_rng(20260924 + n_boxes),
+                                  mode="regret-2", with_audit=True)
+        warmup_schedule = decode_schedule(warmup_state, cp_workers=cp_workers,
+                                          time_limit_s=max(0.5, budget / 3), fixed_seed=n_boxes)
+        benchmark_norm = _benchmark_normalization((singleton_schedule, warmup_schedule))
+        alns_limit = min(5.0, max(1.5, budget / 6.0))
+        alns_result = solve_formal(
+            20260924 + n_boxes,
+            time_limit_s=alns_limit,
+            cp_workers=cp_workers,
+            normalization=benchmark_norm,
+            weight_name="balanced",
+            initial_state=singleton_state,
+        )
+        alns_state = alns_result.state
+        alns_schedule = alns_result.schedule
         alns_val = validate_solution(alns_state, alns_schedule,
                                      expected_box_count=len(chosen), expected_box_ids=set(chosen))
-        benchmark_norm = _benchmark_normalization((singleton_schedule, alns_schedule))
         best = None
         exact_complete = True
         evaluated = 0
@@ -204,6 +218,9 @@ def run_exact_benchmarks(normalization: Normalization, *, cp_workers: int = 1,
             "alns_Cmax_s": float(alns_schedule.metrics.get("Cmax_s", float("nan"))),
             "alns_energy_kwh": float(alns_schedule.metrics.get("total_energy_kwh", float("nan"))),
             "alns_n_trips": int(alns_schedule.metrics.get("n_trips", 0)),
+            "alns_status": alns_result.status,
+            "alns_weight_profile": alns_result.weight_name,
+            "alns_runtime_s": float(alns_result.runtime_s),
             "validator_status": alns_val["status"], "evaluated_structures": evaluated,
         })
     return output
