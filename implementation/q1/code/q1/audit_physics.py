@@ -27,6 +27,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from common.config import CRUISE_CLEARANCE, OPS_HEIGHT_O01, OPS_HEIGHT_S, RES
 from common.data import load_boxes, load_nodes, load_transport_types, sid_list
+from common.physics import TransportTrip
 from common.route import GTS, leg_energy, leg_geom, leg_time, equiv_range_fast
 
 
@@ -34,10 +35,11 @@ def _check_close(a: float, b: float, tol: float = 1e-7) -> bool:
     return bool(np.isfinite(a) and np.isfinite(b) and abs(a - b) <= tol)
 
 
-def audit_geometry() -> tuple[pd.DataFrame, dict]:
+def audit_geometry() -> tuple[pd.DataFrame, dict, list[dict]]:
     nodes = load_nodes().set_index("id")
     sids = sid_list()
     rows: list[dict] = []
+    failures: list[dict] = []
     checks: dict[str, bool] = {
         "data_nodes_16": len(nodes) == 16 and "O01" in nodes.index,
         "data_service_areas_15": all(s in nodes.index for s in sids),
@@ -66,6 +68,19 @@ def audit_geometry() -> tuple[pd.DataFrame, dict]:
         checks["cruise_height_is_dem_plus_50m"] &= height_ok
         checks["climb_descent_nonnegative"] &= height_ok
         checks["return_geometry_reciprocal"] &= reciprocal_ok
+        if not dem_ok:
+            failures.append({"check": "dem_path_samples_finite", "sid": sid,
+                             "zmax_forward_m": fwd["zmax"], "zmax_return_m": rev["zmax"]})
+        if not height_ok:
+            failures.append({"check": "cruise_height_or_operation_height", "sid": sid,
+                             "cruise_altitude_m": fwd["z_cruise"],
+                             "expected_cruise_altitude_m": zc_expected,
+                             "outbound_climb_m": fwd["h_up"],
+                             "outbound_descent_m": fwd["h_dn"]})
+        if not reciprocal_ok:
+            failures.append({"check": "return_geometry_reciprocal", "sid": sid,
+                             "distance_forward_m": fwd["d"], "distance_return_m": rev["d"],
+                             "zmax_forward_m": fwd["zmax"], "zmax_return_m": rev["zmax"]})
         rows.append({
             "sid": sid,
             "distance_m": fwd["d"],
@@ -82,63 +97,145 @@ def audit_geometry() -> tuple[pd.DataFrame, dict]:
             "return_flight_s_A": leg_time("A", sid, "O01"),
             "geometry_ok": bool(dem_ok and height_ok and reciprocal_ok),
         })
-    return pd.DataFrame(rows), checks
+    return pd.DataFrame(rows), checks, failures
 
 
-def audit_energy(geometry: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
+def audit_energy(geometry: pd.DataFrame) -> tuple[pd.DataFrame, dict, list[dict], dict]:
     checks: dict[str, bool] = {
         "payload_range_positive": True,
         "payload_range_nonincreasing": True,
-        "outbound_payload_return_empty": True,
+        "payload_range_empty_endpoint": True,
+        "payload_range_full_endpoint": True,
+        "return_leg_payload_zero": True,
+        "return_leg_energy_matches_q0": True,
         "energy_nonnegative": True,
         "reserve_limit_positive": True,
+        "full_load_energy_finite": True,
     }
     rows: list[dict] = []
+    failures: list[dict] = []
+    nodes = load_nodes()
+    full_load_infeasible: list[dict] = []
+    endpoint_tol = 1e-7
+    payload_tol = 1e-9
+    energy_tol = 1e-8
     for sid in geometry["sid"]:
         for g, gt in GTS.items():
             q_grid = np.linspace(0.0, float(gt["Q"]), 5)
             ranges = np.array([equiv_range_fast(gt, float(q)) for q in q_grid])
             range_ok = bool(np.all(np.isfinite(ranges)) and np.all(ranges > 0))
             monotone_ok = bool(np.all(np.diff(ranges) <= 1e-9))
+            empty_endpoint_ok = bool(abs(ranges[0] - gt["L0"]) <= endpoint_tol)
+            full_endpoint_ok = bool(abs(ranges[-1] - gt["LF"]) <= endpoint_tol)
             checks["payload_range_positive"] &= range_ok
             checks["payload_range_nonincreasing"] &= monotone_ok
+            checks["payload_range_empty_endpoint"] &= empty_endpoint_ok
+            checks["payload_range_full_endpoint"] &= full_endpoint_ok
+            if not range_ok:
+                failures.append({"check": "payload_range_positive", "sid": sid, "gtype": g,
+                                 "ranges_m": ranges.tolist()})
+            if not monotone_ok:
+                failures.append({"check": "payload_range_nonincreasing", "sid": sid,
+                                 "gtype": g, "ranges_m": ranges.tolist()})
+            if not empty_endpoint_ok:
+                failures.append({"check": "payload_range_empty_endpoint", "gtype": g,
+                                 "actual_m": float(ranges[0]), "expected_m": float(gt["L0"])})
+            if not full_endpoint_ok:
+                failures.append({"check": "payload_range_full_endpoint", "gtype": g,
+                                 "actual_m": float(ranges[-1]), "expected_m": float(gt["LF"])})
 
+            q_probe = float(gt["Q"])
+            # 用公共 TransportTrip 实际构造 O01 -> Si -> O01，检查首末航段
+            # 的载荷，而不是仅凭两个独立能耗值推断返航口径。
+            task = TransportTrip(nodes, [sid], gt)
+            payloads = task.leg_payloads({sid: q_probe})
+            outbound_payload = float(payloads[0])
+            return_payload = float(payloads[-1])
+            return_payload_is_zero = abs(return_payload) <= payload_tol
             e_out_empty = float(leg_energy(g, "O01", sid, 0.0, gt))
-            e_out_full = float(leg_energy(g, "O01", sid, gt["Q"], gt))
-            e_back_empty = float(leg_energy(g, sid, "O01", 0.0, gt))
-            e_back_full = float(leg_energy(g, sid, "O01", gt["Q"], gt))
+            e_out_full = float(leg_energy(g, "O01", sid, q_probe, gt))
+            e_return_actual = float(leg_energy(g, sid, "O01", return_payload, gt))
+            e_return_direct = float(leg_energy(g, sid, "O01", 0.0, gt))
+            return_energy_matches = bool(abs(e_return_actual - e_return_direct) <= energy_tol)
             e_limit = (1.0 - float(gt["rho"])) * float(gt["Euse"])
+            e_roundtrip_full = e_out_full + e_return_direct
+            full_margin = e_limit - e_roundtrip_full
+            full_feasible = bool(full_margin >= -energy_tol)
             energy_ok = all(np.isfinite(x) and x >= -1e-9 for x in
-                            (e_out_empty, e_out_full, e_back_empty, e_back_full))
-            loaded_return_rule_ok = e_out_full >= e_out_empty - 1e-9
+                            (e_out_empty, e_out_full, e_return_actual, e_return_direct,
+                             e_roundtrip_full))
             reserve_ok = e_limit > 0
-            checks["outbound_payload_return_empty"] &= loaded_return_rule_ok
+            checks["return_leg_payload_zero"] &= return_payload_is_zero
+            checks["return_leg_energy_matches_q0"] &= return_energy_matches
             checks["energy_nonnegative"] &= energy_ok
             checks["reserve_limit_positive"] &= reserve_ok
+            checks["full_load_energy_finite"] &= energy_ok
+            if not return_payload_is_zero:
+                failures.append({"check": "return_leg_payload_zero", "sid": sid, "gtype": g,
+                                 "return_payload_check_kg": return_payload,
+                                 "expected_return_payload_kg": 0.0})
+            if not return_energy_matches:
+                failures.append({"check": "return_leg_energy_matches_q0", "sid": sid,
+                                 "gtype": g, "return_payload_check_kg": return_payload,
+                                 "return_energy_actual_kwh": e_return_actual,
+                                 "return_energy_direct_q0_kwh": e_return_direct})
+            if not energy_ok:
+                failures.append({"check": "energy_nonnegative", "sid": sid, "gtype": g,
+                                 "energy_outbound_full_kwh": e_out_full,
+                                 "energy_return_empty_kwh": e_return_direct,
+                                 "energy_roundtrip_full_kwh": e_roundtrip_full})
+            if not reserve_ok:
+                failures.append({"check": "reserve_limit_positive", "sid": sid, "gtype": g,
+                                 "energy_limit_kwh": e_limit})
+            if not full_feasible:
+                full_load_infeasible.append({"sid": sid, "gtype": g,
+                                             "full_payload_kg": q_probe,
+                                             "full_load_margin_kwh": full_margin})
             rows.append({
                 "sid": sid,
                 "gtype": g,
-                "payload_probe_kg": float(gt["Q"]),
+                "payload_probe_kg": q_probe,
+                "full_payload_kg": q_probe,
                 "range_empty_m": float(ranges[0]),
                 "range_half_payload_m": float(ranges[2]),
                 "range_max_payload_m": float(ranges[-1]),
+                "range_empty_endpoint_error_m": float(ranges[0] - gt["L0"]),
+                "range_full_endpoint_error_m": float(ranges[-1] - gt["LF"]),
                 "range_positive": range_ok,
                 "range_nonincreasing": monotone_ok,
+                "range_empty_endpoint": empty_endpoint_ok,
+                "range_full_endpoint": full_endpoint_ok,
                 "energy_outbound_empty_kwh": e_out_empty,
                 "energy_outbound_probe_kwh": e_out_full,
-                "energy_return_empty_kwh": e_back_empty,
-                "energy_return_probe_kwh": e_back_full,
+                "energy_outbound_full_kwh": e_out_full,
+                "energy_return_empty_kwh": e_return_direct,
+                "energy_return_probe_kwh": e_return_direct,
+                "return_payload_check_kg": return_payload,
+                "return_payload_is_zero": return_payload_is_zero,
+                "return_energy_direct_q0_kwh": e_return_direct,
+                "return_energy_actual_kwh": e_return_actual,
+                "return_energy_matches_q0": return_energy_matches,
+                "energy_roundtrip_full_kwh": e_roundtrip_full,
                 "energy_limit_after_reserve_kwh": e_limit,
+                "full_load_margin_kwh": full_margin,
+                "full_load_roundtrip_feasible": full_feasible,
                 "rho": float(gt["rho"]),
-                "outbound_loaded_return_empty_rule": loaded_return_rule_ok,
                 "energy_nonnegative": energy_ok,
             })
-    return pd.DataFrame(rows), checks
+    summary = {
+        "total": len(rows),
+        "feasible": len(rows) - len(full_load_infeasible),
+        "infeasible": len(full_load_infeasible),
+    }
+    return pd.DataFrame(rows), checks, failures, {
+        "full_load_summary": summary,
+        "full_load_infeasible_pairs": full_load_infeasible,
+    }
 
 
 def main() -> dict:
-    geometry, geometry_checks = audit_geometry()
-    energy, energy_checks = audit_energy(geometry)
+    geometry, geometry_checks, geometry_failures = audit_geometry()
+    energy, energy_checks, energy_failures, full_load = audit_energy(geometry)
     boxes = load_boxes()
     checks = {**geometry_checks, **energy_checks,
               "box_data_nonempty": len(boxes) > 0,
@@ -153,6 +250,8 @@ def main() -> dict:
         "checks": checks,
         "n_service_areas": int(len(geometry)),
         "n_energy_rows": int(len(energy)),
+        "failures": geometry_failures + energy_failures,
+        **full_load,
         "constants": {
             "cruise_clearance_m": CRUISE_CLEARANCE,
             "ops_height_o01_m": OPS_HEIGHT_O01,
@@ -191,8 +290,28 @@ def main() -> dict:
 | 巡航高度规则 | 全部满足 `z_cruise = z_max + 50 m` |
 | 爬升/下降高度 | 全部非负 |
 | 载荷相关航程 | 对 A/B/C 均为正且随载荷不增 |
+| 航程端点 | 全部满足 `L(0)=L0` 和 `L(Q)=LF` |
+| 返航载荷 | 45 个单服务区任务的最后航段均为 `q=0`，且能耗与直接 q=0 计算一致 |
 | 能耗与安全余量 | 45 个机型—服务区探针全部非负，安全上限为正 |
 | 总体结论 | **{{'PASS' if checks['all_checks_pass'] else 'FAIL'}}** |
+
+## 满载往返能力初筛
+
+本项使用额定最大载荷 `Q_g` 作为能力边界探针，不反解最大安全载荷，不进入组批。
+对每个机型—服务区组合计算：
+
+`E_roundtrip_full = E_outbound(Q_g) + E_return(0)`，并与
+`E_limit = (1-rho_g) E_use_g` 比较。
+
+| 组合总数 | 满载安全可行 | 满载安全不可行 |
+| ---: | ---: | ---: |
+| {{full_total}} | {{full_feasible}} | {{full_infeasible}} |
+
+满载安全不可行组合：
+
+{{full_infeasible_pairs}}
+
+满载不可行不构成 Q1-1 物理审计失败；它是下一阶段反解 `q_max` 的能力边界证据。
 
 ## 文献对照边界
 
@@ -218,6 +337,15 @@ def main() -> dict:
     markdown = markdown.replace("{{gmax['distance_m']:.1f}}", f"{gmax['distance_m']:.1f}")
     markdown = markdown.replace("{{'PASS' if checks['all_checks_pass'] else 'FAIL'}}",
                                 "PASS" if checks["all_checks_pass"] else "FAIL")
+    markdown = markdown.replace("{{full_total}}", str(full_load["full_load_summary"]["total"]))
+    markdown = markdown.replace("{{full_feasible}}", str(full_load["full_load_summary"]["feasible"]))
+    markdown = markdown.replace("{{full_infeasible}}", str(full_load["full_load_summary"]["infeasible"]))
+    pairs = full_load["full_load_infeasible_pairs"]
+    pair_text = "\n".join(
+        f"- `{p['gtype']} - {p['sid']}`（裕量 {p['full_load_margin_kwh']:.6f} kWh）"
+        for p in pairs
+    ) or "- 无"
+    markdown = markdown.replace("{{full_infeasible_pairs}}", pair_text)
     (RES / "q1_physics_audit_report.md").write_text(markdown, encoding="utf-8")
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return report
