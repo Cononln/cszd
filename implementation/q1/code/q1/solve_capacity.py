@@ -117,7 +117,12 @@ def solve_single_service_qmax(
             else:
                 hi = mid
             if hi - lo <= payload_tol:
-                break
+                # A payload interval of 1e-6 kg can still map to an energy
+                # residual slightly above energy_tol on steep curves.  Keep
+                # refining until both requested tolerances are met.
+                e_lo = roundtrip_energy(gtype, sid, lo, gt)
+                if abs(energy_limit - e_lo) <= energy_tol:
+                    break
         q_max = float(lo)
         status = "ENERGY_LIMITED"
 
@@ -378,6 +383,10 @@ def main() -> dict[str, Any]:
         ),
         "energy_limited_boundary_active": all(
             bool(r["qmax_boundary_active"]) for r in limited_rows
+        ),
+        "energy_limited_boundary_residual_within_energy_tol": all(
+            abs(float(r["margin_at_qmax_kwh"])) <= ENERGY_TOL
+            for r in limited_rows
         ),
         "energy_limited_plus_delta_infeasible": all(
             bool(r["qmax_plus_delta_infeasible"]) for r in limited_rows
