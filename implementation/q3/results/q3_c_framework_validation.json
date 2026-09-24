@@ -1,5 +1,6 @@
 {
-  "status": "PASS",
+  "status": "READY",
+  "validation_status": "PASS",
   "tests": {
     "joint_cmax_arithmetic": true,
     "joint_energy_arithmetic": true,
@@ -8,7 +9,14 @@
     "cache_distinguishes_start_time": true,
     "cache_retrieves_same_signature": true,
     "stub_only_test_protocol": true,
-    "fixed_normalization": true
+    "fixed_normalization": true,
+    "pareto_dominance": true,
+    "pareto_tradeoff": true,
+    "pareto_duplicate_equal": true,
+    "final_pareto_normalization": true,
+    "operator_preserves_box_uniqueness": true,
+    "relay_unresolved_short_circuit": true,
+    "formal_solver_gate": true
   },
   "formal_optimization_entered": false,
   "real_decoder_connected": false
