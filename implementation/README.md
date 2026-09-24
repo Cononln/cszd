@@ -1,16 +1,20 @@
 # D 题代码实现
 
-本目录保留两套独立实现。文件哈希核对表明，两套 Python 源码不存在完全相同的文件，不能相互覆盖。
+旧的 A/raw 与 B/super 两套上传代码已清理。当前仓库按照逐问验收制，只维护
+Q1 的正式实现；Q2–Q4 在 Q1 全部 PASS 前不进入代码修改。
 
-## raw
+## Q1
 
-原始实验实现，包含多种 Q1-Q4 候选算法及对应数值结果。代码入口、公共模块和各实验目录保持原始相对结构，数据路径已统一指向仓库根目录的 `data/raw/`。
+- `q1/code/common/`：数据读取、DEM 航段、巡航高度、爬升/下降、载荷相关航程和能耗公共层；
+- `q1/code/q1/audit_physics.py`：Phase Q1-1 基础物理模型审查；
+- `q1/results/`：机器可读检查结果、航段参数表和 Markdown 审查报告；
+- `q1/requirements.txt`：读取 DEM 和运行审查所需的依赖。
 
-## super
+运行：
 
-进阶主实现，采用 `code/common`、`code/q1`、`code/q2`、`code/q3`、`code/q4` 的模块化结构，并保留 `results/` 中的最终数值结果。
+```powershell
+python implementation/q1/code/q1/audit_physics.py
+```
 
-## 文件边界
-
-版本控制包含源码、README、CSV、JSON、TXT 和结果 XLSX。运行环境、缓存、预计算对象和结果图由 `.gitignore` 排除。
-
+Q1-1 已通过数据、DEM、巡航高度、能耗、载荷航程单调性和返航安全余量检查。
+最大安全载荷和组批代码需在阶段确认后再加入。

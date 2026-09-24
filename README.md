@@ -4,14 +4,14 @@
 
 仓库当前为私有仓库。这里只保留赛题、官方数据、提交模板及本队生成的代码与结果；付费资料、内部资料和其他项目的 Git 历史不纳入版本控制。
 
-## 问题拆分
+## 当前进度
 
 | 子项目 | 任务 | 上游依赖 | 标准输出位置 |
 | --- | --- | --- | --- |
-| Q1 | 单点往返最大安全载荷与组批 | 原始数据 | `projects/q1_capacity_batching/outputs/` |
-| Q2 | 异构运输无人机、多点多架次与共享电池联合调度 | Q1 | `projects/q2_transport_scheduling/outputs/` |
-| Q3 | 连续通信约束下运输与中继无人机联合调度 | Q1、Q2 | `projects/q3_joint_relay/outputs/` |
-| Q4 | 基于 Q3 的 2 组/3 组分区与资源核算 | Q3 | `projects/q4_partitioning/outputs/` |
+| Q1-1 | 基础物理模型审查 | 官方数据与 DEM | `implementation/q1/results/` |
+| Q1-2 | 最大安全载荷（待确认后运行） | Q1-1 | `implementation/q1/results/` |
+| Q1-3/Q1-5 | 组批、敏感性、出图与验证 | Q1-2 | 待进入 |
+| Q2–Q4 | 暂不维护 | Q1 | 待 Q1 全部 PASS 后进入 |
 
 依赖关系：`Q1 → Q2 → Q3 → Q4`。各项目通过 `schemas/` 中约定的 CSV/JSON 接口交换结果，不直接读取其他项目的临时文件。
 
@@ -27,27 +27,26 @@ results/submission/        官方提交模板与最终提交文件
 paper/                     论文正文与图表
 docs/                      赛题和协作文档
 scripts/run_pipeline.py    按依赖顺序运行所有已实现子项目
-implementation/raw/        原始实现：多组候选算法及其结果
-implementation/super/      进阶实现：模块化 Q1-Q4 主流程及其结果
+implementation/q1/         当前唯一正式实现：Q1 逐问验收代码与结果
 tests/                     公共回归测试
 ```
 
-## 已有实现
+## 当前正式实现
 
-用户提供的两套实现经文件哈希核对，并非同一套代码。仓库将它们分别保存为：
+旧的 A/raw 与 B/super 两套上传代码已经清理。当前只保留 Q1 的正式验收目录：
 
-- `implementation/raw/`：原始实验实现，保留各问题的候选求解脚本和数值结果；
-- `implementation/super/`：进阶主实现，包含公共物理内核、Q1-Q4、敏感性分析和提交表生成器。
+- `implementation/q1/code/common/`：Q1 所需的数据、DEM、航段和能耗公共物理层；
+- `implementation/q1/code/q1/audit_physics.py`：Phase Q1-1 基础物理审查；
+- `implementation/q1/results/`：审查报告、航段参数和能耗检查结果。
 
-两套实现都读取根目录 `data/raw/`。结果图不进入版本控制，已有 CSV、JSON、TXT 和 XLSX 数值结果予以保留。
+Q1-1 已通过全部检查；在用户确认前，不运行 Q1-2，也不修改 Q2–Q4 核心代码。
 
 ## 快速开始
 
 环境要求：Python 3.11 或更高版本。
 
 ```powershell
-python scripts/run_pipeline.py --list
-python scripts/run_pipeline.py --from q1 --to q4
+python implementation/q1/code/q1/audit_physics.py
 ```
 
 每个子项目实现 `projects/<项目>/run.py` 后，会被流水线自动发现。单独运行某一问时，可直接执行该目录下的 `run.py`。
