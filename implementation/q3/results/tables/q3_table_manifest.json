@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "source": "q3_final.json",
+  "source_sha256": "280327471544e5e1c9ab4014788d8df457ef48035adadb767d4be7552ac8f9f2",
+  "artifacts": [
+    "Q3_Table_01_FinalSolution.csv",
+    "Q3_Table_02_ConstraintAudit.csv",
+    "Q3_Table_03_FeasiblePool.csv",
+    "Q3_Formal_Tables.md"
+  ],
+  "table_count": 3
+}

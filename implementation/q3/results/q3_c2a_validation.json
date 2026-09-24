@@ -377,7 +377,7 @@
         "relay_energy_kwh": 8.247976791529863,
         "relay_cmax_s": 24147.775014499995,
         "joint_cmax_s": 24147.775014499995,
-        "runtime_s": 82.25742869998794
+        "runtime_s": 73.23875150000094
       },
       "reason": null,
       "full_replay_audit": [
@@ -935,7 +935,7 @@
         "relay_energy_kwh": 8.247976791529863,
         "relay_cmax_s": 24147.775014499995,
         "joint_cmax_s": 24147.775014499995,
-        "runtime_s": 94.66768119999324
+        "runtime_s": 54.455449400004
       },
       "reason": null,
       "full_replay_audit": [
@@ -1650,7 +1650,7 @@
         "relay_energy_kwh": 8.272833382812461,
         "relay_cmax_s": 24147.775014499995,
         "joint_cmax_s": 24147.775014499995,
-        "runtime_s": 81.32812210000702
+        "runtime_s": 89.5516052999883
       },
       "reason": null,
       "full_replay_audit": [
@@ -2208,7 +2208,7 @@
         "relay_energy_kwh": 8.247976791529863,
         "relay_cmax_s": 24147.775014499995,
         "joint_cmax_s": 24147.775014499995,
-        "runtime_s": 77.82391399997869
+        "runtime_s": 90.8446800999809
       },
       "reason": null,
       "full_replay_audit": [
@@ -2766,7 +2766,7 @@
         "relay_energy_kwh": 8.247976791529863,
         "relay_cmax_s": 24147.775014499995,
         "joint_cmax_s": 24147.775014499995,
-        "runtime_s": 51.80261049998808
+        "runtime_s": 81.32898099999875
       },
       "reason": null,
       "full_replay_audit": [
@@ -3324,7 +3324,7 @@
         "relay_energy_kwh": 8.247976791529863,
         "relay_cmax_s": 24147.775014499995,
         "joint_cmax_s": 24147.775014499995,
-        "runtime_s": 53.487663300009444
+        "runtime_s": 78.69563679999555
       },
       "reason": null,
       "full_replay_audit": [
@@ -3882,7 +3882,7 @@
         "relay_energy_kwh": 8.247976791529863,
         "relay_cmax_s": 24147.775014499995,
         "joint_cmax_s": 24147.775014499995,
-        "runtime_s": 77.8267147000006
+        "runtime_s": 46.138131199986674
       },
       "reason": null,
       "full_replay_audit": [
@@ -4440,7 +4440,7 @@
         "relay_energy_kwh": 8.247976791529863,
         "relay_cmax_s": 24147.775014499995,
         "joint_cmax_s": 24147.775014499995,
-        "runtime_s": 41.4633421000035
+        "runtime_s": 70.41769699999713
       },
       "reason": null,
       "full_replay_audit": [

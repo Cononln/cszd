@@ -1,0 +1,3091 @@
+{
+  "phase": "Q3-C-C2",
+  "status": "PASS",
+  "candidate_id": "C2A-BASE",
+  "parent": "Q2-FORMAL",
+  "repair_stage": "C2-A",
+  "operators": [
+    "baseline_wave_repair",
+    "spread_blind_intervals_with_resource_ready"
+  ],
+  "joint_status": "PASS",
+  "full_communication_pass": true,
+  "outage_duration_s": 0.0,
+  "transport_state": {
+    "trips": [
+      {
+        "gtype": "A",
+        "stop_sequence": [
+          "S001"
+        ],
+        "boxes_by_stop": {
+          "S001": [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-01"
+          ]
+        }
+      },
+      {
+        "gtype": "C",
+        "stop_sequence": [
+          "S001"
+        ],
+        "boxes_by_stop": {
+          "S001": [
+            "S001-WAT-02",
+            "S001-WAT-03",
+            "S001-WAT-04",
+            "S001-WAT-05",
+            "S001-WAT-06",
+            "S001-FOD-01"
+          ]
+        }
+      },
+      {
+        "gtype": "C",
+        "stop_sequence": [
+          "S001"
+        ],
+        "boxes_by_stop": {
+          "S001": [
+            "S001-WAT-07",
+            "S001-WAT-08",
+            "S001-FOD-02",
+            "S001-FOD-03",
+            "S001-HYG-01",
+            "S001-HYG-02"
+          ]
+        }
+      },
+      {
+        "gtype": "A",
+        "stop_sequence": [
+          "S002"
+        ],
+        "boxes_by_stop": {
+          "S002": [
+            "S002-MED-01",
+            "S002-WAT-01"
+          ]
+        }
+      },
+      {
+        "gtype": "C",
+        "stop_sequence": [
+          "S002"
+        ],
+        "boxes_by_stop": {
+          "S002": [
+            "S002-WAT-02",
+            "S002-WAT-03",
+            "S002-WAT-04",
+            "S002-FOD-01",
+            "S002-FOD-02",
+            "S002-HYG-01"
+          ]
+        }
+      },
+      {
+        "gtype": "B",
+        "stop_sequence": [
+          "S007",
+          "S003"
+        ],
+        "boxes_by_stop": {
+          "S007": [
+            "S007-FOD-01"
+          ],
+          "S003": [
+            "S003-MED-01",
+            "S003-WAT-01"
+          ]
+        }
+      },
+      {
+        "gtype": "C",
+        "stop_sequence": [
+          "S007",
+          "S003"
+        ],
+        "boxes_by_stop": {
+          "S007": [
+            "S007-HYG-01"
+          ],
+          "S003": [
+            "S003-WAT-02",
+            "S003-WAT-03",
+            "S003-WAT-04",
+            "S003-FOD-01",
+            "S003-FOD-02",
+            "S003-HYG-01"
+          ]
+        }
+      },
+      {
+        "gtype": "A",
+        "stop_sequence": [
+          "S004"
+        ],
+        "boxes_by_stop": {
+          "S004": [
+            "S004-MED-01",
+            "S004-WAT-01"
+          ]
+        }
+      },
+      {
+        "gtype": "C",
+        "stop_sequence": [
+          "S004"
+        ],
+        "boxes_by_stop": {
+          "S004": [
+            "S004-WAT-02",
+            "S004-WAT-03",
+            "S004-FOD-01",
+            "S004-HYG-01"
+          ]
+        }
+      },
+      {
+        "gtype": "A",
+        "stop_sequence": [
+          "S005"
+        ],
+        "boxes_by_stop": {
+          "S005": [
+            "S005-MED-01",
+            "S005-WAT-01"
+          ]
+        }
+      },
+      {
+        "gtype": "C",
+        "stop_sequence": [
+          "S005"
+        ],
+        "boxes_by_stop": {
+          "S005": [
+            "S005-WAT-02",
+            "S005-WAT-03",
+            "S005-FOD-01",
+            "S005-HYG-01"
+          ]
+        }
+      },
+      {
+        "gtype": "A",
+        "stop_sequence": [
+          "S006"
+        ],
+        "boxes_by_stop": {
+          "S006": [
+            "S006-MED-01",
+            "S006-WAT-01"
+          ]
+        }
+      },
+      {
+        "gtype": "C",
+        "stop_sequence": [
+          "S006"
+        ],
+        "boxes_by_stop": {
+          "S006": [
+            "S006-WAT-02",
+            "S006-WAT-03",
+            "S006-FOD-01",
+            "S006-HYG-01"
+          ]
+        }
+      },
+      {
+        "gtype": "A",
+        "stop_sequence": [
+          "S007"
+        ],
+        "boxes_by_stop": {
+          "S007": [
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        }
+      },
+      {
+        "gtype": "B",
+        "stop_sequence": [
+          "S008"
+        ],
+        "boxes_by_stop": {
+          "S008": [
+            "S008-MED-01",
+            "S008-WAT-01",
+            "S008-FOD-01"
+          ]
+        }
+      },
+      {
+        "gtype": "A",
+        "stop_sequence": [
+          "S009"
+        ],
+        "boxes_by_stop": {
+          "S009": [
+            "S009-MED-01",
+            "S009-WAT-01"
+          ]
+        }
+      },
+      {
+        "gtype": "B",
+        "stop_sequence": [
+          "S009",
+          "S008"
+        ],
+        "boxes_by_stop": {
+          "S009": [
+            "S009-FOD-01"
+          ],
+          "S008": [
+            "S008-HYG-01"
+          ]
+        }
+      },
+      {
+        "gtype": "B",
+        "stop_sequence": [
+          "S010"
+        ],
+        "boxes_by_stop": {
+          "S010": [
+            "S010-MED-01",
+            "S010-WAT-01",
+            "S010-FOD-01"
+          ]
+        }
+      },
+      {
+        "gtype": "A",
+        "stop_sequence": [
+          "S011"
+        ],
+        "boxes_by_stop": {
+          "S011": [
+            "S011-MED-01",
+            "S011-WAT-01"
+          ]
+        }
+      },
+      {
+        "gtype": "B",
+        "stop_sequence": [
+          "S011",
+          "S008"
+        ],
+        "boxes_by_stop": {
+          "S011": [
+            "S011-FOD-01"
+          ],
+          "S008": [
+            "S008-WAT-02"
+          ]
+        }
+      },
+      {
+        "gtype": "B",
+        "stop_sequence": [
+          "S012"
+        ],
+        "boxes_by_stop": {
+          "S012": [
+            "S012-MED-01",
+            "S012-WAT-01",
+            "S012-FOD-01"
+          ]
+        }
+      },
+      {
+        "gtype": "B",
+        "stop_sequence": [
+          "S013"
+        ],
+        "boxes_by_stop": {
+          "S013": [
+            "S013-MED-01",
+            "S013-WAT-01",
+            "S013-FOD-01"
+          ]
+        }
+      },
+      {
+        "gtype": "B",
+        "stop_sequence": [
+          "S014"
+        ],
+        "boxes_by_stop": {
+          "S014": [
+            "S014-MED-01",
+            "S014-WAT-01",
+            "S014-FOD-01"
+          ]
+        }
+      },
+      {
+        "gtype": "A",
+        "stop_sequence": [
+          "S015"
+        ],
+        "boxes_by_stop": {
+          "S015": [
+            "S015-MED-01",
+            "S015-WAT-01"
+          ]
+        }
+      },
+      {
+        "gtype": "B",
+        "stop_sequence": [
+          "S007",
+          "S015"
+        ],
+        "boxes_by_stop": {
+          "S007": [
+            "S007-WAT-02"
+          ],
+          "S015": [
+            "S015-FOD-01"
+          ]
+        }
+      }
+    ]
+  },
+  "schedule": {
+    "status": "FEASIBLE",
+    "solver_status": "C2_START_TIME_REPAIR",
+    "stage_statuses": {
+      "WTD": "C2_START_TIME_REPAIR",
+      "Cmax": "C2_START_TIME_REPAIR"
+    },
+    "metrics": {
+      "WTD": 2919779.4433474788,
+      "Cmax_s": 23738.870393305344,
+      "total_energy_kwh": 70.1181675670078,
+      "n_trips": 25.0,
+      "total_operation_time_s": 45796.642832170495
+    },
+    "checks": {
+      "uav_type": true,
+      "uav_overlap": true,
+      "battery_overlap": true,
+      "battery_type": true,
+      "soc": true,
+      "charge_before_reuse": true
+    },
+    "assignments": [
+      {
+        "trip_id": "T001",
+        "uid": "U01",
+        "battery_id": "BAT-A-01",
+        "start_time_s": 0.0
+      },
+      {
+        "trip_id": "T002",
+        "uid": "U07",
+        "battery_id": "BAT-C-01",
+        "start_time_s": 8000.0
+      },
+      {
+        "trip_id": "T003",
+        "uid": "U08",
+        "battery_id": "BAT-C-04",
+        "start_time_s": 13000.0
+      },
+      {
+        "trip_id": "T004",
+        "uid": "U03",
+        "battery_id": "BAT-A-03",
+        "start_time_s": 1400.0
+      },
+      {
+        "trip_id": "T005",
+        "uid": "U07",
+        "battery_id": "BAT-C-01",
+        "start_time_s": 16000.0
+      },
+      {
+        "trip_id": "T006",
+        "uid": "U05",
+        "battery_id": "BAT-B-02",
+        "start_time_s": 5000.0
+      },
+      {
+        "trip_id": "T007",
+        "uid": "U07",
+        "battery_id": "BAT-C-03",
+        "start_time_s": 10430.0
+      },
+      {
+        "trip_id": "T008",
+        "uid": "U02",
+        "battery_id": "BAT-A-05",
+        "start_time_s": 3800.0
+      },
+      {
+        "trip_id": "T009",
+        "uid": "U08",
+        "battery_id": "BAT-C-02",
+        "start_time_s": 19000.0
+      },
+      {
+        "trip_id": "T010",
+        "uid": "U03",
+        "battery_id": "BAT-A-02",
+        "start_time_s": 6000.0
+      },
+      {
+        "trip_id": "T011",
+        "uid": "U07",
+        "battery_id": "BAT-C-03",
+        "start_time_s": 22000.0
+      },
+      {
+        "trip_id": "T012",
+        "uid": "U02",
+        "battery_id": "BAT-A-02",
+        "start_time_s": 0.0
+      },
+      {
+        "trip_id": "T013",
+        "uid": "U08",
+        "battery_id": "BAT-C-02",
+        "start_time_s": 9000.0
+      },
+      {
+        "trip_id": "T014",
+        "uid": "U04",
+        "battery_id": "BAT-A-04",
+        "start_time_s": 1600.0
+      },
+      {
+        "trip_id": "T015",
+        "uid": "U06",
+        "battery_id": "BAT-B-01",
+        "start_time_s": 4300.0
+      },
+      {
+        "trip_id": "T016",
+        "uid": "U02",
+        "battery_id": "BAT-A-03",
+        "start_time_s": 8000.0
+      },
+      {
+        "trip_id": "T017",
+        "uid": "U05",
+        "battery_id": "BAT-B-04",
+        "start_time_s": 16000.0
+      },
+      {
+        "trip_id": "T018",
+        "uid": "U05",
+        "battery_id": "BAT-B-01",
+        "start_time_s": 600.0
+      },
+      {
+        "trip_id": "T019",
+        "uid": "U01",
+        "battery_id": "BAT-A-06",
+        "start_time_s": 5000.0
+      },
+      {
+        "trip_id": "T020",
+        "uid": "U06",
+        "battery_id": "BAT-B-03",
+        "start_time_s": 14000.0
+      },
+      {
+        "trip_id": "T021",
+        "uid": "U05",
+        "battery_id": "BAT-B-04",
+        "start_time_s": 2327.0
+      },
+      {
+        "trip_id": "T022",
+        "uid": "U06",
+        "battery_id": "BAT-B-02",
+        "start_time_s": 600.0
+      },
+      {
+        "trip_id": "T023",
+        "uid": "U06",
+        "battery_id": "BAT-B-03",
+        "start_time_s": 2150.0
+      },
+      {
+        "trip_id": "T024",
+        "uid": "U04",
+        "battery_id": "BAT-A-01",
+        "start_time_s": 5940.0
+      },
+      {
+        "trip_id": "T025",
+        "uid": "U06",
+        "battery_id": "BAT-B-01",
+        "start_time_s": 18000.0
+      }
+    ],
+    "trip_records": [
+      {
+        "trip_id": "T001",
+        "gtype": "A",
+        "stop_sequence": [
+          "S001"
+        ],
+        "boxes_by_stop": {
+          "S001": [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-01"
+          ]
+        },
+        "uid": "U01",
+        "battery_id": "BAT-A-01",
+        "start_time_s": 0.0,
+        "departure_time_s": 390.0,
+        "return_time_s": 1325.8757589824106,
+        "charge_start_s": 1325.8757589824106,
+        "charge_end_s": 2192.508647086876,
+        "charge_time_s": 866.6328881044653,
+        "route_duration_s": 1325.8757589824106,
+        "total_energy_kwh": 1.2691138434385338,
+        "soc_after": 0.7179747014581036,
+        "delivery_by_box_s": {
+          "S001-MED-01": 976.0612128245386,
+          "S001-MED-02": 976.0612128245386,
+          "S001-WAT-01": 976.0612128245386
+        },
+        "delivery_offset_by_sid_s": {
+          "S001": 976.0612128245386
+        },
+        "wtd_contribution": 0.0,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S001",
+            "payload_kg": 20.0,
+            "time_s": 346.06121282453864,
+            "energy_kwh": 0.6937480299109539
+          },
+          {
+            "from": "S001",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 349.814546157872,
+            "energy_kwh": 0.57536581352758
+          }
+        ]
+      },
+      {
+        "trip_id": "T002",
+        "gtype": "C",
+        "stop_sequence": [
+          "S001"
+        ],
+        "boxes_by_stop": {
+          "S001": [
+            "S001-WAT-02",
+            "S001-WAT-03",
+            "S001-WAT-04",
+            "S001-WAT-05",
+            "S001-WAT-06",
+            "S001-FOD-01"
+          ]
+        },
+        "uid": "U07",
+        "battery_id": "BAT-C-01",
+        "start_time_s": 8000.0,
+        "departure_time_s": 8480.0,
+        "return_time_s": 9512.844762011775,
+        "charge_start_s": 9512.844762011775,
+        "charge_end_s": 11158.821215676608,
+        "charge_time_s": 1645.9764536648322,
+        "route_duration_s": 1512.844762011775,
+        "total_energy_kwh": 3.000528444300919,
+        "soc_after": 0.6249339444623851,
+        "delivery_by_box_s": {
+          "S001-WAT-02": 9191.607381005888,
+          "S001-WAT-03": 9191.607381005888,
+          "S001-WAT-04": 9191.607381005888,
+          "S001-WAT-05": 9191.607381005888,
+          "S001-WAT-06": 9191.607381005888,
+          "S001-FOD-01": 9191.607381005888
+        },
+        "delivery_offset_by_sid_s": {
+          "S001": 1191.6073810058874
+        },
+        "wtd_contribution": 355412.51667041215,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S001",
+            "payload_kg": 78.0,
+            "time_s": 315.6073810058874,
+            "energy_kwh": 2.0357610213779376
+          },
+          {
+            "from": "S001",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 321.2373810058874,
+            "energy_kwh": 0.964767422922981
+          }
+        ]
+      },
+      {
+        "trip_id": "T003",
+        "gtype": "C",
+        "stop_sequence": [
+          "S001"
+        ],
+        "boxes_by_stop": {
+          "S001": [
+            "S001-WAT-07",
+            "S001-WAT-08",
+            "S001-FOD-02",
+            "S001-FOD-03",
+            "S001-HYG-01",
+            "S001-HYG-02"
+          ]
+        },
+        "uid": "U08",
+        "battery_id": "BAT-C-04",
+        "start_time_s": 13000.0,
+        "departure_time_s": 13480.0,
+        "return_time_s": 14512.844762011775,
+        "charge_start_s": 14512.844762011775,
+        "charge_end_s": 15998.80407621002,
+        "charge_time_s": 1485.9593141982466,
+        "route_duration_s": 1512.844762011775,
+        "total_energy_kwh": 2.4096959293473716,
+        "soc_after": 0.6987880088315785,
+        "delivery_by_box_s": {
+          "S001-WAT-07": 14191.607381005888,
+          "S001-WAT-08": 14191.607381005888,
+          "S001-FOD-02": 14191.607381005888,
+          "S001-FOD-03": 14191.607381005888,
+          "S001-HYG-01": 14191.607381005888,
+          "S001-HYG-02": 14191.607381005888
+        },
+        "delivery_offset_by_sid_s": {
+          "S001": 1191.6073810058874
+        },
+        "wtd_contribution": 448296.4428603533,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S001",
+            "payload_kg": 56.0,
+            "time_s": 315.6073810058874,
+            "energy_kwh": 1.4449285064243909
+          },
+          {
+            "from": "S001",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 321.2373810058874,
+            "energy_kwh": 0.964767422922981
+          }
+        ]
+      },
+      {
+        "trip_id": "T004",
+        "gtype": "A",
+        "stop_sequence": [
+          "S002"
+        ],
+        "boxes_by_stop": {
+          "S002": [
+            "S002-MED-01",
+            "S002-WAT-01"
+          ]
+        },
+        "uid": "U03",
+        "battery_id": "BAT-A-03",
+        "start_time_s": 1400.0,
+        "departure_time_s": 1760.0,
+        "return_time_s": 3402.4489262774878,
+        "charge_start_s": 3402.4489262774878,
+        "charge_end_s": 4744.880481214958,
+        "charge_time_s": 1342.4315549374705,
+        "route_duration_s": 2002.4489262774878,
+        "total_energy_kwh": 2.916109228629706,
+        "soc_after": 0.3519757269711765,
+        "delivery_by_box_s": {
+          "S002-MED-01": 2683.164463138744,
+          "S002-WAT-01": 2683.164463138744
+        },
+        "delivery_offset_by_sid_s": {
+          "S002": 1283.164463138744
+        },
+        "wtd_contribution": 0.0,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S002",
+            "payload_kg": 17.0,
+            "time_s": 713.164463138744,
+            "energy_kwh": 1.5601739044741805
+          },
+          {
+            "from": "S002",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 719.284463138744,
+            "energy_kwh": 1.3559353241555252
+          }
+        ]
+      },
+      {
+        "trip_id": "T005",
+        "gtype": "C",
+        "stop_sequence": [
+          "S002"
+        ],
+        "boxes_by_stop": {
+          "S002": [
+            "S002-WAT-02",
+            "S002-WAT-03",
+            "S002-WAT-04",
+            "S002-FOD-01",
+            "S002-FOD-02",
+            "S002-HYG-01"
+          ]
+        },
+        "uid": "U07",
+        "battery_id": "BAT-C-01",
+        "start_time_s": 16000.0,
+        "departure_time_s": 16480.0,
+        "return_time_s": 18106.96324234035,
+        "charge_start_s": 18106.96324234035,
+        "charge_end_s": 20591.687656119328,
+        "charge_time_s": 2484.7244137789776,
+        "route_duration_s": 2106.96324234035,
+        "total_energy_kwh": 6.097443989337764,
+        "soc_after": 0.23781950133277951,
+        "delivery_by_box_s": {
+          "S002-WAT-02": 17486.891621170176,
+          "S002-WAT-03": 17486.891621170176,
+          "S002-WAT-04": 17486.891621170176,
+          "S002-FOD-01": 17486.891621170176,
+          "S002-FOD-02": 17486.891621170176,
+          "S002-HYG-01": 17486.891621170176
+        },
+        "delivery_offset_by_sid_s": {
+          "S002": 1486.8916211701749
+        },
+        "wtd_contribution": 759161.0637548912,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S002",
+            "payload_kg": 64.0,
+            "time_s": 610.8916211701749,
+            "energy_kwh": 3.7964894083303022
+          },
+          {
+            "from": "S002",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 620.0716211701749,
+            "energy_kwh": 2.3009545810074616
+          }
+        ]
+      },
+      {
+        "trip_id": "T006",
+        "gtype": "B",
+        "stop_sequence": [
+          "S007",
+          "S003"
+        ],
+        "boxes_by_stop": {
+          "S007": [
+            "S007-FOD-01"
+          ],
+          "S003": [
+            "S003-MED-01",
+            "S003-WAT-01"
+          ]
+        },
+        "uid": "U05",
+        "battery_id": "BAT-B-02",
+        "start_time_s": 5000.0,
+        "departure_time_s": 5390.0,
+        "return_time_s": 7235.989543126429,
+        "charge_start_s": 7235.989543126429,
+        "charge_end_s": 9063.301731632593,
+        "charge_time_s": 1827.3121885061641,
+        "route_duration_s": 2235.9895431264295,
+        "total_energy_kwh": 2.6784127427065325,
+        "soc_after": 0.33039681432336687,
+        "delivery_by_box_s": {
+          "S007-FOD-01": 6065.543145830088,
+          "S003-MED-01": 6504.063997027592,
+          "S003-WAT-01": 6504.063997027592
+        },
+        "delivery_offset_by_sid_s": {
+          "S007": 1065.5431458300884,
+          "S003": 1504.0639970275922
+        },
+        "wtd_contribution": 0.0,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S007",
+            "payload_kg": 25.0,
+            "time_s": 495.54314583008846,
+            "energy_kwh": 1.0911480410585455
+          },
+          {
+            "from": "S007",
+            "to": "S003",
+            "payload_kg": 17.0,
+            "time_s": 228.52085119750387,
+            "energy_kwh": 0.4955666639169021
+          },
+          {
+            "from": "S003",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 731.9255460988372,
+            "energy_kwh": 1.091698037731085
+          }
+        ]
+      },
+      {
+        "trip_id": "T007",
+        "gtype": "C",
+        "stop_sequence": [
+          "S007",
+          "S003"
+        ],
+        "boxes_by_stop": {
+          "S007": [
+            "S007-HYG-01"
+          ],
+          "S003": [
+            "S003-WAT-02",
+            "S003-WAT-03",
+            "S003-WAT-04",
+            "S003-FOD-01",
+            "S003-FOD-02",
+            "S003-HYG-01"
+          ]
+        },
+        "uid": "U07",
+        "battery_id": "BAT-C-03",
+        "start_time_s": 10430.0,
+        "departure_time_s": 10940.0,
+        "return_time_s": 13118.880989049281,
+        "charge_start_s": 13118.880989049281,
+        "charge_end_s": 15681.509520914227,
+        "charge_time_s": 2562.628531864945,
+        "route_duration_s": 2688.880989049281,
+        "total_energy_kwh": 6.385089963809028,
+        "soc_after": 0.2018637545238715,
+        "delivery_by_box_s": {
+          "S007-HYG-01": 11693.508675004894,
+          "S003-WAT-02": 12328.65808658651,
+          "S003-WAT-03": 12328.65808658651,
+          "S003-WAT-04": 12328.65808658651,
+          "S003-FOD-01": 12328.65808658651,
+          "S003-FOD-02": 12328.65808658651,
+          "S003-HYG-01": 12328.65808658651
+        },
+        "delivery_offset_by_sid_s": {
+          "S007": 1263.5086750048931,
+          "S003": 1898.6580865865117
+        },
+        "wtd_contribution": 185466.34138301865,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S007",
+            "payload_kg": 70.0,
+            "time_s": 537.5086750048932,
+            "energy_kwh": 2.696010354461977
+          },
+          {
+            "from": "S007",
+            "to": "S003",
+            "payload_kg": 64.0,
+            "time_s": 239.14941158161847,
+            "energy_kwh": 1.396914201366
+          },
+          {
+            "from": "S003",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 790.2229024627694,
+            "energy_kwh": 2.292165407981051
+          }
+        ]
+      },
+      {
+        "trip_id": "T008",
+        "gtype": "A",
+        "stop_sequence": [
+          "S004"
+        ],
+        "boxes_by_stop": {
+          "S004": [
+            "S004-MED-01",
+            "S004-WAT-01"
+          ]
+        },
+        "uid": "U02",
+        "battery_id": "BAT-A-05",
+        "start_time_s": 3800.0,
+        "departure_time_s": 4160.0,
+        "return_time_s": 5988.52438079403,
+        "charge_start_s": 5988.52438079403,
+        "charge_end_s": 7380.288236672951,
+        "charge_time_s": 1391.7638558789215,
+        "route_duration_s": 2188.52438079403,
+        "total_energy_kwh": 3.086874885734728,
+        "soc_after": 0.3140278031700604,
+        "delivery_by_box_s": {
+          "S004-MED-01": 5175.908857063681,
+          "S004-WAT-01": 5175.908857063681
+        },
+        "delivery_offset_by_sid_s": {
+          "S004": 1375.9088570636818
+        },
+        "wtd_contribution": 0.0,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S004",
+            "payload_kg": 17.0,
+            "time_s": 805.9088570636817,
+            "energy_kwh": 1.6532692063207761
+          },
+          {
+            "from": "S004",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 812.6155237303484,
+            "energy_kwh": 1.4336056794139518
+          }
+        ]
+      },
+      {
+        "trip_id": "T009",
+        "gtype": "C",
+        "stop_sequence": [
+          "S004"
+        ],
+        "boxes_by_stop": {
+          "S004": [
+            "S004-WAT-02",
+            "S004-WAT-03",
+            "S004-FOD-01",
+            "S004-HYG-01"
+          ]
+        },
+        "uid": "U08",
+        "battery_id": "BAT-C-02",
+        "start_time_s": 19000.0,
+        "departure_time_s": 19420.0,
+        "return_time_s": 21181.83194075176,
+        "charge_start_s": 21181.83194075176,
+        "charge_end_s": 23508.977516799834,
+        "charge_time_s": 2327.1455760480762,
+        "route_duration_s": 2181.8319407517606,
+        "total_energy_kwh": 5.515614434639051,
+        "soc_after": 0.3105481956701186,
+        "delivery_by_box_s": {
+          "S004-WAT-02": 20457.88597037588,
+          "S004-WAT-03": 20457.88597037588,
+          "S004-FOD-01": 20457.88597037588,
+          "S004-HYG-01": 20457.88597037588
+        },
+        "delivery_offset_by_sid_s": {
+          "S004": 1457.8859703758803
+        },
+        "wtd_contribution": 378768.1229927799,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S004",
+            "payload_kg": 42.0,
+            "time_s": 713.8859703758803,
+            "energy_kwh": 3.0984766624461537
+          },
+          {
+            "from": "S004",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 723.9459703758803,
+            "energy_kwh": 2.417137772192897
+          }
+        ]
+      },
+      {
+        "trip_id": "T010",
+        "gtype": "A",
+        "stop_sequence": [
+          "S005"
+        ],
+        "boxes_by_stop": {
+          "S005": [
+            "S005-MED-01",
+            "S005-WAT-01"
+          ]
+        },
+        "uid": "U03",
+        "battery_id": "BAT-A-02",
+        "start_time_s": 6000.0,
+        "departure_time_s": 6360.0,
+        "return_time_s": 7686.5698700903395,
+        "charge_start_s": 7686.5698700903395,
+        "charge_end_s": 8797.971601040124,
+        "charge_time_s": 1111.4017309497851,
+        "route_duration_s": 1686.5698700903392,
+        "total_energy_kwh": 2.116390607133871,
+        "soc_after": 0.5296909761924731,
+        "delivery_by_box_s": {
+          "S005-MED-01": 7126.041601711837,
+          "S005-WAT-01": 7126.041601711837
+        },
+        "delivery_offset_by_sid_s": {
+          "S005": 1126.0416017118364
+        },
+        "wtd_contribution": 0.0,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S005",
+            "payload_kg": 17.0,
+            "time_s": 556.0416017118363,
+            "energy_kwh": 1.1333329208187226
+          },
+          {
+            "from": "S005",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 560.5282683785028,
+            "energy_kwh": 0.9830576863151486
+          }
+        ]
+      },
+      {
+        "trip_id": "T011",
+        "gtype": "C",
+        "stop_sequence": [
+          "S005"
+        ],
+        "boxes_by_stop": {
+          "S005": [
+            "S005-WAT-02",
+            "S005-WAT-03",
+            "S005-FOD-01",
+            "S005-HYG-01"
+          ]
+        },
+        "uid": "U07",
+        "battery_id": "BAT-C-03",
+        "start_time_s": 22000.0,
+        "departure_time_s": 22420.0,
+        "return_time_s": 23738.870393305344,
+        "charge_start_s": 23738.870393305344,
+        "charge_end_s": 25595.765328648853,
+        "charge_time_s": 1856.8949353435091,
+        "route_duration_s": 1738.8703933053444,
+        "total_energy_kwh": 3.7793043766529575,
+        "soc_after": 0.5275869529183803,
+        "delivery_by_box_s": {
+          "S005-WAT-02": 23238.070196652672,
+          "S005-WAT-03": 23238.070196652672,
+          "S005-FOD-01": 23238.070196652672,
+          "S005-HYG-01": 23238.070196652672
+        },
+        "delivery_offset_by_sid_s": {
+          "S005": 1238.0701966526722
+        },
+        "wtd_contribution": 272989.8251129695,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S005",
+            "payload_kg": 42.0,
+            "time_s": 494.0701966526721,
+            "energy_kwh": 2.123038573567399
+          },
+          {
+            "from": "S005",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 500.80019665267207,
+            "energy_kwh": 1.6562658030855584
+          }
+        ]
+      },
+      {
+        "trip_id": "T012",
+        "gtype": "A",
+        "stop_sequence": [
+          "S006"
+        ],
+        "boxes_by_stop": {
+          "S006": [
+            "S006-MED-01",
+            "S006-WAT-01"
+          ]
+        },
+        "uid": "U02",
+        "battery_id": "BAT-A-02",
+        "start_time_s": 0.0,
+        "departure_time_s": 360.0,
+        "return_time_s": 1313.2085864292808,
+        "charge_start_s": 1313.2085864292808,
+        "charge_end_s": 2191.8995403542476,
+        "charge_time_s": 878.690953924967,
+        "route_duration_s": 1313.2085864292808,
+        "total_energy_kwh": 1.3108533020479625,
+        "soc_after": 0.7086992662115639,
+        "delivery_by_box_s": {
+          "S006-MED-01": 935.3676265479737,
+          "S006-WAT-01": 935.3676265479737
+        },
+        "delivery_offset_by_sid_s": {
+          "S006": 935.3676265479737
+        },
+        "wtd_contribution": 0.0,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S006",
+            "payload_kg": 17.0,
+            "time_s": 365.36762654797366,
+            "energy_kwh": 0.7240504947473169
+          },
+          {
+            "from": "S006",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 377.840959881307,
+            "energy_kwh": 0.5868028073006455
+          }
+        ]
+      },
+      {
+        "trip_id": "T013",
+        "gtype": "C",
+        "stop_sequence": [
+          "S006"
+        ],
+        "boxes_by_stop": {
+          "S006": [
+            "S006-WAT-02",
+            "S006-WAT-03",
+            "S006-FOD-01",
+            "S006-HYG-01"
+          ]
+        },
+        "uid": "U08",
+        "battery_id": "BAT-C-02",
+        "start_time_s": 9000.0,
+        "departure_time_s": 9420.0,
+        "return_time_s": 10429.338181806186,
+        "charge_start_s": 10429.338181806186,
+        "charge_end_s": 11892.78548274402,
+        "charge_time_s": 1463.4473009378353,
+        "route_duration_s": 1429.3381818061853,
+        "total_energy_kwh": 2.326574649616623,
+        "soc_after": 0.7091781687979222,
+        "delivery_by_box_s": {
+          "S006-WAT-02": 10077.314090903092,
+          "S006-WAT-03": 10077.314090903092,
+          "S006-FOD-01": 10077.314090903092,
+          "S006-HYG-01": 10077.314090903092
+        },
+        "delivery_offset_by_sid_s": {
+          "S006": 1077.3140909030926
+        },
+        "wtd_contribution": 184228.67909070512,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S006",
+            "payload_kg": 42.0,
+            "time_s": 333.3140909030925,
+            "energy_kwh": 1.3331435232146354
+          },
+          {
+            "from": "S006",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 352.02409090309254,
+            "energy_kwh": 0.9934311264019877
+          }
+        ]
+      },
+      {
+        "trip_id": "T014",
+        "gtype": "A",
+        "stop_sequence": [
+          "S007"
+        ],
+        "boxes_by_stop": {
+          "S007": [
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        },
+        "uid": "U04",
+        "battery_id": "BAT-A-04",
+        "start_time_s": 1600.0,
+        "departure_time_s": 1960.0,
+        "return_time_s": 3326.8377003906508,
+        "charge_start_s": 3326.8377003906508,
+        "charge_end_s": 4376.831096995131,
+        "charge_time_s": 1049.99339660448,
+        "route_duration_s": 1726.837700390651,
+        "total_energy_kwh": 1.9038232959385848,
+        "soc_after": 0.5769281564580923,
+        "delivery_by_box_s": {
+          "S007-MED-01": 2741.0588501953252,
+          "S007-WAT-01": 2741.0588501953252
+        },
+        "delivery_offset_by_sid_s": {
+          "S007": 1141.0588501953255
+        },
+        "wtd_contribution": 0.0,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S007",
+            "payload_kg": 17.0,
+            "time_s": 571.0588501953255,
+            "energy_kwh": 1.044988797558109
+          },
+          {
+            "from": "S007",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 585.7788501953255,
+            "energy_kwh": 0.8588344983804759
+          }
+        ]
+      },
+      {
+        "trip_id": "T015",
+        "gtype": "B",
+        "stop_sequence": [
+          "S008"
+        ],
+        "boxes_by_stop": {
+          "S008": [
+            "S008-MED-01",
+            "S008-WAT-01",
+            "S008-FOD-01"
+          ]
+        },
+        "uid": "U06",
+        "battery_id": "BAT-B-01",
+        "start_time_s": 4300.0,
+        "departure_time_s": 4690.0,
+        "return_time_s": 6260.230471734119,
+        "charge_start_s": 6260.230471734119,
+        "charge_end_s": 8214.263481053256,
+        "charge_time_s": 1954.0330093191362,
+        "route_duration_s": 1960.230471734119,
+        "total_energy_kwh": 2.970845406121084,
+        "soc_after": 0.257288648469729,
+        "delivery_by_box_s": {
+          "S008-MED-01": 5590.341902533726,
+          "S008-WAT-01": 5590.341902533726,
+          "S008-FOD-01": 5590.341902533726
+        },
+        "delivery_offset_by_sid_s": {
+          "S008": 1290.3419025337262
+        },
+        "wtd_contribution": 0.0,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S008",
+            "payload_kg": 25.0,
+            "time_s": 660.341902533726,
+            "energy_kwh": 1.7933437140305144
+          },
+          {
+            "from": "S008",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 669.8885692003928,
+            "energy_kwh": 1.1775016920905697
+          }
+        ]
+      },
+      {
+        "trip_id": "T016",
+        "gtype": "A",
+        "stop_sequence": [
+          "S009"
+        ],
+        "boxes_by_stop": {
+          "S009": [
+            "S009-MED-01",
+            "S009-WAT-01"
+          ]
+        },
+        "uid": "U02",
+        "battery_id": "BAT-A-03",
+        "start_time_s": 8000.0,
+        "departure_time_s": 8360.0,
+        "return_time_s": 9686.285695754883,
+        "charge_start_s": 9686.285695754883,
+        "charge_end_s": 10836.679921542649,
+        "charge_time_s": 1150.394225787766,
+        "route_duration_s": 1686.285695754882,
+        "total_energy_kwh": 2.2513646277268817,
+        "soc_after": 0.4996967493940263,
+        "delivery_by_box_s": {
+          "S009-MED-01": 9124.732847877442,
+          "S009-WAT-01": 9124.732847877442
+        },
+        "delivery_offset_by_sid_s": {
+          "S009": 1124.7328478774411
+        },
+        "wtd_contribution": 0.0,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S009",
+            "payload_kg": 17.0,
+            "time_s": 554.732847877441,
+            "energy_kwh": 1.2092863511539729
+          },
+          {
+            "from": "S009",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 561.552847877441,
+            "energy_kwh": 1.042078276572909
+          }
+        ]
+      },
+      {
+        "trip_id": "T017",
+        "gtype": "B",
+        "stop_sequence": [
+          "S009",
+          "S008"
+        ],
+        "boxes_by_stop": {
+          "S009": [
+            "S009-FOD-01"
+          ],
+          "S008": [
+            "S008-HYG-01"
+          ]
+        },
+        "uid": "U05",
+        "battery_id": "BAT-B-04",
+        "start_time_s": 16000.0,
+        "departure_time_s": 16360.0,
+        "return_time_s": 18283.9086367231,
+        "charge_start_s": 18283.9086367231,
+        "charge_end_s": 20231.897318434858,
+        "charge_time_s": 1947.9886817117604,
+        "route_duration_s": 2283.9086367231002,
+        "total_energy_kwh": 2.9568969577963697,
+        "soc_after": 0.26077576055090756,
+        "delivery_by_box_s": {
+          "S009-FOD-01": 16999.776275046745,
+          "S008-HYG-01": 17614.020067522706
+        },
+        "delivery_offset_by_sid_s": {
+          "S009": 999.7762750467444,
+          "S008": 1614.0200675227074
+        },
+        "wtd_contribution": 34882.778055416704,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S009",
+            "payload_kg": 14.0,
+            "time_s": 459.77627504674444,
+            "energy_kwh": 0.991943142558176
+          },
+          {
+            "from": "S009",
+            "to": "S008",
+            "payload_kg": 6.0,
+            "time_s": 434.24379247596295,
+            "energy_kwh": 0.7874521231476239
+          },
+          {
+            "from": "S008",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 669.8885692003928,
+            "energy_kwh": 1.1775016920905697
+          }
+        ]
+      },
+      {
+        "trip_id": "T018",
+        "gtype": "B",
+        "stop_sequence": [
+          "S010"
+        ],
+        "boxes_by_stop": {
+          "S010": [
+            "S010-MED-01",
+            "S010-WAT-01",
+            "S010-FOD-01"
+          ]
+        },
+        "uid": "U05",
+        "battery_id": "BAT-B-01",
+        "start_time_s": 600.0,
+        "departure_time_s": 990.0,
+        "return_time_s": 2150.525368279372,
+        "charge_start_s": 2150.525368279372,
+        "charge_end_s": 3605.9895902492817,
+        "charge_time_s": 1455.4642219699099,
+        "route_duration_s": 1550.525368279372,
+        "total_energy_kwh": 1.820302050699792,
+        "soc_after": 0.544924487325052,
+        "delivery_by_box_s": {
+          "S010-MED-01": 1682.7993508063528,
+          "S010-WAT-01": 1682.7993508063528,
+          "S010-FOD-01": 1682.7993508063528
+        },
+        "delivery_offset_by_sid_s": {
+          "S010": 1082.7993508063528
+        },
+        "wtd_contribution": 0.0,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S010",
+            "payload_kg": 25.0,
+            "time_s": 452.79935080635266,
+            "energy_kwh": 1.1172938108631862
+          },
+          {
+            "from": "S010",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 467.7260174730193,
+            "energy_kwh": 0.7030082398366058
+          }
+        ]
+      },
+      {
+        "trip_id": "T019",
+        "gtype": "A",
+        "stop_sequence": [
+          "S011"
+        ],
+        "boxes_by_stop": {
+          "S011": [
+            "S011-MED-01",
+            "S011-WAT-01"
+          ]
+        },
+        "uid": "U01",
+        "battery_id": "BAT-A-06",
+        "start_time_s": 5000.0,
+        "departure_time_s": 5360.0,
+        "return_time_s": 6218.422375105018,
+        "charge_start_s": 6218.422375105018,
+        "charge_end_s": 7050.429256640455,
+        "charge_time_s": 832.0068815354375,
+        "route_duration_s": 1218.4223751050176,
+        "total_energy_kwh": 1.1492545899303606,
+        "soc_after": 0.7446100911265865,
+        "delivery_by_box_s": {
+          "S011-MED-01": 5891.397854219175,
+          "S011-WAT-01": 5891.397854219175
+        },
+        "delivery_offset_by_sid_s": {
+          "S011": 891.3978542191755
+        },
+        "wtd_contribution": 0.0,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S011",
+            "payload_kg": 17.0,
+            "time_s": 321.3978542191755,
+            "energy_kwh": 0.6229982793286073
+          },
+          {
+            "from": "S011",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 327.0245208858422,
+            "energy_kwh": 0.5262563106017532
+          }
+        ]
+      },
+      {
+        "trip_id": "T020",
+        "gtype": "B",
+        "stop_sequence": [
+          "S011",
+          "S008"
+        ],
+        "boxes_by_stop": {
+          "S011": [
+            "S011-FOD-01"
+          ],
+          "S008": [
+            "S008-WAT-02"
+          ]
+        },
+        "uid": "U06",
+        "battery_id": "BAT-B-03",
+        "start_time_s": 14000.0,
+        "departure_time_s": 14360.0,
+        "return_time_s": 16142.903073942329,
+        "charge_start_s": 16142.903073942329,
+        "charge_end_s": 17988.326763364024,
+        "charge_time_s": 1845.423689421694,
+        "route_duration_s": 2142.9030739423297,
+        "total_energy_kwh": 2.720208514050063,
+        "soc_after": 0.31994787148748427,
+        "delivery_by_box_s": {
+          "S011-FOD-01": 14814.661474374689,
+          "S008-WAT-02": 15473.014504741937
+        },
+        "delivery_offset_by_sid_s": {
+          "S011": 814.6614743746893,
+          "S008": 1473.014504741937
+        },
+        "wtd_contribution": 85218.1138936675,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S011",
+            "payload_kg": 22.0,
+            "time_s": 274.66147437468936,
+            "energy_kwh": 0.6026044765103626
+          },
+          {
+            "from": "S011",
+            "to": "S008",
+            "payload_kg": 14.0,
+            "time_s": 478.35303036724764,
+            "energy_kwh": 0.9401023454491305
+          },
+          {
+            "from": "S008",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 669.8885692003928,
+            "energy_kwh": 1.1775016920905697
+          }
+        ]
+      },
+      {
+        "trip_id": "T021",
+        "gtype": "B",
+        "stop_sequence": [
+          "S012"
+        ],
+        "boxes_by_stop": {
+          "S012": [
+            "S012-MED-01",
+            "S012-WAT-01",
+            "S012-FOD-01"
+          ]
+        },
+        "uid": "U05",
+        "battery_id": "BAT-B-04",
+        "start_time_s": 2327.0,
+        "departure_time_s": 2717.0,
+        "return_time_s": 4251.724439752157,
+        "charge_start_s": 4251.724439752157,
+        "charge_end_s": 6110.427468054169,
+        "charge_time_s": 1858.7030283020122,
+        "route_duration_s": 1924.7244397521567,
+        "total_energy_kwh": 2.750853142235412,
+        "soc_after": 0.312286714441147,
+        "delivery_by_box_s": {
+          "S012-MED-01": 3599.2922198760784,
+          "S012-WAT-01": 3599.2922198760784,
+          "S012-FOD-01": 3599.2922198760784
+        },
+        "delivery_offset_by_sid_s": {
+          "S012": 1272.2922198760784
+        },
+        "wtd_contribution": 0.0,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S012",
+            "payload_kg": 25.0,
+            "time_s": 642.2922198760784,
+            "energy_kwh": 1.6628152329446908
+          },
+          {
+            "from": "S012",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 652.4322198760784,
+            "energy_kwh": 1.0880379092907213
+          }
+        ]
+      },
+      {
+        "trip_id": "T022",
+        "gtype": "B",
+        "stop_sequence": [
+          "S013"
+        ],
+        "boxes_by_stop": {
+          "S013": [
+            "S013-MED-01",
+            "S013-WAT-01",
+            "S013-FOD-01"
+          ]
+        },
+        "uid": "U06",
+        "battery_id": "BAT-B-02",
+        "start_time_s": 600.0,
+        "departure_time_s": 990.0,
+        "return_time_s": 2109.9672145177215,
+        "charge_start_s": 2109.9672145177215,
+        "charge_end_s": 3566.7344167506444,
+        "charge_time_s": 1456.7672022329232,
+        "route_duration_s": 1509.9672145177215,
+        "total_energy_kwh": 1.8233089282298225,
+        "soc_after": 0.5441727679425443,
+        "delivery_by_box_s": {
+          "S013-MED-01": 1662.516940592194,
+          "S013-WAT-01": 1662.516940592194,
+          "S013-FOD-01": 1662.516940592194
+        },
+        "delivery_offset_by_sid_s": {
+          "S013": 1062.516940592194
+        },
+        "wtd_contribution": 0.0,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S013",
+            "payload_kg": 25.0,
+            "time_s": 432.5169405921941,
+            "energy_kwh": 1.1194322558292746
+          },
+          {
+            "from": "S013",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 447.4502739255274,
+            "energy_kwh": 0.7038766724005479
+          }
+        ]
+      },
+      {
+        "trip_id": "T023",
+        "gtype": "B",
+        "stop_sequence": [
+          "S014"
+        ],
+        "boxes_by_stop": {
+          "S014": [
+            "S014-MED-01",
+            "S014-WAT-01",
+            "S014-FOD-01"
+          ]
+        },
+        "uid": "U06",
+        "battery_id": "BAT-B-03",
+        "start_time_s": 2150.0,
+        "departure_time_s": 2540.0,
+        "return_time_s": 4019.3867731757114,
+        "charge_start_s": 4019.3867731757114,
+        "charge_end_s": 5613.032821388202,
+        "charge_time_s": 1593.6460482124905,
+        "route_duration_s": 1869.3867731757114,
+        "total_energy_kwh": 2.139183188182671,
+        "soc_after": 0.4652042029543323,
+        "delivery_by_box_s": {
+          "S014-MED-01": 3392.2500532545223,
+          "S014-WAT-01": 3392.2500532545223,
+          "S014-FOD-01": 3392.2500532545223
+        },
+        "delivery_offset_by_sid_s": {
+          "S014": 1242.2500532545223
+        },
+        "wtd_contribution": 0.0,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S014",
+            "payload_kg": 25.0,
+            "time_s": 612.2500532545224,
+            "energy_kwh": 1.3061360897313659
+          },
+          {
+            "from": "S014",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 627.1367199211891,
+            "energy_kwh": 0.8330470984513051
+          }
+        ]
+      },
+      {
+        "trip_id": "T024",
+        "gtype": "A",
+        "stop_sequence": [
+          "S015"
+        ],
+        "boxes_by_stop": {
+          "S015": [
+            "S015-MED-01",
+            "S015-WAT-01"
+          ]
+        },
+        "uid": "U04",
+        "battery_id": "BAT-A-01",
+        "start_time_s": 5940.0,
+        "departure_time_s": 6300.0,
+        "return_time_s": 7907.493017486121,
+        "charge_start_s": 7907.493017486121,
+        "charge_end_s": 9120.853337796596,
+        "charge_time_s": 1213.3603203104751,
+        "route_duration_s": 1967.4930174861213,
+        "total_energy_kwh": 2.4693241856901063,
+        "soc_after": 0.4512612920688652,
+        "delivery_by_box_s": {
+          "S015-MED-01": 7197.186508743061,
+          "S015-WAT-01": 7197.186508743061
+        },
+        "delivery_offset_by_sid_s": {
+          "S015": 1257.1865087430606
+        },
+        "wtd_contribution": 0.0,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S015",
+            "payload_kg": 17.0,
+            "time_s": 687.1865087430607,
+            "energy_kwh": 1.3630680783373788
+          },
+          {
+            "from": "S015",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 710.3065087430607,
+            "energy_kwh": 1.1062561073527273
+          }
+        ]
+      },
+      {
+        "trip_id": "T025",
+        "gtype": "B",
+        "stop_sequence": [
+          "S007",
+          "S015"
+        ],
+        "boxes_by_stop": {
+          "S007": [
+            "S007-WAT-02"
+          ],
+          "S015": [
+            "S015-FOD-01"
+          ]
+        },
+        "uid": "U06",
+        "battery_id": "BAT-B-01",
+        "start_time_s": 18000.0,
+        "departure_time_s": 18360.0,
+        "return_time_s": 20031.766728332866,
+        "charge_start_s": 20031.766728332866,
+        "charge_end_s": 21682.445117637893,
+        "charge_time_s": 1650.678389305028,
+        "route_duration_s": 2031.7667283328656,
+        "total_energy_kwh": 2.2707962830116033,
+        "soc_after": 0.4323009292470992,
+        "delivery_by_box_s": {
+          "S007-WAT-02": 19035.543145830088,
+          "S015-FOD-01": 19421.50696388399
+        },
+        "delivery_offset_by_sid_s": {
+          "S007": 1035.5431458300884,
+          "S015": 1421.5069638839898
+        },
+        "wtd_contribution": 215355.55953326498,
+        "legs": [
+          {
+            "from": "O01",
+            "to": "S007",
+            "payload_kg": 22.0,
+            "time_s": 495.54314583008846,
+            "energy_kwh": 1.0120369003501954
+          },
+          {
+            "from": "S007",
+            "to": "S015",
+            "payload_kg": 8.0,
+            "time_s": 205.96381805390143,
+            "energy_kwh": 0.3773039675196877
+          },
+          {
+            "from": "S015",
+            "to": "O01",
+            "payload_kg": 0.0,
+            "time_s": 610.2597644488757,
+            "energy_kwh": 0.88145541514172
+          }
+        ]
+      }
+    ]
+  },
+  "relay": {
+    "decoder_status": "PASS",
+    "baseline_status": "FEASIBLE",
+    "solver_status": "OPTIMAL",
+    "reason": null,
+    "candidate_spacing_m": 1500.0,
+    "metrics": {
+      "demand_count": 19,
+      "candidate_count": 135,
+      "service_option_count": 735,
+      "candidate_coverable_count": 19,
+      "scheduled_covered_count": 19,
+      "relay_sortie_count": 6,
+      "relay_energy_kwh": 8.247976791529863,
+      "relay_cmax_s": 24147.775014499995,
+      "joint_cmax_s": 24147.775014499995,
+      "runtime_s": 69.12549740000395
+    },
+    "checks": {
+      "all_demands_candidate_coverable": true,
+      "all_demands_scheduled_covered": true,
+      "full_trajectory_communication_feasible": true,
+      "relay_uav_overlap_zero": true,
+      "energy_component_overlap_zero": true,
+      "charging_pass": true,
+      "reserve_pass": true,
+      "arrival_timing_pass": true,
+      "exact_validation_pass": true
+    },
+    "coverage_audit": [
+      {
+        "demand_id": "D-T004-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 17,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-002",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T005-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 17,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-005",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T006-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 7,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-004",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T007-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 7,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-004",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T008-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 6,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-003",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T009-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 6,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-005",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T010-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 34,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-004",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T011-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 34,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-006",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T014-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 19,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-002",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T015-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 11,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-003",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T016-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 49,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-004",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T017-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 9,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-005",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T018-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 24,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-001",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T020-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 11,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-005",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T021-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 14,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-001",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T022-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 63,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-001",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T023-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 18,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-001",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T024-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 14,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-004",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T025-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 11,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-006",
+        "full_replay_covered": true
+      }
+    ],
+    "resource_audit": [
+      {
+        "sortie_id": "RS-001",
+        "option_id": "SO-00595",
+        "candidate_id": "P0113",
+        "relay_id": "R01",
+        "energy_component_id": "EC-03",
+        "demand_ids": [
+          "D-T022-01",
+          "D-T018-01",
+          "D-T023-01",
+          "D-T021-01"
+        ],
+        "service_start_s": 1344.4939412434896,
+        "service_end_s": 3872.466705146261,
+        "launch_start_s": 716.2567466596929,
+        "relay_ready_s": 1344.4939412434896,
+        "return_end_s": 4337.52943175317,
+        "resource_end_s": 4637.52943175317,
+        "charge_start_s": 4637.52943175317,
+        "charge_end_s": 5543.706240996155,
+        "energy_kwh": 0.9998198381365796,
+        "soc_after": 0.6875563005823189
+      },
+      {
+        "sortie_id": "RS-002",
+        "option_id": "SO-00228",
+        "candidate_id": "P0045",
+        "relay_id": "R02",
+        "energy_component_id": "EC-06",
+        "demand_ids": [
+          "D-T004-01",
+          "D-T014-01"
+        ],
+        "service_start_s": 2150.5149475097655,
+        "service_end_s": 2999.079410648509,
+        "launch_start_s": 1519.346301888469,
+        "relay_ready_s": 2150.5149475097655,
+        "return_end_s": 3459.961306493601,
+        "resource_end_s": 3759.961306493601,
+        "charge_start_s": 3759.961306493601,
+        "charge_end_s": 4460.888049369499,
+        "energy_kwh": 0.49458890554067014,
+        "soc_after": 0.8454409670185405
+      },
+      {
+        "sortie_id": "RS-003",
+        "option_id": "SO-00478",
+        "candidate_id": "P0088",
+        "relay_id": "R02",
+        "energy_component_id": "EC-04",
+        "demand_ids": [
+          "D-T008-01",
+          "D-T015-01"
+        ],
+        "service_start_s": 4746.837111409505,
+        "service_end_s": 5864.34501329219,
+        "launch_start_s": 3959.4807971447954,
+        "relay_ready_s": 4746.837111409505,
+        "return_end_s": 6473.551047303807,
+        "resource_end_s": 6773.551047303807,
+        "charge_start_s": 6773.551047303807,
+        "charge_end_s": 7551.117408976064,
+        "energy_kwh": 0.6832402748855564,
+        "soc_after": 0.7864874140982636
+      },
+      {
+        "sortie_id": "RS-004",
+        "option_id": "SO-00102",
+        "candidate_id": "P0027",
+        "relay_id": "R01",
+        "energy_component_id": "EC-01",
+        "demand_ids": [
+          "D-T006-01",
+          "D-T010-01",
+          "D-T024-01",
+          "D-T016-01",
+          "D-T007-01"
+        ],
+        "service_start_s": 5782.09105834961,
+        "service_end_s": 12637.97974185995,
+        "launch_start_s": 5053.265097528441,
+        "relay_ready_s": 5782.09105834961,
+        "return_end_s": 13211.471393802538,
+        "resource_end_s": 13511.471393802538,
+        "charge_start_s": 13511.471393802538,
+        "charge_end_s": 14978.279716603172,
+        "energy_kwh": 2.379835871509255,
+        "soc_after": 0.2563012901533579
+      },
+      {
+        "sortie_id": "RS-005",
+        "option_id": "SO-00487",
+        "candidate_id": "P0088",
+        "relay_id": "R01",
+        "energy_component_id": "EC-06",
+        "demand_ids": [
+          "D-T020-01",
+          "D-T017-01",
+          "D-T005-01",
+          "D-T009-01"
+        ],
+        "service_start_s": 15069.600309010106,
+        "service_end_s": 20647.050504067287,
+        "launch_start_s": 14282.243994745397,
+        "relay_ready_s": 15069.600309010106,
+        "return_end_s": 21256.256538078906,
+        "resource_end_s": 21556.256538078906,
+        "charge_start_s": 21556.256538078906,
+        "charge_end_s": 22887.44420871293,
+        "energy_kwh": 2.0460004200222084,
+        "soc_after": 0.3606248687430599
+      },
+      {
+        "sortie_id": "RS-006",
+        "option_id": "SO-00068",
+        "candidate_id": "P0024",
+        "relay_id": "R02",
+        "energy_component_id": "EC-05",
+        "demand_ids": [
+          "D-T025-01",
+          "D-T011-01"
+        ],
+        "service_start_s": 18752.091058349608,
+        "service_end_s": 23377.470514035485,
+        "launch_start_s": 18118.310975507982,
+        "relay_ready_s": 18752.091058349608,
+        "return_end_s": 23847.775014499995,
+        "resource_end_s": 24147.775014499995,
+        "charge_start_s": 24147.775014499995,
+        "charge_end_s": 25315.849678833205,
+        "energy_kwh": 1.6444914814355938,
+        "soc_after": 0.486096412051377
+      }
+    ],
+    "relay_sorties": [
+      {
+        "sortie_id": "RS-001",
+        "option_id": "SO-00595",
+        "candidate_id": "P0113",
+        "relay_id": "R01",
+        "energy_component_id": "EC-03",
+        "demand_ids": [
+          "D-T022-01",
+          "D-T018-01",
+          "D-T023-01",
+          "D-T021-01"
+        ],
+        "service_start_s": 1344.4939412434896,
+        "service_end_s": 3872.466705146261,
+        "launch_start_s": 716.2567466596929,
+        "relay_ready_s": 1344.4939412434896,
+        "return_end_s": 4337.52943175317,
+        "resource_end_s": 4637.52943175317,
+        "charge_start_s": 4637.52943175317,
+        "charge_end_s": 5543.706240996155,
+        "energy_kwh": 0.9998198381365796,
+        "soc_after": 0.6875563005823189
+      },
+      {
+        "sortie_id": "RS-002",
+        "option_id": "SO-00228",
+        "candidate_id": "P0045",
+        "relay_id": "R02",
+        "energy_component_id": "EC-06",
+        "demand_ids": [
+          "D-T004-01",
+          "D-T014-01"
+        ],
+        "service_start_s": 2150.5149475097655,
+        "service_end_s": 2999.079410648509,
+        "launch_start_s": 1519.346301888469,
+        "relay_ready_s": 2150.5149475097655,
+        "return_end_s": 3459.961306493601,
+        "resource_end_s": 3759.961306493601,
+        "charge_start_s": 3759.961306493601,
+        "charge_end_s": 4460.888049369499,
+        "energy_kwh": 0.49458890554067014,
+        "soc_after": 0.8454409670185405
+      },
+      {
+        "sortie_id": "RS-003",
+        "option_id": "SO-00478",
+        "candidate_id": "P0088",
+        "relay_id": "R02",
+        "energy_component_id": "EC-04",
+        "demand_ids": [
+          "D-T008-01",
+          "D-T015-01"
+        ],
+        "service_start_s": 4746.837111409505,
+        "service_end_s": 5864.34501329219,
+        "launch_start_s": 3959.4807971447954,
+        "relay_ready_s": 4746.837111409505,
+        "return_end_s": 6473.551047303807,
+        "resource_end_s": 6773.551047303807,
+        "charge_start_s": 6773.551047303807,
+        "charge_end_s": 7551.117408976064,
+        "energy_kwh": 0.6832402748855564,
+        "soc_after": 0.7864874140982636
+      },
+      {
+        "sortie_id": "RS-004",
+        "option_id": "SO-00102",
+        "candidate_id": "P0027",
+        "relay_id": "R01",
+        "energy_component_id": "EC-01",
+        "demand_ids": [
+          "D-T006-01",
+          "D-T010-01",
+          "D-T024-01",
+          "D-T016-01",
+          "D-T007-01"
+        ],
+        "service_start_s": 5782.09105834961,
+        "service_end_s": 12637.97974185995,
+        "launch_start_s": 5053.265097528441,
+        "relay_ready_s": 5782.09105834961,
+        "return_end_s": 13211.471393802538,
+        "resource_end_s": 13511.471393802538,
+        "charge_start_s": 13511.471393802538,
+        "charge_end_s": 14978.279716603172,
+        "energy_kwh": 2.379835871509255,
+        "soc_after": 0.2563012901533579
+      },
+      {
+        "sortie_id": "RS-005",
+        "option_id": "SO-00487",
+        "candidate_id": "P0088",
+        "relay_id": "R01",
+        "energy_component_id": "EC-06",
+        "demand_ids": [
+          "D-T020-01",
+          "D-T017-01",
+          "D-T005-01",
+          "D-T009-01"
+        ],
+        "service_start_s": 15069.600309010106,
+        "service_end_s": 20647.050504067287,
+        "launch_start_s": 14282.243994745397,
+        "relay_ready_s": 15069.600309010106,
+        "return_end_s": 21256.256538078906,
+        "resource_end_s": 21556.256538078906,
+        "charge_start_s": 21556.256538078906,
+        "charge_end_s": 22887.44420871293,
+        "energy_kwh": 2.0460004200222084,
+        "soc_after": 0.3606248687430599
+      },
+      {
+        "sortie_id": "RS-006",
+        "option_id": "SO-00068",
+        "candidate_id": "P0024",
+        "relay_id": "R02",
+        "energy_component_id": "EC-05",
+        "demand_ids": [
+          "D-T025-01",
+          "D-T011-01"
+        ],
+        "service_start_s": 18752.091058349608,
+        "service_end_s": 23377.470514035485,
+        "launch_start_s": 18118.310975507982,
+        "relay_ready_s": 18752.091058349608,
+        "return_end_s": 23847.775014499995,
+        "resource_end_s": 24147.775014499995,
+        "charge_start_s": 24147.775014499995,
+        "charge_end_s": 25315.849678833205,
+        "energy_kwh": 1.6444914814355938,
+        "soc_after": 0.486096412051377
+      }
+    ],
+    "relay_services": [
+      {
+        "relay_id": "R01",
+        "option_id": "SO-00595",
+        "candidate_id": "P0113",
+        "lon": 109.27135709756021,
+        "lat": 23.0052097,
+        "altitude_msl_m": 689.6063842773438,
+        "service_start_s": 1344.4939412434896,
+        "service_end_s": 3872.466705146261
+      },
+      {
+        "relay_id": "R02",
+        "option_id": "SO-00228",
+        "candidate_id": "P0045",
+        "lon": 109.21278607038295,
+        "lat": 23.04590642798307,
+        "altitude_msl_m": 604.2590026855469,
+        "service_start_s": 2150.5149475097655,
+        "service_end_s": 2999.079410648509
+      },
+      {
+        "relay_id": "R02",
+        "option_id": "SO-00478",
+        "candidate_id": "P0088",
+        "lon": 109.24207158397158,
+        "lat": 23.073037579971782,
+        "altitude_msl_m": 509.8966369628906,
+        "service_start_s": 4746.837111409505,
+        "service_end_s": 5864.34501329219
+      },
+      {
+        "relay_id": "R01",
+        "option_id": "SO-00102",
+        "candidate_id": "P0027",
+        "lon": 109.19814331358863,
+        "lat": 23.04590642798307,
+        "altitude_msl_m": 783.6882934570312,
+        "service_start_s": 5782.09105834961,
+        "service_end_s": 12637.97974185995
+      },
+      {
+        "relay_id": "R01",
+        "option_id": "SO-00487",
+        "candidate_id": "P0088",
+        "lon": 109.24207158397158,
+        "lat": 23.073037579971782,
+        "altitude_msl_m": 509.8966369628906,
+        "service_start_s": 15069.600309010106,
+        "service_end_s": 20647.050504067287
+      },
+      {
+        "relay_id": "R02",
+        "option_id": "SO-00068",
+        "candidate_id": "P0024",
+        "lon": 109.19814331358863,
+        "lat": 23.032340851988714,
+        "altitude_msl_m": 685.9930114746094,
+        "service_start_s": 18752.091058349608,
+        "service_end_s": 23377.470514035485
+      }
+    ],
+    "replay_audit": [
+      {
+        "trip_id": "T001",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T002",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T003",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T004",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T005",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T006",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T007",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T008",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T009",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T010",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T011",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T012",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T013",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T014",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T015",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T016",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T017",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T018",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T019",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T020",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T021",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T022",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T023",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T024",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T025",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      }
+    ]
+  },
+  "transport_validation": {
+    "phase": "Q2-E",
+    "status": "PASS",
+    "checks": {
+      "all_boxes_delivered_once": true,
+      "missing_boxes": true,
+      "duplicate_boxes": true,
+      "no_split_boxes": true,
+      "unknown_boxes": true,
+      "mass_pass": true,
+      "volume_pass": true,
+      "energy_pass": true,
+      "return_reserve_pass": true,
+      "route_energy_recomputed": true,
+      "delivery_recomputed": true,
+      "first_deadlines_pass": true,
+      "medical_deadlines_pass": true,
+      "uav_type_pass": true,
+      "uav_overlap_zero": true,
+      "battery_type_pass": true,
+      "battery_count_pass": true,
+      "battery_overlap_zero": true,
+      "soc_pass": true,
+      "charge_pass": true,
+      "charge_before_reuse_pass": true,
+      "solver_validator_consistent": true
+    },
+    "metrics": {
+      "WTD": 2919779.443347478,
+      "Cmax_s": 23738.870393305344,
+      "total_energy_kwh": 70.11816756700782,
+      "n_trips": 25.0
+    },
+    "solver_metrics": {
+      "WTD": 2919779.4433474788,
+      "Cmax_s": 23738.870393305344,
+      "total_energy_kwh": 70.1181675670078,
+      "n_trips": 25.0,
+      "total_operation_time_s": 45796.642832170495
+    },
+    "n_trips": 25,
+    "n_boxes": 80,
+    "delivered_records": 80,
+    "solver_status": "C2_START_TIME_REPAIR",
+    "solver_stage_statuses": {
+      "WTD": "C2_START_TIME_REPAIR",
+      "Cmax": "C2_START_TIME_REPAIR"
+    },
+    "solver_grid_metrics": {},
+    "battery_reuse_audit": [
+      {
+        "battery_id": "BAT-A-01",
+        "previous_trip": "T001",
+        "previous_charge_end": 2192.508647086876,
+        "next_trip": "T024",
+        "next_start": 5940.0,
+        "margin_s": 3747.491352913124,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-C-01",
+        "previous_trip": "T002",
+        "previous_charge_end": 11158.821215676608,
+        "next_trip": "T005",
+        "next_start": 16000.0,
+        "margin_s": 4841.178784323392,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-A-03",
+        "previous_trip": "T004",
+        "previous_charge_end": 4744.880481214958,
+        "next_trip": "T016",
+        "next_start": 8000.0,
+        "margin_s": 3255.1195187850417,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-B-02",
+        "previous_trip": "T022",
+        "previous_charge_end": 3566.7344167506444,
+        "next_trip": "T006",
+        "next_start": 5000.0,
+        "margin_s": 1433.2655832493556,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-C-03",
+        "previous_trip": "T007",
+        "previous_charge_end": 15681.509520914227,
+        "next_trip": "T011",
+        "next_start": 22000.0,
+        "margin_s": 6318.490479085773,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-C-02",
+        "previous_trip": "T013",
+        "previous_charge_end": 11892.78548274402,
+        "next_trip": "T009",
+        "next_start": 19000.0,
+        "margin_s": 7107.214517255979,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-A-02",
+        "previous_trip": "T012",
+        "previous_charge_end": 2191.8995403542476,
+        "next_trip": "T010",
+        "next_start": 6000.0,
+        "margin_s": 3808.1004596457524,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-B-01",
+        "previous_trip": "T018",
+        "previous_charge_end": 3605.9895902492817,
+        "next_trip": "T015",
+        "next_start": 4300.0,
+        "margin_s": 694.0104097507183,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-B-01",
+        "previous_trip": "T015",
+        "previous_charge_end": 8214.263481053256,
+        "next_trip": "T025",
+        "next_start": 18000.0,
+        "margin_s": 9785.736518946744,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-B-04",
+        "previous_trip": "T021",
+        "previous_charge_end": 6110.427468054169,
+        "next_trip": "T017",
+        "next_start": 16000.0,
+        "margin_s": 9889.57253194583,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-B-03",
+        "previous_trip": "T023",
+        "previous_charge_end": 5613.032821388202,
+        "next_trip": "T020",
+        "next_start": 14000.0,
+        "margin_s": 8386.967178611798,
+        "pass": true
+      }
+    ]
+  },
+  "relay_validation": {
+    "status": "PASS",
+    "decoder_validation_status": "PASS",
+    "decoder_checks": {
+      "all_demands_candidate_coverable": true,
+      "exact_validation_pass": true,
+      "service_option_space_complete": true,
+      "status_mapping_pass": true
+    },
+    "checks": {
+      "all_demands_candidate_coverable": true,
+      "all_demands_scheduled_covered": true,
+      "relay_uav_overlap_zero": true,
+      "energy_component_overlap_zero": true,
+      "charging_pass": true,
+      "arrival_timing_pass": true,
+      "reserve_pass": true,
+      "full_trajectory_communication_feasible": true,
+      "exact_validation_pass": true,
+      "service_option_space_complete": true,
+      "status_mapping_pass": true
+    },
+    "coverage_audit": [
+      {
+        "demand_id": "D-T004-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 17,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-002",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T005-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 17,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-005",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T006-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 7,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-004",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T007-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 7,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-004",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T008-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 6,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-003",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T009-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 6,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-005",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T010-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 34,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-004",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T011-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 34,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-006",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T014-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 19,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-002",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T015-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 11,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-003",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T016-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 49,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-004",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T017-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 9,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-005",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T018-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 24,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-001",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T020-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 11,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-005",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T021-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 14,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-001",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T022-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 63,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-001",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T023-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 18,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-001",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T024-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 14,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-004",
+        "full_replay_covered": true
+      },
+      {
+        "demand_id": "D-T025-01",
+        "candidate_coverable": true,
+        "n_covering_candidates": 11,
+        "scheduled_covered": true,
+        "selected_sortie_id": "RS-006",
+        "full_replay_covered": true
+      }
+    ],
+    "small_exact": {
+      "B-Small-1": {
+        "solver_status": "OPTIMAL",
+        "sortie_count": 2,
+        "energy_kwh": 2.2,
+        "completion_s": 660,
+        "expected_status": "OPTIMAL",
+        "expected_sortie_count": 2,
+        "pass": true
+      },
+      "B-Small-2": {
+        "solver_status": "OPTIMAL",
+        "sortie_count": 1,
+        "energy_kwh": 1.1,
+        "completion_s": 260,
+        "expected_status": "OPTIMAL",
+        "expected_sortie_count": 1,
+        "pass": true
+      },
+      "B-Small-3": {
+        "solver_status": "INFEASIBLE",
+        "sortie_count": null,
+        "energy_kwh": null,
+        "completion_s": null,
+        "expected_status": "INFEASIBLE",
+        "expected_sortie_count": null,
+        "pass": true
+      },
+      "B-Small-4": {
+        "solver_status": "INFEASIBLE",
+        "sortie_count": null,
+        "energy_kwh": null,
+        "completion_s": null,
+        "expected_status": "INFEASIBLE",
+        "expected_sortie_count": null,
+        "pass": true
+      }
+    },
+    "metrics": {
+      "demand_count": 19,
+      "candidate_count": 135,
+      "service_option_count": 735,
+      "candidate_coverable_count": 19,
+      "scheduled_covered_count": 19,
+      "relay_sortie_count": 6,
+      "relay_energy_kwh": 8.247976791529863,
+      "relay_cmax_s": 24147.775014499995,
+      "joint_cmax_s": 24147.775014499995,
+      "runtime_s": 69.12549740000395
+    },
+    "reason": null,
+    "full_replay_audit": [
+      {
+        "trip_id": "T001",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T002",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T003",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T004",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T005",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T006",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T007",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T008",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T009",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T010",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T011",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T012",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T013",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T014",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T015",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T016",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T017",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T018",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T019",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T020",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T021",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T022",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T023",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T024",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      },
+      {
+        "trip_id": "T025",
+        "outage_samples": 0,
+        "outage_duration_s": 0.0,
+        "communication_feasible": true
+      }
+    ],
+    "decoder_status": "PASS",
+    "baseline_status": "FEASIBLE",
+    "solver_status": "OPTIMAL"
+  },
+  "joint_validation": {
+    "status": "PASS",
+    "checks": {
+      "all_boxes_once": true,
+      "hard_deadlines": true,
+      "mass": true,
+      "volume": true,
+      "transport_reserve": true,
+      "transport_uav_overlap": true,
+      "battery_overlap": true,
+      "battery_soc_recharge": true,
+      "relay_uav_overlap": true,
+      "energy_component_overlap": true,
+      "relay_reserve": true,
+      "relay_charge": true,
+      "arrival_timing": true,
+      "full_communication": true
+    },
+    "reason": null
+  },
+  "metrics": {
+    "WTD": 2919779.443347478,
+    "transport_Cmax_s": 23738.870393305344,
+    "transport_energy_kwh": 70.11816756700782,
+    "transport_n_trips": 25.0,
+    "relay_sorties": 6,
+    "relay_energy_kwh": 8.247976791529863,
+    "joint_Cmax_s": 24147.775014499995,
+    "total_energy_kwh": 78.36614435853768
+  },
+  "provenance": {
+    "candidate_spacing_m": 1500.0,
+    "source": "real Q2 validator + real Q3-B decoder"
+  }
+}

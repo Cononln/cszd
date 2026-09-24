@@ -534,7 +534,7 @@
         "relay_energy_kwh": 8.272833382812461,
         "relay_cmax_s": 24147.775014499995,
         "joint_cmax_s": 24147.775014499995,
-        "runtime_s": 89.09478689997923
+        "runtime_s": 91.91635590000078
       },
       "reason": null,
       "full_replay_audit": [
@@ -1092,7 +1092,7 @@
         "relay_energy_kwh": 8.247976791529863,
         "relay_cmax_s": 24147.775014499995,
         "joint_cmax_s": 24147.775014499995,
-        "runtime_s": 83.33335240001907
+        "runtime_s": 90.95431239999016
       },
       "reason": null,
       "full_replay_audit": [
