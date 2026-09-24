@@ -34,6 +34,8 @@ class RoutePlan:
             raise ValueError("stop_sequence excludes depot O01")
         if set(self.boxes_by_stop) != set(stops):
             raise ValueError("boxes_by_stop keys must equal stop_sequence")
+        if any(not self.boxes_by_stop[sid] for sid in stops):
+            raise ValueError("each service-area stop must deliver at least one box")
         box_ids = [box for sid in stops for box in self.boxes_by_stop[sid]]
         if len(box_ids) != len(set(box_ids)):
             raise ValueError("a route contains a duplicate box ID")
@@ -103,6 +105,10 @@ class RouteEvaluation:
     prep_load_time_s: float | None = None
     handover_time_by_sid: Mapping[str, float] = field(default_factory=dict)
     route_duration_s: float | None = None
+    mass_limit_kg: float | None = None
+    volume_limit_m3: float | None = None
+    payload_after_stop_by_sid: Mapping[str, float] = field(default_factory=dict)
+
     mass_feasible: bool | None = None
     volume_feasible: bool | None = None
     energy_feasible: bool | None = None

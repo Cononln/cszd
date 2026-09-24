@@ -2,7 +2,7 @@
 
 本审计依据：
 
-- GitHub `Cononln/cszd` 的 `origin/q1/q1-3-final`（Q1 正式公共层，当前本地可见提交 `c6a72dc`）；
+- GitHub `Cononln/cszd` 的 `origin/q1/q1-3-final`（Q1 正式公共层，当前本地可见提交 `2f0d95034aba7145e1bb601e12b9660f9e8e4939`）；
 - 本地 A/raw：`D题/D题实现代码/`；
 - 本地 B/super：`D题/进阶版/`；
 - Q2-A 提示词指定的三类论文方法。

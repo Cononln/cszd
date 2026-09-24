@@ -1,0 +1,24 @@
+{
+  "phase": "Q2-B",
+  "status": "PASS",
+  "checks": {
+    "single_stop_regression_all": true,
+    "payload_decreases_all": true,
+    "return_payload_zero_all": true,
+    "handover_accumulation_pass": true,
+    "order_sensitivity_verified": true,
+    "mass_infeasible_detected": true,
+    "volume_infeasible_detected": true,
+    "energy_infeasible_detected": true,
+    "duplicate_box_rejected": true,
+    "sid_mismatch_rejected": true,
+    "unknown_box_rejected": true,
+    "empty_stop_rejected": true
+  },
+  "single_stop_regression": {
+    "n_cases": 6,
+    "max_time_error_s": 0.0,
+    "max_energy_error_kwh": 0.0
+  },
+  "n_cases": 18
+}
