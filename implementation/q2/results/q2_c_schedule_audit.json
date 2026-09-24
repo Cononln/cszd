@@ -1,16 +1,16 @@
 {
   "phase": "Q2-C",
   "status": "PASS",
-  "solver_status": "WTD:FEASIBLE;Cmax:UNKNOWN",
+  "solver_status": "WTD:OPTIMAL;Cmax:OPTIMAL",
   "stage_statuses": {
-    "WTD": "FEASIBLE",
-    "Cmax": "UNKNOWN"
+    "WTD": "OPTIMAL",
+    "Cmax": "OPTIMAL"
   },
   "solver_grid_metrics": {
-    "WTD_stage1_grid": 14791.4,
-    "WTD_stage2_grid": 14791.4,
+    "WTD_stage1_grid": 6228.2,
+    "WTD_stage2_grid": 6228.2,
     "WTD_stage1_locked": 1.0,
-    "Cmax_grid_s": 11993.0
+    "Cmax_grid_s": 9612.4
   },
   "checks": {
     "uav_type": true,
@@ -80,6 +80,6 @@
     },
     "status": "PASS"
   },
-  "n_trips": 29,
+  "n_trips": 25,
   "note": "For the 80-box fixed-route schedule, FEASIBLE means best-known valid schedule; it is not a global optimality claim."
 }
