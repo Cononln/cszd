@@ -16,6 +16,12 @@ def _sha(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def _source_changes(paths: list[str]) -> list[str]:
+    """Exclude generated Q4 output roots from reproducibility metadata."""
+    return sorted({path for path in paths if not path.startswith((
+        "implementation/q4/results/", "implementation/q4/reproducibility/"))})
+
+
 def audit(*, require_deliverables: bool = False) -> dict[str, Any]:
     root = results_root(); final_path = root / "q4_final.json"; final = json.loads(final_path.read_text(encoding="utf-8"))
     current_q3 = load_q3_selected_solution(); q3audit = json.loads(q3_audit_path().read_text(encoding="utf-8"))
@@ -32,8 +38,8 @@ def audit(*, require_deliverables: bool = False) -> dict[str, Any]:
     failure = final.get("failure_taxonomy_summary", {})
     failure_valid = all(row.get("category") and row.get("category") != "unknown" and row.get("source_value") is False
                         for row in failure.get("candidate_failures", []))
-    changed = subprocess.check_output(["git", "diff", "--name-only", "869bcbc..HEAD"], text=True).splitlines()
-    working = subprocess.check_output(["git", "diff", "--name-only"], text=True).splitlines()
+    changed = _source_changes(subprocess.check_output(["git", "diff", "--name-only", "869bcbc..HEAD"], text=True).splitlines())
+    working = _source_changes(subprocess.check_output(["git", "diff", "--name-only"], text=True).splitlines())
     forbidden = [path for path in changed + working if path.startswith(("implementation/q1/", "implementation/q2/", "implementation/q3/"))]
     checks: dict[str, bool] = {
         "q3_upstream_reference_valid": q3audit.get("status") == "PASS" and all(q3audit.get("checks", {}).values()),
