@@ -172,7 +172,7 @@
     {
       "file": "code/implementation/final_audit/git_revision_manifest.json",
       "size": 1524,
-      "sha256": "48c34fd1e89efc8999dbb05943fc91ba209c86d7185adddfca399cbbb01ad2f1",
+      "sha256": "7006ae99ddc1c8f2728f62ecf9d574351a53e860f645f63f0ee88e41ed38a82d",
       "formal_or_auxiliary": "FORMAL"
     },
     {
@@ -214,7 +214,7 @@
     {
       "file": "code/implementation/final_audit/PROJECT_FINAL_AUDIT.json",
       "size": 803,
-      "sha256": "d1cc3d2ca9d21191e077b7b1534799aa77820fb9f4971f2cbed51f591bd2fabb",
+      "sha256": "f003345a9938efa9937033b7e2e33a8387b5a1f0ca4b73f441532dde0a002674",
       "formal_or_auxiliary": "FORMAL"
     },
     {
@@ -226,7 +226,7 @@
     {
       "file": "code/implementation/final_audit/repo_inventory.json",
       "size": 210797,
-      "sha256": "955a35874006da4ecaef18e0d69d5b478f4b27c593492ff961619d566b283c10",
+      "sha256": "5477c9032a3331720ad2ffa7d21235b1e3e5b234340152b9a9a6e8149e09539b",
       "formal_or_auxiliary": "FORMAL"
     },
     {
@@ -2668,7 +2668,7 @@
     {
       "file": "manifests/git_revision_manifest.json",
       "size": 1524,
-      "sha256": "48c34fd1e89efc8999dbb05943fc91ba209c86d7185adddfca399cbbb01ad2f1",
+      "sha256": "7006ae99ddc1c8f2728f62ecf9d574351a53e860f645f63f0ee88e41ed38a82d",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
@@ -2710,7 +2710,7 @@
     {
       "file": "manifests/PROJECT_FINAL_AUDIT.json",
       "size": 799,
-      "sha256": "98202c9e58eabf58101c7f153107d3d1b7b531258730e04f2d69508af31b0c67",
+      "sha256": "e082f20fe89c4814559bb1ae7733de46578a255692b18efbac6ca14aecde5065",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
@@ -2722,7 +2722,7 @@
     {
       "file": "manifests/repo_inventory.json",
       "size": 210797,
-      "sha256": "955a35874006da4ecaef18e0d69d5b478f4b27c593492ff961619d566b283c10",
+      "sha256": "5477c9032a3331720ad2ffa7d21235b1e3e5b234340152b9a9a6e8149e09539b",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {

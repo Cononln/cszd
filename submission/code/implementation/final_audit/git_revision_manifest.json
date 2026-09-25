@@ -36,7 +36,7 @@
     {
       "question": "PACKAGE",
       "branch": "q4/q4-formal",
-      "freeze_commit": "1990834bf0b785c8576f86a81017b26dcf177dc1"
+      "freeze_commit": "279e2fa39e0d0e2d46c8943800bd9b840ecc983e"
     }
   ]
 }
