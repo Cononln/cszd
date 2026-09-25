@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "included": [
+    {
+      "source": "data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/数字高程模型数据（DEM）/镇龙乡及周边30米DEM.tif",
+      "submission_file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/数字高程模型数据（DEM）/镇龙乡及周边30米DEM.tif",
+      "reader": "common.config.DEM_TIF / rasterio",
+      "present": true,
+      "sha256": "741fe6de0b2bcaffd0f4007f574ee698d46197094f52cc954b532c4f90fc7c03"
+    },
+    {
+      "source": "data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/村镇点位/镇龙乡及周边村镇点位.csv",
+      "submission_file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/村镇点位/镇龙乡及周边村镇点位.csv",
+      "reader": "common.config.VILLAGE_CSV",
+      "present": true,
+      "sha256": "e08b6b3b5283a3c9ba5f898b5b7c54badddc786c58ec415dbd1035b3ddbc9759"
+    },
+    {
+      "source": "data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/水体（面）/镇龙乡及周边水体.csv",
+      "submission_file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/水体（面）/镇龙乡及周边水体.csv",
+      "reader": "common.config.WATER_POLY_CSV",
+      "present": true,
+      "sha256": "a3dd9377bfc82656e376a3a6f52ef9019ed76117b8df1841d1409a253790df81"
+    },
+    {
+      "source": "data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/水系（线）/镇龙乡及周边水系.csv",
+      "submission_file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/水系（线）/镇龙乡及周边水系.csv",
+      "reader": "common.config.WATER_LINE_CSV",
+      "present": true,
+      "sha256": "e7d26a3cdf26e845b63d8c4942b94f35fd38f71dc63b07655ca8adf15013ba2e"
+    },
+    {
+      "source": "data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/道路/镇龙乡及周边道路.csv",
+      "submission_file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/道路/镇龙乡及周边道路.csv",
+      "reader": "common.config.ROAD_CSV",
+      "present": true,
+      "sha256": "019c720d07c023cb7ffeb25952bf6cd1ffcf4e7ffec9e1833e162108965f7ec9"
+    },
+    {
+      "source": "data/raw/tabular/无人机应急物资运输基础数据/中继无人机数据.xlsx",
+      "submission_file": "code/data/raw/tabular/无人机应急物资运输基础数据/中继无人机数据.xlsx",
+      "reader": "formal Excel reader",
+      "present": true,
+      "sha256": "be52643ff29419233e6a141dca03a04160a8af551cab36d8c49b51bb836bea04"
+    },
+    {
+      "source": "data/raw/tabular/无人机应急物资运输基础数据/物资需求与配送时限.xlsx",
+      "submission_file": "code/data/raw/tabular/无人机应急物资运输基础数据/物资需求与配送时限.xlsx",
+      "reader": "formal Excel reader",
+      "present": true,
+      "sha256": "5a3346159ceddcf585859d270b8f62114b388a1f737fbe64ffde0ee1fdc8170a"
+    },
+    {
+      "source": "data/raw/tabular/无人机应急物资运输基础数据/调度中心与服务区.xlsx",
+      "submission_file": "code/data/raw/tabular/无人机应急物资运输基础数据/调度中心与服务区.xlsx",
+      "reader": "formal Excel reader",
+      "present": true,
+      "sha256": "541a7af1ded08c9a3ff448480332cb5f6a54902f0afa6e9bcd50c1d2b2b34e38"
+    },
+    {
+      "source": "data/raw/tabular/无人机应急物资运输基础数据/运输无人机数据.xlsx",
+      "submission_file": "code/data/raw/tabular/无人机应急物资运输基础数据/运输无人机数据.xlsx",
+      "reader": "formal Excel reader",
+      "present": true,
+      "sha256": "9296a657c07e042afba6aeea7999665d9cd24e00b592fd6c269de6e338480dcb"
+    },
+    {
+      "source": "data/raw/tabular/无人机应急物资运输基础数据/通信链路参数.xlsx",
+      "submission_file": "code/data/raw/tabular/无人机应急物资运输基础数据/通信链路参数.xlsx",
+      "reader": "formal Excel reader",
+      "present": true,
+      "sha256": "1860d153199e7ae460ba36e83b673374e640e19de91ea167f2877271001f5f81"
+    }
+  ],
+  "excluded": [
+    {
+      "source": "data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/数字高程模型数据（DEM）/镇龙乡及周边30米DEM.mat",
+      "classification": "EXCLUDE_FROM_SUBMISSION",
+      "reason": "not referenced by formal runtime readers; retained in the main repository"
+    },
+    {
+      "source": "data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/村镇点位/镇龙乡及周边村镇点位.mat",
+      "classification": "EXCLUDE_FROM_SUBMISSION",
+      "reason": "not referenced by formal runtime readers; retained in the main repository"
+    },
+    {
+      "source": "data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/水体（面）/镇龙乡及周边水体.mat",
+      "classification": "EXCLUDE_FROM_SUBMISSION",
+      "reason": "not referenced by formal runtime readers; retained in the main repository"
+    },
+    {
+      "source": "data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/水系（线）/镇龙乡及周边水系.mat",
+      "classification": "EXCLUDE_FROM_SUBMISSION",
+      "reason": "not referenced by formal runtime readers; retained in the main repository"
+    },
+    {
+      "source": "data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/道路/镇龙乡及周边道路.mat",
+      "classification": "EXCLUDE_FROM_SUBMISSION",
+      "reason": "not referenced by formal runtime readers; retained in the main repository"
+    },
+    {
+      "source": "data/raw/geo/镇龙乡地理空间数据/镇龙乡地理空间数据说明.pdf",
+      "classification": "EXCLUDE_FROM_SUBMISSION",
+      "reason": "not referenced by formal runtime readers; retained in the main repository"
+    },
+    {
+      "source": "data/raw/geo/镇龙乡地理空间数据/镇龙乡地理空间详情地图.html",
+      "classification": "EXCLUDE_FROM_SUBMISSION",
+      "reason": "not referenced by formal runtime readers; retained in the main repository"
+    }
+  ]
+}

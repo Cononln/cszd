@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "file_count": 585,
+  "file_count": 476,
   "self_hash_files_excluded": [
     "MANIFEST.json",
     "MANIFEST.md",
@@ -12,12 +12,6 @@
       "size": 41,
       "sha256": "0ea1a34a6633ed0c239a7363536aaf4b3f0ee77a59c26e29e847f00ed52220c7",
       "formal_or_auxiliary": "AUXILIARY"
-    },
-    {
-      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/数字高程模型数据（DEM）/镇龙乡及周边30米DEM.mat",
-      "size": 6746494,
-      "sha256": "c68703e0cc8f94f4bd52ff6e9974b66a2dae33865f0723ad71c04b6694bf4fbf",
-      "formal_or_auxiliary": "FORMAL"
     },
     {
       "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/数字高程模型数据（DEM）/镇龙乡及周边30米DEM.tif",
@@ -32,21 +26,9 @@
       "formal_or_auxiliary": "FORMAL"
     },
     {
-      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/村镇点位/镇龙乡及周边村镇点位.mat",
-      "size": 119280,
-      "sha256": "61419e92447ada38c56b7f64f04e4aada2eb1ed076ae33e95f1cbc69f3514beb",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
       "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/水体（面）/镇龙乡及周边水体.csv",
       "size": 283376,
       "sha256": "a3dd9377bfc82656e376a3a6f52ef9019ed76117b8df1841d1409a253790df81",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/水体（面）/镇龙乡及周边水体.mat",
-      "size": 179705,
-      "sha256": "b79df14bdc0b22811f5c219897a66775d8879a93c4a865e455d8c43ab099b50a",
       "formal_or_auxiliary": "FORMAL"
     },
     {
@@ -56,33 +38,9 @@
       "formal_or_auxiliary": "FORMAL"
     },
     {
-      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/水系（线）/镇龙乡及周边水系.mat",
-      "size": 179598,
-      "sha256": "b89f4f294bf771962676009fa9044f46ef26a06613fb6f91e2c6f9ccd430f8e8",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
       "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/道路/镇龙乡及周边道路.csv",
       "size": 1444497,
       "sha256": "019c720d07c023cb7ffeb25952bf6cd1ffcf4e7ffec9e1833e162108965f7ec9",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/道路/镇龙乡及周边道路.mat",
-      "size": 399882,
-      "sha256": "c868717284d8aee60157e3bc9b20e18a81b26fde3d75fc7d80317ef877af9849",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡地理空间数据说明.pdf",
-      "size": 85812,
-      "sha256": "6d1522c6832a5d91a108dae0d07954845025c0dabd44af8ee78c7860d7c405e4",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡地理空间详情地图.html",
-      "size": 4701769,
-      "sha256": "af1ae5cb0d3a843eb5b8a4adaea36dff6689ce2020061b1a234b71fe3a39b7ad",
       "formal_or_auxiliary": "FORMAL"
     },
     {
@@ -116,141 +74,9 @@
       "formal_or_auxiliary": "FORMAL"
     },
     {
-      "file": "code/implementation/final_audit/absolute_path_audit.md",
-      "size": 199,
-      "sha256": "f7ff530f3e02dd22c95bda2659dd64f07b2c3b79d95b26a4866c39229da66a58",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
       "file": "code/implementation/final_audit/audit_project_final.py",
-      "size": 37675,
-      "sha256": "3c0ef2b2a95e497988d652bb3a726b47ed0b209a04d8ebf5d8503bbf498c9a11",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/cross_question_interface_audit.json",
-      "size": 782,
-      "sha256": "2a91054ae9e5b591ebd16839111315ad16772dc4204e0864a604a952f7bed554",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/energy_consistency_audit.json",
-      "size": 280,
-      "sha256": "ef352f1c15232bc1cf7d975237b07d8e9ae33bc654c5873d9b37ef46b12a7c1c",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/environment_manifest.md",
-      "size": 1119,
-      "sha256": "48fe9176b6a3397d16054ab0ba0b3ad4e0b54d690c93b974a16fd91fd72a34fb",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/final_figure_manifest.json",
-      "size": 56372,
-      "sha256": "a8cbab1944a3138d9e0d6ff45b5d879683887a7b62da9789998f0da4f5c81c70",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/final_table_manifest.json",
-      "size": 2995,
-      "sha256": "1a5de359ff8114db13552acacdca37b012597b5fef47cdcee98e1fb41b516237",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/formal_source_manifest.json",
-      "size": 2536,
-      "sha256": "8ef6cef4e2ed73a8e99cdb16593bc8d6f382db6f2009b149a1533b4c7a5976c3",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/freeze_status_manifest.json",
-      "size": 509,
-      "sha256": "c0455198ff5ef5ee13ed6efbf2f246ecd79b33d82ed815bd707bd5d6567af791",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/git_revision_manifest.json",
-      "size": 1524,
-      "sha256": "7006ae99ddc1c8f2728f62ecf9d574351a53e860f645f63f0ee88e41ed38a82d",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/global_parameter_audit.json",
-      "size": 496,
-      "sha256": "65346f38df5cfb4c028b353bdd83477d6af9078aebb2b529090d5994ebbaac77",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/hard_constraint_matrix.csv",
-      "size": 4354,
-      "sha256": "6f4467dc1a5bc0ef7f96001c69d8b69ec71c205a281ab4eb72aba53fba4e0106",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/id_consistency_audit.csv",
-      "size": 587,
-      "sha256": "8b4ef245f5fd25399ba5d39659185e9841b0a2685b98b18f930e7f521739556c",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/input_data_manifest.json",
-      "size": 5717,
-      "sha256": "62b56491441776067e33b9da4febfa33b36e4e26f8ead74e48c489293debbd90",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/numeric_format_policy.md",
-      "size": 260,
-      "sha256": "aeaaa5a78eb8a5a89aa34301f74e50f0648e3a1901d0fd7b2075ed3a10a6eceb",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/objective_definition_audit.md",
-      "size": 893,
-      "sha256": "e84660954a9ed1d1926247d2816c33cd49fa0b06bba5e3309af14361b0ea0aee",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/PROJECT_FINAL_AUDIT.json",
-      "size": 803,
-      "sha256": "f003345a9938efa9937033b7e2e33a8387b5a1f0ca4b73f441532dde0a002674",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/PROJECT_FINAL_AUDIT.md",
-      "size": 631,
-      "sha256": "5c551dd92878531b7182af92d3dd3b99d871548ffcd67adda9523e572383bf45",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/repo_inventory.json",
-      "size": 210797,
-      "sha256": "5477c9032a3331720ad2ffa7d21235b1e3e5b234340152b9a9a6e8149e09539b",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/repo_inventory.md",
-      "size": 187,
-      "sha256": "62fbf777b221d2f0acf223bf5a6a9fcb2c02ef3e7a36033ef56c633620456372",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/stale_artifact_report.json",
-      "size": 3008,
-      "sha256": "3c34a46bcad0572353ccf42c05abd8e6a4324c5e8d101e759f61bfc21bc17d1e",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/timeline_consistency_audit.json",
-      "size": 325,
-      "sha256": "c8054697a0dd48cf5aad04383af22341ac4cbef386c8e1e50b12a0a0102806d5",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/final_audit/validator_independence_audit.md",
-      "size": 732,
-      "sha256": "903834ebc450662b64b9ec692bb32ec1bf4b8b841c44f7252d0007ae0af1d245",
+      "size": 50174,
+      "sha256": "159fb5519627e84eba0b2fc8c77a7cb71402b0fa3a5341b536e1d4441bacc41e",
       "formal_or_auxiliary": "FORMAL"
     },
     {
@@ -341,204 +167,6 @@
       "file": "code/implementation/q1/requirements.txt",
       "size": 67,
       "sha256": "e0e8186fee35050b098586051bf4519b4697fff789ba885ef7f354351d9d1dc2",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_01_capacity_map.pdf",
-      "size": 26306,
-      "sha256": "f9a78b29a1be3093c1b7300099d0e6855b4fba97408da987ce40115fef5186a8",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_01_capacity_map.png",
-      "size": 425743,
-      "sha256": "caee520625194f63f83b77dd6f9a131e9d3677d2e3442927581766b015106d05",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_01_capacity_map.svg",
-      "size": 61835,
-      "sha256": "94ef847179b9106c641feaf4ed4da78153fee1e57002fc0d01783663a0edf68b",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_02_flight_envelope.pdf",
-      "size": 22138,
-      "sha256": "9cd46fdcda7248df3c2e80621ce748e1e470c5d1c3b7603b7faba0b7025d8c73",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_02_flight_envelope.png",
-      "size": 404863,
-      "sha256": "cd859b8196a9e9ff8aca3fb153d10f52539307435d4076fbe3f5984b348fe973",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_02_flight_envelope.svg",
-      "size": 36137,
-      "sha256": "a82b1497743dc06de53064ab0cabd7d6eb7d88eb7bed6e5ccf1ab3de6761b93d",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_03_batch_plan.pdf",
-      "size": 18850,
-      "sha256": "c5ac2ec79350b79580bceef9c0db698cc0868e9a5d961f68686d5df448250288",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_03_batch_plan.png",
-      "size": 307542,
-      "sha256": "959e162d71b49f1600c18e453663dc0aa641eba45deb9ca9ebc4d62c863861f2",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_03_batch_plan.svg",
-      "size": 37521,
-      "sha256": "942281c1572b4f2e1ef7138e22089160350fc7d53f7c57ee4cd5766af10e06f5",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_04_service_allocation.pdf",
-      "size": 16364,
-      "sha256": "2afb37a671d7779211bcea50dae4e4e85b74d8ed938b2ae263b2ed4893b9ed55",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_04_service_allocation.png",
-      "size": 277976,
-      "sha256": "feddbb74779cbbe8d8a405b065f80b40d8de805a5ba55f0cfe6d6d35466369f6",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_04_service_allocation.svg",
-      "size": 23851,
-      "sha256": "d7220f8b573ad9c61b63d0227591305f77fbf3e20dae285a77f798148c279ad9",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_05_method_comparison.pdf",
-      "size": 16607,
-      "sha256": "dd7b1c441c81176942c116edaa5370b17ae7de917d9b6bc0afb3c00229d8da42",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_05_method_comparison.png",
-      "size": 205748,
-      "sha256": "fc3873a84dcba6681ef8accce64a6c405690af12614b2aff193eef7481354ef7",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_05_method_comparison.svg",
-      "size": 26644,
-      "sha256": "d918342def01d281f49f5620cbcc94e61f7168bb5fc3e4c98afc9713967bc8f1",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_06_utilization_tradeoff.pdf",
-      "size": 16867,
-      "sha256": "f1a92627ca31742bc00d496f519531756b134706f41ae4834b51862fb447caed",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_06_utilization_tradeoff.png",
-      "size": 273692,
-      "sha256": "9de7f588591e2fc13a233fcaf3328b0882bdb5098f560c7fe755de77f2f81d3b",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_06_utilization_tradeoff.svg",
-      "size": 35937,
-      "sha256": "0469921bf058b9cb19fa98291e1111107d9e6400e161f5d22a885f1857fa01be",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_07_energy_margin.pdf",
-      "size": 15133,
-      "sha256": "bd0397d91ba93e492bdc07975ee42ff1069b4ead27ba3d103e563e5848d74e63",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_07_energy_margin.png",
-      "size": 245369,
-      "sha256": "28800651d1361f49f8513d52f12cc934fbe48e721b4b67c07d7f202dcf47d3b9",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_07_energy_margin.svg",
-      "size": 22992,
-      "sha256": "cb4edd5f997170125c46d0d878f2b4f3283d3c94f945e2a41bfd8973e7855e3c",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_08_service_tradeoff.pdf",
-      "size": 23126,
-      "sha256": "28ba2244cb95fa57a03cfc8df19c3afdf4a0cba8fdaf1d901d0130c3eb3f40f1",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_08_service_tradeoff.png",
-      "size": 250178,
-      "sha256": "c96d7d6c18e4023828a8c40dca252940db19a90b469ee4f055823c982ac10a31",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_08_service_tradeoff.svg",
-      "size": 28746,
-      "sha256": "e1b1598bef2975bec4d0192b7c013be036f650d0b524a08a5247297fdee6f718",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_09_sensitivity.pdf",
-      "size": 15186,
-      "sha256": "659f9be8186f90a9af7d5d10b92d71328afee1737f91e766b29280097d64642c",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_09_sensitivity.png",
-      "size": 101478,
-      "sha256": "bba5cb794ae209960233c1119f99fcff303bebc72c4936aa215eae29f7670ec0",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_09_sensitivity.svg",
-      "size": 7753,
-      "sha256": "4baf7bf9eadf5d58c729cb198e2041b25f7a8ca01b3acc652ea8c9c01fd8ab18",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_10_lexicographic_stages.pdf",
-      "size": 12701,
-      "sha256": "b5879629fbeea15f6bd4555efb353cbf231c427db2bbd654d7255773a252153e",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_10_lexicographic_stages.png",
-      "size": 193975,
-      "sha256": "bdde3355d5f115a7d14d73e909454c398d01add435f9b63d2290be0bfa79dd09",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_10_lexicographic_stages.svg",
-      "size": 17319,
-      "sha256": "4cf0db4f82e88e92dd60513e4fd5d8eda6b3c82a1404547fba9fc9bcdb122e42",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_S2_solver_cost.pdf",
-      "size": 19108,
-      "sha256": "d68a6a530d94c0913b7b27e50b75b7e4555c027fb4f826c3c7c41b032f186d6e",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_S2_solver_cost.png",
-      "size": 140265,
-      "sha256": "506fe049bb1392dfdd46ed5f706986993606b39cb5f5734536eb16c83dc9efd2",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q1/results/figures/Fig_Q1_S2_solver_cost.svg",
-      "size": 28999,
-      "sha256": "913068392d003ad69c4adb7d9d5a9ea22ac65ebefa0c962eb2745f6bd92a24e0",
       "formal_or_auxiliary": "FORMAL"
     },
     {
@@ -767,168 +395,6 @@
       "file": "code/implementation/q2/requirements.txt",
       "size": 154,
       "sha256": "09b334c8b8be7e0092de675cbf5d6e90d82127155c8800cfa746138c66c532d9",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_01_method_comparison.pdf",
-      "size": 28416,
-      "sha256": "7241ba2e0037636378cf77953c439633b9a2cd8c3de5772cd0699c6720f05e91",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_01_method_comparison.png",
-      "size": 245130,
-      "sha256": "b91fa2d9a9ccf1bf6da22250a0d44d2168705372992ecdf0b18ecb052e6d1364",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_01_method_comparison.svg",
-      "size": 47255,
-      "sha256": "be68744545363d3b2262652d6aa741ed11de77f1f0b8e2236c1015304dcba5b3",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_02_global_pareto.pdf",
-      "size": 32069,
-      "sha256": "72b42e7fb5dd5653e1c55ab8de85526d3dcffef0b43beb17b7c508f61455bfae",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_02_global_pareto.png",
-      "size": 215495,
-      "sha256": "86bb7ccbeaf5abbb04166440002c1ecb51e45736f1233dec2229816eed8c97b5",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_02_global_pareto.svg",
-      "size": 35081,
-      "sha256": "03a28c2b6a7379e15cdcb8c6bddd3b138b045761918ddc5ef4c57db8272857bf",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_03_multiseed_stability.pdf",
-      "size": 42160,
-      "sha256": "801d6268e9a7b842cdfaf1b5a270fd3b360835277bd0084566bb434ecdde21bf",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_03_multiseed_stability.png",
-      "size": 317216,
-      "sha256": "db8e958f200fb324988e8ad106e6f33d553ba988136f631555b4de813de3f2be",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_03_multiseed_stability.svg",
-      "size": 51137,
-      "sha256": "da7faf5f5acfbfd358d4cda08ad582376530c489cdb6b3baf86f0189147de9a2",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_04_route_structure_map.pdf",
-      "size": 26373,
-      "sha256": "2266b7ad7b4fc23828337a7610469200c969f610f27ebc7bf9150082ca8ffaa3",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_04_route_structure_map.png",
-      "size": 310248,
-      "sha256": "05610fdec428a699c305c2f0ee0a473e46c49a38df376735712a0795435ab849",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_04_route_structure_map.svg",
-      "size": 17681,
-      "sha256": "eedc5ba4374989df0458f91543ce4ec84f9504708ee5b896ff45b9bf3f2d256e",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_05_uav_gantt.pdf",
-      "size": 24679,
-      "sha256": "90080f92a13223fb783ded3d6c431b43401d072d23b4901e890d661cd7905eed",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_05_uav_gantt.png",
-      "size": 139834,
-      "sha256": "5111537ba0df2a913e9c272f98bbdd1ffe69ff3561e910b37c2d938d420aa05b",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_05_uav_gantt.svg",
-      "size": 15793,
-      "sha256": "0725b47cc4716295e3798651f1b41e3fece49ec591a3f4b720f39618598a728b",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_06_battery_timeline.pdf",
-      "size": 18245,
-      "sha256": "c8d6912f57eb9225327787379ec1ace361cd3442ecb55716da1436f90768f8b7",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_06_battery_timeline.png",
-      "size": 179966,
-      "sha256": "ef67778d0362d5b953e30f89f693b14ceb21b90f5fab1844fd63a05687bdb6b7",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_06_battery_timeline.svg",
-      "size": 35631,
-      "sha256": "1b90206de0f32eccb0f9ece275b18b0ea5a30e32f8e2210eb2df6b8b34b20384",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_07_delivery_timeliness.pdf",
-      "size": 27236,
-      "sha256": "90a8ae96aea9acda05a4d0520dc700765466c08b0471e09c83c6e7b093756ec4",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_07_delivery_timeliness.png",
-      "size": 190814,
-      "sha256": "a25e5e04c76fb27c1d11776378aa6fac93261bd2e2b5b658d84f8882bfdd7a3f",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_07_delivery_timeliness.svg",
-      "size": 38553,
-      "sha256": "b0d51076c296065ebbce80b89c053d6834403adabbe353bf7d1c7cbcf212437d",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_08_multistop_examples.pdf",
-      "size": 24771,
-      "sha256": "75ed15e30483123444e6b88ef9185f6c785dca228af915cbeeddee1317f59230",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_08_multistop_examples.png",
-      "size": 256094,
-      "sha256": "16854079d4506cc749f339864d0f116920f9955979c8a400f24ac081c5e8b50a",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_08_multistop_examples.svg",
-      "size": 8611,
-      "sha256": "bb5dfa0b5efba9e5c2211d64bbb578767c3cdfdac12480fbbee243a7fdb10250",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_09_exact_benchmark.pdf",
-      "size": 35417,
-      "sha256": "e4404b05cca6320c149a2232ac6ae0b91c018d8f681fa66c65483cda3df6a070",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_09_exact_benchmark.png",
-      "size": 243458,
-      "sha256": "727cfa36cce86f67dece995b7844611d09b4302e3f7e6e3782145655bd824230",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q2/results/figures/Fig_Q2_09_exact_benchmark.svg",
-      "size": 17670,
-      "sha256": "56e9ac42bb376ff6638f4bfd6f3f4e71e38123c04181d46486aab97956a127fb",
       "formal_or_auxiliary": "FORMAL"
     },
     {
@@ -1337,78 +803,6 @@
       "file": "code/implementation/q3/requirements.txt",
       "size": 122,
       "sha256": "9eb2ef99eb42d10e395a2989e1b289b3e3ee7dfcad630ceb8e6d7fe9688fca2a",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.pdf",
-      "size": 40128,
-      "sha256": "4cc051637d60dbf6637110655560741cae88f37c6f9e1315e6e5892635a42275",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.png",
-      "size": 63463,
-      "sha256": "2aa6b0c99c85cf7e763661f90cd9fa3d831fa37186d75a67d7ef0c48e4ebd538",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.svg",
-      "size": 19513,
-      "sha256": "602f2b2ef5eddbe9ac66a1c7e1fcd1b45d89ca8815724a8fa0c04c59ecfa1d72",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.tiff",
-      "size": 25225406,
-      "sha256": "086d62a9366c451d7eb0f5a4c3222bfbda3edbf91660d49425a1d89cba6ea10a",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.pdf",
-      "size": 39983,
-      "sha256": "47e15fa959f0c26312302d08bc2ce1a9951654768815be1baf87249fdde04f3e",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.png",
-      "size": 61450,
-      "sha256": "29c92cf320c72c0f13480a63af6d35d411928e39497353708af06b3427df3892",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.svg",
-      "size": 27769,
-      "sha256": "0b5858caf3f3abc67761a9335080e1018e1b232d0203cb2494498223dece8375",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.tiff",
-      "size": 28314206,
-      "sha256": "963b3dfabec0b237990953468122d7efe2ac672766d6587cbc78be50e342444d",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q3/results/figures/Fig_Q3_03_search_validation.pdf",
-      "size": 38921,
-      "sha256": "44c6a52c2a1eedda005d009fe175119bde201398b9ad602c8900d2442ed1f669",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q3/results/figures/Fig_Q3_03_search_validation.png",
-      "size": 60454,
-      "sha256": "9d5b0600c64d55a074053373db4258be18f60f1929916149b00497c4eb109a10",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q3/results/figures/Fig_Q3_03_search_validation.svg",
-      "size": 13981,
-      "sha256": "80de53c62d75a8319b652ae9c95bcc95528c1e75d9eb7346609cf2a7616b4ebb",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q3/results/figures/Fig_Q3_03_search_validation.tiff",
-      "size": 25740206,
-      "sha256": "441e7acea4acae0068b39cddf9ef30416f7f03ff5fdbf9f7349c2b85fb553d14",
       "formal_or_auxiliary": "FORMAL"
     },
     {
@@ -1892,78 +1286,6 @@
       "formal_or_auxiliary": "FORMAL"
     },
     {
-      "file": "code/implementation/q4/results/figures/Fig_Q4_01_resource_configuration.pdf",
-      "size": 33392,
-      "sha256": "545be5dc72652d596c8b4b88683ef32f7bac501fb5be22c845a9b68908a6eb1f",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q4/results/figures/Fig_Q4_01_resource_configuration.png",
-      "size": 36685,
-      "sha256": "1a4c08cc957c69ad88c0979e470723b30b585d61f10fd66ea4e8e43b49ba7c8c",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q4/results/figures/Fig_Q4_01_resource_configuration.svg",
-      "size": 13628,
-      "sha256": "e1e9f7c7dfdb74f634789c191f69a378c08fc17011e9915ed0e606f0799ec30e",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q4/results/figures/Fig_Q4_01_resource_configuration.tiff",
-      "size": 28411978,
-      "sha256": "7e842463e633bbd8210ba3c1b51852db76788649f8ec977b9e005d5dbd47588b",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q4/results/figures/Fig_Q4_02_workload_balance.pdf",
-      "size": 38121,
-      "sha256": "8a9eed0c98f4f46b16008d71c0908e695a64ca53ad5149c53272a2aceb8f0f17",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q4/results/figures/Fig_Q4_02_workload_balance.png",
-      "size": 48844,
-      "sha256": "6bc356d06a375c5afc6d5211efc57c37be685d22becaa5f21c5e16a75680f2fd",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q4/results/figures/Fig_Q4_02_workload_balance.svg",
-      "size": 12821,
-      "sha256": "555e4d6084b225a5700df88bdaef67828429a5a97abbe51271b469c72fb3c416",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q4/results/figures/Fig_Q4_02_workload_balance.tiff",
-      "size": 28379238,
-      "sha256": "0149ca55afd3960f6cd73b580740d00493dd9240be81997f5c48436a6de1888a",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q4/results/figures/Fig_Q4_03_partition_structure.pdf",
-      "size": 32483,
-      "sha256": "a94fa5dbb57503f394d6b556d3abd0a1338e570dab8720c817e965d42e9e5140",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q4/results/figures/Fig_Q4_03_partition_structure.png",
-      "size": 33953,
-      "sha256": "a0e1afbc8174a1fbf738b0d7b76eb1e42757cd5e44ca39e31c83679955792020",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q4/results/figures/Fig_Q4_03_partition_structure.svg",
-      "size": 13813,
-      "sha256": "2a71eb4e322bdfea454270b796eac9644265583ea3ae7652c29a5c1bad24d900",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
-      "file": "code/implementation/q4/results/figures/Fig_Q4_03_partition_structure.tiff",
-      "size": 29453338,
-      "sha256": "03e22c2b8ef14f252d39ddd50262a679a476c0e0200164b7454d7c1b4dbe4530",
-      "formal_or_auxiliary": "FORMAL"
-    },
-    {
       "file": "code/implementation/q4/results/q4_a_problem_definition.json",
       "size": 4478,
       "sha256": "44039997b283ac29d96d91276b4decde847368aaf2f54eacad2d21fce086eb0b",
@@ -2288,6 +1610,24 @@
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
+      "file": "figures/q1/Fig_Q1_S1_solver_audit.pdf",
+      "size": 20434,
+      "sha256": "d5db03e3bb62b43d281379c314cbe7cfcf8cef0703c8740138f6657b3bd63984",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_S1_solver_audit.png",
+      "size": 198801,
+      "sha256": "d8cfdf59f7e73bc097e3ed22ae76f9bbaa6bcad9160aaa2f3a479317f7c16405",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_S1_solver_audit.svg",
+      "size": 33505,
+      "sha256": "645d2de30024ea2c28364b255713fd32ebb3c0cba1474e3470930c43311692d0",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
       "file": "figures/q1/Fig_Q1_S2_solver_cost.pdf",
       "size": 19108,
       "sha256": "d68a6a530d94c0913b7b27e50b75b7e4555c027fb4f826c3c7c41b032f186d6e",
@@ -2468,6 +1808,24 @@
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
+      "file": "figures/q2/Fig_Q2_10_operator_multistop_audit.pdf",
+      "size": 36572,
+      "sha256": "19ceec6d1198b13835a9aee232af70b02cc95295dccd00aef62c752dabf215c1",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_10_operator_multistop_audit.png",
+      "size": 283663,
+      "sha256": "e1ac58d585ed3755ab7ef85f8e1d24cbffce8459f94aa2b622e53a6616b102a5",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_10_operator_multistop_audit.svg",
+      "size": 27574,
+      "sha256": "9e9a7e1d727ab7aab8c3746f8c841294c0580400018ca8acadebde55d2b08671",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
       "file": "figures/q3/Fig_Q3_01_joint_solution_cost.pdf",
       "size": 40128,
       "sha256": "4cc051637d60dbf6637110655560741cae88f37c6f9e1315e6e5892635a42275",
@@ -2483,12 +1841,6 @@
       "file": "figures/q3/Fig_Q3_01_joint_solution_cost.svg",
       "size": 19513,
       "sha256": "602f2b2ef5eddbe9ac66a1c7e1fcd1b45d89ca8815724a8fa0c04c59ecfa1d72",
-      "formal_or_auxiliary": "AUXILIARY"
-    },
-    {
-      "file": "figures/q3/Fig_Q3_01_joint_solution_cost.tiff",
-      "size": 25225406,
-      "sha256": "086d62a9366c451d7eb0f5a4c3222bfbda3edbf91660d49425a1d89cba6ea10a",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
@@ -2510,12 +1862,6 @@
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
-      "file": "figures/q3/Fig_Q3_02_temporal_coordination.tiff",
-      "size": 28314206,
-      "sha256": "963b3dfabec0b237990953468122d7efe2ac672766d6587cbc78be50e342444d",
-      "formal_or_auxiliary": "AUXILIARY"
-    },
-    {
       "file": "figures/q3/Fig_Q3_03_search_validation.pdf",
       "size": 38921,
       "sha256": "44c6a52c2a1eedda005d009fe175119bde201398b9ad602c8900d2442ed1f669",
@@ -2531,12 +1877,6 @@
       "file": "figures/q3/Fig_Q3_03_search_validation.svg",
       "size": 13981,
       "sha256": "80de53c62d75a8319b652ae9c95bcc95528c1e75d9eb7346609cf2a7616b4ebb",
-      "formal_or_auxiliary": "AUXILIARY"
-    },
-    {
-      "file": "figures/q3/Fig_Q3_03_search_validation.tiff",
-      "size": 25740206,
-      "sha256": "441e7acea4acae0068b39cddf9ef30416f7f03ff5fdbf9f7349c2b85fb553d14",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
@@ -2558,12 +1898,6 @@
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
-      "file": "figures/q4/Fig_Q4_01_resource_configuration.tiff",
-      "size": 28411978,
-      "sha256": "7e842463e633bbd8210ba3c1b51852db76788649f8ec977b9e005d5dbd47588b",
-      "formal_or_auxiliary": "AUXILIARY"
-    },
-    {
       "file": "figures/q4/Fig_Q4_02_workload_balance.pdf",
       "size": 38121,
       "sha256": "8a9eed0c98f4f46b16008d71c0908e695a64ca53ad5149c53272a2aceb8f0f17",
@@ -2579,12 +1913,6 @@
       "file": "figures/q4/Fig_Q4_02_workload_balance.svg",
       "size": 12821,
       "sha256": "555e4d6084b225a5700df88bdaef67828429a5a97abbe51271b469c72fb3c416",
-      "formal_or_auxiliary": "AUXILIARY"
-    },
-    {
-      "file": "figures/q4/Fig_Q4_02_workload_balance.tiff",
-      "size": 28379238,
-      "sha256": "0149ca55afd3960f6cd73b580740d00493dd9240be81997f5c48436a6de1888a",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
@@ -2606,12 +1934,6 @@
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
-      "file": "figures/q4/Fig_Q4_03_partition_structure.tiff",
-      "size": 29453338,
-      "sha256": "03e22c2b8ef14f252d39ddd50262a679a476c0e0200164b7454d7c1b4dbe4530",
-      "formal_or_auxiliary": "AUXILIARY"
-    },
-    {
       "file": "manifests/absolute_path_audit.md",
       "size": 199,
       "sha256": "f7ff530f3e02dd22c95bda2659dd64f07b2c3b79d95b26a4866c39229da66a58",
@@ -2619,8 +1941,8 @@
     },
     {
       "file": "manifests/audit_project_final.py",
-      "size": 37675,
-      "sha256": "3c0ef2b2a95e497988d652bb3a726b47ed0b209a04d8ebf5d8503bbf498c9a11",
+      "size": 50174,
+      "sha256": "159fb5519627e84eba0b2fc8c77a7cb71402b0fa3a5341b536e1d4441bacc41e",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
@@ -2642,9 +1964,21 @@
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
+      "file": "manifests/FIGURE_REQUIREMENT_MAPPING.md",
+      "size": 597,
+      "sha256": "481106f061802eebd6ffaf29978d9de89f615250ebdde98dad65184ca0aaacd4",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/FINAL_FIGURE_CHECK.json",
+      "size": 20973,
+      "sha256": "d76a06d675af2aa2a70f8f480ed263c323cc6ee3e4ab4208709b57f8eb9fa29d",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
       "file": "manifests/final_figure_manifest.json",
-      "size": 56372,
-      "sha256": "a8cbab1944a3138d9e0d6ff45b5d879683887a7b62da9789998f0da4f5c81c70",
+      "size": 33846,
+      "sha256": "96ea7691280a0b8bc054791a730122d770871ee68ef9858220c8a7046fef35d8",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
@@ -2668,7 +2002,7 @@
     {
       "file": "manifests/git_revision_manifest.json",
       "size": 1524,
-      "sha256": "7006ae99ddc1c8f2728f62ecf9d574351a53e860f645f63f0ee88e41ed38a82d",
+      "sha256": "f6fca4dd0300d87608944b36e5b19442dd7ab5cfc9825ffab2b1427394a53ed0",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
@@ -2696,6 +2030,12 @@
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
+      "file": "manifests/INPUT_SELECTION_AUDIT.json",
+      "size": 6348,
+      "sha256": "48063efdd4b449527b236ba65533099da82c8b9ff2680d3572c1688df3bb046f",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
       "file": "manifests/numeric_format_policy.md",
       "size": 260,
       "sha256": "aeaaa5a78eb8a5a89aa34301f74e50f0648e3a1901d0fd7b2075ed3a10a6eceb",
@@ -2709,32 +2049,38 @@
     },
     {
       "file": "manifests/PROJECT_FINAL_AUDIT.json",
-      "size": 799,
-      "sha256": "e082f20fe89c4814559bb1ae7733de46578a255692b18efbac6ca14aecde5065",
+      "size": 1143,
+      "sha256": "b72e2478d811fa7ff91ee5e40b5ce4e318d87d9e4c20ce5d74d77d68b61795d3",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
       "file": "manifests/PROJECT_FINAL_AUDIT.md",
-      "size": 627,
-      "sha256": "88ede70a5597bb59b35048ceb0eaeadb7069764f710a0a2cbc3365a69b53f715",
+      "size": 915,
+      "sha256": "a42febebc702e83a184e2e5e5fdedb59b13d669a342b9bcdb8092d29e1e97263",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
       "file": "manifests/repo_inventory.json",
-      "size": 210797,
-      "sha256": "5477c9032a3331720ad2ffa7d21235b1e3e5b234340152b9a9a6e8149e09539b",
+      "size": 190141,
+      "sha256": "65350152c1df3ed45363a907650b7aeb1715ef31333ec15c30065874e808d8c4",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
       "file": "manifests/repo_inventory.md",
       "size": 187,
-      "sha256": "62fbf777b221d2f0acf223bf5a6a9fcb2c02ef3e7a36033ef56c633620456372",
+      "sha256": "ed81113d61c6ff6f19d962d297bf4dab3501859535bceb3629d4186f259761f5",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
       "file": "manifests/stale_artifact_report.json",
-      "size": 3008,
-      "sha256": "3c34a46bcad0572353ccf42c05abd8e6a4324c5e8d101e759f61bfc21bc17d1e",
+      "size": 3114,
+      "sha256": "9d11861dec0c572babca82f053181448f281d1b2d2dc15d2a9b83f9e4ef5067f",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/SUBMISSION_SIZE_AUDIT.json",
+      "size": 3134,
+      "sha256": "a0df76a1c5f1a8a0c26f4423eb5554e445a198fc17e6337d42f06477bef68595",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
@@ -2751,14 +2097,14 @@
     },
     {
       "file": "README.md",
-      "size": 487,
-      "sha256": "c40f114ecd43da43ca27ae6db2c8e24abb9157716dd3c974989f834cba0fbadb",
+      "size": 685,
+      "sha256": "5a63f37551dea0eefea6f18187fe108046dbcd775b4beb2bd3b19488ed41847e",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
       "file": "REPRODUCE.md",
-      "size": 680,
-      "sha256": "dd6d3202ad3441febade35db25a1fba6efeb55e688f81bd1c458a6f237315ae6",
+      "size": 721,
+      "sha256": "5170b6fbbba2d684e38cfc203fbcd15df2661a3a06906e81a29430d991397817",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {

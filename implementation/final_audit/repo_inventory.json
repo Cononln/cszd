@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-25T05:38:25.803315+00:00",
+  "generated_utc": "2026-09-25T07:17:22.237347+00:00",
   "root": ".",
   "files": [
     {
@@ -142,7 +142,7 @@
     },
     {
       "file": "implementation/final_audit/audit_project_final.py",
-      "size": 37675,
+      "size": 50174,
       "category": "final_audit",
       "label": "FORMAL"
     },
@@ -166,7 +166,7 @@
     },
     {
       "file": "implementation/final_audit/final_figure_manifest.json",
-      "size": 56372,
+      "size": 33846,
       "category": "final_audit",
       "label": "FORMAL"
     },
@@ -232,19 +232,19 @@
     },
     {
       "file": "implementation/final_audit/PROJECT_FINAL_AUDIT.json",
-      "size": 799,
+      "size": 1143,
       "category": "final_audit",
       "label": "FORMAL"
     },
     {
       "file": "implementation/final_audit/PROJECT_FINAL_AUDIT.md",
-      "size": 627,
+      "size": 915,
       "category": "final_audit",
       "label": "FORMAL"
     },
     {
       "file": "implementation/final_audit/repo_inventory.json",
-      "size": 210797,
+      "size": 189600,
       "category": "final_audit",
       "label": "FORMAL"
     },
@@ -256,7 +256,7 @@
     },
     {
       "file": "implementation/final_audit/stale_artifact_report.json",
-      "size": 3008,
+      "size": 3114,
       "category": "final_audit",
       "label": "FORMAL"
     },
@@ -3777,12 +3777,6 @@
       "label": "KEEP"
     },
     {
-      "file": "submission/code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/数字高程模型数据（DEM）/镇龙乡及周边30米DEM.mat",
-      "size": 6746494,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
       "file": "submission/code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/数字高程模型数据（DEM）/镇龙乡及周边30米DEM.tif",
       "size": 7867096,
       "category": "submission",
@@ -3795,20 +3789,8 @@
       "label": "KEEP"
     },
     {
-      "file": "submission/code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/村镇点位/镇龙乡及周边村镇点位.mat",
-      "size": 119280,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
       "file": "submission/code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/水体（面）/镇龙乡及周边水体.csv",
       "size": 283376,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/水体（面）/镇龙乡及周边水体.mat",
-      "size": 179705,
       "category": "submission",
       "label": "KEEP"
     },
@@ -3819,32 +3801,8 @@
       "label": "KEEP"
     },
     {
-      "file": "submission/code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/水系（线）/镇龙乡及周边水系.mat",
-      "size": 179598,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
       "file": "submission/code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/道路/镇龙乡及周边道路.csv",
       "size": 1444497,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/道路/镇龙乡及周边道路.mat",
-      "size": 399882,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/data/raw/geo/镇龙乡地理空间数据/镇龙乡地理空间数据说明.pdf",
-      "size": 85812,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/data/raw/geo/镇龙乡地理空间数据/镇龙乡地理空间详情地图.html",
-      "size": 4701769,
       "category": "submission",
       "label": "KEEP"
     },
@@ -3879,44 +3837,8 @@
       "label": "KEEP"
     },
     {
-      "file": "submission/code/implementation/final_audit/absolute_path_audit.md",
-      "size": 199,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
       "file": "submission/code/implementation/final_audit/audit_project_final.py",
-      "size": 37675,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/cross_question_interface_audit.json",
-      "size": 782,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/energy_consistency_audit.json",
-      "size": 280,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/environment_manifest.md",
-      "size": 1119,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/final_figure_manifest.json",
-      "size": 56372,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/final_table_manifest.json",
-      "size": 2995,
+      "size": 50026,
       "category": "submission",
       "label": "KEEP"
     },
@@ -3935,84 +3857,6 @@
     {
       "file": "submission/code/implementation/final_audit/git_revision_manifest.json",
       "size": 1524,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/global_parameter_audit.json",
-      "size": 496,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/hard_constraint_matrix.csv",
-      "size": 4354,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/id_consistency_audit.csv",
-      "size": 587,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/input_data_manifest.json",
-      "size": 5717,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/numeric_format_policy.md",
-      "size": 260,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/objective_definition_audit.md",
-      "size": 893,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/PROJECT_FINAL_AUDIT.json",
-      "size": 803,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/PROJECT_FINAL_AUDIT.md",
-      "size": 631,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/repo_inventory.json",
-      "size": 210797,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/repo_inventory.md",
-      "size": 187,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/stale_artifact_report.json",
-      "size": 3008,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/timeline_consistency_audit.json",
-      "size": 325,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/validator_independence_audit.md",
-      "size": 732,
       "category": "submission",
       "label": "KEEP"
     },
@@ -4103,204 +3947,6 @@
     {
       "file": "submission/code/implementation/q1/requirements.txt",
       "size": 67,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_01_capacity_map.pdf",
-      "size": 26306,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_01_capacity_map.png",
-      "size": 425743,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_01_capacity_map.svg",
-      "size": 61835,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_02_flight_envelope.pdf",
-      "size": 22138,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_02_flight_envelope.png",
-      "size": 404863,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_02_flight_envelope.svg",
-      "size": 36137,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_03_batch_plan.pdf",
-      "size": 18850,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_03_batch_plan.png",
-      "size": 307542,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_03_batch_plan.svg",
-      "size": 37521,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_04_service_allocation.pdf",
-      "size": 16364,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_04_service_allocation.png",
-      "size": 277976,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_04_service_allocation.svg",
-      "size": 23851,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_05_method_comparison.pdf",
-      "size": 16607,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_05_method_comparison.png",
-      "size": 205748,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_05_method_comparison.svg",
-      "size": 26644,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_06_utilization_tradeoff.pdf",
-      "size": 16867,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_06_utilization_tradeoff.png",
-      "size": 273692,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_06_utilization_tradeoff.svg",
-      "size": 35937,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_07_energy_margin.pdf",
-      "size": 15133,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_07_energy_margin.png",
-      "size": 245369,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_07_energy_margin.svg",
-      "size": 22992,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_08_service_tradeoff.pdf",
-      "size": 23126,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_08_service_tradeoff.png",
-      "size": 250178,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_08_service_tradeoff.svg",
-      "size": 28746,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_09_sensitivity.pdf",
-      "size": 15186,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_09_sensitivity.png",
-      "size": 101478,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_09_sensitivity.svg",
-      "size": 7753,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_10_lexicographic_stages.pdf",
-      "size": 12701,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_10_lexicographic_stages.png",
-      "size": 193975,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_10_lexicographic_stages.svg",
-      "size": 17319,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_S2_solver_cost.pdf",
-      "size": 19108,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_S2_solver_cost.png",
-      "size": 140265,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q1/results/figures/Fig_Q1_S2_solver_cost.svg",
-      "size": 28999,
       "category": "submission",
       "label": "KEEP"
     },
@@ -4529,168 +4175,6 @@
     {
       "file": "submission/code/implementation/q2/requirements.txt",
       "size": 154,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_01_method_comparison.pdf",
-      "size": 28416,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_01_method_comparison.png",
-      "size": 245130,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_01_method_comparison.svg",
-      "size": 47255,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_02_global_pareto.pdf",
-      "size": 32069,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_02_global_pareto.png",
-      "size": 215495,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_02_global_pareto.svg",
-      "size": 35081,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_03_multiseed_stability.pdf",
-      "size": 42160,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_03_multiseed_stability.png",
-      "size": 317216,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_03_multiseed_stability.svg",
-      "size": 51137,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_04_route_structure_map.pdf",
-      "size": 26373,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_04_route_structure_map.png",
-      "size": 310248,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_04_route_structure_map.svg",
-      "size": 17681,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_05_uav_gantt.pdf",
-      "size": 24679,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_05_uav_gantt.png",
-      "size": 139834,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_05_uav_gantt.svg",
-      "size": 15793,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_06_battery_timeline.pdf",
-      "size": 18245,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_06_battery_timeline.png",
-      "size": 179966,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_06_battery_timeline.svg",
-      "size": 35631,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_07_delivery_timeliness.pdf",
-      "size": 27236,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_07_delivery_timeliness.png",
-      "size": 190814,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_07_delivery_timeliness.svg",
-      "size": 38553,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_08_multistop_examples.pdf",
-      "size": 24771,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_08_multistop_examples.png",
-      "size": 256094,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_08_multistop_examples.svg",
-      "size": 8611,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_09_exact_benchmark.pdf",
-      "size": 35417,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_09_exact_benchmark.png",
-      "size": 243458,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q2/results/figures/Fig_Q2_09_exact_benchmark.svg",
-      "size": 17670,
       "category": "submission",
       "label": "KEEP"
     },
@@ -5099,78 +4583,6 @@
     {
       "file": "submission/code/implementation/q3/requirements.txt",
       "size": 122,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.pdf",
-      "size": 40128,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.png",
-      "size": 63463,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.svg",
-      "size": 19513,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.tiff",
-      "size": 25225406,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.pdf",
-      "size": 39983,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.png",
-      "size": 61450,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.svg",
-      "size": 27769,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.tiff",
-      "size": 28314206,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q3/results/figures/Fig_Q3_03_search_validation.pdf",
-      "size": 38921,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q3/results/figures/Fig_Q3_03_search_validation.png",
-      "size": 60454,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q3/results/figures/Fig_Q3_03_search_validation.svg",
-      "size": 13981,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q3/results/figures/Fig_Q3_03_search_validation.tiff",
-      "size": 25740206,
       "category": "submission",
       "label": "KEEP"
     },
@@ -5655,78 +5067,6 @@
       "label": "KEEP"
     },
     {
-      "file": "submission/code/implementation/q4/results/figures/Fig_Q4_01_resource_configuration.pdf",
-      "size": 33392,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q4/results/figures/Fig_Q4_01_resource_configuration.png",
-      "size": 36685,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q4/results/figures/Fig_Q4_01_resource_configuration.svg",
-      "size": 13628,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q4/results/figures/Fig_Q4_01_resource_configuration.tiff",
-      "size": 28411978,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q4/results/figures/Fig_Q4_02_workload_balance.pdf",
-      "size": 38121,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q4/results/figures/Fig_Q4_02_workload_balance.png",
-      "size": 48844,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q4/results/figures/Fig_Q4_02_workload_balance.svg",
-      "size": 12821,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q4/results/figures/Fig_Q4_02_workload_balance.tiff",
-      "size": 28379238,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q4/results/figures/Fig_Q4_03_partition_structure.pdf",
-      "size": 32483,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q4/results/figures/Fig_Q4_03_partition_structure.png",
-      "size": 33953,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q4/results/figures/Fig_Q4_03_partition_structure.svg",
-      "size": 13813,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/q4/results/figures/Fig_Q4_03_partition_structure.tiff",
-      "size": 29453338,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
       "file": "submission/code/implementation/q4/results/q4_a_problem_definition.json",
       "size": 4478,
       "category": "submission",
@@ -6051,6 +5391,24 @@
       "label": "KEEP"
     },
     {
+      "file": "submission/figures/q1/Fig_Q1_S1_solver_audit.pdf",
+      "size": 20434,
+      "category": "submission",
+      "label": "KEEP"
+    },
+    {
+      "file": "submission/figures/q1/Fig_Q1_S1_solver_audit.png",
+      "size": 198801,
+      "category": "submission",
+      "label": "KEEP"
+    },
+    {
+      "file": "submission/figures/q1/Fig_Q1_S1_solver_audit.svg",
+      "size": 33505,
+      "category": "submission",
+      "label": "KEEP"
+    },
+    {
       "file": "submission/figures/q1/Fig_Q1_S2_solver_cost.pdf",
       "size": 19108,
       "category": "submission",
@@ -6231,6 +5589,24 @@
       "label": "KEEP"
     },
     {
+      "file": "submission/figures/q2/Fig_Q2_10_operator_multistop_audit.pdf",
+      "size": 36572,
+      "category": "submission",
+      "label": "KEEP"
+    },
+    {
+      "file": "submission/figures/q2/Fig_Q2_10_operator_multistop_audit.png",
+      "size": 283663,
+      "category": "submission",
+      "label": "KEEP"
+    },
+    {
+      "file": "submission/figures/q2/Fig_Q2_10_operator_multistop_audit.svg",
+      "size": 27574,
+      "category": "submission",
+      "label": "KEEP"
+    },
+    {
       "file": "submission/figures/q3/Fig_Q3_01_joint_solution_cost.pdf",
       "size": 40128,
       "category": "submission",
@@ -6245,12 +5621,6 @@
     {
       "file": "submission/figures/q3/Fig_Q3_01_joint_solution_cost.svg",
       "size": 19513,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/figures/q3/Fig_Q3_01_joint_solution_cost.tiff",
-      "size": 25225406,
       "category": "submission",
       "label": "KEEP"
     },
@@ -6273,12 +5643,6 @@
       "label": "KEEP"
     },
     {
-      "file": "submission/figures/q3/Fig_Q3_02_temporal_coordination.tiff",
-      "size": 28314206,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
       "file": "submission/figures/q3/Fig_Q3_03_search_validation.pdf",
       "size": 38921,
       "category": "submission",
@@ -6293,12 +5657,6 @@
     {
       "file": "submission/figures/q3/Fig_Q3_03_search_validation.svg",
       "size": 13981,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/figures/q3/Fig_Q3_03_search_validation.tiff",
-      "size": 25740206,
       "category": "submission",
       "label": "KEEP"
     },
@@ -6321,12 +5679,6 @@
       "label": "KEEP"
     },
     {
-      "file": "submission/figures/q4/Fig_Q4_01_resource_configuration.tiff",
-      "size": 28411978,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
       "file": "submission/figures/q4/Fig_Q4_02_workload_balance.pdf",
       "size": 38121,
       "category": "submission",
@@ -6341,12 +5693,6 @@
     {
       "file": "submission/figures/q4/Fig_Q4_02_workload_balance.svg",
       "size": 12821,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/figures/q4/Fig_Q4_02_workload_balance.tiff",
-      "size": 28379238,
       "category": "submission",
       "label": "KEEP"
     },
@@ -6369,20 +5715,14 @@
       "label": "KEEP"
     },
     {
-      "file": "submission/figures/q4/Fig_Q4_03_partition_structure.tiff",
-      "size": 29453338,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
       "file": "submission/MANIFEST.json",
-      "size": 134656,
+      "size": 107257,
       "category": "submission",
       "label": "KEEP"
     },
     {
       "file": "submission/MANIFEST.md",
-      "size": 79191,
+      "size": 62026,
       "category": "submission",
       "label": "KEEP"
     },
@@ -6394,7 +5734,7 @@
     },
     {
       "file": "submission/manifests/audit_project_final.py",
-      "size": 37675,
+      "size": 50026,
       "category": "submission",
       "label": "KEEP"
     },
@@ -6417,8 +5757,20 @@
       "label": "KEEP"
     },
     {
+      "file": "submission/manifests/FIGURE_REQUIREMENT_MAPPING.md",
+      "size": 597,
+      "category": "submission",
+      "label": "KEEP"
+    },
+    {
+      "file": "submission/manifests/FINAL_FIGURE_CHECK.json",
+      "size": 20973,
+      "category": "submission",
+      "label": "KEEP"
+    },
+    {
       "file": "submission/manifests/final_figure_manifest.json",
-      "size": 56372,
+      "size": 33846,
       "category": "submission",
       "label": "KEEP"
     },
@@ -6471,6 +5823,12 @@
       "label": "KEEP"
     },
     {
+      "file": "submission/manifests/INPUT_SELECTION_AUDIT.json",
+      "size": 6348,
+      "category": "submission",
+      "label": "KEEP"
+    },
+    {
       "file": "submission/manifests/numeric_format_policy.md",
       "size": 260,
       "category": "submission",
@@ -6484,19 +5842,19 @@
     },
     {
       "file": "submission/manifests/PROJECT_FINAL_AUDIT.json",
-      "size": 799,
+      "size": 1143,
       "category": "submission",
       "label": "KEEP"
     },
     {
       "file": "submission/manifests/PROJECT_FINAL_AUDIT.md",
-      "size": 627,
+      "size": 915,
       "category": "submission",
       "label": "KEEP"
     },
     {
       "file": "submission/manifests/repo_inventory.json",
-      "size": 210797,
+      "size": 189600,
       "category": "submission",
       "label": "KEEP"
     },
@@ -6508,7 +5866,13 @@
     },
     {
       "file": "submission/manifests/stale_artifact_report.json",
-      "size": 3008,
+      "size": 3114,
+      "category": "submission",
+      "label": "KEEP"
+    },
+    {
+      "file": "submission/manifests/SUBMISSION_SIZE_AUDIT.json",
+      "size": 3134,
       "category": "submission",
       "label": "KEEP"
     },
@@ -6526,13 +5890,13 @@
     },
     {
       "file": "submission/README.md",
-      "size": 487,
+      "size": 685,
       "category": "submission",
       "label": "KEEP"
     },
     {
       "file": "submission/REPRODUCE.md",
-      "size": 680,
+      "size": 721,
       "category": "submission",
       "label": "KEEP"
     },
@@ -7294,7 +6658,7 @@
     },
     {
       "file": "submission/SHA256SUMS.txt",
-      "size": 69013,
+      "size": 53841,
       "category": "submission",
       "label": "KEEP"
     },
@@ -7307,7 +6671,7 @@
   ],
   "counts": {
     "FORMAL": 456,
-    "KEEP": 733,
+    "KEEP": 627,
     "REVIEW_REQUIRED": 28
   }
 }

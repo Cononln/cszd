@@ -24,3 +24,11 @@
 - [x] timeline_consistent
 - [x] energy_consistent
 - [x] submission_manifest_complete
+- [x] submission_under_size_target
+- [x] no_tiff_in_submission
+- [x] no_duplicate_formal_figures
+- [x] no_stale_review_required
+- [x] no_conflicting_project_final_audit
+- [x] all_formal_figures_present
+- [x] formal_figures_match_manifest
+- [x] submission_required_inputs_complete

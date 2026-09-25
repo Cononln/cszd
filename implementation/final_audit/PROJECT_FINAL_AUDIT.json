@@ -2,7 +2,7 @@
   "status": "PASS",
   "project_status": "FROZEN",
   "submission_package_status": "READY",
-  "generated_utc": "2026-09-25T05:38:26.693273+00:00",
+  "generated_utc": "2026-09-25T07:17:23.242188+00:00",
   "checks": {
     "q1_final_valid": true,
     "q2_final_valid": true,
@@ -21,6 +21,14 @@
     "input_manifest_complete": true,
     "timeline_consistent": true,
     "energy_consistent": true,
-    "submission_manifest_complete": true
+    "submission_manifest_complete": true,
+    "submission_under_size_target": true,
+    "no_tiff_in_submission": true,
+    "no_duplicate_formal_figures": true,
+    "no_stale_review_required": true,
+    "no_conflicting_project_final_audit": true,
+    "all_formal_figures_present": true,
+    "formal_figures_match_manifest": true,
+    "submission_required_inputs_complete": true
   }
 }

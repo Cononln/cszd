@@ -8,3 +8,5 @@
 - Q4：`results/q4/q4_final.json`，选定解 `Q4-2G-00003` / `Q4-3G-00001`
 
 先阅读 `REPRODUCE.md`，再运行 `manifests/PROJECT_FINAL_AUDIT.json` 对应的只读审计。
+
+附件包只携带正式代码实际读取的 Excel、DEM GeoTIFF 和地理 CSV；未被运行时引用的 GIS `.mat`、交互式 HTML 地图和说明 PDF 保留在主仓库，不影响复现。

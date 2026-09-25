@@ -1,6 +1,6 @@
 # Reproduce
 
-Run from the repository root with Python 3.11+. The compact executable mirror is under `submission/code/`.
+Run from the repository root. The current frozen package was validated with Python 3.14; the compact executable mirror is under `submission/code/`.
 
 1. `python implementation/final_audit/audit_project_final.py --audit-only`.
 2. Q1: `python implementation/q1/code/q1/audit_physics.py`.

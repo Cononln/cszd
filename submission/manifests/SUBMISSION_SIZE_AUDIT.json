@@ -1,0 +1,117 @@
+{
+  "status": "PASS",
+  "total_files": 479,
+  "total_uncompressed_bytes": 22128718,
+  "total_uncompressed_mb": 22.129,
+  "target_uncompressed_mb": 40.0,
+  "category_mb": {
+    "code": 2.577,
+    "results": 1.813,
+    "figures": 7.212,
+    "data": 9.968,
+    "manifests": 0.334,
+    "other": 0.225
+  },
+  "largest_20_files": [
+    {
+      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/数字高程模型数据（DEM）/镇龙乡及周边30米DEM.tif",
+      "size": 7867096,
+      "size_mb": 7.867
+    },
+    {
+      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/道路/镇龙乡及周边道路.csv",
+      "size": 1444497,
+      "size_mb": 1.444
+    },
+    {
+      "file": "figures/q1/Fig_Q1_01_capacity_map.png",
+      "size": 425743,
+      "size_mb": 0.426
+    },
+    {
+      "file": "figures/q1/Fig_Q1_02_flight_envelope.png",
+      "size": 404863,
+      "size_mb": 0.405
+    },
+    {
+      "file": "figures/q2/Fig_Q2_03_multiseed_stability.png",
+      "size": 317216,
+      "size_mb": 0.317
+    },
+    {
+      "file": "figures/q2/Fig_Q2_04_route_structure_map.png",
+      "size": 310248,
+      "size_mb": 0.31
+    },
+    {
+      "file": "figures/q1/Fig_Q1_03_batch_plan.png",
+      "size": 307542,
+      "size_mb": 0.308
+    },
+    {
+      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/水系（线）/镇龙乡及周边水系.csv",
+      "size": 301794,
+      "size_mb": 0.302
+    },
+    {
+      "file": "figures/q2/Fig_Q2_10_operator_multistop_audit.png",
+      "size": 283663,
+      "size_mb": 0.284
+    },
+    {
+      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/水体（面）/镇龙乡及周边水体.csv",
+      "size": 283376,
+      "size_mb": 0.283
+    },
+    {
+      "file": "figures/q1/Fig_Q1_04_service_allocation.png",
+      "size": 277976,
+      "size_mb": 0.278
+    },
+    {
+      "file": "figures/q1/Fig_Q1_06_utilization_tradeoff.png",
+      "size": 273692,
+      "size_mb": 0.274
+    },
+    {
+      "file": "figures/q2/Fig_Q2_08_multistop_examples.png",
+      "size": 256094,
+      "size_mb": 0.256
+    },
+    {
+      "file": "results/q3/q3_c2b_results.json",
+      "size": 253802,
+      "size_mb": 0.254
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2b_results.json",
+      "size": 253802,
+      "size_mb": 0.254
+    },
+    {
+      "file": "results/q3/q3_b_service_options.csv",
+      "size": 252794,
+      "size_mb": 0.253
+    },
+    {
+      "file": "code/implementation/q3/results/q3_b_service_options.csv",
+      "size": 252794,
+      "size_mb": 0.253
+    },
+    {
+      "file": "figures/q1/Fig_Q1_08_service_tradeoff.png",
+      "size": 250178,
+      "size_mb": 0.25
+    },
+    {
+      "file": "figures/q1/Fig_Q1_07_energy_margin.png",
+      "size": 245369,
+      "size_mb": 0.245
+    },
+    {
+      "file": "figures/q2/Fig_Q2_01_method_comparison.png",
+      "size": 245130,
+      "size_mb": 0.245
+    }
+  ]
+}

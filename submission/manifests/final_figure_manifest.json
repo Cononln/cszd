@@ -2,26 +2,6 @@
   "status": "PASS",
   "figures": [
     {
-      "figure_id": "Fig_Q1_01_capacity_map.alignment",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_01_capacity_map.alignment.svg",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q1_01_capacity_map.collision-audit",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_01_capacity_map.collision-audit.pdf",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "pdf",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
       "figure_id": "Fig_Q1_01_capacity_map",
       "question": "Q1",
       "file": "implementation/q1/figures/Fig_Q1_01_capacity_map.pdf",
@@ -52,26 +32,6 @@
       "status": "PASS"
     },
     {
-      "figure_id": "Fig_Q1_02_flight_envelope.alignment",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_02_flight_envelope.alignment.svg",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q1_02_flight_envelope.collision-audit",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_02_flight_envelope.collision-audit.pdf",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "pdf",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
       "figure_id": "Fig_Q1_02_flight_envelope",
       "question": "Q1",
       "file": "implementation/q1/figures/Fig_Q1_02_flight_envelope.pdf",
@@ -95,16 +55,6 @@
       "figure_id": "Fig_Q1_02_flight_envelope",
       "question": "Q1",
       "file": "implementation/q1/figures/Fig_Q1_02_flight_envelope.svg",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q1_03_batch_plan.alignment",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_03_batch_plan.alignment.svg",
       "source_file": "implementation/q1/results/q1_final.json",
       "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
       "format": "svg",
@@ -142,26 +92,6 @@
       "status": "PASS"
     },
     {
-      "figure_id": "Fig_Q1_04_service_allocation.alignment",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_04_service_allocation.alignment.svg",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q1_04_service_allocation.collision-audit",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_04_service_allocation.collision-audit.pdf",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "pdf",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
       "figure_id": "Fig_Q1_04_service_allocation",
       "question": "Q1",
       "file": "implementation/q1/figures/Fig_Q1_04_service_allocation.pdf",
@@ -188,26 +118,6 @@
       "source_file": "implementation/q1/results/q1_final.json",
       "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
       "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q1_05_method_comparison.alignment",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_05_method_comparison.alignment.svg",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q1_05_method_comparison.collision-audit",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_05_method_comparison.collision-audit.pdf",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "pdf",
       "editable_text": true,
       "status": "PASS"
     },
@@ -242,26 +152,6 @@
       "status": "PASS"
     },
     {
-      "figure_id": "Fig_Q1_06_utilization_tradeoff.alignment",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_06_utilization_tradeoff.alignment.svg",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q1_06_utilization_tradeoff.collision-audit",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_06_utilization_tradeoff.collision-audit.pdf",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "pdf",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
       "figure_id": "Fig_Q1_06_utilization_tradeoff",
       "question": "Q1",
       "file": "implementation/q1/figures/Fig_Q1_06_utilization_tradeoff.pdf",
@@ -288,26 +178,6 @@
       "source_file": "implementation/q1/results/q1_final.json",
       "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
       "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q1_07_energy_margin.alignment",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_07_energy_margin.alignment.svg",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q1_07_energy_margin.collision-audit",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_07_energy_margin.collision-audit.pdf",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "pdf",
       "editable_text": true,
       "status": "PASS"
     },
@@ -342,26 +212,6 @@
       "status": "PASS"
     },
     {
-      "figure_id": "Fig_Q1_08_service_tradeoff.alignment",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_08_service_tradeoff.alignment.svg",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q1_08_service_tradeoff.collision-audit",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_08_service_tradeoff.collision-audit.pdf",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "pdf",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
       "figure_id": "Fig_Q1_08_service_tradeoff",
       "question": "Q1",
       "file": "implementation/q1/figures/Fig_Q1_08_service_tradeoff.pdf",
@@ -385,16 +235,6 @@
       "figure_id": "Fig_Q1_08_service_tradeoff",
       "question": "Q1",
       "file": "implementation/q1/figures/Fig_Q1_08_service_tradeoff.svg",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q1_09_sensitivity.alignment",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_09_sensitivity.alignment.svg",
       "source_file": "implementation/q1/results/q1_final.json",
       "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
       "format": "svg",
@@ -432,26 +272,6 @@
       "status": "PASS"
     },
     {
-      "figure_id": "Fig_Q1_10_lexicographic_stages.alignment",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_10_lexicographic_stages.alignment.svg",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q1_10_lexicographic_stages.collision-audit",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_10_lexicographic_stages.collision-audit.pdf",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "pdf",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
       "figure_id": "Fig_Q1_10_lexicographic_stages",
       "question": "Q1",
       "file": "implementation/q1/figures/Fig_Q1_10_lexicographic_stages.pdf",
@@ -478,26 +298,6 @@
       "source_file": "implementation/q1/results/q1_final.json",
       "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
       "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q1_S1_solver_audit.alignment",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_S1_solver_audit.alignment.svg",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q1_S1_solver_audit.collision-audit",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_S1_solver_audit.collision-audit.pdf",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "pdf",
       "editable_text": true,
       "status": "PASS"
     },
@@ -532,26 +332,6 @@
       "status": "PASS"
     },
     {
-      "figure_id": "Fig_Q1_S2_solver_cost.alignment",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_S2_solver_cost.alignment.svg",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q1_S2_solver_cost.collision-audit",
-      "question": "Q1",
-      "file": "implementation/q1/figures/Fig_Q1_S2_solver_cost.collision-audit.pdf",
-      "source_file": "implementation/q1/results/q1_final.json",
-      "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "pdf",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
       "figure_id": "Fig_Q1_S2_solver_cost",
       "question": "Q1",
       "file": "implementation/q1/figures/Fig_Q1_S2_solver_cost.pdf",
@@ -577,16 +357,6 @@
       "file": "implementation/q1/figures/Fig_Q1_S2_solver_cost.svg",
       "source_file": "implementation/q1/results/q1_final.json",
       "source_hash": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q2_01_method_comparison.alignment",
-      "question": "Q2",
-      "file": "implementation/q2/figures/Fig_Q2_01_method_comparison.alignment.svg",
-      "source_file": "implementation/q2/results/q2_final.json",
-      "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
       "format": "svg",
       "editable_text": true,
       "status": "PASS"
@@ -622,26 +392,6 @@
       "status": "PASS"
     },
     {
-      "figure_id": "Fig_Q2_02_global_pareto.alignment",
-      "question": "Q2",
-      "file": "implementation/q2/figures/Fig_Q2_02_global_pareto.alignment.svg",
-      "source_file": "implementation/q2/results/q2_final.json",
-      "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q2_02_global_pareto.collision-audit",
-      "question": "Q2",
-      "file": "implementation/q2/figures/Fig_Q2_02_global_pareto.collision-audit.pdf",
-      "source_file": "implementation/q2/results/q2_final.json",
-      "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
-      "format": "pdf",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
       "figure_id": "Fig_Q2_02_global_pareto",
       "question": "Q2",
       "file": "implementation/q2/figures/Fig_Q2_02_global_pareto.pdf",
@@ -668,26 +418,6 @@
       "source_file": "implementation/q2/results/q2_final.json",
       "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
       "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q2_03_multiseed_stability.alignment",
-      "question": "Q2",
-      "file": "implementation/q2/figures/Fig_Q2_03_multiseed_stability.alignment.svg",
-      "source_file": "implementation/q2/results/q2_final.json",
-      "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q2_03_multiseed_stability.collision-audit",
-      "question": "Q2",
-      "file": "implementation/q2/figures/Fig_Q2_03_multiseed_stability.collision-audit.pdf",
-      "source_file": "implementation/q2/results/q2_final.json",
-      "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
-      "format": "pdf",
       "editable_text": true,
       "status": "PASS"
     },
@@ -722,26 +452,6 @@
       "status": "PASS"
     },
     {
-      "figure_id": "Fig_Q2_04_route_structure_map.alignment",
-      "question": "Q2",
-      "file": "implementation/q2/figures/Fig_Q2_04_route_structure_map.alignment.svg",
-      "source_file": "implementation/q2/results/q2_final.json",
-      "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q2_04_route_structure_map.collision-audit",
-      "question": "Q2",
-      "file": "implementation/q2/figures/Fig_Q2_04_route_structure_map.collision-audit.pdf",
-      "source_file": "implementation/q2/results/q2_final.json",
-      "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
-      "format": "pdf",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
       "figure_id": "Fig_Q2_04_route_structure_map",
       "question": "Q2",
       "file": "implementation/q2/figures/Fig_Q2_04_route_structure_map.pdf",
@@ -768,26 +478,6 @@
       "source_file": "implementation/q2/results/q2_final.json",
       "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
       "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q2_05_uav_gantt.alignment",
-      "question": "Q2",
-      "file": "implementation/q2/figures/Fig_Q2_05_uav_gantt.alignment.svg",
-      "source_file": "implementation/q2/results/q2_final.json",
-      "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q2_05_uav_gantt.collision-audit",
-      "question": "Q2",
-      "file": "implementation/q2/figures/Fig_Q2_05_uav_gantt.collision-audit.pdf",
-      "source_file": "implementation/q2/results/q2_final.json",
-      "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
-      "format": "pdf",
       "editable_text": true,
       "status": "PASS"
     },
@@ -822,26 +512,6 @@
       "status": "PASS"
     },
     {
-      "figure_id": "Fig_Q2_06_battery_timeline.alignment",
-      "question": "Q2",
-      "file": "implementation/q2/figures/Fig_Q2_06_battery_timeline.alignment.svg",
-      "source_file": "implementation/q2/results/q2_final.json",
-      "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q2_06_battery_timeline.collision-audit",
-      "question": "Q2",
-      "file": "implementation/q2/figures/Fig_Q2_06_battery_timeline.collision-audit.pdf",
-      "source_file": "implementation/q2/results/q2_final.json",
-      "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
-      "format": "pdf",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
       "figure_id": "Fig_Q2_06_battery_timeline",
       "question": "Q2",
       "file": "implementation/q2/figures/Fig_Q2_06_battery_timeline.pdf",
@@ -868,26 +538,6 @@
       "source_file": "implementation/q2/results/q2_final.json",
       "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
       "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q2_07_delivery_timeliness.alignment",
-      "question": "Q2",
-      "file": "implementation/q2/figures/Fig_Q2_07_delivery_timeliness.alignment.svg",
-      "source_file": "implementation/q2/results/q2_final.json",
-      "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q2_07_delivery_timeliness.collision-audit",
-      "question": "Q2",
-      "file": "implementation/q2/figures/Fig_Q2_07_delivery_timeliness.collision-audit.pdf",
-      "source_file": "implementation/q2/results/q2_final.json",
-      "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
-      "format": "pdf",
       "editable_text": true,
       "status": "PASS"
     },
@@ -922,26 +572,6 @@
       "status": "PASS"
     },
     {
-      "figure_id": "Fig_Q2_08_multistop_examples.alignment",
-      "question": "Q2",
-      "file": "implementation/q2/figures/Fig_Q2_08_multistop_examples.alignment.svg",
-      "source_file": "implementation/q2/results/q2_final.json",
-      "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q2_08_multistop_examples.collision-audit",
-      "question": "Q2",
-      "file": "implementation/q2/figures/Fig_Q2_08_multistop_examples.collision-audit.pdf",
-      "source_file": "implementation/q2/results/q2_final.json",
-      "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
-      "format": "pdf",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
       "figure_id": "Fig_Q2_08_multistop_examples",
       "question": "Q2",
       "file": "implementation/q2/figures/Fig_Q2_08_multistop_examples.pdf",
@@ -968,26 +598,6 @@
       "source_file": "implementation/q2/results/q2_final.json",
       "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
       "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q2_09_exact_benchmark.alignment",
-      "question": "Q2",
-      "file": "implementation/q2/figures/Fig_Q2_09_exact_benchmark.alignment.svg",
-      "source_file": "implementation/q2/results/q2_final.json",
-      "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q2_09_exact_benchmark.collision-audit",
-      "question": "Q2",
-      "file": "implementation/q2/figures/Fig_Q2_09_exact_benchmark.collision-audit.pdf",
-      "source_file": "implementation/q2/results/q2_final.json",
-      "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
-      "format": "pdf",
       "editable_text": true,
       "status": "PASS"
     },
@@ -1022,26 +632,6 @@
       "status": "PASS"
     },
     {
-      "figure_id": "Fig_Q2_10_operator_multistop_audit.alignment",
-      "question": "Q2",
-      "file": "implementation/q2/figures/Fig_Q2_10_operator_multistop_audit.alignment.svg",
-      "source_file": "implementation/q2/results/q2_final.json",
-      "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q2_10_operator_multistop_audit.collision-audit",
-      "question": "Q2",
-      "file": "implementation/q2/figures/Fig_Q2_10_operator_multistop_audit.collision-audit.pdf",
-      "source_file": "implementation/q2/results/q2_final.json",
-      "source_hash": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
-      "format": "pdf",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
       "figure_id": "Fig_Q2_10_operator_multistop_audit",
       "question": "Q2",
       "file": "implementation/q2/figures/Fig_Q2_10_operator_multistop_audit.pdf",
@@ -1072,16 +662,6 @@
       "status": "PASS"
     },
     {
-      "figure_id": "Fig_Q3_01_joint_solution_cost.alignment",
-      "question": "Q3",
-      "file": "q3/q3-c-formal:implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.alignment.svg",
-      "source_file": "implementation/q3/results/q3_final.json",
-      "source_hash": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
       "figure_id": "Fig_Q3_01_joint_solution_cost",
       "question": "Q3",
       "file": "q3/q3-c-formal:implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.pdf",
@@ -1105,26 +685,6 @@
       "figure_id": "Fig_Q3_01_joint_solution_cost",
       "question": "Q3",
       "file": "q3/q3-c-formal:implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.svg",
-      "source_file": "implementation/q3/results/q3_final.json",
-      "source_hash": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q3_01_joint_solution_cost",
-      "question": "Q3",
-      "file": "q3/q3-c-formal:implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.tiff",
-      "source_file": "implementation/q3/results/q3_final.json",
-      "source_hash": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81",
-      "format": "tiff",
-      "editable_text": false,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q3_02_temporal_coordination.alignment",
-      "question": "Q3",
-      "file": "q3/q3-c-formal:implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.alignment.svg",
       "source_file": "implementation/q3/results/q3_final.json",
       "source_hash": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81",
       "format": "svg",
@@ -1162,26 +722,6 @@
       "status": "PASS"
     },
     {
-      "figure_id": "Fig_Q3_02_temporal_coordination",
-      "question": "Q3",
-      "file": "q3/q3-c-formal:implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.tiff",
-      "source_file": "implementation/q3/results/q3_final.json",
-      "source_hash": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81",
-      "format": "tiff",
-      "editable_text": false,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q3_03_search_validation.alignment",
-      "question": "Q3",
-      "file": "q3/q3-c-formal:implementation/q3/results/figures/Fig_Q3_03_search_validation.alignment.svg",
-      "source_file": "implementation/q3/results/q3_final.json",
-      "source_hash": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
       "figure_id": "Fig_Q3_03_search_validation",
       "question": "Q3",
       "file": "q3/q3-c-formal:implementation/q3/results/figures/Fig_Q3_03_search_validation.pdf",
@@ -1212,26 +752,6 @@
       "status": "PASS"
     },
     {
-      "figure_id": "Fig_Q3_03_search_validation",
-      "question": "Q3",
-      "file": "q3/q3-c-formal:implementation/q3/results/figures/Fig_Q3_03_search_validation.tiff",
-      "source_file": "implementation/q3/results/q3_final.json",
-      "source_hash": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81",
-      "format": "tiff",
-      "editable_text": false,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q4_01_resource_configuration.alignment",
-      "question": "Q4",
-      "file": "implementation/q4/results/figures/Fig_Q4_01_resource_configuration.alignment.svg",
-      "source_file": "implementation/q4/results/q4_final.json",
-      "source_hash": "70361a3df8d37bcc01c8d476b8f1b8a55f0a3d45aaa2127f64b93ea3e9cb61d3",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
       "figure_id": "Fig_Q4_01_resource_configuration",
       "question": "Q4",
       "file": "implementation/q4/results/figures/Fig_Q4_01_resource_configuration.pdf",
@@ -1255,26 +775,6 @@
       "figure_id": "Fig_Q4_01_resource_configuration",
       "question": "Q4",
       "file": "implementation/q4/results/figures/Fig_Q4_01_resource_configuration.svg",
-      "source_file": "implementation/q4/results/q4_final.json",
-      "source_hash": "70361a3df8d37bcc01c8d476b8f1b8a55f0a3d45aaa2127f64b93ea3e9cb61d3",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q4_01_resource_configuration",
-      "question": "Q4",
-      "file": "implementation/q4/results/figures/Fig_Q4_01_resource_configuration.tiff",
-      "source_file": "implementation/q4/results/q4_final.json",
-      "source_hash": "70361a3df8d37bcc01c8d476b8f1b8a55f0a3d45aaa2127f64b93ea3e9cb61d3",
-      "format": "tiff",
-      "editable_text": false,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q4_02_workload_balance.alignment",
-      "question": "Q4",
-      "file": "implementation/q4/results/figures/Fig_Q4_02_workload_balance.alignment.svg",
       "source_file": "implementation/q4/results/q4_final.json",
       "source_hash": "70361a3df8d37bcc01c8d476b8f1b8a55f0a3d45aaa2127f64b93ea3e9cb61d3",
       "format": "svg",
@@ -1312,26 +812,6 @@
       "status": "PASS"
     },
     {
-      "figure_id": "Fig_Q4_02_workload_balance",
-      "question": "Q4",
-      "file": "implementation/q4/results/figures/Fig_Q4_02_workload_balance.tiff",
-      "source_file": "implementation/q4/results/q4_final.json",
-      "source_hash": "70361a3df8d37bcc01c8d476b8f1b8a55f0a3d45aaa2127f64b93ea3e9cb61d3",
-      "format": "tiff",
-      "editable_text": false,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q4_03_partition_structure.alignment",
-      "question": "Q4",
-      "file": "implementation/q4/results/figures/Fig_Q4_03_partition_structure.alignment.svg",
-      "source_file": "implementation/q4/results/q4_final.json",
-      "source_hash": "70361a3df8d37bcc01c8d476b8f1b8a55f0a3d45aaa2127f64b93ea3e9cb61d3",
-      "format": "svg",
-      "editable_text": true,
-      "status": "PASS"
-    },
-    {
       "figure_id": "Fig_Q4_03_partition_structure",
       "question": "Q4",
       "file": "implementation/q4/results/figures/Fig_Q4_03_partition_structure.pdf",
@@ -1359,16 +839,6 @@
       "source_hash": "70361a3df8d37bcc01c8d476b8f1b8a55f0a3d45aaa2127f64b93ea3e9cb61d3",
       "format": "svg",
       "editable_text": true,
-      "status": "PASS"
-    },
-    {
-      "figure_id": "Fig_Q4_03_partition_structure",
-      "question": "Q4",
-      "file": "implementation/q4/results/figures/Fig_Q4_03_partition_structure.tiff",
-      "source_file": "implementation/q4/results/q4_final.json",
-      "source_hash": "70361a3df8d37bcc01c8d476b8f1b8a55f0a3d45aaa2127f64b93ea3e9cb61d3",
-      "format": "tiff",
-      "editable_text": false,
       "status": "PASS"
     }
   ]

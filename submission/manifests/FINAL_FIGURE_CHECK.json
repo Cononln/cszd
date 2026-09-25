@@ -1,0 +1,770 @@
+{
+  "status": "PASS",
+  "expected_figure_count": 28,
+  "expected_formats_per_figure": [
+    "pdf",
+    "png",
+    "svg"
+  ],
+  "figure_count": 28,
+  "files": [
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_01_capacity_map",
+      "format": "pdf",
+      "file": "figures/q1/Fig_Q1_01_capacity_map.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_01_capacity_map",
+      "format": "png",
+      "file": "figures/q1/Fig_Q1_01_capacity_map.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_01_capacity_map",
+      "format": "svg",
+      "file": "figures/q1/Fig_Q1_01_capacity_map.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_02_flight_envelope",
+      "format": "pdf",
+      "file": "figures/q1/Fig_Q1_02_flight_envelope.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_02_flight_envelope",
+      "format": "png",
+      "file": "figures/q1/Fig_Q1_02_flight_envelope.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_02_flight_envelope",
+      "format": "svg",
+      "file": "figures/q1/Fig_Q1_02_flight_envelope.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_03_batch_plan",
+      "format": "pdf",
+      "file": "figures/q1/Fig_Q1_03_batch_plan.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_03_batch_plan",
+      "format": "png",
+      "file": "figures/q1/Fig_Q1_03_batch_plan.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_03_batch_plan",
+      "format": "svg",
+      "file": "figures/q1/Fig_Q1_03_batch_plan.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_04_service_allocation",
+      "format": "pdf",
+      "file": "figures/q1/Fig_Q1_04_service_allocation.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_04_service_allocation",
+      "format": "png",
+      "file": "figures/q1/Fig_Q1_04_service_allocation.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_04_service_allocation",
+      "format": "svg",
+      "file": "figures/q1/Fig_Q1_04_service_allocation.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_05_method_comparison",
+      "format": "pdf",
+      "file": "figures/q1/Fig_Q1_05_method_comparison.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_05_method_comparison",
+      "format": "png",
+      "file": "figures/q1/Fig_Q1_05_method_comparison.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_05_method_comparison",
+      "format": "svg",
+      "file": "figures/q1/Fig_Q1_05_method_comparison.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_06_utilization_tradeoff",
+      "format": "pdf",
+      "file": "figures/q1/Fig_Q1_06_utilization_tradeoff.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_06_utilization_tradeoff",
+      "format": "png",
+      "file": "figures/q1/Fig_Q1_06_utilization_tradeoff.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_06_utilization_tradeoff",
+      "format": "svg",
+      "file": "figures/q1/Fig_Q1_06_utilization_tradeoff.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_07_energy_margin",
+      "format": "pdf",
+      "file": "figures/q1/Fig_Q1_07_energy_margin.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_07_energy_margin",
+      "format": "png",
+      "file": "figures/q1/Fig_Q1_07_energy_margin.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_07_energy_margin",
+      "format": "svg",
+      "file": "figures/q1/Fig_Q1_07_energy_margin.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_08_service_tradeoff",
+      "format": "pdf",
+      "file": "figures/q1/Fig_Q1_08_service_tradeoff.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_08_service_tradeoff",
+      "format": "png",
+      "file": "figures/q1/Fig_Q1_08_service_tradeoff.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_08_service_tradeoff",
+      "format": "svg",
+      "file": "figures/q1/Fig_Q1_08_service_tradeoff.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_09_sensitivity",
+      "format": "pdf",
+      "file": "figures/q1/Fig_Q1_09_sensitivity.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_09_sensitivity",
+      "format": "png",
+      "file": "figures/q1/Fig_Q1_09_sensitivity.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_09_sensitivity",
+      "format": "svg",
+      "file": "figures/q1/Fig_Q1_09_sensitivity.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_10_lexicographic_stages",
+      "format": "pdf",
+      "file": "figures/q1/Fig_Q1_10_lexicographic_stages.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_10_lexicographic_stages",
+      "format": "png",
+      "file": "figures/q1/Fig_Q1_10_lexicographic_stages.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_10_lexicographic_stages",
+      "format": "svg",
+      "file": "figures/q1/Fig_Q1_10_lexicographic_stages.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_S1_solver_audit",
+      "format": "pdf",
+      "file": "figures/q1/Fig_Q1_S1_solver_audit.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_S1_solver_audit",
+      "format": "png",
+      "file": "figures/q1/Fig_Q1_S1_solver_audit.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_S1_solver_audit",
+      "format": "svg",
+      "file": "figures/q1/Fig_Q1_S1_solver_audit.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_S2_solver_cost",
+      "format": "pdf",
+      "file": "figures/q1/Fig_Q1_S2_solver_cost.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_S2_solver_cost",
+      "format": "png",
+      "file": "figures/q1/Fig_Q1_S2_solver_cost.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q1",
+      "figure_id": "Fig_Q1_S2_solver_cost",
+      "format": "svg",
+      "file": "figures/q1/Fig_Q1_S2_solver_cost.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_01_method_comparison",
+      "format": "pdf",
+      "file": "figures/q2/Fig_Q2_01_method_comparison.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_01_method_comparison",
+      "format": "png",
+      "file": "figures/q2/Fig_Q2_01_method_comparison.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_01_method_comparison",
+      "format": "svg",
+      "file": "figures/q2/Fig_Q2_01_method_comparison.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_02_global_pareto",
+      "format": "pdf",
+      "file": "figures/q2/Fig_Q2_02_global_pareto.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_02_global_pareto",
+      "format": "png",
+      "file": "figures/q2/Fig_Q2_02_global_pareto.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_02_global_pareto",
+      "format": "svg",
+      "file": "figures/q2/Fig_Q2_02_global_pareto.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_03_multiseed_stability",
+      "format": "pdf",
+      "file": "figures/q2/Fig_Q2_03_multiseed_stability.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_03_multiseed_stability",
+      "format": "png",
+      "file": "figures/q2/Fig_Q2_03_multiseed_stability.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_03_multiseed_stability",
+      "format": "svg",
+      "file": "figures/q2/Fig_Q2_03_multiseed_stability.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_04_route_structure_map",
+      "format": "pdf",
+      "file": "figures/q2/Fig_Q2_04_route_structure_map.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_04_route_structure_map",
+      "format": "png",
+      "file": "figures/q2/Fig_Q2_04_route_structure_map.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_04_route_structure_map",
+      "format": "svg",
+      "file": "figures/q2/Fig_Q2_04_route_structure_map.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_05_uav_gantt",
+      "format": "pdf",
+      "file": "figures/q2/Fig_Q2_05_uav_gantt.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_05_uav_gantt",
+      "format": "png",
+      "file": "figures/q2/Fig_Q2_05_uav_gantt.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_05_uav_gantt",
+      "format": "svg",
+      "file": "figures/q2/Fig_Q2_05_uav_gantt.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_06_battery_timeline",
+      "format": "pdf",
+      "file": "figures/q2/Fig_Q2_06_battery_timeline.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_06_battery_timeline",
+      "format": "png",
+      "file": "figures/q2/Fig_Q2_06_battery_timeline.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_06_battery_timeline",
+      "format": "svg",
+      "file": "figures/q2/Fig_Q2_06_battery_timeline.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_07_delivery_timeliness",
+      "format": "pdf",
+      "file": "figures/q2/Fig_Q2_07_delivery_timeliness.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_07_delivery_timeliness",
+      "format": "png",
+      "file": "figures/q2/Fig_Q2_07_delivery_timeliness.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_07_delivery_timeliness",
+      "format": "svg",
+      "file": "figures/q2/Fig_Q2_07_delivery_timeliness.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_08_multistop_examples",
+      "format": "pdf",
+      "file": "figures/q2/Fig_Q2_08_multistop_examples.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_08_multistop_examples",
+      "format": "png",
+      "file": "figures/q2/Fig_Q2_08_multistop_examples.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_08_multistop_examples",
+      "format": "svg",
+      "file": "figures/q2/Fig_Q2_08_multistop_examples.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_09_exact_benchmark",
+      "format": "pdf",
+      "file": "figures/q2/Fig_Q2_09_exact_benchmark.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_09_exact_benchmark",
+      "format": "png",
+      "file": "figures/q2/Fig_Q2_09_exact_benchmark.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_09_exact_benchmark",
+      "format": "svg",
+      "file": "figures/q2/Fig_Q2_09_exact_benchmark.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_10_operator_multistop_audit",
+      "format": "pdf",
+      "file": "figures/q2/Fig_Q2_10_operator_multistop_audit.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_10_operator_multistop_audit",
+      "format": "png",
+      "file": "figures/q2/Fig_Q2_10_operator_multistop_audit.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q2",
+      "figure_id": "Fig_Q2_10_operator_multistop_audit",
+      "format": "svg",
+      "file": "figures/q2/Fig_Q2_10_operator_multistop_audit.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q3",
+      "figure_id": "Fig_Q3_01_joint_solution_cost",
+      "format": "pdf",
+      "file": "figures/q3/Fig_Q3_01_joint_solution_cost.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q3",
+      "figure_id": "Fig_Q3_01_joint_solution_cost",
+      "format": "png",
+      "file": "figures/q3/Fig_Q3_01_joint_solution_cost.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q3",
+      "figure_id": "Fig_Q3_01_joint_solution_cost",
+      "format": "svg",
+      "file": "figures/q3/Fig_Q3_01_joint_solution_cost.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q3",
+      "figure_id": "Fig_Q3_02_temporal_coordination",
+      "format": "pdf",
+      "file": "figures/q3/Fig_Q3_02_temporal_coordination.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q3",
+      "figure_id": "Fig_Q3_02_temporal_coordination",
+      "format": "png",
+      "file": "figures/q3/Fig_Q3_02_temporal_coordination.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q3",
+      "figure_id": "Fig_Q3_02_temporal_coordination",
+      "format": "svg",
+      "file": "figures/q3/Fig_Q3_02_temporal_coordination.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q3",
+      "figure_id": "Fig_Q3_03_search_validation",
+      "format": "pdf",
+      "file": "figures/q3/Fig_Q3_03_search_validation.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q3",
+      "figure_id": "Fig_Q3_03_search_validation",
+      "format": "png",
+      "file": "figures/q3/Fig_Q3_03_search_validation.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q3",
+      "figure_id": "Fig_Q3_03_search_validation",
+      "format": "svg",
+      "file": "figures/q3/Fig_Q3_03_search_validation.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q4",
+      "figure_id": "Fig_Q4_01_resource_configuration",
+      "format": "pdf",
+      "file": "figures/q4/Fig_Q4_01_resource_configuration.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q4",
+      "figure_id": "Fig_Q4_01_resource_configuration",
+      "format": "png",
+      "file": "figures/q4/Fig_Q4_01_resource_configuration.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q4",
+      "figure_id": "Fig_Q4_01_resource_configuration",
+      "format": "svg",
+      "file": "figures/q4/Fig_Q4_01_resource_configuration.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q4",
+      "figure_id": "Fig_Q4_02_workload_balance",
+      "format": "pdf",
+      "file": "figures/q4/Fig_Q4_02_workload_balance.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q4",
+      "figure_id": "Fig_Q4_02_workload_balance",
+      "format": "png",
+      "file": "figures/q4/Fig_Q4_02_workload_balance.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q4",
+      "figure_id": "Fig_Q4_02_workload_balance",
+      "format": "svg",
+      "file": "figures/q4/Fig_Q4_02_workload_balance.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q4",
+      "figure_id": "Fig_Q4_03_partition_structure",
+      "format": "pdf",
+      "file": "figures/q4/Fig_Q4_03_partition_structure.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q4",
+      "figure_id": "Fig_Q4_03_partition_structure",
+      "format": "png",
+      "file": "figures/q4/Fig_Q4_03_partition_structure.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q4",
+      "figure_id": "Fig_Q4_03_partition_structure",
+      "format": "svg",
+      "file": "figures/q4/Fig_Q4_03_partition_structure.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    }
+  ],
+  "forbidden_submission_files": [],
+  "duplicate_figure_payload": []
+}

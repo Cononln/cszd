@@ -1,6 +1,0 @@
-﻿category,scope,count,unique_count,duplicate_ids,rule,status
-trip,implementation/q1/results/q1_solution_trips.csv,18,18,,unique within formal scope,PASS
-box,implementation/q1/results/q1_solution_boxes.csv,80,80,,unique within formal scope,PASS
-relay_sortie,q3_final.selected_solution.relay_sorties,6,6,,unique within formal scope,PASS
-energy_component_assignment,q3_final.selected_solution.relay_sorties,6,5,EC-06,assignment may reuse a component only when timeline validator permits it,REVIEW_REQUIRED
-q4_solution,q4_final.selected_solution,2,2,,unique within formal scope,PASS
