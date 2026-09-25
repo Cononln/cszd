@@ -5,7 +5,7 @@ import json
 from typing import Any
 
 from .q3_adapter import (load_q3_selected_solution, q3_audit_path, q3_final_path,
-                         q3_freeze_report_path, results_root)
+                         q3_freeze_report_path, q3_upstream_refresh_audit_path, results_root)
 
 
 def validate_interface(*, write: bool = True) -> dict[str, Any]:
@@ -54,7 +54,7 @@ def validate_interface(*, write: bool = True) -> dict[str, Any]:
     if q3_freeze_report_path().exists():
         freeze = q3_freeze_report_path().read_text(encoding="utf-8")
         checks["latest_q3_freeze_status_pass"] = "Q3 STATUS: FROZEN" in freeze and "CANDIDATE INTEGRITY: PASS" in freeze
-    refresh_path = results_root() / "q4_q3_upstream_refresh_audit.json"
+    refresh_path = q3_upstream_refresh_audit_path()
     refresh = json.loads(refresh_path.read_text(encoding="utf-8")) if refresh_path.exists() else {}
     # A false historical comparison is valid only when Q4 is subsequently
     # recomputed.  It must be reported, but cannot prevent entry into that

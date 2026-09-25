@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from .problem_audit import problem_definition
-from .q3_adapter import results_root
+from .q3_adapter import q3_upstream_refresh_audit_path, results_root
 
 
 def _git_revision() -> str:
@@ -35,7 +35,7 @@ def build_final(model: dict[str, Any], interface_gate: dict[str, Any]) -> dict[s
             "validator_status": "PASS", "validator_result": row["validator_result"],
         }
     source_path = prepared["interface"]["source_file"]
-    refresh_path = results_root() / "q4_q3_upstream_refresh_audit.json"
+    refresh_path = q3_upstream_refresh_audit_path()
     refresh = json.loads(refresh_path.read_text(encoding="utf-8")) if refresh_path.exists() else {}
     final = {
         "metadata": {"phase": "Q4", "method": "exact enumeration of legal component partitions",
@@ -67,7 +67,8 @@ def build_final(model: dict[str, Any], interface_gate: dict[str, Any]) -> dict[s
                         "q3_upstream_refresh": {"audit_file": "q4_q3_upstream_refresh_audit.json",
                                                 "historical_semantic_equal": refresh.get("semantic_equal"),
                                                 "q4_reenumeration_required": bool(refresh and not refresh.get("semantic_equal", True)),
-                                                "q4_reenumeration_completed": bool(refresh and not refresh.get("semantic_equal", True))}},
+                                                "q4_reenumeration_completed": bool(refresh and not refresh.get("semantic_equal", True)),
+                                                "candidate_pool_reuse_validated": False}},
     }
     return final
 

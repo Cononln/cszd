@@ -7,7 +7,8 @@ import subprocess
 from pathlib import Path
 from typing import Any
 
-from .q3_adapter import load_q3_selected_solution, q3_audit_path, q3_final_path, results_root
+from .q3_adapter import (load_q3_selected_solution, q3_audit_path, q3_final_path,
+                         q3_upstream_refresh_audit_path, results_root)
 from .q4_model import prepare_state
 from .validate_q4 import validate_final
 
@@ -25,7 +26,7 @@ def _source_changes(paths: list[str]) -> list[str]:
 def audit(*, require_deliverables: bool = False) -> dict[str, Any]:
     root = results_root(); final_path = root / "q4_final.json"; final = json.loads(final_path.read_text(encoding="utf-8"))
     current_q3 = load_q3_selected_solution(); q3audit = json.loads(q3_audit_path().read_text(encoding="utf-8"))
-    refresh_path = root / "q4_q3_upstream_refresh_audit.json"
+    refresh_path = q3_upstream_refresh_audit_path()
     refresh = json.loads(refresh_path.read_text(encoding="utf-8")) if refresh_path.exists() else {}
     prepared = prepare_state(current_q3)
     selected = final["selected_solution"]

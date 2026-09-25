@@ -4,7 +4,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from .q3_adapter import q4_root, results_root
+from .q3_adapter import q3_upstream_refresh_audit_path, q4_root, results_root
 
 
 def write_report() -> Path:
@@ -13,7 +13,7 @@ def write_report() -> Path:
     clean = json.loads(clean_path.read_text(encoding="utf-8")) if clean_path.exists() else {"status": "NOT RECORDED"}
     comparison_path = root / "q4_reproduction_comparison.json"
     comparison = json.loads(comparison_path.read_text(encoding="utf-8")) if comparison_path.exists() else {"status": "NOT RECORDED"}
-    refresh_path = root / "q4_q3_upstream_refresh_audit.json"
+    refresh_path = q3_upstream_refresh_audit_path()
     refresh = json.loads(refresh_path.read_text(encoding="utf-8")) if refresh_path.exists() else {}
     checks = audit["checks"]
     freeze = {"Q3 interface": checks.get("q3_upstream_reference_valid", False), "variable legality": checks.get("q4_variables_legal", False),
