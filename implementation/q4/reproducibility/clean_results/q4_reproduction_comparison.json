@@ -13,8 +13,8 @@
   "stable_evidence_exact": true,
   "evidence_files": {
     "q4_final_audit.json": {
-      "formal_sha256": "0e489f4d9bfce8b3da82ece3e04df9a6631b8a053963dd92de0439e173d12439",
-      "clean_sha256": "0e489f4d9bfce8b3da82ece3e04df9a6631b8a053963dd92de0439e173d12439",
+      "formal_sha256": "1be3a407f7aca0b8c4a7b92f56335fe3575800da49639bf3f909c7e45bbe8b32",
+      "clean_sha256": "1be3a407f7aca0b8c4a7b92f56335fe3575800da49639bf3f909c7e45bbe8b32",
       "equal": true
     },
     "q4_q3_interface_validation.json": {
