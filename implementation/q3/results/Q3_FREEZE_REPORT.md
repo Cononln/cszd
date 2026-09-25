@@ -7,14 +7,20 @@ The formal Q3 pipeline uses frozen Q2 routes, C2-A constrained temporal repair, 
 ## 2. C2-A result
 
 - status: **PASS**
-- candidates: 9
-- joint-feasible candidates: 8
+- raw candidates generated: 9
+- no-op candidates removed: 4
+- duplicate decision states removed: 0
+- unique candidates: 5
+- joint-feasible candidates: 4
 
 ## 3. C2-B result
 
 - status: **PASS**
-- candidates: 4
-- joint-feasible candidates: 2
+- raw combinations generated: 4
+- no-op combinations removed: 2
+- duplicate decision states removed: 0
+- unique combinations: 2
+- joint-feasible candidates: 1
 
 ## 4. Final solution
 
@@ -54,12 +60,23 @@ The formal Q3 pipeline uses frozen Q2 routes, C2-A constrained temporal repair, 
 | no_formal_optimizer_entered | PASS |
 | single_formal_source_declared | PASS |
 | failure_taxonomy_present | PASS |
+| no_noop_candidates | PASS |
+| candidate_state_signatures_unique | PASS |
+| feasible_pool_state_signatures_unique | PASS |
+| candidate_counts_recomputed | PASS |
+| failure_taxonomy_semantically_valid | PASS |
 | formal_figure_manifest_present | PASS |
 | formal_table_manifest_present | PASS |
 | figures_read_only_q3_final | PASS |
 | tables_read_only_q3_final | PASS |
 | figure_qa_pass | PASS |
 | all_manifest_artifacts_present | PASS |
+
+## 7A. Candidate integrity
+
+- no-op candidates: 0
+- duplicate decision states: 0
+- feasible-pool duplicate states: 0
 
 ## 8. Clean run
 
@@ -83,9 +100,8 @@ The formal Q3 pipeline uses frozen Q2 routes, C2-A constrained temporal repair, 
 
 ## 11. Git
 
-- revision recorded in q3_final: `94154eb01e06a40abb5df8a4d1044019b92ae7b3`
+- revision recorded in q3_final: `c7880a36e1f5e9efb39f0d6d6be9d38b9638d80a`
 - freeze commit message: `Freeze Q3 validated reproducible solution`
-- freeze commit: `8cfe013`
 
 ## 12. Freeze checklist
 
@@ -100,5 +116,7 @@ The formal Q3 pipeline uses frozen Q2 routes, C2-A constrained temporal repair, 
 - [x] single formal source
 - [x] no formal optimizer
 - [x] all deliverables present
+- [x] candidate integrity PASS
 
 Q3 STATUS: FROZEN
+CANDIDATE INTEGRITY: PASS
