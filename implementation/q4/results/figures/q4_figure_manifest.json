@@ -2,7 +2,7 @@
   "status": "PASS",
   "backend": "python-matplotlib",
   "source": "q4_final.json",
-  "source_sha256": "225758ec0b3c4f69ae46f2c294ae155edd91dc2644fe926821a46728915ff0fb",
+  "source_sha256": "4a14e67eb6c1a2b5f83dd0bafc1e29cdfc7515e8850f8b6ff24adcb351e03f44",
   "artifacts": [
     "Fig_Q4_01_resource_configuration.alignment.json",
     "Fig_Q4_01_resource_configuration.alignment.svg",

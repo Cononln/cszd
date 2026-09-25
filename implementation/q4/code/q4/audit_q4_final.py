@@ -7,7 +7,7 @@ import subprocess
 from pathlib import Path
 from typing import Any
 
-from .q3_adapter import load_q3_selected_solution, q3_audit_path, results_root
+from .q3_adapter import load_q3_selected_solution, q3_audit_path, q3_final_path, results_root
 from .q4_model import prepare_state
 from .validate_q4 import validate_final
 
@@ -25,6 +25,8 @@ def _source_changes(paths: list[str]) -> list[str]:
 def audit(*, require_deliverables: bool = False) -> dict[str, Any]:
     root = results_root(); final_path = root / "q4_final.json"; final = json.loads(final_path.read_text(encoding="utf-8"))
     current_q3 = load_q3_selected_solution(); q3audit = json.loads(q3_audit_path().read_text(encoding="utf-8"))
+    refresh_path = root / "q4_q3_upstream_refresh_audit.json"
+    refresh = json.loads(refresh_path.read_text(encoding="utf-8")) if refresh_path.exists() else {}
     prepared = prepare_state(current_q3)
     selected = final["selected_solution"]
     validations = {key: validate_final(value, prepared) for key, value in selected.items()}
@@ -40,11 +42,33 @@ def audit(*, require_deliverables: bool = False) -> dict[str, Any]:
                         for row in failure.get("candidate_failures", []))
     changed = _source_changes(subprocess.check_output(["git", "diff", "--name-only", "869bcbc..HEAD"], text=True).splitlines())
     working = _source_changes(subprocess.check_output(["git", "diff", "--name-only"], text=True).splitlines())
-    forbidden = [path for path in changed + working if path.startswith(("implementation/q1/", "implementation/q2/", "implementation/q3/"))]
+    allowed_q3_upstream = {
+        "implementation/q3/results/q3_final.json",
+        "implementation/q3/results/q3_final_audit.json",
+        "implementation/q3/results/Q3_FREEZE_REPORT.md",
+    }
+    forbidden = [path for path in changed + working
+                 if path.startswith(("implementation/q1/", "implementation/q2/")) or
+                 (path.startswith("implementation/q3/") and path not in allowed_q3_upstream)]
+    upstream = final["q3_upstream_reference"]
     checks: dict[str, bool] = {
         "q3_upstream_reference_valid": q3audit.get("status") == "PASS" and all(q3audit.get("checks", {}).values()),
         "q3_selected_solution_unchanged": final["q3_selected_solution_id"] == current_q3["selected_solution_id"] and final["q3_upstream_reference"]["selected_solution_fingerprint"] == current_q3["selected_solution_fingerprint"],
         "q3_frozen_files_untouched": not forbidden,
+        "q3_upstream_snapshot_valid": q3_final_path().exists() and q3_audit_path().exists() and
+            final["q3_upstream_reference"]["source_sha256"] == _sha(q3_final_path()),
+        "q3_latest_refreeze_detected": current_q3.get("q3_final_schema") == "1.2" and
+            current_q3.get("q3_refreeze_commit") == "35a5668e9822dc92c2d8c8a21bbd01f1452ba487",
+        "q3_upstream_provenance_current": all(upstream.get(key) == current_q3.get(key) for key in
+            ("source_sha256", "q3_git_revision", "q3_final_schema", "q3_refreeze_commit", "selected_solution_id")),
+        "q3_selected_solution_semantic_equal": upstream.get("selected_solution_fingerprint") == current_q3.get("selected_solution_fingerprint"),
+        "q3_transport_state_semantic_equal": upstream.get("transport_state") == current_q3.get("transport_state"),
+        "q3_transport_schedule_semantic_equal": upstream.get("transport_schedule") == current_q3.get("transport_schedule"),
+        "q3_relay_schedule_semantic_equal": upstream.get("relay_schedule") == current_q3.get("relay_schedule"),
+        "q3_core_objective_semantic_equal": upstream.get("energy_components") == current_q3.get("energy_components") and
+            upstream.get("completion_times_s") == current_q3.get("completion_times_s"),
+        "q3_upstream_change_handled": refresh.get("status") == "FAIL" and
+            final.get("provenance", {}).get("q3_upstream_refresh", {}).get("q4_reenumeration_completed") is True,
         "q4_variables_legal": final["q4_problem_definition"].get("status") == "PASS" and len(final["q4_problem_definition"].get("new_decision_variables", [])) == 1,
         "q4_validator_independent": all(value["status"] == "PASS" for value in validations.values()),
         "all_hard_constraints_pass": all(all(value["checks"].values()) for value in validations.values()),

@@ -8,6 +8,12 @@ from pathlib import Path
 from typing import Any
 
 
+# The Q3 worktree is refrozen independently.  This commit identifies the
+# immutable Q3 snapshot copied into this Q4 branch; it is provenance only and
+# is never used to select a different Q3 solution.
+Q3_REFREEZE_COMMIT = "35a5668e9822dc92c2d8c8a21bbd01f1452ba487"
+
+
 def q4_root() -> Path:
     return Path(__file__).resolve().parents[2]
 
@@ -27,9 +33,23 @@ def q3_audit_path() -> Path:
     return q4_root().parents[0] / "q3" / "results" / "q3_final_audit.json"
 
 
+def q3_freeze_report_path() -> Path:
+    return q4_root().parents[0] / "q3" / "results" / "Q3_FREEZE_REPORT.md"
+
+
 def _sha256(value: Any) -> str:
     encoded = json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(encoded.encode("utf-8")).hexdigest()
+
+
+def selected_solution_semantic_fingerprint(selected: dict[str, Any]) -> str:
+    return _sha256({
+        "solution_id": selected.get("solution_id"),
+        "transport_state": selected.get("transport_state", {}),
+        "schedule": selected.get("schedule", {}),
+        "relay": selected.get("relay", {}),
+        "objective": selected.get("objective", {}),
+    })
 
 
 def load_q3_selected_solution() -> dict[str, Any]:
@@ -46,14 +66,11 @@ def load_q3_selected_solution() -> dict[str, Any]:
         "source_file": "implementation/q3/results/q3_final.json",
         "source_sha256": hashlib.sha256(final_path.read_bytes()).hexdigest(),
         "q3_git_revision": final.get("metadata", {}).get("git_revision"),
+        "q3_final_schema": final.get("metadata", {}).get("q3_final_schema"),
+        "q3_refreeze_commit": Q3_REFREEZE_COMMIT,
         "selected_solution_id": selected.get("solution_id"),
-        "selected_solution_fingerprint": _sha256({
-            "solution_id": selected.get("solution_id"),
-            "transport_state": transport_state,
-            "schedule": schedule,
-            "relay": relay,
-            "objective": selected.get("objective", {}),
-        }),
+        "selected_solution_state_signature": selected.get("state_signature"),
+        "selected_solution_fingerprint": selected_solution_semantic_fingerprint(selected),
         "transport_state": transport_state,
         "transport_schedule": schedule,
         "relay_schedule": relay,

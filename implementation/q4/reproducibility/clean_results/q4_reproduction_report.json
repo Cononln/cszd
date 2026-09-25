@@ -32,14 +32,14 @@
     },
     "total_candidates": 29524,
     "total_feasible": 29524,
-    "runtime_s": 6.952671400009422,
+    "runtime_s": 7.218914199998835,
     "candidate_state_signatures_unique": true
   },
   "figures": {
     "status": "PASS",
     "backend": "python-matplotlib",
     "source": "q4_final.json",
-    "source_sha256": "a909aeb27d6a5dc43bb1e561a3355c0f7fe698a67ae1bac6e0b9d8e7f08b88ec",
+    "source_sha256": "90e6e5844b246b2cf4f20ce35a81ec3399cd4589ecd06fd231c0e7bd6f98d9f7",
     "artifacts": [
       "Fig_Q4_01_resource_configuration.alignment.json",
       "Fig_Q4_01_resource_configuration.alignment.svg",
@@ -181,7 +181,7 @@
   "tables": {
     "status": "PASS",
     "source": "q4_final.json",
-    "source_sha256": "a909aeb27d6a5dc43bb1e561a3355c0f7fe698a67ae1bac6e0b9d8e7f08b88ec",
+    "source_sha256": "90e6e5844b246b2cf4f20ce35a81ec3399cd4589ecd06fd231c0e7bd6f98d9f7",
     "artifacts": [
       "Q4_Table_01_SelectedConfigurations.csv",
       "Q4_Table_02_GroupResources.csv",
@@ -196,6 +196,7 @@
       "q3_upstream_reference_valid": true,
       "q3_selected_solution_unchanged": true,
       "q3_frozen_files_untouched": true,
+      "q3_upstream_snapshot_valid": true,
       "q4_variables_legal": true,
       "q4_validator_independent": true,
       "all_hard_constraints_pass": true,
@@ -302,7 +303,14 @@
       "implementation/q4/code/q4/run_q4_model.py",
       "implementation/q4/code/q4/validate_q3_to_q4_interface.py",
       "implementation/q4/code/q4/validate_q4.py",
-      "implementation/q4/code/q4/write_q4_freeze_report.py"
+      "implementation/q4/code/q4/write_q4_freeze_report.py",
+      "implementation/q3/results/Q3_FREEZE_REPORT.md",
+      "implementation/q3/results/q3_final.json",
+      "implementation/q3/results/q3_final_audit.json",
+      "implementation/q4/code/q4/audit_q4_final.py",
+      "implementation/q4/code/q4/q3_adapter.py",
+      "implementation/q4/code/q4/q4_final.py",
+      "implementation/q4/code/q4/validate_q3_to_q4_interface.py"
     ],
     "forbidden_changed_files": [],
     "require_deliverables": true

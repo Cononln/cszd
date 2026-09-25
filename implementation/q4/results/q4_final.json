@@ -3,15 +3,18 @@
     "phase": "Q4",
     "method": "exact enumeration of legal component partitions",
     "formal_solver": "deterministic exhaustive partition enumeration",
-    "git_revision": "b73cebe298c537301e74ba8cad7938e8c63e961d",
+    "git_revision": "b95a81f8a7599e6b563bc0e908eead978d383ec0",
     "q4_final_schema": "1.0"
   },
   "q3_upstream_reference": {
     "source_file": "implementation/q3/results/q3_final.json",
-    "source_sha256": "280327471544e5e1c9ab4014788d8df457ef48035adadb767d4be7552ac8f9f2",
-    "q3_git_revision": "94154eb01e06a40abb5df8a4d1044019b92ae7b3",
+    "source_sha256": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81",
+    "q3_git_revision": "c7880a36e1f5e9efb39f0d6d6be9d38b9638d80a",
+    "q3_final_schema": "1.2",
+    "q3_refreeze_commit": "35a5668e9822dc92c2d8c8a21bbd01f1452ba487",
     "selected_solution_id": "C2A-BASE",
-    "selected_solution_fingerprint": "d4f6c254bc94b1f5970989674c6dc13759c6db2aecf7864927754617d523ca7f",
+    "selected_solution_state_signature": "ee2466c245db4dc12ee6f8d7d31151776c81aa7d2e53d336a8e97aa6805e76ef",
+    "selected_solution_fingerprint": "e87be62ffdc6e2862709a1a26aea950fdbe59adcabb8fd0e6dafccd30b62f1e1",
     "transport_state": {
       "trips": [
         {
@@ -359,7 +362,8 @@
             ]
           }
         }
-      ]
+      ],
+      "unassigned": []
     },
     "transport_schedule": {
       "status": "FEASIBLE",
@@ -1869,7 +1873,7 @@
         "relay_energy_kwh": 8.247976791529863,
         "relay_cmax_s": 24147.775014499995,
         "joint_cmax_s": 24147.775014499995,
-        "runtime_s": 73.23875150000094
+        "runtime_s": 80.32635909999954
       },
       "checks": {
         "all_demands_candidate_coverable": true,
@@ -2041,8 +2045,8 @@
           "sortie_id": "RS-001",
           "option_id": "SO-00595",
           "candidate_id": "P0113",
-          "relay_id": "R01",
-          "energy_component_id": "EC-04",
+          "relay_id": "R02",
+          "energy_component_id": "EC-02",
           "demand_ids": [
             "D-T022-01",
             "D-T018-01",
@@ -2064,8 +2068,8 @@
           "sortie_id": "RS-002",
           "option_id": "SO-00228",
           "candidate_id": "P0045",
-          "relay_id": "R02",
-          "energy_component_id": "EC-06",
+          "relay_id": "R01",
+          "energy_component_id": "EC-01",
           "demand_ids": [
             "D-T004-01",
             "D-T014-01"
@@ -2085,8 +2089,8 @@
           "sortie_id": "RS-003",
           "option_id": "SO-00478",
           "candidate_id": "P0088",
-          "relay_id": "R02",
-          "energy_component_id": "EC-01",
+          "relay_id": "R01",
+          "energy_component_id": "EC-06",
           "demand_ids": [
             "D-T008-01",
             "D-T015-01"
@@ -2106,8 +2110,8 @@
           "sortie_id": "RS-004",
           "option_id": "SO-00102",
           "candidate_id": "P0027",
-          "relay_id": "R01",
-          "energy_component_id": "EC-02",
+          "relay_id": "R02",
+          "energy_component_id": "EC-03",
           "demand_ids": [
             "D-T006-01",
             "D-T010-01",
@@ -2154,7 +2158,7 @@
           "option_id": "SO-00068",
           "candidate_id": "P0024",
           "relay_id": "R01",
-          "energy_component_id": "EC-03",
+          "energy_component_id": "EC-04",
           "demand_ids": [
             "D-T025-01",
             "D-T011-01"
@@ -2176,8 +2180,8 @@
           "sortie_id": "RS-001",
           "option_id": "SO-00595",
           "candidate_id": "P0113",
-          "relay_id": "R01",
-          "energy_component_id": "EC-04",
+          "relay_id": "R02",
+          "energy_component_id": "EC-02",
           "demand_ids": [
             "D-T022-01",
             "D-T018-01",
@@ -2199,8 +2203,8 @@
           "sortie_id": "RS-002",
           "option_id": "SO-00228",
           "candidate_id": "P0045",
-          "relay_id": "R02",
-          "energy_component_id": "EC-06",
+          "relay_id": "R01",
+          "energy_component_id": "EC-01",
           "demand_ids": [
             "D-T004-01",
             "D-T014-01"
@@ -2220,8 +2224,8 @@
           "sortie_id": "RS-003",
           "option_id": "SO-00478",
           "candidate_id": "P0088",
-          "relay_id": "R02",
-          "energy_component_id": "EC-01",
+          "relay_id": "R01",
+          "energy_component_id": "EC-06",
           "demand_ids": [
             "D-T008-01",
             "D-T015-01"
@@ -2241,8 +2245,8 @@
           "sortie_id": "RS-004",
           "option_id": "SO-00102",
           "candidate_id": "P0027",
-          "relay_id": "R01",
-          "energy_component_id": "EC-02",
+          "relay_id": "R02",
+          "energy_component_id": "EC-03",
           "demand_ids": [
             "D-T006-01",
             "D-T010-01",
@@ -2289,7 +2293,7 @@
           "option_id": "SO-00068",
           "candidate_id": "P0024",
           "relay_id": "R01",
-          "energy_component_id": "EC-03",
+          "energy_component_id": "EC-04",
           "demand_ids": [
             "D-T025-01",
             "D-T011-01"
@@ -2308,7 +2312,7 @@
       ],
       "relay_services": [
         {
-          "relay_id": "R01",
+          "relay_id": "R02",
           "option_id": "SO-00595",
           "candidate_id": "P0113",
           "lon": 109.27135709756021,
@@ -2318,7 +2322,7 @@
           "service_end_s": 3872.466705146261
         },
         {
-          "relay_id": "R02",
+          "relay_id": "R01",
           "option_id": "SO-00228",
           "candidate_id": "P0045",
           "lon": 109.21278607038295,
@@ -2328,7 +2332,7 @@
           "service_end_s": 2999.079410648509
         },
         {
-          "relay_id": "R02",
+          "relay_id": "R01",
           "option_id": "SO-00478",
           "candidate_id": "P0088",
           "lon": 109.24207158397158,
@@ -2338,7 +2342,7 @@
           "service_end_s": 5864.34501329219
         },
         {
-          "relay_id": "R01",
+          "relay_id": "R02",
           "option_id": "SO-00102",
           "candidate_id": "P0027",
           "lon": 109.19814331358863,
@@ -2806,8 +2810,8 @@
     "relay_assignments": [
       {
         "sortie_id": "RS-001",
-        "relay_id": "R01",
-        "energy_component_id": "EC-04",
+        "relay_id": "R02",
+        "energy_component_id": "EC-02",
         "launch_start_s": 716.2567466596929,
         "service_start_s": 1344.4939412434896,
         "service_end_s": 3872.466705146261,
@@ -2823,8 +2827,8 @@
       },
       {
         "sortie_id": "RS-002",
-        "relay_id": "R02",
-        "energy_component_id": "EC-06",
+        "relay_id": "R01",
+        "energy_component_id": "EC-01",
         "launch_start_s": 1519.346301888469,
         "service_start_s": 2150.5149475097655,
         "service_end_s": 2999.079410648509,
@@ -2838,8 +2842,8 @@
       },
       {
         "sortie_id": "RS-003",
-        "relay_id": "R02",
-        "energy_component_id": "EC-01",
+        "relay_id": "R01",
+        "energy_component_id": "EC-06",
         "launch_start_s": 3959.4807971447954,
         "service_start_s": 4746.837111409505,
         "service_end_s": 5864.34501329219,
@@ -2853,8 +2857,8 @@
       },
       {
         "sortie_id": "RS-004",
-        "relay_id": "R01",
-        "energy_component_id": "EC-02",
+        "relay_id": "R02",
+        "energy_component_id": "EC-03",
         "launch_start_s": 5053.265097528441,
         "service_start_s": 5782.09105834961,
         "service_end_s": 12637.97974185995,
@@ -2889,7 +2893,7 @@
       {
         "sortie_id": "RS-006",
         "relay_id": "R01",
-        "energy_component_id": "EC-03",
+        "energy_component_id": "EC-04",
         "launch_start_s": 18118.310975507982,
         "service_start_s": 18752.091058349608,
         "service_end_s": 23377.470514035485,
@@ -3600,7 +3604,9 @@
     "description": "Enumerate all unlabeled nonempty partitions of frozen multi-stop service-area components for k=2 and k=3.",
     "selection_rule": "minimize (total shortage units, total independent resource units, workload imbalance ratio, state signature)",
     "random_seeds": [],
-    "q3_state_modified": false
+    "q3_state_modified": false,
+    "candidate_pool_reuse_validated": false,
+    "upstream_change_resolution": "Q4_REENUMERATION"
   },
   "q4_baseline": {
     "candidate_id": "Q4-BASE-ALL",
@@ -3688,7 +3694,7 @@
     },
     "total_candidates": 29524,
     "total_feasible": 29524,
-    "runtime_s": 6.941454799991334,
+    "runtime_s": 7.2184103000035975,
     "candidate_state_signatures_unique": true
   },
   "failure_taxonomy_summary": {
@@ -3877,10 +3883,10 @@
                 "BAT-B-04"
               ],
               "relay_uavs": [
-                "R01"
+                "R02"
               ],
               "relay_energy_components": [
-                "EC-04"
+                "EC-02"
               ],
               "transport_uavs_by_type": {
                 "B": 1
@@ -4168,10 +4174,10 @@
                 "BAT-B-04"
               ],
               "relay_uavs": [
-                "R01"
+                "R02"
               ],
               "relay_energy_components": [
-                "EC-04"
+                "EC-02"
               ],
               "transport_uavs_by_type": {
                 "B": 1
@@ -4206,10 +4212,10 @@
                 "BAT-B-03"
               ],
               "relay_uavs": [
-                "R01"
+                "R02"
               ],
               "relay_energy_components": [
-                "EC-04"
+                "EC-02"
               ],
               "transport_uavs_by_type": {
                 "B": 1
@@ -4428,6 +4434,13 @@
     "source_of_formal_numbers": "q4_final.json",
     "q3_search_history_used": false,
     "q3_selected_solution_only": true,
-    "q4_candidate_source": "exact legal partition enumeration"
+    "q4_candidate_source": "exact legal partition enumeration",
+    "q3_upstream_refresh": {
+      "audit_file": "q4_q3_upstream_refresh_audit.json",
+      "historical_semantic_equal": false,
+      "q4_reenumeration_required": true,
+      "q4_reenumeration_completed": true,
+      "candidate_pool_reuse_validated": false
+    }
   }
 }

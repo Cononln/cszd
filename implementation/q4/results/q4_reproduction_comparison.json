@@ -13,13 +13,13 @@
   "stable_evidence_exact": true,
   "evidence_files": {
     "q4_final_audit.json": {
-      "formal_sha256": "1be3a407f7aca0b8c4a7b92f56335fe3575800da49639bf3f909c7e45bbe8b32",
-      "clean_sha256": "1be3a407f7aca0b8c4a7b92f56335fe3575800da49639bf3f909c7e45bbe8b32",
+      "formal_sha256": "d6bbcaa52f94c2e07b4b83342d960b7482651aa1b35bcaf00b576f213f7d7290",
+      "clean_sha256": "d6bbcaa52f94c2e07b4b83342d960b7482651aa1b35bcaf00b576f213f7d7290",
       "equal": true
     },
     "q4_q3_interface_validation.json": {
-      "formal_sha256": "4a9b3811a8153ce7582f964a3c265734a5984e8390f32d2832c4620e712e02ff",
-      "clean_sha256": "4a9b3811a8153ce7582f964a3c265734a5984e8390f32d2832c4620e712e02ff",
+      "formal_sha256": "40067fbe52aef31c44b931fd38795a5d5e99c94c11e5b16880d42cb7adb2cdf2",
+      "clean_sha256": "40067fbe52aef31c44b931fd38795a5d5e99c94c11e5b16880d42cb7adb2cdf2",
       "equal": true
     },
     "q4_small_case_validation.json": {
@@ -43,23 +43,23 @@
       "equal": true
     },
     "q4_2group_candidates.json": {
-      "formal_sha256": "1409c3aed0b60a7f73f6d920e46f08cbfc3badc6b5fb3c97264e31af9b25e8b4",
-      "clean_sha256": "1409c3aed0b60a7f73f6d920e46f08cbfc3badc6b5fb3c97264e31af9b25e8b4",
+      "formal_sha256": "45c609ceed0710c7bb1968503ee0b545ec4db7e8f52440faf52e5fc37c0aca34",
+      "clean_sha256": "45c609ceed0710c7bb1968503ee0b545ec4db7e8f52440faf52e5fc37c0aca34",
       "equal": true
     },
     "q4_3group_candidates.json": {
-      "formal_sha256": "df1c7725cbfd889817336b4719690ed690b0b16710f376c4989ed2c793e567ac",
-      "clean_sha256": "df1c7725cbfd889817336b4719690ed690b0b16710f376c4989ed2c793e567ac",
+      "formal_sha256": "0864f3713903b5f2c9899ff1e02bb5bcc9ad49675240f15241fc4508b6f050dc",
+      "clean_sha256": "0864f3713903b5f2c9899ff1e02bb5bcc9ad49675240f15241fc4508b6f050dc",
       "equal": true
     },
     "q4_feasible_pool.json": {
-      "formal_sha256": "589ef51c869522d50f3f2f6816a5abd1f639b0dadc5635215d56249737c88b90",
-      "clean_sha256": "589ef51c869522d50f3f2f6816a5abd1f639b0dadc5635215d56249737c88b90",
+      "formal_sha256": "78dfb3c474920a105853b9ce15b5b35c8c25ef36cfb369e49f0ff70c2f5c0614",
+      "clean_sha256": "78dfb3c474920a105853b9ce15b5b35c8c25ef36cfb369e49f0ff70c2f5c0614",
       "equal": true
     },
     "q4_candidate_log.csv": {
-      "formal_sha256": "9a3df985e271a8a698c4f035a7cd11008980a0c8fd65d607b01b6a2de3219485",
-      "clean_sha256": "9a3df985e271a8a698c4f035a7cd11008980a0c8fd65d607b01b6a2de3219485",
+      "formal_sha256": "693f556948db856783459421c943015943a18d7982acd74a83fcdd1750a58a7f",
+      "clean_sha256": "693f556948db856783459421c943015943a18d7982acd74a83fcdd1750a58a7f",
       "equal": true
     }
   },

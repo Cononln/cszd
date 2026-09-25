@@ -108,6 +108,9 @@
   },
   "q3_interface_gate": {
     "q3_final_exists": true,
+    "latest_q3_final_exists": true,
+    "latest_q3_schema_1_2": true,
+    "latest_q3_freeze_status_pass": true,
     "q3_selected_solution_exists": true,
     "q3_final_audit_pass": true,
     "q3_joint_validator_pass": true,

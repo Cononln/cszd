@@ -35,6 +35,8 @@ def build_final(model: dict[str, Any], interface_gate: dict[str, Any]) -> dict[s
             "validator_status": "PASS", "validator_result": row["validator_result"],
         }
     source_path = prepared["interface"]["source_file"]
+    refresh_path = results_root() / "q4_q3_upstream_refresh_audit.json"
+    refresh = json.loads(refresh_path.read_text(encoding="utf-8")) if refresh_path.exists() else {}
     final = {
         "metadata": {"phase": "Q4", "method": "exact enumeration of legal component partitions",
                      "formal_solver": "deterministic exhaustive partition enumeration",
@@ -44,7 +46,9 @@ def build_final(model: dict[str, Any], interface_gate: dict[str, Any]) -> dict[s
         "q4_problem_definition": problem_definition(),
         "q4_method": {"description": "Enumerate all unlabeled nonempty partitions of frozen multi-stop service-area components for k=2 and k=3.",
                        "selection_rule": "minimize (total shortage units, total independent resource units, workload imbalance ratio, state signature)",
-                       "random_seeds": [], "q3_state_modified": False},
+                       "random_seeds": [], "q3_state_modified": False,
+                       "candidate_pool_reuse_validated": False,
+                       "upstream_change_resolution": "Q4_REENUMERATION" if refresh and not refresh.get("semantic_equal", True) else "POOL_REUSE"},
         "q4_baseline": {key: model["baseline"][key] for key in ("candidate_id", "state_signature", "objective", "shortages", "hard_constraint_checks", "validator_status", "validator_result")},
         "search_statistics": {"2": model["summaries"]["2"], "3": model["summaries"]["3"],
                               "total_candidates": len(model["all_rows"]), "total_feasible": len(model["feasible"]),
@@ -59,7 +63,11 @@ def build_final(model: dict[str, Any], interface_gate: dict[str, Any]) -> dict[s
         "random_seeds": [],
         "provenance": {"source_of_q3": source_path, "source_of_formal_numbers": "q4_final.json",
                         "q3_search_history_used": False, "q3_selected_solution_only": True,
-                        "q4_candidate_source": "exact legal partition enumeration"},
+                        "q4_candidate_source": "exact legal partition enumeration",
+                        "q3_upstream_refresh": {"audit_file": "q4_q3_upstream_refresh_audit.json",
+                                                "historical_semantic_equal": refresh.get("semantic_equal"),
+                                                "q4_reenumeration_required": bool(refresh and not refresh.get("semantic_equal", True)),
+                                                "q4_reenumeration_completed": bool(refresh and not refresh.get("semantic_equal", True))}},
     }
     return final
 
