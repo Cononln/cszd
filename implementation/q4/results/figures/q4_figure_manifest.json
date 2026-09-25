@@ -1,0 +1,143 @@
+{
+  "status": "PASS",
+  "backend": "python-matplotlib",
+  "source": "q4_final.json",
+  "source_sha256": "19b03527ec67603e8e5844b1811fbeb6d59a3b10c31f87de99606260016f6a5b",
+  "artifacts": [
+    "Fig_Q4_01_resource_configuration.alignment.json",
+    "Fig_Q4_01_resource_configuration.alignment.svg",
+    "Fig_Q4_01_resource_configuration.collision-audit.json",
+    "Fig_Q4_01_resource_configuration.pdf",
+    "Fig_Q4_01_resource_configuration.png",
+    "Fig_Q4_01_resource_configuration.svg",
+    "Fig_Q4_01_resource_configuration.tiff",
+    "Fig_Q4_02_workload_balance.alignment.json",
+    "Fig_Q4_02_workload_balance.alignment.svg",
+    "Fig_Q4_02_workload_balance.collision-audit.json",
+    "Fig_Q4_02_workload_balance.pdf",
+    "Fig_Q4_02_workload_balance.png",
+    "Fig_Q4_02_workload_balance.svg",
+    "Fig_Q4_02_workload_balance.tiff",
+    "Fig_Q4_03_partition_structure.alignment.json",
+    "Fig_Q4_03_partition_structure.alignment.svg",
+    "Fig_Q4_03_partition_structure.collision-audit.json",
+    "Fig_Q4_03_partition_structure.pdf",
+    "Fig_Q4_03_partition_structure.png",
+    "Fig_Q4_03_partition_structure.svg",
+    "Fig_Q4_03_partition_structure.tiff",
+    "Q4_Figure_Contract.md"
+  ],
+  "pdf_qa": [
+    {
+      "figure": "Fig_Q4_01_resource_configuration.pdf",
+      "status": "PASS",
+      "pdf_text": {
+        "pdf": "D:\\Users\\29919\\Documents\\科研\\cszd-q4-formal\\implementation\\q4\\results\\figures\\Fig_Q4_01_resource_configuration.pdf",
+        "auditable": true,
+        "minimum_required_pt": 5.0,
+        "minimum_found_pt": 6.0,
+        "text_run_count": 26,
+        "below_minimum_count": 0,
+        "below_minimum": [],
+        "warnings": []
+      },
+      "collision": {
+        "pdf": "D:\\Users\\29919\\Documents\\科研\\cszd-q4-formal\\implementation\\q4\\results\\figures\\Fig_Q4_01_resource_configuration.pdf",
+        "auditable": true,
+        "verdict": "PASS",
+        "page_count": 1,
+        "visible_text_box_count": 26,
+        "text_trace_count": 26,
+        "stroke_path_count": 24,
+        "filled_region_count": 27,
+        "image_region_count": 0,
+        "summary": {
+          "fail": 0,
+          "warn": 0,
+          "contained_fill_overlays": 0,
+          "contained_image_overlays": 0
+        },
+        "thresholds": {
+          "text_inset_pt": 0.6,
+          "min_overlap_ratio": 0.05,
+          "clipping_tolerance_pt": 0.5
+        },
+        "findings": []
+      }
+    },
+    {
+      "figure": "Fig_Q4_02_workload_balance.pdf",
+      "status": "PASS",
+      "pdf_text": {
+        "pdf": "D:\\Users\\29919\\Documents\\科研\\cszd-q4-formal\\implementation\\q4\\results\\figures\\Fig_Q4_02_workload_balance.pdf",
+        "auditable": true,
+        "minimum_required_pt": 5.0,
+        "minimum_found_pt": 6.0,
+        "text_run_count": 24,
+        "below_minimum_count": 0,
+        "below_minimum": [],
+        "warnings": []
+      },
+      "collision": {
+        "pdf": "D:\\Users\\29919\\Documents\\科研\\cszd-q4-formal\\implementation\\q4\\results\\figures\\Fig_Q4_02_workload_balance.pdf",
+        "auditable": true,
+        "verdict": "PASS",
+        "page_count": 1,
+        "visible_text_box_count": 24,
+        "text_trace_count": 24,
+        "stroke_path_count": 22,
+        "filled_region_count": 25,
+        "image_region_count": 0,
+        "summary": {
+          "fail": 0,
+          "warn": 0,
+          "contained_fill_overlays": 0,
+          "contained_image_overlays": 0
+        },
+        "thresholds": {
+          "text_inset_pt": 0.6,
+          "min_overlap_ratio": 0.05,
+          "clipping_tolerance_pt": 0.5
+        },
+        "findings": []
+      }
+    },
+    {
+      "figure": "Fig_Q4_03_partition_structure.pdf",
+      "status": "PASS",
+      "pdf_text": {
+        "pdf": "D:\\Users\\29919\\Documents\\科研\\cszd-q4-formal\\implementation\\q4\\results\\figures\\Fig_Q4_03_partition_structure.pdf",
+        "auditable": true,
+        "minimum_required_pt": 5.0,
+        "minimum_found_pt": 6.0,
+        "text_run_count": 26,
+        "below_minimum_count": 0,
+        "below_minimum": [],
+        "warnings": []
+      },
+      "collision": {
+        "pdf": "D:\\Users\\29919\\Documents\\科研\\cszd-q4-formal\\implementation\\q4\\results\\figures\\Fig_Q4_03_partition_structure.pdf",
+        "auditable": true,
+        "verdict": "PASS",
+        "page_count": 1,
+        "visible_text_box_count": 26,
+        "text_trace_count": 26,
+        "stroke_path_count": 24,
+        "filled_region_count": 28,
+        "image_region_count": 0,
+        "summary": {
+          "fail": 0,
+          "warn": 0,
+          "contained_fill_overlays": 0,
+          "contained_image_overlays": 0
+        },
+        "thresholds": {
+          "text_inset_pt": 0.6,
+          "min_overlap_ratio": 0.05,
+          "clipping_tolerance_pt": 0.5
+        },
+        "findings": []
+      }
+    }
+  ]
+}

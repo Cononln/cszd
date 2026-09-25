@@ -1,0 +1,32 @@
+{
+  "candidate_id": "Q4-BASE-ALL",
+  "state_signature": "a4d920eb3863259af4eb69aac3899e320a6428d46017081d9b511728820a0b16",
+  "status": "PASS",
+  "checks": {
+    "state_signature_matches": true,
+    "group_count_matches": true,
+    "groups_match": true,
+    "resource_requirements_match": true,
+    "shortages_match": true,
+    "objective_matches": true,
+    "hard_constraints_recomputed": true,
+    "upstream_reference_matches": true
+  },
+  "recomputed_objective": {
+    "total_resource_units": 29,
+    "total_shortage_units": 0,
+    "imbalance_ratio": 1.0,
+    "max_group_workload_s": 64834.28365062774,
+    "group_workload_range_s": 0.0
+  },
+  "recomputed_shortages": {
+    "transport_uavs_by_type:A": 0,
+    "transport_uavs_by_type:B": 0,
+    "transport_uavs_by_type:C": 0,
+    "batteries_by_type:A": 0,
+    "batteries_by_type:B": 0,
+    "batteries_by_type:C": 0,
+    "relay_uavs_by_type:R": 0,
+    "relay_energy_by_type:R": 0
+  }
+}

@@ -52,6 +52,14 @@ implementation/**/figures_plus/*.svg
 implementation/**/__pycache__/
 implementation/**/*.pkl
 
+# Q4 clean reproduction is regenerated from the formal source; retain only
+# compact audit evidence while avoiding a duplicate 200+ MiB output bundle.
+implementation/q4/reproducibility/clean_results/**
+!implementation/q4/reproducibility/clean_results/q4_reproduction_report.json
+!implementation/q4/reproducibility/clean_results/q4_reproduction_comparison.json
+!implementation/q4/reproducibility/clean_results/q4_final_audit.json
+!implementation/q4/reproducibility/clean_results/Q4_FREEZE_REPORT.md
+
 # Source-only materials that must not enter this repository
 研赛内部资料/
 研赛内部资料.zip

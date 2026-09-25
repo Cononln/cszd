@@ -1,0 +1,77 @@
+{
+  "phase": "Q4 clean reproduction comparison",
+  "status": "PASS",
+  "formal_results_dir": "implementation/q4/results",
+  "clean_results_dir": "implementation/q4/reproducibility/clean_results",
+  "comparison_rule": "semantic q4_final equality; execution runtime excluded; stable evidence files exact",
+  "missing_files": [],
+  "q4_final": {
+    "status": "PASS",
+    "semantic_equal": true,
+    "selected_solution_equal": true
+  },
+  "stable_evidence_exact": true,
+  "evidence_files": {
+    "q4_final_audit.json": {
+      "formal_sha256": "7ccdbec11a22d9e051100a7df4061e483bc8f0fce4ee1f560641a44bc92d5499",
+      "clean_sha256": "7ccdbec11a22d9e051100a7df4061e483bc8f0fce4ee1f560641a44bc92d5499",
+      "equal": true
+    },
+    "q4_q3_interface_validation.json": {
+      "formal_sha256": "4a9b3811a8153ce7582f964a3c265734a5984e8390f32d2832c4620e712e02ff",
+      "clean_sha256": "4a9b3811a8153ce7582f964a3c265734a5984e8390f32d2832c4620e712e02ff",
+      "equal": true
+    },
+    "q4_small_case_validation.json": {
+      "formal_sha256": "d7c6290c6ec31d46b6accfd70ac8f8008eb2bf5b47ddfc5ba2bf324b84c8fff3",
+      "clean_sha256": "d7c6290c6ec31d46b6accfd70ac8f8008eb2bf5b47ddfc5ba2bf324b84c8fff3",
+      "equal": true
+    },
+    "q4_failure_taxonomy.json": {
+      "formal_sha256": "8dcdccbed6329413c716844f63e1e3e57a3eeaeee87819bc54371b5c26174b2f",
+      "clean_sha256": "8dcdccbed6329413c716844f63e1e3e57a3eeaeee87819bc54371b5c26174b2f",
+      "equal": true
+    },
+    "q4_baseline.json": {
+      "formal_sha256": "e7490b45348c808b140b98fa8fd0f6d4cd6e57db71a09abe5eb6dd98ccce7b2d",
+      "clean_sha256": "e7490b45348c808b140b98fa8fd0f6d4cd6e57db71a09abe5eb6dd98ccce7b2d",
+      "equal": true
+    },
+    "q4_baseline_validation.json": {
+      "formal_sha256": "f4e916a8f14ddef94f5f966552dbededfc6300ed52b494d25bb240bf15fbe026",
+      "clean_sha256": "f4e916a8f14ddef94f5f966552dbededfc6300ed52b494d25bb240bf15fbe026",
+      "equal": true
+    },
+    "q4_2group_candidates.json": {
+      "formal_sha256": "1409c3aed0b60a7f73f6d920e46f08cbfc3badc6b5fb3c97264e31af9b25e8b4",
+      "clean_sha256": "1409c3aed0b60a7f73f6d920e46f08cbfc3badc6b5fb3c97264e31af9b25e8b4",
+      "equal": true
+    },
+    "q4_3group_candidates.json": {
+      "formal_sha256": "df1c7725cbfd889817336b4719690ed690b0b16710f376c4989ed2c793e567ac",
+      "clean_sha256": "df1c7725cbfd889817336b4719690ed690b0b16710f376c4989ed2c793e567ac",
+      "equal": true
+    },
+    "q4_feasible_pool.json": {
+      "formal_sha256": "589ef51c869522d50f3f2f6816a5abd1f639b0dadc5635215d56249737c88b90",
+      "clean_sha256": "589ef51c869522d50f3f2f6816a5abd1f639b0dadc5635215d56249737c88b90",
+      "equal": true
+    },
+    "q4_candidate_log.csv": {
+      "formal_sha256": "9a3df985e271a8a698c4f035a7cd11008980a0c8fd65d607b01b6a2de3219485",
+      "clean_sha256": "9a3df985e271a8a698c4f035a7cd11008980a0c8fd65d607b01b6a2de3219485",
+      "equal": true
+    }
+  },
+  "audit_statuses_pass": true,
+  "figure_checks": {
+    "q4_figure_manifest.json": {
+      "semantic_equal": true,
+      "formal_status": "PASS",
+      "clean_status": "PASS"
+    },
+    "Q4_Figure_Contract.md": {
+      "exact_equal": true
+    }
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "status": "PASS",
+  "results_dir": "D:\\Users\\29919\\Documents\\科研\\cszd-q4-formal\\implementation\\q4\\reproducibility\\clean_results",
+  "q4a_status": "PASS",
+  "small_case_status": "PASS",
+  "selected_solution_ids": {
+    "2": "Q4-2G-00003",
+    "3": "Q4-3G-00001"
+  },
+  "search_statistics": {
+    "2": {
+      "generated_raw_count": 1023,
+      "noop_removed_count": 0,
+      "duplicate_removed_count": 0,
+      "unique_candidate_count": 1023,
+      "candidate_count": 1023,
+      "feasible_count": 1023,
+      "selected_solution_id": "Q4-2G-00003",
+      "selected_state_signature": "9fbded1bd206f1ff943bfd4a21646a3519b84d910b8253162eede40c0e829e21",
+      "status": "PASS"
+    },
+    "3": {
+      "generated_raw_count": 28501,
+      "noop_removed_count": 0,
+      "duplicate_removed_count": 0,
+      "unique_candidate_count": 28501,
+      "candidate_count": 28501,
+      "feasible_count": 28501,
+      "selected_solution_id": "Q4-3G-00001",
+      "selected_state_signature": "45e16b95098ec0b0048365858c4b90979fd6cec5dc2b5216d4ba26fb1b74a0c9",
+      "status": "PASS"
+    },
+    "total_candidates": 29524,
+    "total_feasible": 29524,
+    "runtime_s": 7.07293630001368,
+    "candidate_state_signatures_unique": true
+  },
+  "figures": {
+    "status": "PASS",
+    "backend": "python-matplotlib",
+    "source": "q4_final.json",
+    "source_sha256": "0e1d0d9eb1f46a0991b60294b17d60e582fe4590c5cb71edaba6d468667375ba",
+    "artifacts": [
+      "Fig_Q4_01_resource_configuration.alignment.json",
+      "Fig_Q4_01_resource_configuration.alignment.svg",
+      "Fig_Q4_01_resource_configuration.collision-audit.json",
+      "Fig_Q4_01_resource_configuration.pdf",
+      "Fig_Q4_01_resource_configuration.png",
+      "Fig_Q4_01_resource_configuration.svg",
+      "Fig_Q4_01_resource_configuration.tiff",
+      "Fig_Q4_02_workload_balance.alignment.json",
+      "Fig_Q4_02_workload_balance.alignment.svg",
+      "Fig_Q4_02_workload_balance.collision-audit.json",
+      "Fig_Q4_02_workload_balance.pdf",
+      "Fig_Q4_02_workload_balance.png",
+      "Fig_Q4_02_workload_balance.svg",
+      "Fig_Q4_02_workload_balance.tiff",
+      "Fig_Q4_03_partition_structure.alignment.json",
+      "Fig_Q4_03_partition_structure.alignment.svg",
+      "Fig_Q4_03_partition_structure.collision-audit.json",
+      "Fig_Q4_03_partition_structure.pdf",
+      "Fig_Q4_03_partition_structure.png",
+      "Fig_Q4_03_partition_structure.svg",
+      "Fig_Q4_03_partition_structure.tiff",
+      "Q4_Figure_Contract.md"
+    ],
+    "pdf_qa": [
+      {
+        "figure": "Fig_Q4_01_resource_configuration.pdf",
+        "status": "PASS",
+        "pdf_text": {
+          "pdf": "D:\\Users\\29919\\Documents\\科研\\cszd-q4-formal\\implementation\\q4\\reproducibility\\clean_results\\figures\\Fig_Q4_01_resource_configuration.pdf",
+          "auditable": true,
+          "minimum_required_pt": 5.0,
+          "minimum_found_pt": 6.0,
+          "text_run_count": 26,
+          "below_minimum_count": 0,
+          "below_minimum": [],
+          "warnings": []
+        },
+        "collision": {
+          "pdf": "D:\\Users\\29919\\Documents\\科研\\cszd-q4-formal\\implementation\\q4\\reproducibility\\clean_results\\figures\\Fig_Q4_01_resource_configuration.pdf",
+          "auditable": true,
+          "verdict": "PASS",
+          "page_count": 1,
+          "visible_text_box_count": 26,
+          "text_trace_count": 26,
+          "stroke_path_count": 24,
+          "filled_region_count": 27,
+          "image_region_count": 0,
+          "summary": {
+            "fail": 0,
+            "warn": 0,
+            "contained_fill_overlays": 0,
+            "contained_image_overlays": 0
+          },
+          "thresholds": {
+            "text_inset_pt": 0.6,
+            "min_overlap_ratio": 0.05,
+            "clipping_tolerance_pt": 0.5
+          },
+          "findings": []
+        }
+      },
+      {
+        "figure": "Fig_Q4_02_workload_balance.pdf",
+        "status": "PASS",
+        "pdf_text": {
+          "pdf": "D:\\Users\\29919\\Documents\\科研\\cszd-q4-formal\\implementation\\q4\\reproducibility\\clean_results\\figures\\Fig_Q4_02_workload_balance.pdf",
+          "auditable": true,
+          "minimum_required_pt": 5.0,
+          "minimum_found_pt": 6.0,
+          "text_run_count": 24,
+          "below_minimum_count": 0,
+          "below_minimum": [],
+          "warnings": []
+        },
+        "collision": {
+          "pdf": "D:\\Users\\29919\\Documents\\科研\\cszd-q4-formal\\implementation\\q4\\reproducibility\\clean_results\\figures\\Fig_Q4_02_workload_balance.pdf",
+          "auditable": true,
+          "verdict": "PASS",
+          "page_count": 1,
+          "visible_text_box_count": 24,
+          "text_trace_count": 24,
+          "stroke_path_count": 22,
+          "filled_region_count": 25,
+          "image_region_count": 0,
+          "summary": {
+            "fail": 0,
+            "warn": 0,
+            "contained_fill_overlays": 0,
+            "contained_image_overlays": 0
+          },
+          "thresholds": {
+            "text_inset_pt": 0.6,
+            "min_overlap_ratio": 0.05,
+            "clipping_tolerance_pt": 0.5
+          },
+          "findings": []
+        }
+      },
+      {
+        "figure": "Fig_Q4_03_partition_structure.pdf",
+        "status": "PASS",
+        "pdf_text": {
+          "pdf": "D:\\Users\\29919\\Documents\\科研\\cszd-q4-formal\\implementation\\q4\\reproducibility\\clean_results\\figures\\Fig_Q4_03_partition_structure.pdf",
+          "auditable": true,
+          "minimum_required_pt": 5.0,
+          "minimum_found_pt": 6.0,
+          "text_run_count": 26,
+          "below_minimum_count": 0,
+          "below_minimum": [],
+          "warnings": []
+        },
+        "collision": {
+          "pdf": "D:\\Users\\29919\\Documents\\科研\\cszd-q4-formal\\implementation\\q4\\reproducibility\\clean_results\\figures\\Fig_Q4_03_partition_structure.pdf",
+          "auditable": true,
+          "verdict": "PASS",
+          "page_count": 1,
+          "visible_text_box_count": 26,
+          "text_trace_count": 26,
+          "stroke_path_count": 24,
+          "filled_region_count": 28,
+          "image_region_count": 0,
+          "summary": {
+            "fail": 0,
+            "warn": 0,
+            "contained_fill_overlays": 0,
+            "contained_image_overlays": 0
+          },
+          "thresholds": {
+            "text_inset_pt": 0.6,
+            "min_overlap_ratio": 0.05,
+            "clipping_tolerance_pt": 0.5
+          },
+          "findings": []
+        }
+      }
+    ]
+  },
+  "tables": {
+    "status": "PASS",
+    "source": "q4_final.json",
+    "source_sha256": "0e1d0d9eb1f46a0991b60294b17d60e582fe4590c5cb71edaba6d468667375ba",
+    "artifacts": [
+      "Q4_Table_01_SelectedConfigurations.csv",
+      "Q4_Table_02_GroupResources.csv",
+      "Q4_Formal_Tables.md"
+    ],
+    "table_count": 2
+  },
+  "final_audit": {
+    "phase": "Q4 final audit",
+    "status": "PASS",
+    "checks": {
+      "q3_upstream_reference_valid": true,
+      "q3_selected_solution_unchanged": true,
+      "q3_frozen_files_untouched": true,
+      "q4_variables_legal": true,
+      "q4_validator_independent": true,
+      "all_hard_constraints_pass": true,
+      "objective_recomputed": true,
+      "source_numbers_consistent": true,
+      "candidate_state_signatures_unique": true,
+      "feasible_pool_signatures_unique": true,
+      "no_noop_candidates": true,
+      "frozen_variables_explicit": true,
+      "failure_taxonomy_valid": true,
+      "single_formal_source": true,
+      "figures_read_only_q4_final": true,
+      "tables_read_only_q4_final": true,
+      "figure_qa_pass": true,
+      "all_deliverables_present": true
+    },
+    "delivery_checks": {
+      "figures_read_only_q4_final": true,
+      "tables_read_only_q4_final": true,
+      "figure_qa_pass": true,
+      "all_deliverables_present": true
+    },
+    "selected_validations": {
+      "2": {
+        "candidate_id": "Q4-2G-00003",
+        "state_signature": "9fbded1bd206f1ff943bfd4a21646a3519b84d910b8253162eede40c0e829e21",
+        "status": "PASS",
+        "checks": {
+          "state_signature_matches": true,
+          "group_count_matches": true,
+          "groups_match": true,
+          "resource_requirements_match": true,
+          "shortages_match": true,
+          "objective_matches": true,
+          "hard_constraints_recomputed": true,
+          "upstream_reference_matches": true
+        },
+        "recomputed_objective": {
+          "total_resource_units": 33,
+          "total_shortage_units": 3,
+          "imbalance_ratio": 12.276880238324553,
+          "max_group_workload_s": 63299.55921087558,
+          "group_workload_range_s": 58143.562086029946
+        },
+        "recomputed_shortages": {
+          "transport_uavs_by_type:A": 0,
+          "transport_uavs_by_type:B": 1,
+          "transport_uavs_by_type:C": 0,
+          "batteries_by_type:A": 0,
+          "batteries_by_type:B": 1,
+          "batteries_by_type:C": 0,
+          "relay_uavs_by_type:R": 1,
+          "relay_energy_by_type:R": 0
+        }
+      },
+      "3": {
+        "candidate_id": "Q4-3G-00001",
+        "state_signature": "45e16b95098ec0b0048365858c4b90979fd6cec5dc2b5216d4ba26fb1b74a0c9",
+        "status": "PASS",
+        "checks": {
+          "state_signature_matches": true,
+          "group_count_matches": true,
+          "groups_match": true,
+          "resource_requirements_match": true,
+          "shortages_match": true,
+          "objective_matches": true,
+          "hard_constraints_recomputed": true,
+          "upstream_reference_matches": true
+        },
+        "recomputed_objective": {
+          "total_resource_units": 37,
+          "total_shortage_units": 7,
+          "imbalance_ratio": 12.12003525102563,
+          "max_group_workload_s": 61820.17243769986,
+          "group_workload_range_s": 56719.51297943067
+        },
+        "recomputed_shortages": {
+          "transport_uavs_by_type:A": 0,
+          "transport_uavs_by_type:B": 2,
+          "transport_uavs_by_type:C": 0,
+          "batteries_by_type:A": 0,
+          "batteries_by_type:B": 2,
+          "batteries_by_type:C": 0,
+          "relay_uavs_by_type:R": 2,
+          "relay_energy_by_type:R": 1
+        }
+      }
+    },
+    "changed_files": [
+      ".gitignore",
+      "README.md",
+      "implementation/q4/README.md",
+      "implementation/q4/code/q4/__init__.py",
+      "implementation/q4/code/q4/audit_q4_final.py",
+      "implementation/q4/code/q4/compare_q4_reproduction.py",
+      "implementation/q4/code/q4/generate_q4_figures.py",
+      "implementation/q4/code/q4/generate_q4_tables.py",
+      "implementation/q4/code/q4/problem_audit.py",
+      "implementation/q4/code/q4/q3_adapter.py",
+      "implementation/q4/code/q4/q4_final.py",
+      "implementation/q4/code/q4/q4_model.py",
+      "implementation/q4/code/q4/q4_small_cases.py",
+      "implementation/q4/code/q4/run_q4_final.py",
+      "implementation/q4/code/q4/run_q4_model.py",
+      "implementation/q4/code/q4/validate_q3_to_q4_interface.py",
+      "implementation/q4/code/q4/validate_q4.py",
+      "implementation/q4/code/q4/write_q4_freeze_report.py",
+      "implementation/q4/reproducibility/clean_results/Q4_FREEZE_REPORT.md",
+      "implementation/q4/reproducibility/clean_results/q4_final_audit.json",
+      "implementation/q4/reproducibility/clean_results/q4_reproduction_comparison.json",
+      "implementation/q4/reproducibility/clean_results/q4_reproduction_report.json",
+      "implementation/q4/results/Q4_FREEZE_REPORT.md",
+      "implementation/q4/results/figures/Fig_Q4_01_resource_configuration.alignment.json",
+      "implementation/q4/results/figures/Fig_Q4_01_resource_configuration.collision-audit.json",
+      "implementation/q4/results/figures/Fig_Q4_01_resource_configuration.pdf",
+      "implementation/q4/results/figures/Fig_Q4_01_resource_configuration.tiff",
+      "implementation/q4/results/figures/Fig_Q4_02_workload_balance.alignment.json",
+      "implementation/q4/results/figures/Fig_Q4_02_workload_balance.collision-audit.json",
+      "implementation/q4/results/figures/Fig_Q4_02_workload_balance.pdf",
+      "implementation/q4/results/figures/Fig_Q4_02_workload_balance.tiff",
+      "implementation/q4/results/figures/Fig_Q4_03_partition_structure.alignment.json",
+      "implementation/q4/results/figures/Fig_Q4_03_partition_structure.collision-audit.json",
+      "implementation/q4/results/figures/Fig_Q4_03_partition_structure.pdf",
+      "implementation/q4/results/figures/Fig_Q4_03_partition_structure.tiff",
+      "implementation/q4/results/figures/Q4_Figure_Contract.md",
+      "implementation/q4/results/figures/q4_figure_manifest.json",
+      "implementation/q4/results/q4_2group_candidates.json",
+      "implementation/q4/results/q4_3group_candidates.json",
+      "implementation/q4/results/q4_a_problem_definition.json",
+      "implementation/q4/results/q4_a_report.md",
+      "implementation/q4/results/q4_a_state_interface.json",
+      "implementation/q4/results/q4_baseline.json",
+      "implementation/q4/results/q4_baseline_report.md",
+      "implementation/q4/results/q4_baseline_validation.json",
+      "implementation/q4/results/q4_candidate_log.csv",
+      "implementation/q4/results/q4_failure_taxonomy.json",
+      "implementation/q4/results/q4_feasible_pool.json",
+      "implementation/q4/results/q4_final.json",
+      "implementation/q4/results/q4_final_audit.json",
+      "implementation/q4/results/q4_problem_audit.json",
+      "implementation/q4/results/q4_problem_audit.md",
+      "implementation/q4/results/q4_q3_interface_validation.json",
+      "implementation/q4/results/q4_reproduction_comparison.json",
+      "implementation/q4/results/q4_reproduction_report.json",
+      "implementation/q4/results/q4_small_case_validation.json",
+      "implementation/q4/results/tables/Q4_Formal_Tables.md",
+      "implementation/q4/results/tables/Q4_Table_01_SelectedConfigurations.csv",
+      "implementation/q4/results/tables/Q4_Table_02_GroupResources.csv",
+      "implementation/q4/results/tables/q4_table_manifest.json",
+      "implementation/q4/reproducibility/clean_results/Q4_FREEZE_REPORT.md",
+      "implementation/q4/reproducibility/clean_results/q4_final_audit.json",
+      "implementation/q4/reproducibility/clean_results/q4_reproduction_comparison.json",
+      "implementation/q4/reproducibility/clean_results/q4_reproduction_report.json",
+      "implementation/q4/results/Q4_FREEZE_REPORT.md",
+      "implementation/q4/results/figures/Fig_Q4_01_resource_configuration.pdf",
+      "implementation/q4/results/figures/Fig_Q4_02_workload_balance.pdf",
+      "implementation/q4/results/figures/Fig_Q4_03_partition_structure.pdf",
+      "implementation/q4/results/figures/q4_figure_manifest.json",
+      "implementation/q4/results/q4_final.json",
+      "implementation/q4/results/q4_final_audit.json",
+      "implementation/q4/results/q4_reproduction_comparison.json",
+      "implementation/q4/results/q4_reproduction_report.json",
+      "implementation/q4/results/tables/q4_table_manifest.json"
+    ],
+    "forbidden_changed_files": [],
+    "require_deliverables": true
+  }
+}

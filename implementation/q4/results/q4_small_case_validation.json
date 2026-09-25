@@ -1,0 +1,30 @@
+{
+  "phase": "Q4 small-case validation",
+  "status": "PASS",
+  "cases": [
+    {
+      "case_id": "Q4-Small-1 feasible",
+      "expected": "PASS",
+      "actual": "PASS",
+      "purpose": "two nonempty legal groups preserve every multi-stop component"
+    },
+    {
+      "case_id": "Q4-Small-2 boundary feasible",
+      "expected": "PASS",
+      "actual": "PASS",
+      "purpose": "three-group boundary case with singleton components"
+    },
+    {
+      "case_id": "Q4-Small-3 infeasible",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "purpose": "empty task group violates the nonempty-group constraint"
+    },
+    {
+      "case_id": "Q4-Small-4 resource conflict",
+      "expected": "PASS with shortage report",
+      "actual": "PASS with shortage=3",
+      "purpose": "inventory shortfall is reported as a Q4 resource configuration result, not misclassified as hard infeasibility"
+    }
+  ]
+}
