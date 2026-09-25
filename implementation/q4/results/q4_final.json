@@ -3,7 +3,7 @@
     "phase": "Q4",
     "method": "exact enumeration of legal component partitions",
     "formal_solver": "deterministic exhaustive partition enumeration",
-    "git_revision": "b60590a6701894ea1524123c33b2082ee1cf8272",
+    "git_revision": "565e542a7ff5c3ea1cef10b27015b4c96f9300c1",
     "q4_final_schema": "1.0"
   },
   "q3_upstream_reference": {
