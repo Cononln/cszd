@@ -1,12 +1,12 @@
 {
   "status": "PASS",
-  "expected_figure_count": 28,
+  "expected_figure_count": 29,
   "expected_formats_per_figure": [
     "pdf",
     "png",
     "svg"
   ],
-  "figure_count": 28,
+  "figure_count": 29,
   "files": [
     {
       "question": "Q1",
@@ -679,6 +679,33 @@
       "figure_id": "Fig_Q3_03_search_validation",
       "format": "svg",
       "file": "figures/q3/Fig_Q3_03_search_validation.svg",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q3",
+      "figure_id": "Fig_Q3_04_relay_coverage_map",
+      "format": "pdf",
+      "file": "figures/q3/Fig_Q3_04_relay_coverage_map.pdf",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q3",
+      "figure_id": "Fig_Q3_04_relay_coverage_map",
+      "format": "png",
+      "file": "figures/q3/Fig_Q3_04_relay_coverage_map.png",
+      "exists": true,
+      "readable": true,
+      "status": "PASS"
+    },
+    {
+      "question": "Q3",
+      "figure_id": "Fig_Q3_04_relay_coverage_map",
+      "format": "svg",
+      "file": "figures/q3/Fig_Q3_04_relay_coverage_map.svg",
       "exists": true,
       "readable": true,
       "status": "PASS"

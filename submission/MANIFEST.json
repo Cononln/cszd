@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "file_count": 476,
+  "file_count": 479,
   "self_hash_files_excluded": [
     "MANIFEST.json",
     "MANIFEST.md",
@@ -75,8 +75,8 @@
     },
     {
       "file": "code/implementation/final_audit/audit_project_final.py",
-      "size": 50174,
-      "sha256": "159fb5519627e84eba0b2fc8c77a7cb71402b0fa3a5341b536e1d4441bacc41e",
+      "size": 51225,
+      "sha256": "048876d0010e57bcbf5b28e8727ae527a4528597a90759bb48eda46ca746c55f",
       "formal_or_auxiliary": "FORMAL"
     },
     {
@@ -609,8 +609,8 @@
     },
     {
       "file": "code/implementation/q3/code/q3/generate_q3_figures.py",
-      "size": 15922,
-      "sha256": "d0b7024392d09aa9594bbbe2e4e28a1a8c2731ba6ad49cd694702100a8c11129",
+      "size": 36462,
+      "sha256": "629402209d32a72e2de23bd327dde6e8b00616c52f4a2a30e74a038e7e007e8b",
       "formal_or_auxiliary": "FORMAL"
     },
     {
@@ -1880,6 +1880,24 @@
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
+      "file": "figures/q3/Fig_Q3_04_relay_coverage_map.pdf",
+      "size": 57146,
+      "sha256": "97bc4671cc798063947697b895941381b07dc587de9d5c11705e3646202eb075",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q3/Fig_Q3_04_relay_coverage_map.png",
+      "size": 274771,
+      "sha256": "ff996fffa40c5e780318998f5b27a53dc6715b798f42acaff3803110b0d150c0",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q3/Fig_Q3_04_relay_coverage_map.svg",
+      "size": 58578,
+      "sha256": "1f00b3f5f0727c361b6aac4219a0feea0f1829676d0cf9781a7b6ad1c6d4822a",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
       "file": "figures/q4/Fig_Q4_01_resource_configuration.pdf",
       "size": 33392,
       "sha256": "545be5dc72652d596c8b4b88683ef32f7bac501fb5be22c845a9b68908a6eb1f",
@@ -1941,14 +1959,14 @@
     },
     {
       "file": "manifests/audit_project_final.py",
-      "size": 50174,
-      "sha256": "159fb5519627e84eba0b2fc8c77a7cb71402b0fa3a5341b536e1d4441bacc41e",
+      "size": 51225,
+      "sha256": "048876d0010e57bcbf5b28e8727ae527a4528597a90759bb48eda46ca746c55f",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
       "file": "manifests/cross_question_interface_audit.json",
-      "size": 782,
-      "sha256": "2a91054ae9e5b591ebd16839111315ad16772dc4204e0864a604a952f7bed554",
+      "size": 828,
+      "sha256": "ba2e796471958c1818f9fa4b24df7dbaeec1c8e0acccb1b31b7ac4af78316f83",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
@@ -1965,20 +1983,20 @@
     },
     {
       "file": "manifests/FIGURE_REQUIREMENT_MAPPING.md",
-      "size": 597,
-      "sha256": "481106f061802eebd6ffaf29978d9de89f615250ebdde98dad65184ca0aaacd4",
+      "size": 633,
+      "sha256": "a129737166eaf1b6dc85615a89a7327aeb4c744bd8763ac674a0360a71bb2eda",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
       "file": "manifests/FINAL_FIGURE_CHECK.json",
-      "size": 20973,
-      "sha256": "d76a06d675af2aa2a70f8f480ed263c323cc6ee3e4ab4208709b57f8eb9fa29d",
+      "size": 21723,
+      "sha256": "007fd858960b5f6940754d2aebdace477c5d4ee8673bf80ff6890445eb66c04f",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
       "file": "manifests/final_figure_manifest.json",
-      "size": 33846,
-      "sha256": "96ea7691280a0b8bc054791a730122d770871ee68ef9858220c8a7046fef35d8",
+      "size": 35122,
+      "sha256": "66addb8155061065206fa036628b4e5a13e91dcd14f1a9bade139752a7a0ccc0",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
@@ -1989,8 +2007,8 @@
     },
     {
       "file": "manifests/formal_source_manifest.json",
-      "size": 2536,
-      "sha256": "8ef6cef4e2ed73a8e99cdb16593bc8d6f382db6f2009b149a1533b4c7a5976c3",
+      "size": 2569,
+      "sha256": "5f5c542178ac7df10c431761dfb44f5d1599e226f80db98518bd87de89b4135a",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
@@ -2002,7 +2020,7 @@
     {
       "file": "manifests/git_revision_manifest.json",
       "size": 1524,
-      "sha256": "f6fca4dd0300d87608944b36e5b19442dd7ab5cfc9825ffab2b1427394a53ed0",
+      "sha256": "30ed35dd63b50fb1401268b42ea80859163221d301693bf1ab87b9de465d0368",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
@@ -2050,7 +2068,7 @@
     {
       "file": "manifests/PROJECT_FINAL_AUDIT.json",
       "size": 1143,
-      "sha256": "b72e2478d811fa7ff91ee5e40b5ce4e318d87d9e4c20ce5d74d77d68b61795d3",
+      "sha256": "4abfdfd34dc31fc6d4f31822914ef6084a59406aaf710503254083bb73fb8920",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
@@ -2061,8 +2079,8 @@
     },
     {
       "file": "manifests/repo_inventory.json",
-      "size": 190141,
-      "sha256": "65350152c1df3ed45363a907650b7aeb1715ef31333ec15c30065874e808d8c4",
+      "size": 190099,
+      "sha256": "8864c52a95bb5a2748dc9fce8c8770d9a72a9b7fe55beab8a6f79d5bed50ad96",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {
@@ -2079,8 +2097,8 @@
     },
     {
       "file": "manifests/SUBMISSION_SIZE_AUDIT.json",
-      "size": 3134,
-      "sha256": "a0df76a1c5f1a8a0c26f4423eb5554e445a198fc17e6337d42f06477bef68595",
+      "size": 3135,
+      "sha256": "23e376b24ef67178173cc26e84873475387aacecb4dffebc5cc1c48c4803f4ec",
       "formal_or_auxiliary": "AUXILIARY"
     },
     {

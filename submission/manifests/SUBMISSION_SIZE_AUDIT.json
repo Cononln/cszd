@@ -1,16 +1,16 @@
 {
   "status": "PASS",
-  "total_files": 479,
-  "total_uncompressed_bytes": 22128718,
-  "total_uncompressed_mb": 22.129,
+  "total_files": 482,
+  "total_uncompressed_bytes": 22545356,
+  "total_uncompressed_mb": 22.545,
   "target_uncompressed_mb": 40.0,
   "category_mb": {
-    "code": 2.577,
+    "code": 2.598,
     "results": 1.813,
-    "figures": 7.212,
+    "figures": 7.602,
     "data": 9.968,
-    "manifests": 0.334,
-    "other": 0.225
+    "manifests": 0.337,
+    "other": 0.226
   },
   "largest_20_files": [
     {
@@ -69,6 +69,11 @@
       "size_mb": 0.278
     },
     {
+      "file": "figures/q3/Fig_Q3_04_relay_coverage_map.png",
+      "size": 274771,
+      "size_mb": 0.275
+    },
+    {
       "file": "figures/q1/Fig_Q1_06_utilization_tradeoff.png",
       "size": 273692,
       "size_mb": 0.274
@@ -106,11 +111,6 @@
     {
       "file": "figures/q1/Fig_Q1_07_energy_margin.png",
       "size": 245369,
-      "size_mb": 0.245
-    },
-    {
-      "file": "figures/q2/Fig_Q2_01_method_comparison.png",
-      "size": 245130,
       "size_mb": 0.245
     }
   ]

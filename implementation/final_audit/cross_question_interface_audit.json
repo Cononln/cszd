@@ -17,6 +17,7 @@
     "q3_schema_1_2": true,
     "q3_revision_current": true,
     "q3_code_refreeze_head_current": true,
+    "q3_figure_update_noninterfering": true,
     "q3_refreeze_commit_current": true,
     "q4_upstream_snapshot_current": true,
     "relay_change_reenumerated": true,

@@ -35,7 +35,7 @@
       "freeze_report_present": true,
       "status": "PASS",
       "last_result_commit": "53a55b3cbcbe6ebe3e5a1bca209e5925ea787c48",
-      "source_worktree": "q3/q3-c-formal@35a5668"
+      "source_worktree": "q3/q3-c-formal@a5c5f6ba36e8ef71ce73b6505609aa9749bac78f"
     },
     {
       "question": "Q4",

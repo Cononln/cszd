@@ -51,7 +51,7 @@ FORMAL_FIGURES: dict[str, tuple[str, ...]] = {
     ),
     "q3": (
         "Fig_Q3_01_joint_solution_cost", "Fig_Q3_02_temporal_coordination",
-        "Fig_Q3_03_search_validation",
+        "Fig_Q3_03_search_validation", "Fig_Q3_04_relay_coverage_map",
     ),
     "q4": (
         "Fig_Q4_01_resource_configuration", "Fig_Q4_02_workload_balance",
@@ -203,7 +203,8 @@ def formal_sources() -> tuple[dict[str, Any], dict[str, Any]]:
                         "freeze_report": freeze_s, "freeze_report_present": bool(freeze_s and (source_root / freeze_s).exists()),
                         "status": "PASS" if passed else "FAIL",
                         "last_result_commit": git_at(source_root, "log", "-1", "--format=%H", "--", final_s),
-                        "source_worktree": "q3/q3-c-formal@35a5668" if question == "Q3" else "current repository"})
+                        "source_worktree": (f"q3/q3-c-formal@{git_at(source_root, 'rev-parse', 'HEAD')}"
+                                            if question == "Q3" else "current repository")})
     manifest = {"formal_sources_unique": len({e["formal_result_file"] for e in entries}) == 4,
                 "entries": entries}
     write_json(AUDIT / "formal_source_manifest.json", manifest)
@@ -216,6 +217,18 @@ def cross_interfaces(data: dict[str, Any]) -> dict[str, Any]:
     q4_audit = read_json(IMPL / "q4/results/q4_final_audit.json")
     refresh = read_json(IMPL / "q4/results/q4_q3_upstream_refresh_audit.json")
     q3i = qimpl("q3")
+    q3_final_hash = sha(q3i / "results/q3_final.json")
+    q3_figure_audit_path = q3i / "results/figures/Fig_Q3_04_noninterference_audit.json"
+    q3_figure_audit = read_json(q3_figure_audit_path) if q3_figure_audit_path.exists() else {}
+    q3_figure_update_noninterfering = bool(
+        q3_figure_audit.get("status") == "PASS" and
+        q3_figure_audit.get("q3_final_hash_before") == q3_final_hash and
+        q3_figure_audit.get("q3_final_hash_after") == q3_final_hash and
+        q3_figure_audit.get("existing_figures_hash_equal") is True and
+        q3_figure_audit.get("selected_solution_unchanged") is True and
+        q3_figure_audit.get("objective_unchanged") is True and
+        q3_figure_audit.get("relay_schedule_unchanged") is True
+    )
     q3_report = (q3i / "results/Q3_FREEZE_REPORT.md").read_text(encoding="utf-8")
     q4_report = (IMPL / "q4/results/Q4_FREEZE_REPORT.md").read_text(encoding="utf-8")
     q1_q2 = {
@@ -235,7 +248,11 @@ def cross_interfaces(data: dict[str, Any]) -> dict[str, Any]:
         "q3_selected_solution_c2a_base": q4.get("q3_selected_solution_id") == "C2A-BASE",
         "q3_schema_1_2": q3.get("metadata", {}).get("q3_final_schema") == "1.2",
         "q3_revision_current": q3.get("metadata", {}).get("git_revision") == "c7880a36e1f5e9efb39f0d6d6be9d38b9638d80a",
-        "q3_code_refreeze_head_current": git_at(q3_formal_root(), "rev-parse", "HEAD") in {"35a5668e9822dc92c2d8c8a21bbd01f1452ba487", "UNKNOWN"},
+        "q3_code_refreeze_head_current": (
+            git_at(q3_formal_root(), "rev-parse", "HEAD") in {"35a5668e9822dc92c2d8c8a21bbd01f1452ba487", "UNKNOWN"}
+            or q3_figure_update_noninterfering
+        ),
+        "q3_figure_update_noninterfering": q3_figure_update_noninterfering,
         "q3_refreeze_commit_current": q4.get("q3_upstream_reference", {}).get("q3_refreeze_commit") == "35a5668e9822dc92c2d8c8a21bbd01f1452ba487",
         "q4_upstream_snapshot_current": q4.get("q3_upstream_reference", {}).get("source_sha256") == sha(q3i / "results/q3_final.json"),
         "relay_change_reenumerated": refresh.get("semantic_equal") is False and q4.get("provenance", {}).get("q3_upstream_refresh", {}).get("q4_reenumeration_completed") is True,
@@ -690,7 +707,7 @@ def write_submission_quality_manifests() -> dict[str, Any]:
     mapping = {
         "q1": "安全载荷、飞行可行性、组批分配、能耗利用率与敏感性/求解过程",
         "q2": "调度优化、路线结构、UAV/电池时间轴、时效性、方法比较、Pareto/稳定性与精确基准",
-        "q3": "运输-通信联合代价、时间协调以及搜索与验证",
+        "q3": "运输-通信联合代价、时间协调、搜索与验证以及中继空间部署与通信覆盖",
         "q4": "2组/3组划分、资源配置、工作量均衡与分区结构",
     }
     mapping_lines = ["# Formal figure requirement mapping", "", "All listed figures are copied once under `submission/figures/`; QA overlays remain outside the attachment payload.", ""]

@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-25T07:17:22.237347+00:00",
+  "generated_utc": "2026-09-25T08:51:34.298572+00:00",
   "root": ".",
   "files": [
     {
@@ -142,13 +142,13 @@
     },
     {
       "file": "implementation/final_audit/audit_project_final.py",
-      "size": 50174,
+      "size": 51225,
       "category": "final_audit",
       "label": "FORMAL"
     },
     {
       "file": "implementation/final_audit/cross_question_interface_audit.json",
-      "size": 782,
+      "size": 828,
       "category": "final_audit",
       "label": "FORMAL"
     },
@@ -166,7 +166,7 @@
     },
     {
       "file": "implementation/final_audit/final_figure_manifest.json",
-      "size": 33846,
+      "size": 35122,
       "category": "final_audit",
       "label": "FORMAL"
     },
@@ -178,7 +178,7 @@
     },
     {
       "file": "implementation/final_audit/formal_source_manifest.json",
-      "size": 2536,
+      "size": 2569,
       "category": "final_audit",
       "label": "FORMAL"
     },
@@ -244,7 +244,7 @@
     },
     {
       "file": "implementation/final_audit/repo_inventory.json",
-      "size": 189600,
+      "size": 190099,
       "category": "final_audit",
       "label": "FORMAL"
     },
@@ -3838,25 +3838,7 @@
     },
     {
       "file": "submission/code/implementation/final_audit/audit_project_final.py",
-      "size": 50026,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/formal_source_manifest.json",
-      "size": 2536,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/freeze_status_manifest.json",
-      "size": 509,
-      "category": "submission",
-      "label": "KEEP"
-    },
-    {
-      "file": "submission/code/implementation/final_audit/git_revision_manifest.json",
-      "size": 1524,
+      "size": 51225,
       "category": "submission",
       "label": "KEEP"
     },
@@ -4390,7 +4372,7 @@
     },
     {
       "file": "submission/code/implementation/q3/code/q3/generate_q3_figures.py",
-      "size": 15922,
+      "size": 36462,
       "category": "submission",
       "label": "KEEP"
     },
@@ -5661,6 +5643,24 @@
       "label": "KEEP"
     },
     {
+      "file": "submission/figures/q3/Fig_Q3_04_relay_coverage_map.pdf",
+      "size": 57146,
+      "category": "submission",
+      "label": "KEEP"
+    },
+    {
+      "file": "submission/figures/q3/Fig_Q3_04_relay_coverage_map.png",
+      "size": 274771,
+      "category": "submission",
+      "label": "KEEP"
+    },
+    {
+      "file": "submission/figures/q3/Fig_Q3_04_relay_coverage_map.svg",
+      "size": 58578,
+      "category": "submission",
+      "label": "KEEP"
+    },
+    {
       "file": "submission/figures/q4/Fig_Q4_01_resource_configuration.pdf",
       "size": 33392,
       "category": "submission",
@@ -5716,13 +5716,13 @@
     },
     {
       "file": "submission/MANIFEST.json",
-      "size": 107257,
+      "size": 107936,
       "category": "submission",
       "label": "KEEP"
     },
     {
       "file": "submission/MANIFEST.md",
-      "size": 62026,
+      "size": 62414,
       "category": "submission",
       "label": "KEEP"
     },
@@ -5734,13 +5734,13 @@
     },
     {
       "file": "submission/manifests/audit_project_final.py",
-      "size": 50026,
+      "size": 51225,
       "category": "submission",
       "label": "KEEP"
     },
     {
       "file": "submission/manifests/cross_question_interface_audit.json",
-      "size": 782,
+      "size": 828,
       "category": "submission",
       "label": "KEEP"
     },
@@ -5758,19 +5758,19 @@
     },
     {
       "file": "submission/manifests/FIGURE_REQUIREMENT_MAPPING.md",
-      "size": 597,
+      "size": 633,
       "category": "submission",
       "label": "KEEP"
     },
     {
       "file": "submission/manifests/FINAL_FIGURE_CHECK.json",
-      "size": 20973,
+      "size": 21723,
       "category": "submission",
       "label": "KEEP"
     },
     {
       "file": "submission/manifests/final_figure_manifest.json",
-      "size": 33846,
+      "size": 35122,
       "category": "submission",
       "label": "KEEP"
     },
@@ -5782,7 +5782,7 @@
     },
     {
       "file": "submission/manifests/formal_source_manifest.json",
-      "size": 2536,
+      "size": 2569,
       "category": "submission",
       "label": "KEEP"
     },
@@ -5854,7 +5854,7 @@
     },
     {
       "file": "submission/manifests/repo_inventory.json",
-      "size": 189600,
+      "size": 190099,
       "category": "submission",
       "label": "KEEP"
     },
@@ -5872,7 +5872,7 @@
     },
     {
       "file": "submission/manifests/SUBMISSION_SIZE_AUDIT.json",
-      "size": 3134,
+      "size": 3135,
       "category": "submission",
       "label": "KEEP"
     },
@@ -6658,7 +6658,7 @@
     },
     {
       "file": "submission/SHA256SUMS.txt",
-      "size": 53841,
+      "size": 54174,
       "category": "submission",
       "label": "KEEP"
     },

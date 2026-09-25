@@ -752,6 +752,36 @@
       "status": "PASS"
     },
     {
+      "figure_id": "Fig_Q3_04_relay_coverage_map",
+      "question": "Q3",
+      "file": "q3/q3-c-formal:implementation/q3/results/figures/Fig_Q3_04_relay_coverage_map.pdf",
+      "source_file": "implementation/q3/results/q3_final.json",
+      "source_hash": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81",
+      "format": "pdf",
+      "editable_text": true,
+      "status": "PASS"
+    },
+    {
+      "figure_id": "Fig_Q3_04_relay_coverage_map",
+      "question": "Q3",
+      "file": "q3/q3-c-formal:implementation/q3/results/figures/Fig_Q3_04_relay_coverage_map.png",
+      "source_file": "implementation/q3/results/q3_final.json",
+      "source_hash": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81",
+      "format": "png",
+      "editable_text": false,
+      "status": "PASS"
+    },
+    {
+      "figure_id": "Fig_Q3_04_relay_coverage_map",
+      "question": "Q3",
+      "file": "q3/q3-c-formal:implementation/q3/results/figures/Fig_Q3_04_relay_coverage_map.svg",
+      "source_file": "implementation/q3/results/q3_final.json",
+      "source_hash": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81",
+      "format": "svg",
+      "editable_text": true,
+      "status": "PASS"
+    },
+    {
       "figure_id": "Fig_Q4_01_resource_configuration",
       "question": "Q4",
       "file": "implementation/q4/results/figures/Fig_Q4_01_resource_configuration.pdf",
