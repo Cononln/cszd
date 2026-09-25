@@ -18,6 +18,7 @@ def run() -> dict:
     _json(root / "q3_c2b_results.json", result)
     _csv(root / "q3_c2b_candidate_log.csv", _candidate_log(result["candidates"]))
     validations = [{"candidate_id": row["candidate_id"], "joint_status": row["joint_status"],
+                    "state_signature": row["state_signature"],
                     "transport_validation": row["repaired"]["transport_validation"],
                     "relay_validation": row["repaired"]["relay_validation"],
                     "joint_validation": row["repaired"]["joint"]} for row in result["candidates"]]
@@ -27,7 +28,10 @@ def run() -> dict:
         _write_seed_outputs(root, feasible[0])
     (root / "q3_c2b_summary.md").write_text(
         "# Q3-C C2-B Bounded Combination Search\n\n"
-        f"- candidates generated: {result['candidate_count']}\n"
+        f"- raw combinations generated: {result['generated_raw_count']}\n"
+        f"- combinations removed for no-op operations: {result['noop_removed_count']}\n"
+        f"- duplicate decision states removed: {result['duplicate_removed_count']}\n"
+        f"- unique combinations evaluated: {result['unique_candidate_count']}\n"
         f"- transport validator PASS: {result['transport_feasible_count']}\n"
         f"- real relay evaluations: {result['relay_evaluated_count']}\n"
         f"- final joint validator PASS: {result['joint_feasible_count']}\n"

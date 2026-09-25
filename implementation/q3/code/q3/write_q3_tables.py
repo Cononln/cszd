@@ -57,8 +57,9 @@ def write_tables() -> dict[str, Any]:
     all_solutions = [selected, *final.get("alternative_feasible_solutions", [])]
     for rank, solution in enumerate(all_solutions, 1):
         item = solution["objective"]
-        pool_rows.append({"rank": rank, "solution_id": solution["solution_id"] if "solution_id" in solution else solution["candidate_id"],
-                          "stage": solution.get("repair_stage"), "operator": solution.get("operator"),
+        pool_rows.append({"rank": rank, "solution_id": solution["solution_id"],
+                          "stage": solution.get("stage", solution.get("repair_stage")), "operator": solution.get("operator"),
+                          "state_signature": solution.get("state_signature"),
                           "WTD": item["WTD"], "joint_Cmax_s": item["joint_Cmax_s"],
                           "total_energy_kwh": item["total_energy_kwh"],
                           "transport_n_trips": item["transport_n_trips"], "relay_sorties": item["relay_sorties"]})

@@ -65,9 +65,14 @@ def run_final(*, clean: bool = False, results_dir: Path | None = None) -> dict[s
             tables = table_future.result()
         final_audit = audit(require_deliverables=True)
         result = {"status": "PASS" if final_audit["status"] == "PASS" else "FAIL", "results_dir": str(active.resolve()),
-                  "c2a": {key: c2a["c2a"][key] for key in ("status", "candidate_count", "joint_feasible_count")},
-                  "c2b": {key: c2b[key] for key in ("status", "candidate_count", "joint_feasible_count")},
+                  "c2a": {key: c2a["c2a"][key] for key in ("status", "generated_raw_count", "noop_removed_count",
+                                                               "duplicate_removed_count", "unique_candidate_count",
+                                                               "candidate_count", "joint_feasible_count")},
+                  "c2b": {key: c2b[key] for key in ("status", "generated_raw_count", "noop_removed_count",
+                                                     "duplicate_removed_count", "unique_candidate_count",
+                                                     "candidate_count", "joint_feasible_count")},
                   "selected_solution_id": final["selected_solution"]["solution_id"],
+                  "selected_state_signature": final["selected_solution"]["state_signature"],
                   "figures": figures, "tables": tables, "final_audit": final_audit}
         (active / "q3_reproduction_report.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
         return result
@@ -76,6 +81,27 @@ def run_final(*, clean: bool = False, results_dir: Path | None = None) -> dict[s
             os.environ.pop("Q3_RESULTS_DIR", None)
         else:
             os.environ["Q3_RESULTS_DIR"] = old_results
+
+
+def _compare_clean_reproduction(clean_root: Path) -> dict[str, bool]:
+    """Compare a clean Q3-C rebuild with the independently created formal set."""
+    formal_root = Path(__file__).resolve().parents[2] / "results"
+    formal = json.loads((formal_root / "q3_final.json").read_text(encoding="utf-8"))
+    clean = json.loads((clean_root / "q3_final.json").read_text(encoding="utf-8"))
+    formal_pool = sorted(entry["state_signature"] for entry in formal.get("feasible_pool", []))
+    clean_pool = sorted(entry["state_signature"] for entry in clean.get("feasible_pool", []))
+    return {
+        "selected_solution_matches_formal": clean["selected_solution"]["solution_id"] ==
+                                            formal["selected_solution"]["solution_id"],
+        "selected_state_matches_formal": clean["selected_solution"]["state_signature"] ==
+                                         formal["selected_solution"]["state_signature"],
+        "candidate_counts_match_formal": all(
+            clean[key].get("unique_candidate_count") == formal[key].get("unique_candidate_count")
+            and clean[key].get("candidate_count") == formal[key].get("candidate_count")
+            for key in ("c2a_summary", "c2b_summary")),
+        "feasible_pool_signatures_match_formal": clean_pool == formal_pool,
+        "clean_final_audit_pass": json.loads((clean_root / "q3_final_audit.json").read_text(encoding="utf-8")).get("status") == "PASS",
+    }
 
 
 if __name__ == "__main__":
@@ -87,4 +113,11 @@ if __name__ == "__main__":
     if args.mode == "reproduce" and args.results_dir is None:
         args.results_dir = Path(__file__).resolve().parents[2] / "reproducibility" / "clean_results"
         args.clean = True
-    print(json.dumps(run_final(clean=args.clean, results_dir=args.results_dir), ensure_ascii=False, indent=2))
+    result = run_final(clean=args.clean, results_dir=args.results_dir)
+    if args.mode == "reproduce":
+        comparison = _compare_clean_reproduction(args.results_dir.resolve())
+        result["reproduction_comparison"] = comparison
+        result["status"] = "PASS" if result["status"] == "PASS" and all(comparison.values()) else "FAIL"
+        (args.results_dir / "q3_reproduction_report.json").write_text(
+            json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(json.dumps(result, ensure_ascii=False, indent=2))

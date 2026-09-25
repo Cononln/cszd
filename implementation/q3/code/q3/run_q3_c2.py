@@ -71,6 +71,7 @@ def _candidate_log(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
         log.append({
             "candidate_id": row["candidate_id"], "parent_id": row["parent_id"],
             "stage": row["repair_stage"], "operator": row["operator"],
+            "state_signature": row["state_signature"],
             "transport_status": transport.get("status"),
             "relay_decoder_status": relay.get("decoder_status"),
             "relay_baseline_status": relay.get("baseline_status"),
@@ -151,9 +152,11 @@ def run() -> dict[str, Any]:
     c2a = run_c2a()
     candidates = c2a["candidates"]
     audit = [{"candidate_id": row["candidate_id"], "repair": row["repair"],
+              "state_signature": row["state_signature"],
               "baseline_violations": row["baseline"]["violations"],
               "repaired_violations": row["repaired"]["violations"]} for row in candidates]
     validation = [{"candidate_id": row["candidate_id"], "joint_status": row["joint_status"],
+                   "state_signature": row["state_signature"],
                    "transport_validation": row["repaired"]["transport_validation"],
                    "relay_validation": row["repaired"]["relay_validation"],
                    "joint_validation": row["repaired"]["joint"]} for row in candidates]
@@ -166,7 +169,10 @@ def run() -> dict[str, Any]:
     seed = _write_seed_outputs(root, feasible[0]) if feasible else None
     (root / "q3_c2a_summary.md").write_text(
         "# Q3-C C2-A Temporal Repair\n\n"
-        f"- candidates evaluated: {len(candidates)}\n"
+        f"- raw candidates generated: {c2a['generated_raw_count']}\n"
+        f"- no-op candidates removed: {c2a['noop_removed_count']}\n"
+        f"- duplicate decision states removed: {c2a['duplicate_removed_count']}\n"
+        f"- unique candidates evaluated: {c2a['unique_candidate_count']}\n"
         f"- transport-validator PASS: {c2a['transport_feasible_count']}\n"
         f"- real relay-decoder evaluations: {c2a['relay_evaluated_count']}\n"
         f"- joint-validator PASS: {c2a['joint_feasible_count']}\n"

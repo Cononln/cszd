@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any
 
 from .q3_final import _root
+from .c2_seed_builder import canonical_transport_signature
 
 
 def _sha256(path: Path) -> str:
@@ -36,6 +37,64 @@ def _delivery_checks(root: Path, final_path: Path) -> dict[str, bool]:
                                        table_manifest.get("source_sha256") == source_hash,
         "figure_qa_pass": figure_manifest.get("status") == "PASS",
         "all_manifest_artifacts_present": all(path.exists() and path.stat().st_size > 0 for path in artifact_paths),
+    }
+
+
+def _candidate_integrity(root: Path, final: dict[str, Any]) -> dict[str, bool]:
+    """Recompute candidate counts and state identities from persisted evidence."""
+    payloads = []
+    for name in ("q3_c2a_candidates.json", "q3_c2b_candidates.json"):
+        path = root / name
+        if path.exists():
+            payloads.append(json.loads(path.read_text(encoding="utf-8")))
+    rows = [row for payload in payloads for row in payload.get("candidates", [])]
+    signatures = [row.get("state_signature") or canonical_transport_signature(row.get("transport_state", {}))
+                  for row in rows]
+    baseline = next((row for row in rows if row.get("candidate_id") == "C2A-BASE"), None)
+    base_trips = (baseline or {}).get("transport_state", {}).get("trips", [])
+    no_op = False
+    for row in rows:
+        operator = str(row.get("operator", ""))
+        if row.get("candidate_id") == "C2A-BASE":
+            continue
+        state_trips = row.get("transport_state", {}).get("trips", [])
+        if operator.startswith("single_type_adjustment_T"):
+            token = operator.removeprefix("single_type_adjustment_T")
+            number_text, proposed = token.split("_", 1)
+            number = int(number_text)
+            if 1 <= number <= len(base_trips) and str(base_trips[number - 1].get("gtype")) == proposed:
+                no_op = True
+        if operator.startswith("combination_"):
+            for token in operator.removeprefix("combination_").split("+"):
+                number_text, proposed = token[1:].split("-", 1)
+                number = int(number_text)
+                if 1 <= number <= len(base_trips) and str(base_trips[number - 1].get("gtype")) == proposed:
+                    no_op = True
+        if row.get("state_signature") != canonical_transport_signature(row.get("transport_state", {})):
+            no_op = True
+    stats_ok = True
+    for payload in payloads:
+        unique = payload.get("unique_candidate_count")
+        count = payload.get("candidate_count")
+        raw = payload.get("generated_raw_count")
+        removed = int(payload.get("noop_removed_count", 0)) + int(payload.get("duplicate_removed_count", 0))
+        candidate_rows = payload.get("candidates", [])
+        stats_ok = stats_ok and count == len(candidate_rows) == unique and raw - removed == unique
+    taxonomy = final.get("failure_taxonomy", {})
+    evidence_ok = True
+    for failure in taxonomy.get("candidate_failures", []):
+        for evidence in failure.get("evidence", []):
+            category = str(evidence.get("category", ""))
+            evidence_ok = evidence_ok and bool(category) and not category.endswith("_PASS") and evidence.get("source_value") is False
+    pool = final.get("feasible_pool", [])
+    required = {"solution_id", "parent_id", "stage", "operator", "state_signature", "objective", "validator_status"}
+    pool_fields_ok = all(required.issubset(entry) for entry in pool)
+    return {
+        "no_noop_candidates": not no_op,
+        "candidate_state_signatures_unique": len(signatures) == len(set(signatures)),
+        "feasible_pool_state_signatures_unique": len(pool) == len({entry.get("state_signature") for entry in pool}) and pool_fields_ok,
+        "candidate_counts_recomputed": stats_ok,
+        "failure_taxonomy_semantically_valid": evidence_ok,
     }
 from .validate_q3_c2 import validate_q3_c2
 
@@ -76,6 +135,8 @@ def audit(*, require_deliverables: bool = False) -> dict[str, Any]:
         "failure_taxonomy_present": "failure_taxonomy" in result,
     }
     delivery = _delivery_checks(root, final_path)
+    integrity = _candidate_integrity(root, result)
+    checks.update(integrity)
     if require_deliverables:
         checks.update(delivery)
     report = {"phase": "Q3-final-audit", "status": "PASS" if all(checks.values()) else "FAIL",
