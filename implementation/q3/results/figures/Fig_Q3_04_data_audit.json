@@ -1,0 +1,250 @@
+{
+  "status": "PASS",
+  "selected_solution_id": "C2A-BASE",
+  "relay_sortie_count": 6,
+  "relay_location_count": 5,
+  "communication_demand_count": 19,
+  "covered_demand_count": 19,
+  "full_replay_outage_s": 0.0,
+  "coordinate_source": "q3_final.json:selected_solution.relay.relay_services (candidate_id, lon, lat, altitude_msl_m)",
+  "mapping_source": "q3_final.json:selected_solution.relay.coverage_audit joined to relay_sorties by selected_sortie_id",
+  "transport_geometry_source": "q3_final.json:selected_solution.schedule.trip_records plus official node coordinates for map geometry only",
+  "coordinate_mapping_verified": true,
+  "coverage_mapping_verified": true,
+  "coverage_radius_drawn": false,
+  "relay_services": [
+    {
+      "sortie_id": "RS-001",
+      "candidate_id": "P0113",
+      "relay_id": "R02",
+      "option_id": "SO-00595",
+      "lon": 109.27135709756021,
+      "lat": 23.0052097,
+      "altitude_msl_m": 689.6063842773438,
+      "demand_ids": [
+        "D-T022-01",
+        "D-T018-01",
+        "D-T023-01",
+        "D-T021-01"
+      ],
+      "service_start_s": 1344.4939412434896,
+      "service_end_s": 3872.466705146261
+    },
+    {
+      "sortie_id": "RS-002",
+      "candidate_id": "P0045",
+      "relay_id": "R01",
+      "option_id": "SO-00228",
+      "lon": 109.21278607038295,
+      "lat": 23.04590642798307,
+      "altitude_msl_m": 604.2590026855469,
+      "demand_ids": [
+        "D-T004-01",
+        "D-T014-01"
+      ],
+      "service_start_s": 2150.5149475097655,
+      "service_end_s": 2999.079410648509
+    },
+    {
+      "sortie_id": "RS-003",
+      "candidate_id": "P0088",
+      "relay_id": "R01",
+      "option_id": "SO-00478",
+      "lon": 109.24207158397158,
+      "lat": 23.073037579971782,
+      "altitude_msl_m": 509.8966369628906,
+      "demand_ids": [
+        "D-T008-01",
+        "D-T015-01"
+      ],
+      "service_start_s": 4746.837111409505,
+      "service_end_s": 5864.34501329219
+    },
+    {
+      "sortie_id": "RS-004",
+      "candidate_id": "P0027",
+      "relay_id": "R02",
+      "option_id": "SO-00102",
+      "lon": 109.19814331358863,
+      "lat": 23.04590642798307,
+      "altitude_msl_m": 783.6882934570312,
+      "demand_ids": [
+        "D-T006-01",
+        "D-T010-01",
+        "D-T024-01",
+        "D-T016-01",
+        "D-T007-01"
+      ],
+      "service_start_s": 5782.09105834961,
+      "service_end_s": 12637.97974185995
+    },
+    {
+      "sortie_id": "RS-005",
+      "candidate_id": "P0088",
+      "relay_id": "R02",
+      "option_id": "SO-00487",
+      "lon": 109.24207158397158,
+      "lat": 23.073037579971782,
+      "altitude_msl_m": 509.8966369628906,
+      "demand_ids": [
+        "D-T020-01",
+        "D-T017-01",
+        "D-T005-01",
+        "D-T009-01"
+      ],
+      "service_start_s": 15069.600309010106,
+      "service_end_s": 20647.050504067287
+    },
+    {
+      "sortie_id": "RS-006",
+      "candidate_id": "P0024",
+      "relay_id": "R01",
+      "option_id": "SO-00068",
+      "lon": 109.19814331358863,
+      "lat": 23.032340851988714,
+      "altitude_msl_m": 685.9930114746094,
+      "demand_ids": [
+        "D-T025-01",
+        "D-T011-01"
+      ],
+      "service_start_s": 18752.091058349608,
+      "service_end_s": 23377.470514035485
+    }
+  ],
+  "validated_mappings": [
+    {
+      "demand_id": "D-T004-01",
+      "selected_sortie_id": "RS-002",
+      "candidate_id": "P0045",
+      "scheduled_covered": true,
+      "full_replay_covered": true
+    },
+    {
+      "demand_id": "D-T005-01",
+      "selected_sortie_id": "RS-005",
+      "candidate_id": "P0088",
+      "scheduled_covered": true,
+      "full_replay_covered": true
+    },
+    {
+      "demand_id": "D-T006-01",
+      "selected_sortie_id": "RS-004",
+      "candidate_id": "P0027",
+      "scheduled_covered": true,
+      "full_replay_covered": true
+    },
+    {
+      "demand_id": "D-T007-01",
+      "selected_sortie_id": "RS-004",
+      "candidate_id": "P0027",
+      "scheduled_covered": true,
+      "full_replay_covered": true
+    },
+    {
+      "demand_id": "D-T008-01",
+      "selected_sortie_id": "RS-003",
+      "candidate_id": "P0088",
+      "scheduled_covered": true,
+      "full_replay_covered": true
+    },
+    {
+      "demand_id": "D-T009-01",
+      "selected_sortie_id": "RS-005",
+      "candidate_id": "P0088",
+      "scheduled_covered": true,
+      "full_replay_covered": true
+    },
+    {
+      "demand_id": "D-T010-01",
+      "selected_sortie_id": "RS-004",
+      "candidate_id": "P0027",
+      "scheduled_covered": true,
+      "full_replay_covered": true
+    },
+    {
+      "demand_id": "D-T011-01",
+      "selected_sortie_id": "RS-006",
+      "candidate_id": "P0024",
+      "scheduled_covered": true,
+      "full_replay_covered": true
+    },
+    {
+      "demand_id": "D-T014-01",
+      "selected_sortie_id": "RS-002",
+      "candidate_id": "P0045",
+      "scheduled_covered": true,
+      "full_replay_covered": true
+    },
+    {
+      "demand_id": "D-T015-01",
+      "selected_sortie_id": "RS-003",
+      "candidate_id": "P0088",
+      "scheduled_covered": true,
+      "full_replay_covered": true
+    },
+    {
+      "demand_id": "D-T016-01",
+      "selected_sortie_id": "RS-004",
+      "candidate_id": "P0027",
+      "scheduled_covered": true,
+      "full_replay_covered": true
+    },
+    {
+      "demand_id": "D-T017-01",
+      "selected_sortie_id": "RS-005",
+      "candidate_id": "P0088",
+      "scheduled_covered": true,
+      "full_replay_covered": true
+    },
+    {
+      "demand_id": "D-T018-01",
+      "selected_sortie_id": "RS-001",
+      "candidate_id": "P0113",
+      "scheduled_covered": true,
+      "full_replay_covered": true
+    },
+    {
+      "demand_id": "D-T020-01",
+      "selected_sortie_id": "RS-005",
+      "candidate_id": "P0088",
+      "scheduled_covered": true,
+      "full_replay_covered": true
+    },
+    {
+      "demand_id": "D-T021-01",
+      "selected_sortie_id": "RS-001",
+      "candidate_id": "P0113",
+      "scheduled_covered": true,
+      "full_replay_covered": true
+    },
+    {
+      "demand_id": "D-T022-01",
+      "selected_sortie_id": "RS-001",
+      "candidate_id": "P0113",
+      "scheduled_covered": true,
+      "full_replay_covered": true
+    },
+    {
+      "demand_id": "D-T023-01",
+      "selected_sortie_id": "RS-001",
+      "candidate_id": "P0113",
+      "scheduled_covered": true,
+      "full_replay_covered": true
+    },
+    {
+      "demand_id": "D-T024-01",
+      "selected_sortie_id": "RS-004",
+      "candidate_id": "P0027",
+      "scheduled_covered": true,
+      "full_replay_covered": true
+    },
+    {
+      "demand_id": "D-T025-01",
+      "selected_sortie_id": "RS-006",
+      "candidate_id": "P0024",
+      "scheduled_covered": true,
+      "full_replay_covered": true
+    }
+  ],
+  "source_sha256": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81"
+}

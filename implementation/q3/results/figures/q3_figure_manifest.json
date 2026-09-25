@@ -22,6 +22,13 @@
     "Fig_Q3_03_search_validation.png",
     "Fig_Q3_03_search_validation.svg",
     "Fig_Q3_03_search_validation.tiff",
+    "Fig_Q3_04_data_audit.json",
+    "Fig_Q3_04_noninterference_audit.json",
+    "Fig_Q3_04_relay_coverage_map.alignment.json",
+    "Fig_Q3_04_relay_coverage_map.alignment.svg",
+    "Fig_Q3_04_relay_coverage_map.pdf",
+    "Fig_Q3_04_relay_coverage_map.png",
+    "Fig_Q3_04_relay_coverage_map.svg",
     "Q3_Figure_Contract.md"
   ],
   "source_preflight": {
@@ -276,6 +283,45 @@
         "stroke_path_count": 20,
         "filled_region_count": 28,
         "image_region_count": 0,
+        "summary": {
+          "fail": 0,
+          "warn": 0,
+          "contained_fill_overlays": 0,
+          "contained_image_overlays": 0
+        },
+        "thresholds": {
+          "text_inset_pt": 0.6,
+          "min_overlap_ratio": 0.05,
+          "clipping_tolerance_pt": 0.5
+        },
+        "findings": []
+      },
+      "collision_exit_code": 0,
+      "artifacts": []
+    },
+    {
+      "figure": "Fig_Q3_04_relay_coverage_map.pdf",
+      "status": "PASS",
+      "pdf_text": {
+        "pdf": "D:\\Users\\29919\\Documents\\科研\\cszd-q3c-formal\\implementation\\q3\\results\\figures\\Fig_Q3_04_relay_coverage_map.pdf",
+        "auditable": true,
+        "minimum_required_pt": 5.0,
+        "minimum_found_pt": 5.6,
+        "text_run_count": 64,
+        "below_minimum_count": 0,
+        "below_minimum": [],
+        "warnings": []
+      },
+      "collision": {
+        "pdf": "D:\\Users\\29919\\Documents\\科研\\cszd-q3c-formal\\implementation\\q3\\results\\figures\\Fig_Q3_04_relay_coverage_map.pdf",
+        "auditable": true,
+        "verdict": "PASS",
+        "page_count": 1,
+        "visible_text_box_count": 62,
+        "text_trace_count": 64,
+        "stroke_path_count": 182,
+        "filled_region_count": 91,
+        "image_region_count": 1,
         "summary": {
           "fail": 0,
           "warn": 0,
