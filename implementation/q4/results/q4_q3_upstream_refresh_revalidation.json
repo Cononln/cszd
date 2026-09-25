@@ -71,7 +71,7 @@
     "status": "PASS",
     "backend": "python-matplotlib",
     "source": "q4_final.json",
-    "source_sha256": "4a14e67eb6c1a2b5f83dd0bafc1e29cdfc7515e8850f8b6ff24adcb351e03f44",
+    "source_sha256": "bcaf58dd37ed26af351a3c7ac97a6672feda5ceeaf0a8dee810fa517345cf4d5",
     "artifacts": [
       "Fig_Q4_01_resource_configuration.alignment.json",
       "Fig_Q4_01_resource_configuration.alignment.svg",
@@ -213,7 +213,7 @@
   "tables": {
     "status": "PASS",
     "source": "q4_final.json",
-    "source_sha256": "4a14e67eb6c1a2b5f83dd0bafc1e29cdfc7515e8850f8b6ff24adcb351e03f44",
+    "source_sha256": "bcaf58dd37ed26af351a3c7ac97a6672feda5ceeaf0a8dee810fa517345cf4d5",
     "artifacts": [
       "Q4_Table_01_SelectedConfigurations.csv",
       "Q4_Table_02_GroupResources.csv",

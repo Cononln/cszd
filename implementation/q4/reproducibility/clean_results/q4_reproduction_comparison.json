@@ -13,13 +13,13 @@
   "stable_evidence_exact": true,
   "evidence_files": {
     "q4_final_audit.json": {
-      "formal_sha256": "d6bbcaa52f94c2e07b4b83342d960b7482651aa1b35bcaf00b576f213f7d7290",
-      "clean_sha256": "d6bbcaa52f94c2e07b4b83342d960b7482651aa1b35bcaf00b576f213f7d7290",
+      "formal_sha256": "8e5800e6f7c77396f869195c432a63a73da47bb71ad335ce5ae7af29c227383f",
+      "clean_sha256": "8e5800e6f7c77396f869195c432a63a73da47bb71ad335ce5ae7af29c227383f",
       "equal": true
     },
     "q4_q3_interface_validation.json": {
-      "formal_sha256": "40067fbe52aef31c44b931fd38795a5d5e99c94c11e5b16880d42cb7adb2cdf2",
-      "clean_sha256": "40067fbe52aef31c44b931fd38795a5d5e99c94c11e5b16880d42cb7adb2cdf2",
+      "formal_sha256": "3ab8edc3ca67c676311ae696faa56485f08e51b12a7a0df6873a991f145336d9",
+      "clean_sha256": "3ab8edc3ca67c676311ae696faa56485f08e51b12a7a0df6873a991f145336d9",
       "equal": true
     },
     "q4_small_case_validation.json": {

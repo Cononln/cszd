@@ -3,7 +3,7 @@
     "phase": "Q4",
     "method": "exact enumeration of legal component partitions",
     "formal_solver": "deterministic exhaustive partition enumeration",
-    "git_revision": "b95a81f8a7599e6b563bc0e908eead978d383ec0",
+    "git_revision": "b60590a6701894ea1524123c33b2082ee1cf8272",
     "q4_final_schema": "1.0"
   },
   "q3_upstream_reference": {
@@ -3694,7 +3694,7 @@
     },
     "total_candidates": 29524,
     "total_feasible": 29524,
-    "runtime_s": 7.2184103000035975,
+    "runtime_s": 6.515495500003453,
     "candidate_state_signatures_unique": true
   },
   "failure_taxonomy_summary": {

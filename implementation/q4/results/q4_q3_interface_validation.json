@@ -3503,7 +3503,7 @@
     }
   },
   "q3_audit_status": "PASS",
-  "upstream_refresh_audit_present": false,
-  "historical_q3_semantic_equal": null,
+  "upstream_refresh_audit_present": true,
+  "historical_q3_semantic_equal": false,
   "upstream_change_resolution": "Q4_REENUMERATION_REQUIRED"
 }
