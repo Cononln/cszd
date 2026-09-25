@@ -358,7 +358,8 @@
           ]
         }
       }
-    ]
+    ],
+    "unassigned": []
   },
   "schedule": {
     "status": "FEASIBLE",
@@ -1868,7 +1869,7 @@
       "relay_energy_kwh": 8.247976791529863,
       "relay_cmax_s": 24147.775014499995,
       "joint_cmax_s": 24147.775014499995,
-      "runtime_s": 69.12549740000395
+      "runtime_s": 62.247851499996614
     },
     "checks": {
       "all_demands_candidate_coverable": true,
@@ -2040,8 +2041,8 @@
         "sortie_id": "RS-001",
         "option_id": "SO-00595",
         "candidate_id": "P0113",
-        "relay_id": "R01",
-        "energy_component_id": "EC-03",
+        "relay_id": "R02",
+        "energy_component_id": "EC-01",
         "demand_ids": [
           "D-T022-01",
           "D-T018-01",
@@ -2063,8 +2064,8 @@
         "sortie_id": "RS-002",
         "option_id": "SO-00228",
         "candidate_id": "P0045",
-        "relay_id": "R02",
-        "energy_component_id": "EC-06",
+        "relay_id": "R01",
+        "energy_component_id": "EC-02",
         "demand_ids": [
           "D-T004-01",
           "D-T014-01"
@@ -2084,7 +2085,7 @@
         "sortie_id": "RS-003",
         "option_id": "SO-00478",
         "candidate_id": "P0088",
-        "relay_id": "R02",
+        "relay_id": "R01",
         "energy_component_id": "EC-04",
         "demand_ids": [
           "D-T008-01",
@@ -2105,8 +2106,8 @@
         "sortie_id": "RS-004",
         "option_id": "SO-00102",
         "candidate_id": "P0027",
-        "relay_id": "R01",
-        "energy_component_id": "EC-01",
+        "relay_id": "R02",
+        "energy_component_id": "EC-05",
         "demand_ids": [
           "D-T006-01",
           "D-T010-01",
@@ -2129,7 +2130,7 @@
         "sortie_id": "RS-005",
         "option_id": "SO-00487",
         "candidate_id": "P0088",
-        "relay_id": "R01",
+        "relay_id": "R02",
         "energy_component_id": "EC-06",
         "demand_ids": [
           "D-T020-01",
@@ -2152,8 +2153,8 @@
         "sortie_id": "RS-006",
         "option_id": "SO-00068",
         "candidate_id": "P0024",
-        "relay_id": "R02",
-        "energy_component_id": "EC-05",
+        "relay_id": "R01",
+        "energy_component_id": "EC-01",
         "demand_ids": [
           "D-T025-01",
           "D-T011-01"
@@ -2175,8 +2176,8 @@
         "sortie_id": "RS-001",
         "option_id": "SO-00595",
         "candidate_id": "P0113",
-        "relay_id": "R01",
-        "energy_component_id": "EC-03",
+        "relay_id": "R02",
+        "energy_component_id": "EC-01",
         "demand_ids": [
           "D-T022-01",
           "D-T018-01",
@@ -2198,8 +2199,8 @@
         "sortie_id": "RS-002",
         "option_id": "SO-00228",
         "candidate_id": "P0045",
-        "relay_id": "R02",
-        "energy_component_id": "EC-06",
+        "relay_id": "R01",
+        "energy_component_id": "EC-02",
         "demand_ids": [
           "D-T004-01",
           "D-T014-01"
@@ -2219,7 +2220,7 @@
         "sortie_id": "RS-003",
         "option_id": "SO-00478",
         "candidate_id": "P0088",
-        "relay_id": "R02",
+        "relay_id": "R01",
         "energy_component_id": "EC-04",
         "demand_ids": [
           "D-T008-01",
@@ -2240,8 +2241,8 @@
         "sortie_id": "RS-004",
         "option_id": "SO-00102",
         "candidate_id": "P0027",
-        "relay_id": "R01",
-        "energy_component_id": "EC-01",
+        "relay_id": "R02",
+        "energy_component_id": "EC-05",
         "demand_ids": [
           "D-T006-01",
           "D-T010-01",
@@ -2264,7 +2265,7 @@
         "sortie_id": "RS-005",
         "option_id": "SO-00487",
         "candidate_id": "P0088",
-        "relay_id": "R01",
+        "relay_id": "R02",
         "energy_component_id": "EC-06",
         "demand_ids": [
           "D-T020-01",
@@ -2287,8 +2288,8 @@
         "sortie_id": "RS-006",
         "option_id": "SO-00068",
         "candidate_id": "P0024",
-        "relay_id": "R02",
-        "energy_component_id": "EC-05",
+        "relay_id": "R01",
+        "energy_component_id": "EC-01",
         "demand_ids": [
           "D-T025-01",
           "D-T011-01"
@@ -2307,7 +2308,7 @@
     ],
     "relay_services": [
       {
-        "relay_id": "R01",
+        "relay_id": "R02",
         "option_id": "SO-00595",
         "candidate_id": "P0113",
         "lon": 109.27135709756021,
@@ -2317,7 +2318,7 @@
         "service_end_s": 3872.466705146261
       },
       {
-        "relay_id": "R02",
+        "relay_id": "R01",
         "option_id": "SO-00228",
         "candidate_id": "P0045",
         "lon": 109.21278607038295,
@@ -2327,7 +2328,7 @@
         "service_end_s": 2999.079410648509
       },
       {
-        "relay_id": "R02",
+        "relay_id": "R01",
         "option_id": "SO-00478",
         "candidate_id": "P0088",
         "lon": 109.24207158397158,
@@ -2337,7 +2338,7 @@
         "service_end_s": 5864.34501329219
       },
       {
-        "relay_id": "R01",
+        "relay_id": "R02",
         "option_id": "SO-00102",
         "candidate_id": "P0027",
         "lon": 109.19814331358863,
@@ -2347,7 +2348,7 @@
         "service_end_s": 12637.97974185995
       },
       {
-        "relay_id": "R01",
+        "relay_id": "R02",
         "option_id": "SO-00487",
         "candidate_id": "P0088",
         "lon": 109.24207158397158,
@@ -2357,7 +2358,7 @@
         "service_end_s": 20647.050504067287
       },
       {
-        "relay_id": "R02",
+        "relay_id": "R01",
         "option_id": "SO-00068",
         "candidate_id": "P0024",
         "lon": 109.19814331358863,
@@ -2895,7 +2896,7 @@
       "relay_energy_kwh": 8.247976791529863,
       "relay_cmax_s": 24147.775014499995,
       "joint_cmax_s": 24147.775014499995,
-      "runtime_s": 69.12549740000395
+      "runtime_s": 62.247851499996614
     },
     "reason": null,
     "full_replay_audit": [

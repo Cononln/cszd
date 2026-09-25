@@ -11,6 +11,11 @@
     "no_formal_optimizer_entered": true,
     "single_formal_source_declared": true,
     "failure_taxonomy_present": true,
+    "no_noop_candidates": true,
+    "candidate_state_signatures_unique": true,
+    "feasible_pool_state_signatures_unique": true,
+    "candidate_counts_recomputed": true,
+    "failure_taxonomy_semantically_valid": true,
     "formal_figure_manifest_present": true,
     "formal_table_manifest_present": true,
     "figures_read_only_q3_final": true,
@@ -194,7 +199,7 @@
         "relay_energy_kwh": 8.247976791529863,
         "relay_cmax_s": 24147.775014499995,
         "joint_cmax_s": 24147.775014499995,
-        "runtime_s": 60.85426880000159
+        "runtime_s": 58.573318699985975
       }
     },
     "relay_validation": {
@@ -421,7 +426,7 @@
         "relay_energy_kwh": 8.247976791529863,
         "relay_cmax_s": 24147.775014499995,
         "joint_cmax_s": 24147.775014499995,
-        "runtime_s": 60.85426880000159
+        "runtime_s": 58.573318699985975
       },
       "reason": null,
       "full_replay_audit": [
