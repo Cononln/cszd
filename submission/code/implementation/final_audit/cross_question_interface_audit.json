@@ -1,0 +1,28 @@
+{
+  "q1_to_q2": {
+    "q1_final_pass": true,
+    "q2_data_audit_pass": true,
+    "q1_common_modules_reused": true,
+    "service_area_count_15": true,
+    "box_count_80": true
+  },
+  "q2_to_q3": {
+    "q2_final_pass": true,
+    "q2_transport_physics_not_modified": true,
+    "q3_source_is_q2_frozen_files": true,
+    "q3_final_audit_q2_untouched": true
+  },
+  "q3_to_q4": {
+    "q3_selected_solution_c2a_base": true,
+    "q3_schema_1_2": true,
+    "q3_revision_current": true,
+    "q3_code_refreeze_head_current": true,
+    "q3_refreeze_commit_current": true,
+    "q4_upstream_snapshot_current": true,
+    "relay_change_reenumerated": true,
+    "q4_audit_pass": true,
+    "q3_freeze_markers": true,
+    "q4_freeze_markers": true
+  },
+  "status": "PASS"
+}

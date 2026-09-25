@@ -1,0 +1,82 @@
+{
+  "old_q3_revision": "94154eb01e06a40abb5df8a4d1044019b92ae7b3",
+  "new_q3_revision": "c7880a36e1f5e9efb39f0d6d6be9d38b9638d80a",
+  "q3_refreeze_head": "35a5668e9822dc92c2d8c8a21bbd01f1452ba487",
+  "old_q3_schema": "1.1",
+  "new_q3_schema": "1.2",
+  "selected_solution": {
+    "old_solution_id": "C2A-BASE",
+    "new_solution_id": "C2A-BASE",
+    "old_operator": "baseline_wave_repair",
+    "new_operator": "baseline_wave_repair",
+    "old_recomputed_state_signature": "0be7d2f6f60251d932090e85cbf4e56febc73c710076d89568402abf0e34c811",
+    "new_recorded_state_signature": "ee2466c245db4dc12ee6f8d7d31151776c81aa7d2e53d336a8e97aa6805e76ef",
+    "new_recomputed_state_signature": "50501f8bc4946b0b366d70517c11156ee58379d3d9bb0231b55cee1dc5381da0",
+    "equal": false
+  },
+  "selected_solution_equal": false,
+  "transport_state_equal": true,
+  "transport_schedule_equal": true,
+  "relay_schedule_equal": false,
+  "core_objective_equal": true,
+  "tolerance_abs": 1e-09,
+  "differences": {
+    "transport_state": [],
+    "transport_schedule": [],
+    "relay_schedule": [
+      {
+        "path": "$.sorties[0].energy_component_id",
+        "old": "EC-04",
+        "new": "EC-02"
+      },
+      {
+        "path": "$.sorties[0].relay_id",
+        "old": "R01",
+        "new": "R02"
+      },
+      {
+        "path": "$.sorties[1].energy_component_id",
+        "old": "EC-06",
+        "new": "EC-01"
+      },
+      {
+        "path": "$.sorties[1].relay_id",
+        "old": "R02",
+        "new": "R01"
+      },
+      {
+        "path": "$.sorties[2].energy_component_id",
+        "old": "EC-01",
+        "new": "EC-06"
+      },
+      {
+        "path": "$.sorties[2].relay_id",
+        "old": "R02",
+        "new": "R01"
+      },
+      {
+        "path": "$.sorties[3].energy_component_id",
+        "old": "EC-02",
+        "new": "EC-03"
+      },
+      {
+        "path": "$.sorties[3].relay_id",
+        "old": "R01",
+        "new": "R02"
+      },
+      {
+        "path": "$.sorties[5].energy_component_id",
+        "old": "EC-03",
+        "new": "EC-04"
+      }
+    ],
+    "core_objective": []
+  },
+  "candidate_pool_reuse_validated": false,
+  "semantic_equal": false,
+  "status": "FAIL",
+  "old_q3_final_path": "git:b95a81f8a7599e6b563bc0e908eead978d383ec0:implementation/q3/results/q3_final.json",
+  "new_q3_final_path": "D:\\Users\\29919\\Documents\\科研\\cszd-q4-formal\\implementation\\q3\\results\\q3_final.json",
+  "old_q3_final_sha256": "ed7032f2b0e3e4df6a118526e28dc06f5f02e2dacfe20e3931a66cec88f445ea",
+  "new_q3_final_sha256": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81"
+}

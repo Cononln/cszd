@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "tables": [
+    {
+      "table_id": "Q3_Formal_Tables",
+      "question": "Q3",
+      "file": "q3/q3-c-formal:implementation/q3/results/tables/Q3_Formal_Tables.md",
+      "source": "implementation/q3/results/q3_final.json",
+      "source_hash": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81",
+      "units": "see source schema",
+      "rounding": "display only",
+      "status": "PASS"
+    },
+    {
+      "table_id": "Q3_Table_01_FinalSolution",
+      "question": "Q3",
+      "file": "q3/q3-c-formal:implementation/q3/results/tables/Q3_Table_01_FinalSolution.csv",
+      "source": "implementation/q3/results/q3_final.json",
+      "source_hash": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81",
+      "units": "see source schema",
+      "rounding": "display only",
+      "status": "PASS"
+    },
+    {
+      "table_id": "Q3_Table_02_ConstraintAudit",
+      "question": "Q3",
+      "file": "q3/q3-c-formal:implementation/q3/results/tables/Q3_Table_02_ConstraintAudit.csv",
+      "source": "implementation/q3/results/q3_final.json",
+      "source_hash": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81",
+      "units": "see source schema",
+      "rounding": "display only",
+      "status": "PASS"
+    },
+    {
+      "table_id": "Q3_Table_03_FeasiblePool",
+      "question": "Q3",
+      "file": "q3/q3-c-formal:implementation/q3/results/tables/Q3_Table_03_FeasiblePool.csv",
+      "source": "implementation/q3/results/q3_final.json",
+      "source_hash": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81",
+      "units": "see source schema",
+      "rounding": "display only",
+      "status": "PASS"
+    },
+    {
+      "table_id": "Q4_Formal_Tables",
+      "question": "Q4",
+      "file": "implementation/q4/results/tables/Q4_Formal_Tables.md",
+      "source": "implementation/q4/results/q4_final.json",
+      "source_hash": "70361a3df8d37bcc01c8d476b8f1b8a55f0a3d45aaa2127f64b93ea3e9cb61d3",
+      "units": "see source schema",
+      "rounding": "display only",
+      "status": "PASS"
+    },
+    {
+      "table_id": "Q4_Table_01_SelectedConfigurations",
+      "question": "Q4",
+      "file": "implementation/q4/results/tables/Q4_Table_01_SelectedConfigurations.csv",
+      "source": "implementation/q4/results/q4_final.json",
+      "source_hash": "70361a3df8d37bcc01c8d476b8f1b8a55f0a3d45aaa2127f64b93ea3e9cb61d3",
+      "units": "see source schema",
+      "rounding": "display only",
+      "status": "PASS"
+    },
+    {
+      "table_id": "Q4_Table_02_GroupResources",
+      "question": "Q4",
+      "file": "implementation/q4/results/tables/Q4_Table_02_GroupResources.csv",
+      "source": "implementation/q4/results/q4_final.json",
+      "source_hash": "70361a3df8d37bcc01c8d476b8f1b8a55f0a3d45aaa2127f64b93ea3e9cb61d3",
+      "units": "see source schema",
+      "rounding": "display only",
+      "status": "PASS"
+    }
+  ]
+}

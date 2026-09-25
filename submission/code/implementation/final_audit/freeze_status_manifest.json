@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "entries": [
+    {
+      "question": "Q1",
+      "status": "FROZEN",
+      "basis": "q1_final.status and all checks PASS"
+    },
+    {
+      "question": "Q2",
+      "status": "FROZEN",
+      "basis": "q2_final.status and all checks PASS"
+    },
+    {
+      "question": "Q3",
+      "status": "FROZEN",
+      "basis": "Q3_FREEZE_REPORT markers"
+    },
+    {
+      "question": "Q4",
+      "status": "FROZEN",
+      "basis": "Q4_FREEZE_REPORT markers"
+    }
+  ]
+}

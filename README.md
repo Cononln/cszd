@@ -4,17 +4,14 @@
 
 仓库当前为私有仓库。这里只保留赛题、官方数据、提交模板及本队生成的代码与结果；付费资料、内部资料和其他项目的 Git 历史不纳入版本控制。
 
-## 当前进度
+## 冻结状态
 
 | 子项目 | 任务 | 上游依赖 | 标准输出位置 |
 | --- | --- | --- | --- |
-| Q1-1 | 基础物理模型审查 | 官方数据与 DEM | `implementation/q1/results/` |
-| Q1-2 | 最大安全载荷（待确认后运行） | Q1-1 | `implementation/q1/results/` |
-| Q1-3/Q1-5 | 组批、敏感性、出图与验证 | Q1-2 | 待进入 |
-| Q2-A/B | 供体审计、约束登记与多点路线物理 | Q1 | `implementation/q2/results/` |
-| Q2-C–E | UAV/电池调度、Formal ALNS、独立验收 | Q1/Q2-B | `implementation/q2/results/` |
-| Q3 | 通信中继联合调度（已冻结） | Q2 | `implementation/q3/results/q3_final.json` |
-| Q4 | 救援任务分区与独立资源配置（已冻结） | Q3 selected solution | `implementation/q4/results/q4_final.json` |
+| Q1 | 基础物理、载荷、组批与敏感性 | 官方数据与 DEM | `implementation/q1/results/q1_final.json` |
+| Q2 | 多点运输、UAV/电池调度与独立验收 | Q1 公共物理层 | `implementation/q2/results/q2_final.json` |
+| Q3 | 通信中继联合调度 | Q2 冻结运输状态 | `implementation/q3/results/q3_final.json` |
+| Q4 | 救援任务分区与独立资源配置 | Q3 `C2A-BASE` | `implementation/q4/results/q4_final.json` |
 
 依赖关系：`Q1 → Q2 → Q3 → Q4`。各项目通过 `schemas/` 中约定的 CSV/JSON 接口交换结果，不直接读取其他项目的临时文件。
 
@@ -35,7 +32,7 @@ implementation/q2/         Q2-A/B 唯一正式骨架与路线审计结果
 tests/                     公共回归测试
 ```
 
-## 当前正式实现
+## 正式结果源
 
 旧的 A/raw 与 B/super 两套上传代码已经清理。当前正式验收目录包括：
 
@@ -44,27 +41,33 @@ tests/                     公共回归测试
 - `implementation/q1/results/`：审查报告、航段参数和能耗检查结果。
 - `implementation/q2/`：Q2-A/B 唯一正式骨架、供体审计和路线物理验收。
 
-Q1 已完成此前阶段验收。Q2-A/B 已通过路线物理审计，Q2-C–E 已完成资源解码、
-Formal ALNS 和独立重放验收；`implementation/q2/results/q2_final.json` 是 Q2
-冻结状态。Q3 的唯一正式来源是 `implementation/q3/results/q3_final.json`。Q4
-只读取其中的 `selected_solution`，枚举合法的 2 组与 3 组服务区耦合分区；其唯一
-正式来源是 `implementation/q4/results/q4_final.json`。
+四问均已冻结。每问唯一正式数值来源分别是 `q1_final.json`、`q2_final.json`、
+`q3_final.json` 和 `q4_final.json`。Q3 选定解为 `C2A-BASE`；Q4 仅读取该选定解，
+对合法的 2 组与 3 组服务区耦合分区做确定性枚举。最终项目审计与提交封装入口为
+`implementation/final_audit/audit_project_final.py`。
 
 ## 快速开始
 
-环境要求：Python 3.11 或更高版本。
+环境要求：Python 3.11 或更高版本。请从仓库根目录运行命令。
 
 ```powershell
-python implementation/q1/code/q1/audit_physics.py
+python implementation/final_audit/audit_project_final.py --audit-only
 ```
 
-Q4 正式求解与从空输出目录进行的复现：
+Q4 的正式复现与一致性检查：
 
 ```powershell
 $env:PYTHONPATH = "$PWD\implementation\q4\code"
 python -m q4.run_q4_final --mode formal --clean
 python -m q4.run_q4_final --mode reproduce
 python -m q4.compare_q4_reproduction
+```
+
+生成评审提交目录并校验其哈希：
+
+```powershell
+python implementation/final_audit/audit_project_final.py --package
+python implementation/final_audit/audit_project_final.py --verify
 ```
 
 每个子项目实现 `projects/<项目>/run.py` 后，会被流水线自动发现。单独运行某一问时，可直接执行该目录下的 `run.py`。

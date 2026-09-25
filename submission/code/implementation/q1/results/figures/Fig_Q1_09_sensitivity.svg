@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="343.90375pt" height="234.310397pt" viewBox="0 0 343.90375 234.310397" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-24T05:20:12.812012</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 234.310397 
+L 343.90375 234.310397 
+L 343.90375 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 31.835 184.22036 
+L 336.70375 184.22036 
+L 336.70375 18.61584 
+L 31.835 18.61584 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m4b110a088d" d="M 0 0 
+L 0 3 
+" style="stroke: #000000; stroke-width: 0.6"/>
+      </defs>
+      <g>
+       <use xlink:href="#m4b110a088d" x="69.743173" y="184.22036" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 7px; font-family: 'Noto Sans SC', 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle" x="69.743173" y="196.291923" transform="rotate(-0 69.743173 196.291923)">1</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m4b110a088d" x="184.269375" y="184.22036" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 7px; font-family: 'Noto Sans SC', 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle" x="184.269375" y="196.291923" transform="rotate(-0 184.269375 196.291923)">3</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m4b110a088d" x="298.795577" y="184.22036" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 7px; font-family: 'Noto Sans SC', 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle" x="298.795577" y="196.291923" transform="rotate(-0 298.795577 196.291923)">5</text>
+     </g>
+    </g>
+    <g id="text_4">
+     <text style="font-size: 10px; font-family: 'Noto Sans SC', 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle" x="184.269375" y="209.865673" transform="rotate(-0 184.269375 209.865673)">安全边界收紧比例 / %</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_4">
+      <path d="M 31.835 184.22036 
+L 336.70375 184.22036 
+" clip-path="url(#p2d0ffa6bd4)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_5">
+      <defs>
+       <path id="m4e36a50c81" d="M 0 0 
+L -3 0 
+" style="stroke: #000000; stroke-width: 0.6"/>
+      </defs>
+      <g>
+       <use xlink:href="#m4e36a50c81" x="31.835" y="184.22036" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 7px; font-family: 'Noto Sans SC', 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: end" x="25.335" y="187.006142" transform="rotate(-0 25.335 187.006142)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_6">
+      <path d="M 31.835 26.50177 
+L 336.70375 26.50177 
+" clip-path="url(#p2d0ffa6bd4)" style="fill: none; stroke: #e5e7eb; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m4e36a50c81" x="31.835" y="26.50177" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 7px; font-family: 'Noto Sans SC', 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: end" x="25.335" y="29.287551" transform="rotate(-0 25.335 29.287551)">1</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 10px; font-family: 'Noto Sans SC', 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle" x="15.159375" y="101.4181" transform="rotate(-90 15.159375 101.4181)">违例架次数</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 31.835 184.22036 
+L 31.835 18.61584 
+" style="fill: none; stroke: #4d4d4d; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 31.835 184.22036 
+L 336.70375 184.22036 
+" style="fill: none; stroke: #4d4d4d; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 45.69267 184.22036 
+L 93.793675 184.22036 
+L 93.793675 184.22036 
+L 45.69267 184.22036 
+z
+" clip-path="url(#p2d0ffa6bd4)" style="fill: #4c72b0; stroke: #ffffff; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 160.218873 184.22036 
+L 208.319877 184.22036 
+L 208.319877 26.50177 
+L 160.218873 26.50177 
+z
+" clip-path="url(#p2d0ffa6bd4)" style="fill: #4c72b0; stroke: #ffffff; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 274.745075 184.22036 
+L 322.84608 184.22036 
+L 322.84608 26.50177 
+L 274.745075 26.50177 
+z
+" clip-path="url(#p2d0ffa6bd4)" style="fill: #4c72b0; stroke: #ffffff; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_8">
+    <g clip-path="url(#p2d0ffa6bd4)">
+     <text style="font-size: 6.7px; font-family: 'Noto Sans SC', 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle; fill: #272727" x="69.743173" y="173.222526" transform="rotate(-0 69.743173 173.222526)">0</text>
+    </g>
+   </g>
+   <g id="text_9">
+    <g clip-path="url(#p2d0ffa6bd4)">
+     <text style="font-size: 6.7px; font-family: 'Noto Sans SC', 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle; fill: #272727" x="184.269375" y="15.503936" transform="rotate(-0 184.269375 15.503936)">1</text>
+    </g>
+   </g>
+   <g id="text_10">
+    <g clip-path="url(#p2d0ffa6bd4)">
+     <text style="font-size: 6.7px; font-family: 'Noto Sans SC', 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle; fill: #272727" x="298.795577" y="15.503936" transform="rotate(-0 298.795577 15.503936)">1</text>
+    </g>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 6.5px; font-family: 'Noto Sans SC', 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #272727" x="37.932375" y="225.62149" transform="rotate(-0 37.932375 225.62149)">固定正式方案鲁棒性检查；各收紧场景未重新优化</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Noto Sans SC', 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #272727" x="7.4455" y="13.58375" transform="rotate(-0 7.4455 13.58375)">a</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p2d0ffa6bd4">
+   <rect x="31.835" y="18.61584" width="304.86875" height="165.60452"/>
+  </clipPath>
+ </defs>
+</svg>

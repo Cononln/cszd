@@ -1,0 +1,100 @@
+{
+  "phase": "Q2-A",
+  "status": "PASS",
+  "formal_optimization_run": false,
+  "q1_common_reuse": [
+    "implementation/q1/code/common/data.py",
+    "implementation/q1/code/common/dem.py",
+    "implementation/q1/code/common/physics.py",
+    "implementation/q1/code/common/route.py"
+  ],
+  "boxes": {
+    "n_boxes": 80,
+    "n_service_areas": 15,
+    "service_area_ids": [
+      "S001",
+      "S002",
+      "S003",
+      "S004",
+      "S005",
+      "S006",
+      "S007",
+      "S008",
+      "S009",
+      "S010",
+      "S011",
+      "S012",
+      "S013",
+      "S014",
+      "S015"
+    ],
+    "n_first_boxes": 30,
+    "n_medical_boxes": 16,
+    "n_first_and_medical_boxes": 15,
+    "n_hard_deadline_boxes": 31,
+    "mass_total_kg": 758.0,
+    "volume_total_m3": 2.011,
+    "type_counts": {
+      "饮用水": 36,
+      "应急食品": 19,
+      "医疗物资": 16,
+      "生活卫生用品": 9
+    }
+  },
+  "fleet": {
+    "n_uav": 8,
+    "by_gtype": {
+      "A": 4,
+      "B": 2,
+      "C": 2
+    }
+  },
+  "batteries": {
+    "A": {
+      "n": 6,
+      "t_full_s": 1800.0
+    },
+    "B": {
+      "n": 4,
+      "t_full_s": 2400.0
+    },
+    "C": {
+      "n": 4,
+      "t_full_s": 3000.0
+    }
+  },
+  "deadlines_s": {
+    "t_first": {
+      "min": 3600.0,
+      "max": 10800.0
+    },
+    "t_exp": {
+      "min": 3600.0,
+      "max": 18000.0
+    },
+    "hard_deadline": {
+      "min": 3600.0,
+      "max": 10800.0
+    },
+    "missing_t_first": 50,
+    "missing_t_exp": 0
+  },
+  "priority": {
+    "min": 4.0,
+    "max": 24.0,
+    "mean": 11.95
+  },
+  "checks": {
+    "n_boxes_is_80": true,
+    "n_service_areas_is_15": true,
+    "fleet_is_8": true,
+    "fleet_types_are_abc": true,
+    "all_boxes_have_expected_time": true,
+    "all_hard_boxes_have_hard_deadline": true
+  },
+  "notes": [
+    "15 boxes are both first-batch and medical; hard_deadline takes min(t_first, t_exp).",
+    "Q2 multi-stop energy and delivery offsets are not evaluated in Q2-A.",
+    "No Q2 final route, WTD, Cmax, energy or Pareto result is produced in Q2-A."
+  ]
+}

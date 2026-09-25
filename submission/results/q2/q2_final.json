@@ -1,0 +1,548 @@
+{
+  "phase": "Q2",
+  "status": "PASS",
+  "run_mode": "formal",
+  "formal_solution_id": "seed-20260930-iter-0",
+  "metrics": {
+    "WTD": 6228.862797380436,
+    "Cmax_s": 9612.3086367231,
+    "total_energy_kwh": 70.1181675670078,
+    "n_trips": 25.0,
+    "total_operation_time_s": 45796.642832170495
+  },
+  "formal_selection": {
+    "rule": "minimum normalized distance to ideal point using final global Pareto ideal/nadir",
+    "ideal": {
+      "WTD": 5953.7177499610625,
+      "Cmax_s": 9510.800249159249,
+      "total_energy_kwh": 69.92733585559016,
+      "n_trips": 22.0
+    },
+    "nadir": {
+      "WTD": 213730.95096904945,
+      "Cmax_s": 13306.708636723099,
+      "total_energy_kwh": 81.97043047417402,
+      "n_trips": 27.0
+    },
+    "rho": 0.005,
+    "search_normalization": {
+      "ideal": {
+        "WTD": 7413.192535394137,
+        "Cmax_s": 9799.538476712547,
+        "total_energy_kwh": 77.27429885832598,
+        "n_trips": 28.0
+      },
+      "nadir": {
+        "WTD": 291892.3875050912,
+        "Cmax_s": 33920.9634517862,
+        "total_energy_kwh": 109.51414164475945,
+        "n_trips": 43.0
+      },
+      "rho": 0.005
+    }
+  },
+  "route_structure": {
+    "n_multistop_trips": 5.0,
+    "max_stops": 2.0,
+    "mean_stops_per_trip": 1.2
+  },
+  "exact_validation_summary": {
+    "n_optimal_instances": 2,
+    "max_gap": 0.145292731195679
+  },
+  "checks": {
+    "all_boxes_delivered_once": true,
+    "missing_boxes": true,
+    "duplicate_boxes": true,
+    "no_split_boxes": true,
+    "unknown_boxes": true,
+    "mass_pass": true,
+    "volume_pass": true,
+    "energy_pass": true,
+    "return_reserve_pass": true,
+    "route_energy_recomputed": true,
+    "delivery_recomputed": true,
+    "first_deadlines_pass": true,
+    "medical_deadlines_pass": true,
+    "uav_type_pass": true,
+    "uav_overlap_zero": true,
+    "battery_type_pass": true,
+    "battery_count_pass": true,
+    "battery_overlap_zero": true,
+    "soc_pass": true,
+    "charge_pass": true,
+    "charge_before_reuse_pass": true,
+    "solver_validator_consistent": true,
+    "q2_b_route_physics_pass": true,
+    "wtd_aware_decoder": true,
+    "global_pareto_filtered": true,
+    "multi_seed_completed": true,
+    "small_exact_validation_completed": true,
+    "multistop_explored": true
+  },
+  "runtime": {
+    "cpu_count": 12,
+    "seed_workers": 1,
+    "cp_sat_workers": 4,
+    "parallel_mode": true,
+    "parallel_fallback_reason": "ProcessPool unavailable: PermissionError",
+    "wall_time_total_s": 147.58508300001267,
+    "requested_seeds": 8,
+    "completed_seeds": 8,
+    "failed_seeds": 0
+  },
+  "gate_c": {
+    "phase": "Q2-C",
+    "status": "PASS",
+    "solver_status": "WTD:OPTIMAL;Cmax:OPTIMAL",
+    "stage_statuses": {
+      "WTD": "OPTIMAL",
+      "Cmax": "OPTIMAL"
+    },
+    "solver_grid_metrics": {
+      "WTD_stage1_grid": 6228.2,
+      "WTD_stage2_grid": 6228.2,
+      "WTD_stage1_locked": 1.0,
+      "Cmax_grid_s": 9612.4
+    },
+    "checks": {
+      "uav_type": true,
+      "uav_overlap": true,
+      "battery_overlap": true,
+      "battery_type": true,
+      "soc": true,
+      "charge_before_reuse": true
+    },
+    "charge_audit": {
+      "A": {
+        "soc": [
+          0.0,
+          0.45,
+          0.89,
+          0.9,
+          0.95,
+          1.0
+        ],
+        "charge_time_s": [
+          1800.0,
+          1215.0,
+          643.0,
+          629.9999999999998,
+          315.0000000000003,
+          0.0
+        ],
+        "pass": true
+      },
+      "B": {
+        "soc": [
+          0.0,
+          0.45,
+          0.89,
+          0.9,
+          0.95,
+          1.0
+        ],
+        "charge_time_s": [
+          2400.0,
+          1620.0,
+          857.3333333333334,
+          839.9999999999998,
+          420.00000000000034,
+          0.0
+        ],
+        "pass": true
+      },
+      "C": {
+        "soc": [
+          0.0,
+          0.45,
+          0.89,
+          0.9,
+          0.95,
+          1.0
+        ],
+        "charge_time_s": [
+          3000.0,
+          2025.0000000000002,
+          1071.6666666666667,
+          1049.9999999999995,
+          525.0000000000005,
+          0.0
+        ],
+        "pass": true
+      },
+      "status": "PASS"
+    },
+    "n_trips": 25,
+    "note": "For the 80-box fixed-route schedule, FEASIBLE means best-known valid schedule; it is not a global optimality claim."
+  },
+  "gate_e": {
+    "phase": "Q2-E",
+    "status": "PASS",
+    "checks": {
+      "all_boxes_delivered_once": true,
+      "missing_boxes": true,
+      "duplicate_boxes": true,
+      "no_split_boxes": true,
+      "unknown_boxes": true,
+      "mass_pass": true,
+      "volume_pass": true,
+      "energy_pass": true,
+      "return_reserve_pass": true,
+      "route_energy_recomputed": true,
+      "delivery_recomputed": true,
+      "first_deadlines_pass": true,
+      "medical_deadlines_pass": true,
+      "uav_type_pass": true,
+      "uav_overlap_zero": true,
+      "battery_type_pass": true,
+      "battery_count_pass": true,
+      "battery_overlap_zero": true,
+      "soc_pass": true,
+      "charge_pass": true,
+      "charge_before_reuse_pass": true,
+      "solver_validator_consistent": true
+    },
+    "metrics": {
+      "WTD": 6228.862797380436,
+      "Cmax_s": 9612.3086367231,
+      "total_energy_kwh": 70.11816756700782,
+      "n_trips": 25.0
+    },
+    "solver_metrics": {
+      "WTD": 6228.862797380436,
+      "Cmax_s": 9612.3086367231,
+      "total_energy_kwh": 70.1181675670078,
+      "n_trips": 25.0,
+      "total_operation_time_s": 45796.642832170495
+    },
+    "n_trips": 25,
+    "n_boxes": 80,
+    "delivered_records": 80,
+    "solver_status": "WTD:OPTIMAL;Cmax:OPTIMAL",
+    "solver_stage_statuses": {
+      "WTD": "OPTIMAL",
+      "Cmax": "OPTIMAL"
+    },
+    "solver_grid_metrics": {
+      "WTD_stage1_grid": 6228.2,
+      "WTD_stage2_grid": 6228.2,
+      "WTD_stage1_locked": 1.0,
+      "Cmax_grid_s": 9612.4
+    },
+    "battery_reuse_audit": [
+      {
+        "battery_id": "BAT-A-06",
+        "previous_trip": "T001",
+        "previous_charge_end": 2192.508647086876,
+        "next_trip": "T019",
+        "next_start": 6694.3,
+        "margin_s": 4501.791352913124,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-C-03",
+        "previous_trip": "T003",
+        "previous_charge_end": 4511.704076210021,
+        "next_trip": "T009",
+        "next_start": 4511.8,
+        "margin_s": 0.09592378997876949,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-C-02",
+        "previous_trip": "T005",
+        "previous_charge_end": 6021.087656119327,
+        "next_trip": "T011",
+        "next_start": 6021.2,
+        "margin_s": 0.11234388067259715,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-B-04",
+        "previous_trip": "T018",
+        "previous_charge_end": 4515.989590249282,
+        "next_trip": "T006",
+        "next_start": 5092.4,
+        "margin_s": 576.4104097507179,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-C-01",
+        "previous_trip": "T013",
+        "previous_charge_end": 2892.7854827440206,
+        "next_trip": "T007",
+        "next_start": 3025.8,
+        "margin_s": 133.01451725597963,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-A-04",
+        "previous_trip": "T012",
+        "previous_charge_end": 2191.8995403542476,
+        "next_trip": "T008",
+        "next_start": 2192.0,
+        "margin_s": 0.10045964575238031,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-A-01",
+        "previous_trip": "T014",
+        "previous_charge_end": 4090.131096995131,
+        "next_trip": "T024",
+        "next_start": 4726.8,
+        "margin_s": 636.6689030048692,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-A-01",
+        "previous_trip": "T024",
+        "previous_charge_end": 7907.653337796596,
+        "next_trip": "T016",
+        "next_start": 7912.8,
+        "margin_s": 5.146662203404048,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-B-03",
+        "previous_trip": "T021",
+        "previous_charge_end": 3783.427468054169,
+        "next_trip": "T015",
+        "next_start": 3794.2,
+        "margin_s": 10.772531945830906,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-B-02",
+        "previous_trip": "T022",
+        "previous_charge_end": 2966.7344167506444,
+        "next_trip": "T025",
+        "next_start": 3060.6,
+        "margin_s": 93.8655832493555,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-B-02",
+        "previous_trip": "T025",
+        "previous_charge_end": 6743.045117637893,
+        "next_trip": "T017",
+        "next_start": 7328.4,
+        "margin_s": 585.3548823621068,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-B-01",
+        "previous_trip": "T023",
+        "previous_charge_end": 5387.832821388201,
+        "next_trip": "T020",
+        "next_start": 5754.5,
+        "margin_s": 366.6671786117986,
+        "pass": true
+      }
+    ]
+  },
+  "exact_validation": [
+    {
+      "instance": "Small-1",
+      "n_service_areas": 3,
+      "n_boxes": 3,
+      "exact_status": "OPTIMAL",
+      "exact_objective": 0.2118533977969583,
+      "alns_objective": 0.2118533977969583,
+      "absolute_gap": 0.0,
+      "relative_gap": 0.0,
+      "comparison_status": "PASS",
+      "benchmark_normalization": {
+        "ideal": {
+          "WTD": 0.0,
+          "Cmax_s": 0.0,
+          "total_energy_kwh": 0.0,
+          "n_trips": 1.0
+        },
+        "nadir": {
+          "WTD": 1.0,
+          "Cmax_s": 2495.5496154160455,
+          "total_energy_kwh": 4.039889118363298,
+          "n_trips": 3.0
+        },
+        "rho": 0.005
+      },
+      "exact_WTD": 0.0,
+      "exact_Cmax_s": 2088.2464662596676,
+      "exact_energy_kwh": 3.1846057879736778,
+      "exact_n_trips": 2,
+      "alns_WTD": 0.0,
+      "alns_Cmax_s": 2088.2464662596676,
+      "alns_energy_kwh": 3.1846057879736778,
+      "alns_n_trips": 2,
+      "alns_status": "PASS",
+      "alns_weight_profile": "balanced",
+      "alns_runtime_s": 0.6870765000057872,
+      "validator_status": "PASS",
+      "evaluated_structures": 93
+    },
+    {
+      "instance": "Small-2",
+      "n_service_areas": 3,
+      "n_boxes": 4,
+      "exact_status": "OPTIMAL",
+      "exact_objective": 0.1653796019425106,
+      "alns_objective": 0.1894080559927922,
+      "absolute_gap": 0.02402845405028159,
+      "relative_gap": 0.145292731195679,
+      "comparison_status": "PASS",
+      "benchmark_normalization": {
+        "ideal": {
+          "WTD": 0.0,
+          "Cmax_s": 0.0,
+          "total_energy_kwh": 0.0,
+          "n_trips": 1.0
+        },
+        "nadir": {
+          "WTD": 1.0,
+          "Cmax_s": 2866.9725500934887,
+          "total_energy_kwh": 5.861111083043017,
+          "n_trips": 4.0
+        },
+        "rho": 0.005
+      },
+      "exact_WTD": 0.0,
+      "exact_Cmax_s": 1873.4697880341996,
+      "exact_energy_kwh": 3.6551816496976164,
+      "exact_n_trips": 2,
+      "alns_WTD": 0.0,
+      "alns_Cmax_s": 2148.2464662596676,
+      "alns_energy_kwh": 3.4119487783821363,
+      "alns_n_trips": 2,
+      "alns_status": "PASS",
+      "alns_weight_profile": "balanced",
+      "alns_runtime_s": 0.6807051000068896,
+      "validator_status": "PASS",
+      "evaluated_structures": 573
+    },
+    {
+      "instance": "Small-3",
+      "n_service_areas": 5,
+      "n_boxes": 8,
+      "exact_status": "FEASIBLE",
+      "exact_objective": 0.24614830922424802,
+      "alns_objective": 0.1459461162519049,
+      "absolute_gap": NaN,
+      "relative_gap": NaN,
+      "comparison_status": "UNRESOLVED",
+      "benchmark_normalization": {
+        "ideal": {
+          "WTD": 0.0,
+          "Cmax_s": 0.0,
+          "total_energy_kwh": 0.0,
+          "n_trips": 1.0
+        },
+        "nadir": {
+          "WTD": 1.0,
+          "Cmax_s": 5693.372550093489,
+          "total_energy_kwh": 12.087023413644086,
+          "n_trips": 8.0
+        },
+        "rho": 0.005
+      },
+      "exact_WTD": 0.0,
+      "exact_Cmax_s": 2517.290518061747,
+      "exact_energy_kwh": 11.77205228066623,
+      "exact_n_trips": 6,
+      "alns_WTD": 0.0,
+      "alns_Cmax_s": 3213.2496154160453,
+      "alns_energy_kwh": 6.969990740763403,
+      "alns_n_trips": 3,
+      "alns_status": "PASS",
+      "alns_weight_profile": "balanced",
+      "alns_runtime_s": 0.8435406000062358,
+      "validator_status": "PASS",
+      "evaluated_structures": 451
+    }
+  ],
+  "multiseed_summary": {
+    "WTD": {
+      "best": 5953.7177499610625,
+      "median": 32479.757343998524,
+      "mean": 94042.99206293699,
+      "std": 159683.65093285055
+    },
+    "Cmax_s": {
+      "best": 9510.800249159249,
+      "median": 11865.67179299671,
+      "mean": 14073.198730363923,
+      "std": 7607.818674981358
+    },
+    "total_energy_kwh": {
+      "best": 70.32272327490749,
+      "median": 81.54200016635059,
+      "mean": 82.24550916315232,
+      "std": 6.552827116720144
+    },
+    "n_trips": {
+      "best": 25.0,
+      "median": 29.0,
+      "mean": 28.625,
+      "std": 1.79843682124227
+    }
+  },
+  "normalization_anchors": [
+    {
+      "anchor_name": "Q2_single_stop",
+      "WTD": 291892.3875050912,
+      "Cmax_s": 33920.9634517862,
+      "total_energy_kwh": 95.35881824993719,
+      "n_trips": 31.0,
+      "n_multistop_trips": 0.0,
+      "max_stops": 1.0,
+      "mean_stops_per_trip": 1.0,
+      "runtime_s": 3.1534943000006024
+    },
+    {
+      "anchor_name": "warmup_cheapest-delta",
+      "WTD": 51373.302457842234,
+      "Cmax_s": 10064.070393305345,
+      "total_energy_kwh": 77.27429885832598,
+      "n_trips": 28.0,
+      "n_multistop_trips": 5.0,
+      "max_stops": 2.0,
+      "mean_stops_per_trip": 1.1785714285714286,
+      "runtime_s": 3.0570959000033326,
+      "anchor_role": "min-total_energy_kwh min-n_trips"
+    },
+    {
+      "anchor_name": "warmup_energy-aware",
+      "WTD": 7413.192535394137,
+      "Cmax_s": 9799.538476712547,
+      "total_energy_kwh": 80.87698306860746,
+      "n_trips": 29.0,
+      "n_multistop_trips": 7.0,
+      "max_stops": 2.0,
+      "mean_stops_per_trip": 1.2413793103448276,
+      "runtime_s": 2.1299677999923006,
+      "anchor_role": "min-WTD min-Cmax_s"
+    },
+    {
+      "anchor_name": "warmup_regret-2",
+      "WTD": 24649.964058362526,
+      "Cmax_s": 13579.299291929718,
+      "total_energy_kwh": 84.67436444324909,
+      "n_trips": 31.0,
+      "n_multistop_trips": 4.0,
+      "max_stops": 2.0,
+      "mean_stops_per_trip": 1.1290322580645162,
+      "runtime_s": 3.059649599978002
+    },
+    {
+      "anchor_name": "warmup_new-trip",
+      "WTD": 59430.63532617185,
+      "Cmax_s": 15458.970393305344,
+      "total_energy_kwh": 109.51414164475945,
+      "n_trips": 43.0,
+      "n_multistop_trips": 0.0,
+      "max_stops": 1.0,
+      "mean_stops_per_trip": 1.0,
+      "runtime_s": 3.0446342000213917
+    }
+  ]
+}

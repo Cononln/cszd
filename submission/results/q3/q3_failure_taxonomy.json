@@ -1,0 +1,59 @@
+{
+  "counts": {
+    "TRANSPORT_MASS_VIOLATION": 2,
+    "TRANSPORT_ROUTE_ENERGY_INCONSISTENCY": 2,
+    "TRANSPORT_VOLUME_VIOLATION": 2
+  },
+  "candidate_failures": [
+    {
+      "candidate_id": "C2A-SINGLE-T009-B",
+      "state_signature": "9b43e48f08e0507d6f2ef3bfb7c9dc4c06b90f15e6445f52d40d841dd37b3576",
+      "evidence": [
+        {
+          "category": "TRANSPORT_MASS_VIOLATION",
+          "source_check": "mass_pass",
+          "source_value": false,
+          "constraint_family": "transport"
+        },
+        {
+          "category": "TRANSPORT_VOLUME_VIOLATION",
+          "source_check": "volume_pass",
+          "source_value": false,
+          "constraint_family": "transport"
+        },
+        {
+          "category": "TRANSPORT_ROUTE_ENERGY_INCONSISTENCY",
+          "source_check": "route_energy_recomputed",
+          "source_value": false,
+          "constraint_family": "transport"
+        }
+      ],
+      "failure_reason": null
+    },
+    {
+      "candidate_id": "C2B-COMB-04",
+      "state_signature": "e0df182e457e2ffd8080bd2dff869b38a2d76163e5dd28e6c389e6b321801e07",
+      "evidence": [
+        {
+          "category": "TRANSPORT_MASS_VIOLATION",
+          "source_check": "mass_pass",
+          "source_value": false,
+          "constraint_family": "transport"
+        },
+        {
+          "category": "TRANSPORT_VOLUME_VIOLATION",
+          "source_check": "volume_pass",
+          "source_value": false,
+          "constraint_family": "transport"
+        },
+        {
+          "category": "TRANSPORT_ROUTE_ENERGY_INCONSISTENCY",
+          "source_check": "route_energy_recomputed",
+          "source_value": false,
+          "constraint_family": "transport"
+        }
+      ],
+      "failure_reason": null
+    }
+  ]
+}

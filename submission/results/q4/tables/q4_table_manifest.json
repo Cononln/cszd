@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "source": "q4_final.json",
+  "source_sha256": "70361a3df8d37bcc01c8d476b8f1b8a55f0a3d45aaa2127f64b93ea3e9cb61d3",
+  "artifacts": [
+    "Q4_Table_01_SelectedConfigurations.csv",
+    "Q4_Table_02_GroupResources.csv",
+    "Q4_Formal_Tables.md"
+  ],
+  "table_count": 2
+}

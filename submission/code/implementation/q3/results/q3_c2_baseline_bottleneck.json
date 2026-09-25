@@ -1,0 +1,195 @@
+{
+  "transport_validation": {
+    "phase": "Q2-E",
+    "status": "PASS",
+    "checks": {
+      "all_boxes_delivered_once": true,
+      "missing_boxes": true,
+      "duplicate_boxes": true,
+      "no_split_boxes": true,
+      "unknown_boxes": true,
+      "mass_pass": true,
+      "volume_pass": true,
+      "energy_pass": true,
+      "return_reserve_pass": true,
+      "route_energy_recomputed": true,
+      "delivery_recomputed": true,
+      "first_deadlines_pass": true,
+      "medical_deadlines_pass": true,
+      "uav_type_pass": true,
+      "uav_overlap_zero": true,
+      "battery_type_pass": true,
+      "battery_count_pass": true,
+      "battery_overlap_zero": true,
+      "soc_pass": true,
+      "charge_pass": true,
+      "charge_before_reuse_pass": true,
+      "solver_validator_consistent": true
+    },
+    "metrics": {
+      "WTD": 6228.862797380436,
+      "Cmax_s": 9612.3086367231,
+      "total_energy_kwh": 70.11816756700782,
+      "n_trips": 25.0
+    },
+    "solver_metrics": {
+      "WTD": 6228.862797380436,
+      "Cmax_s": 9612.3086367231,
+      "total_energy_kwh": 70.1181675670078,
+      "n_trips": 25.0,
+      "total_operation_time_s": 45796.642832170495
+    },
+    "n_trips": 25,
+    "n_boxes": 80,
+    "delivered_records": 80,
+    "solver_status": "WTD:OPTIMAL;Cmax:OPTIMAL",
+    "solver_stage_statuses": {
+      "WTD": "OPTIMAL",
+      "Cmax": "OPTIMAL"
+    },
+    "solver_grid_metrics": {
+      "WTD_stage1_grid": 6228.2,
+      "WTD_stage2_grid": 6228.2,
+      "WTD_stage1_locked": 1.0,
+      "Cmax_grid_s": 9612.4
+    },
+    "battery_reuse_audit": [
+      {
+        "battery_id": "BAT-A-06",
+        "previous_trip": "T001",
+        "previous_charge_end": 2192.508647086876,
+        "next_trip": "T019",
+        "next_start": 6694.3,
+        "margin_s": 4501.791352913124,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-C-03",
+        "previous_trip": "T003",
+        "previous_charge_end": 4511.704076210021,
+        "next_trip": "T009",
+        "next_start": 4511.8,
+        "margin_s": 0.09592378997876949,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-C-02",
+        "previous_trip": "T005",
+        "previous_charge_end": 6021.087656119327,
+        "next_trip": "T011",
+        "next_start": 6021.2,
+        "margin_s": 0.11234388067259715,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-B-04",
+        "previous_trip": "T018",
+        "previous_charge_end": 4515.989590249282,
+        "next_trip": "T006",
+        "next_start": 5092.4,
+        "margin_s": 576.4104097507179,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-C-01",
+        "previous_trip": "T013",
+        "previous_charge_end": 2892.7854827440206,
+        "next_trip": "T007",
+        "next_start": 3025.8,
+        "margin_s": 133.01451725597963,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-A-04",
+        "previous_trip": "T012",
+        "previous_charge_end": 2191.8995403542476,
+        "next_trip": "T008",
+        "next_start": 2192.0,
+        "margin_s": 0.10045964575238031,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-A-01",
+        "previous_trip": "T014",
+        "previous_charge_end": 4090.131096995131,
+        "next_trip": "T024",
+        "next_start": 4726.8,
+        "margin_s": 636.6689030048692,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-A-01",
+        "previous_trip": "T024",
+        "previous_charge_end": 7907.653337796596,
+        "next_trip": "T016",
+        "next_start": 7912.8,
+        "margin_s": 5.146662203404048,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-B-03",
+        "previous_trip": "T021",
+        "previous_charge_end": 3783.427468054169,
+        "next_trip": "T015",
+        "next_start": 3794.2,
+        "margin_s": 10.772531945830906,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-B-02",
+        "previous_trip": "T022",
+        "previous_charge_end": 2966.7344167506444,
+        "next_trip": "T025",
+        "next_start": 3060.6,
+        "margin_s": 93.8655832493555,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-B-02",
+        "previous_trip": "T025",
+        "previous_charge_end": 6743.045117637893,
+        "next_trip": "T017",
+        "next_start": 7328.4,
+        "margin_s": 585.3548823621068,
+        "pass": true
+      },
+      {
+        "battery_id": "BAT-B-01",
+        "previous_trip": "T023",
+        "previous_charge_end": 5387.832821388201,
+        "next_trip": "T020",
+        "next_start": 5754.5,
+        "margin_s": 366.6671786117986,
+        "pass": true
+      }
+    ]
+  },
+  "relay": {
+    "decoder_status": "PASS",
+    "baseline_status": "INFEASIBLE_PROVEN_ON_DISCRETE_CANDIDATE_SET",
+    "solver_status": "INFEASIBLE",
+    "reason": "joint_solver_infeasible",
+    "metrics": {
+      "demand_count": 19,
+      "candidate_count": 135,
+      "service_option_count": 990,
+      "candidate_coverable_count": 19,
+      "runtime_s": 19.586583000025712
+    }
+  },
+  "bottleneck": {
+    "baseline_status": "INFEASIBLE_PROVEN_ON_DISCRETE_CANDIDATE_SET",
+    "decoder_status": "PASS",
+    "solver_status": "INFEASIBLE",
+    "reason": "joint_solver_infeasible",
+    "blind_interval_count": 19,
+    "blind_duration_s": 13934.25474764146,
+    "blind_peak_temporal_concurrency": 3,
+    "candidate_count": 135,
+    "service_option_count": 990,
+    "relay_uav_capacity": 2,
+    "energy_component_capacity": 6,
+    "horizon_s": 9216.42317828117,
+    "primary_bottleneck": "B3_RELAY_UAV_CAPACITY"
+  }
+}

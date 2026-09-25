@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "entries": [
+    {
+      "question": "Q1",
+      "branch": "q4/q4-formal",
+      "formal_result_commit": "02d5ae893b5c810a57212d3dbbf2f105dee37350",
+      "revision_recorded_in_final": null,
+      "revision_recorded_or_file_commit": "02d5ae893b5c810a57212d3dbbf2f105dee37350",
+      "exists_in_repository": true
+    },
+    {
+      "question": "Q2",
+      "branch": "q4/q4-formal",
+      "formal_result_commit": "d248152c757ced3f124d3319c2953798121f2243",
+      "revision_recorded_in_final": null,
+      "revision_recorded_or_file_commit": "d248152c757ced3f124d3319c2953798121f2243",
+      "exists_in_repository": true
+    },
+    {
+      "question": "Q3",
+      "branch": "q4/q4-formal",
+      "formal_result_commit": "53a55b3cbcbe6ebe3e5a1bca209e5925ea787c48",
+      "revision_recorded_in_final": "c7880a36e1f5e9efb39f0d6d6be9d38b9638d80a",
+      "revision_recorded_or_file_commit": "c7880a36e1f5e9efb39f0d6d6be9d38b9638d80a",
+      "exists_in_repository": true
+    },
+    {
+      "question": "Q4",
+      "branch": "q4/q4-formal",
+      "formal_result_commit": "1990834bf0b785c8576f86a81017b26dcf177dc1",
+      "revision_recorded_in_final": "565e542a7ff5c3ea1cef10b27015b4c96f9300c1",
+      "revision_recorded_or_file_commit": "565e542a7ff5c3ea1cef10b27015b4c96f9300c1",
+      "exists_in_repository": true
+    },
+    {
+      "question": "PACKAGE",
+      "branch": "q4/q4-formal",
+      "freeze_commit": "1990834bf0b785c8576f86a81017b26dcf177dc1"
+    }
+  ]
+}

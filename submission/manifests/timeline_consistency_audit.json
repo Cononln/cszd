@@ -1,0 +1,11 @@
+{
+  "q2_transport_cmax_s": 9612.3086367231,
+  "q3_transport_cmax_s": 23738.870393305344,
+  "q3_joint_cmax_s": 24147.775014499995,
+  "q4_max_group_workload_s": 63299.55921087558,
+  "checks": {
+    "q3_joint_not_before_transport": true,
+    "q4_workload_includes_q3_joint": true,
+    "units_are_seconds": true
+  }
+}

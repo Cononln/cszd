@@ -1,0 +1,75 @@
+{
+  "phase": "Q1-1",
+  "scope": "基础物理模型审查；未进行最大安全载荷反解和组批",
+  "checks": {
+    "data_nodes_16": true,
+    "data_service_areas_15": true,
+    "dem_path_samples_finite": true,
+    "cruise_height_is_dem_plus_50m": true,
+    "climb_descent_nonnegative": true,
+    "return_geometry_reciprocal": true,
+    "payload_range_positive": true,
+    "payload_range_nonincreasing": true,
+    "payload_range_empty_endpoint": true,
+    "payload_range_full_endpoint": true,
+    "return_leg_payload_zero": true,
+    "return_leg_energy_matches_q0": true,
+    "energy_nonnegative": true,
+    "reserve_limit_positive": true,
+    "full_load_energy_finite": true,
+    "box_data_nonempty": true,
+    "box_columns_present": true,
+    "all_checks_pass": true
+  },
+  "n_service_areas": 15,
+  "n_energy_rows": 45,
+  "failures": [],
+  "full_load_summary": {
+    "total": 45,
+    "feasible": 39,
+    "infeasible": 6
+  },
+  "full_load_infeasible_pairs": [
+    {
+      "sid": "S002",
+      "gtype": "C",
+      "full_payload_kg": 80.0,
+      "full_load_margin_kwh": -0.937858029610811
+    },
+    {
+      "sid": "S003",
+      "gtype": "C",
+      "full_payload_kg": 80.0,
+      "full_load_margin_kwh": -0.9766863791857467
+    },
+    {
+      "sid": "S004",
+      "gtype": "C",
+      "full_payload_kg": 80.0,
+      "full_load_margin_kwh": -1.3102421963705115
+    },
+    {
+      "sid": "S008",
+      "gtype": "B",
+      "full_payload_kg": 30.0,
+      "full_load_margin_kwh": -0.08233296543826318
+    },
+    {
+      "sid": "S008",
+      "gtype": "C",
+      "full_payload_kg": 80.0,
+      "full_load_margin_kwh": -1.6261111048526757
+    },
+    {
+      "sid": "S012",
+      "gtype": "C",
+      "full_payload_kg": 80.0,
+      "full_load_margin_kwh": -0.9926418821072076
+    }
+  ],
+  "constants": {
+    "cruise_clearance_m": 50.0,
+    "ops_height_o01_m": 0.0,
+    "ops_height_service_m": 30.0
+  }
+}

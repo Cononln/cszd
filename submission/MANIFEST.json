@@ -1,0 +1,3521 @@
+{
+  "status": "PASS",
+  "file_count": 585,
+  "self_hash_files_excluded": [
+    "MANIFEST.json",
+    "MANIFEST.md",
+    "SHA256SUMS.txt"
+  ],
+  "files": [
+    {
+      "file": ".cszd_submission_package",
+      "size": 41,
+      "sha256": "0ea1a34a6633ed0c239a7363536aaf4b3f0ee77a59c26e29e847f00ed52220c7",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/数字高程模型数据（DEM）/镇龙乡及周边30米DEM.mat",
+      "size": 6746494,
+      "sha256": "c68703e0cc8f94f4bd52ff6e9974b66a2dae33865f0723ad71c04b6694bf4fbf",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/数字高程模型数据（DEM）/镇龙乡及周边30米DEM.tif",
+      "size": 7867096,
+      "sha256": "741fe6de0b2bcaffd0f4007f574ee698d46197094f52cc954b532c4f90fc7c03",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/村镇点位/镇龙乡及周边村镇点位.csv",
+      "size": 9736,
+      "sha256": "e08b6b3b5283a3c9ba5f898b5b7c54badddc786c58ec415dbd1035b3ddbc9759",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/村镇点位/镇龙乡及周边村镇点位.mat",
+      "size": 119280,
+      "sha256": "61419e92447ada38c56b7f64f04e4aada2eb1ed076ae33e95f1cbc69f3514beb",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/水体（面）/镇龙乡及周边水体.csv",
+      "size": 283376,
+      "sha256": "a3dd9377bfc82656e376a3a6f52ef9019ed76117b8df1841d1409a253790df81",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/水体（面）/镇龙乡及周边水体.mat",
+      "size": 179705,
+      "sha256": "b79df14bdc0b22811f5c219897a66775d8879a93c4a865e455d8c43ab099b50a",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/水系（线）/镇龙乡及周边水系.csv",
+      "size": 301794,
+      "sha256": "e7d26a3cdf26e845b63d8c4942b94f35fd38f71dc63b07655ca8adf15013ba2e",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/水系（线）/镇龙乡及周边水系.mat",
+      "size": 179598,
+      "sha256": "b89f4f294bf771962676009fa9044f46ef26a06613fb6f91e2c6f9ccd430f8e8",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/道路/镇龙乡及周边道路.csv",
+      "size": 1444497,
+      "sha256": "019c720d07c023cb7ffeb25952bf6cd1ffcf4e7ffec9e1833e162108965f7ec9",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡及周边地理数据/道路/镇龙乡及周边道路.mat",
+      "size": 399882,
+      "sha256": "c868717284d8aee60157e3bc9b20e18a81b26fde3d75fc7d80317ef877af9849",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡地理空间数据说明.pdf",
+      "size": 85812,
+      "sha256": "6d1522c6832a5d91a108dae0d07954845025c0dabd44af8ee78c7860d7c405e4",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/data/raw/geo/镇龙乡地理空间数据/镇龙乡地理空间详情地图.html",
+      "size": 4701769,
+      "sha256": "af1ae5cb0d3a843eb5b8a4adaea36dff6689ce2020061b1a234b71fe3a39b7ad",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/data/raw/tabular/无人机应急物资运输基础数据/中继无人机数据.xlsx",
+      "size": 11082,
+      "sha256": "be52643ff29419233e6a141dca03a04160a8af551cab36d8c49b51bb836bea04",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/data/raw/tabular/无人机应急物资运输基础数据/物资需求与配送时限.xlsx",
+      "size": 17474,
+      "sha256": "5a3346159ceddcf585859d270b8f62114b388a1f737fbe64ffde0ee1fdc8170a",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/data/raw/tabular/无人机应急物资运输基础数据/调度中心与服务区.xlsx",
+      "size": 11017,
+      "sha256": "541a7af1ded08c9a3ff448480332cb5f6a54902f0afa6e9bcd50c1d2b2b34e38",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/data/raw/tabular/无人机应急物资运输基础数据/运输无人机数据.xlsx",
+      "size": 11746,
+      "sha256": "9296a657c07e042afba6aeea7999665d9cd24e00b592fd6c269de6e338480dcb",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/data/raw/tabular/无人机应急物资运输基础数据/通信链路参数.xlsx",
+      "size": 10485,
+      "sha256": "1860d153199e7ae460ba36e83b673374e640e19de91ea167f2877271001f5f81",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/absolute_path_audit.md",
+      "size": 199,
+      "sha256": "f7ff530f3e02dd22c95bda2659dd64f07b2c3b79d95b26a4866c39229da66a58",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/audit_project_final.py",
+      "size": 37675,
+      "sha256": "3c0ef2b2a95e497988d652bb3a726b47ed0b209a04d8ebf5d8503bbf498c9a11",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/cross_question_interface_audit.json",
+      "size": 782,
+      "sha256": "2a91054ae9e5b591ebd16839111315ad16772dc4204e0864a604a952f7bed554",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/energy_consistency_audit.json",
+      "size": 280,
+      "sha256": "ef352f1c15232bc1cf7d975237b07d8e9ae33bc654c5873d9b37ef46b12a7c1c",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/environment_manifest.md",
+      "size": 1119,
+      "sha256": "48fe9176b6a3397d16054ab0ba0b3ad4e0b54d690c93b974a16fd91fd72a34fb",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/final_figure_manifest.json",
+      "size": 56372,
+      "sha256": "a8cbab1944a3138d9e0d6ff45b5d879683887a7b62da9789998f0da4f5c81c70",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/final_table_manifest.json",
+      "size": 2995,
+      "sha256": "1a5de359ff8114db13552acacdca37b012597b5fef47cdcee98e1fb41b516237",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/formal_source_manifest.json",
+      "size": 2536,
+      "sha256": "8ef6cef4e2ed73a8e99cdb16593bc8d6f382db6f2009b149a1533b4c7a5976c3",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/freeze_status_manifest.json",
+      "size": 509,
+      "sha256": "c0455198ff5ef5ee13ed6efbf2f246ecd79b33d82ed815bd707bd5d6567af791",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/git_revision_manifest.json",
+      "size": 1524,
+      "sha256": "48c34fd1e89efc8999dbb05943fc91ba209c86d7185adddfca399cbbb01ad2f1",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/global_parameter_audit.json",
+      "size": 496,
+      "sha256": "65346f38df5cfb4c028b353bdd83477d6af9078aebb2b529090d5994ebbaac77",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/hard_constraint_matrix.csv",
+      "size": 4354,
+      "sha256": "6f4467dc1a5bc0ef7f96001c69d8b69ec71c205a281ab4eb72aba53fba4e0106",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/id_consistency_audit.csv",
+      "size": 587,
+      "sha256": "8b4ef245f5fd25399ba5d39659185e9841b0a2685b98b18f930e7f521739556c",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/input_data_manifest.json",
+      "size": 5717,
+      "sha256": "62b56491441776067e33b9da4febfa33b36e4e26f8ead74e48c489293debbd90",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/numeric_format_policy.md",
+      "size": 260,
+      "sha256": "aeaaa5a78eb8a5a89aa34301f74e50f0648e3a1901d0fd7b2075ed3a10a6eceb",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/objective_definition_audit.md",
+      "size": 893,
+      "sha256": "e84660954a9ed1d1926247d2816c33cd49fa0b06bba5e3309af14361b0ea0aee",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/PROJECT_FINAL_AUDIT.json",
+      "size": 803,
+      "sha256": "d1cc3d2ca9d21191e077b7b1534799aa77820fb9f4971f2cbed51f591bd2fabb",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/PROJECT_FINAL_AUDIT.md",
+      "size": 631,
+      "sha256": "5c551dd92878531b7182af92d3dd3b99d871548ffcd67adda9523e572383bf45",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/repo_inventory.json",
+      "size": 210797,
+      "sha256": "955a35874006da4ecaef18e0d69d5b478f4b27c593492ff961619d566b283c10",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/repo_inventory.md",
+      "size": 187,
+      "sha256": "62fbf777b221d2f0acf223bf5a6a9fcb2c02ef3e7a36033ef56c633620456372",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/stale_artifact_report.json",
+      "size": 3008,
+      "sha256": "3c34a46bcad0572353ccf42c05abd8e6a4324c5e8d101e759f61bfc21bc17d1e",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/timeline_consistency_audit.json",
+      "size": 325,
+      "sha256": "c8054697a0dd48cf5aad04383af22341ac4cbef386c8e1e50b12a0a0102806d5",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/final_audit/validator_independence_audit.md",
+      "size": 732,
+      "sha256": "903834ebc450662b64b9ec692bb32ec1bf4b8b841c44f7252d0007ae0af1d245",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/code/common/__init__.py",
+      "size": 116,
+      "sha256": "7d84cf49b5a6c3559829c8eef5f2ae113cf7a50406707fed225bd3ee616528a7",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/code/common/config.py",
+      "size": 2521,
+      "sha256": "1e1efe328f06d6b85d6f2822c8303847f9b59641cff2acde4ee2d0953ea58287",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/code/common/data.py",
+      "size": 8037,
+      "sha256": "420bae53414e8bfa3ea8693d3d3a2b7b32ee5e61ca50b4ca38091798c5bbdb05",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/code/common/dem.py",
+      "size": 6004,
+      "sha256": "cc801f50ad260a6198260073a7a36a5b78797238015a4c680326169ea03cdadb",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/code/common/physics.py",
+      "size": 11005,
+      "sha256": "d0c745bc7061576e8cafb6ac23a45c9d271aa41076fa02f1372ac179ba509303",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/code/common/route.py",
+      "size": 5889,
+      "sha256": "fdec7d5cc99c4b691005ee6c4f16ab4f7f84259235ae49e3681237b602380aff",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/code/q1/audit_physics.py",
+      "size": 18091,
+      "sha256": "bc1917413f6681c4468b84e0aad310448553ce44bbe7cc30268a572a8cb23b5d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/code/q1/audit_q13_inputs.py",
+      "size": 7743,
+      "sha256": "7fcdbd0c5650b478c4c3ddcc1acebf0248ffa9c790b62967917f8fc514a7ca23",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/code/q1/evaluate_q1.py",
+      "size": 18251,
+      "sha256": "9514ce9c36de399e282ba26f8392efeff82a1ccad223d6d7a5c8c62f9f70a949",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/code/q1/plot_q1_results.py",
+      "size": 57045,
+      "sha256": "8927888d179a2183ca796d3b0da5350bff3e5121b06df890e4d3fe3d08116baa",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/code/q1/q1_batch.py",
+      "size": 9613,
+      "sha256": "7ad96c7a24367bc11f2007dde53258bf5f7e26c5aa74dfba1f3c97cbab25aab9",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/code/q1/solve_capacity.py",
+      "size": 19805,
+      "sha256": "0b6287ebb2bc78a4fd97d9ae26c9f92a34d584d75a8f9eae04ae8de2bef6f2e6",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/code/q1/solve_q1.py",
+      "size": 14874,
+      "sha256": "7749dd80bd6218648c9d1d4af2f2eb9db361cc2b5dad57a4dd15d67c6aec99b9",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/README.md",
+      "size": 1251,
+      "sha256": "3f4404d4796aeacce2ce0de7d8684b0c548da718ef67ff819e6f60eaafccc7da",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/requirements.txt",
+      "size": 67,
+      "sha256": "e0e8186fee35050b098586051bf4519b4697fff789ba885ef7f354351d9d1dc2",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_01_capacity_map.pdf",
+      "size": 26306,
+      "sha256": "f9a78b29a1be3093c1b7300099d0e6855b4fba97408da987ce40115fef5186a8",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_01_capacity_map.png",
+      "size": 425743,
+      "sha256": "caee520625194f63f83b77dd6f9a131e9d3677d2e3442927581766b015106d05",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_01_capacity_map.svg",
+      "size": 61835,
+      "sha256": "94ef847179b9106c641feaf4ed4da78153fee1e57002fc0d01783663a0edf68b",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_02_flight_envelope.pdf",
+      "size": 22138,
+      "sha256": "9cd46fdcda7248df3c2e80621ce748e1e470c5d1c3b7603b7faba0b7025d8c73",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_02_flight_envelope.png",
+      "size": 404863,
+      "sha256": "cd859b8196a9e9ff8aca3fb153d10f52539307435d4076fbe3f5984b348fe973",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_02_flight_envelope.svg",
+      "size": 36137,
+      "sha256": "a82b1497743dc06de53064ab0cabd7d6eb7d88eb7bed6e5ccf1ab3de6761b93d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_03_batch_plan.pdf",
+      "size": 18850,
+      "sha256": "c5ac2ec79350b79580bceef9c0db698cc0868e9a5d961f68686d5df448250288",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_03_batch_plan.png",
+      "size": 307542,
+      "sha256": "959e162d71b49f1600c18e453663dc0aa641eba45deb9ca9ebc4d62c863861f2",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_03_batch_plan.svg",
+      "size": 37521,
+      "sha256": "942281c1572b4f2e1ef7138e22089160350fc7d53f7c57ee4cd5766af10e06f5",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_04_service_allocation.pdf",
+      "size": 16364,
+      "sha256": "2afb37a671d7779211bcea50dae4e4e85b74d8ed938b2ae263b2ed4893b9ed55",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_04_service_allocation.png",
+      "size": 277976,
+      "sha256": "feddbb74779cbbe8d8a405b065f80b40d8de805a5ba55f0cfe6d6d35466369f6",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_04_service_allocation.svg",
+      "size": 23851,
+      "sha256": "d7220f8b573ad9c61b63d0227591305f77fbf3e20dae285a77f798148c279ad9",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_05_method_comparison.pdf",
+      "size": 16607,
+      "sha256": "dd7b1c441c81176942c116edaa5370b17ae7de917d9b6bc0afb3c00229d8da42",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_05_method_comparison.png",
+      "size": 205748,
+      "sha256": "fc3873a84dcba6681ef8accce64a6c405690af12614b2aff193eef7481354ef7",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_05_method_comparison.svg",
+      "size": 26644,
+      "sha256": "d918342def01d281f49f5620cbcc94e61f7168bb5fc3e4c98afc9713967bc8f1",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_06_utilization_tradeoff.pdf",
+      "size": 16867,
+      "sha256": "f1a92627ca31742bc00d496f519531756b134706f41ae4834b51862fb447caed",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_06_utilization_tradeoff.png",
+      "size": 273692,
+      "sha256": "9de7f588591e2fc13a233fcaf3328b0882bdb5098f560c7fe755de77f2f81d3b",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_06_utilization_tradeoff.svg",
+      "size": 35937,
+      "sha256": "0469921bf058b9cb19fa98291e1111107d9e6400e161f5d22a885f1857fa01be",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_07_energy_margin.pdf",
+      "size": 15133,
+      "sha256": "bd0397d91ba93e492bdc07975ee42ff1069b4ead27ba3d103e563e5848d74e63",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_07_energy_margin.png",
+      "size": 245369,
+      "sha256": "28800651d1361f49f8513d52f12cc934fbe48e721b4b67c07d7f202dcf47d3b9",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_07_energy_margin.svg",
+      "size": 22992,
+      "sha256": "cb4edd5f997170125c46d0d878f2b4f3283d3c94f945e2a41bfd8973e7855e3c",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_08_service_tradeoff.pdf",
+      "size": 23126,
+      "sha256": "28ba2244cb95fa57a03cfc8df19c3afdf4a0cba8fdaf1d901d0130c3eb3f40f1",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_08_service_tradeoff.png",
+      "size": 250178,
+      "sha256": "c96d7d6c18e4023828a8c40dca252940db19a90b469ee4f055823c982ac10a31",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_08_service_tradeoff.svg",
+      "size": 28746,
+      "sha256": "e1b1598bef2975bec4d0192b7c013be036f650d0b524a08a5247297fdee6f718",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_09_sensitivity.pdf",
+      "size": 15186,
+      "sha256": "659f9be8186f90a9af7d5d10b92d71328afee1737f91e766b29280097d64642c",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_09_sensitivity.png",
+      "size": 101478,
+      "sha256": "bba5cb794ae209960233c1119f99fcff303bebc72c4936aa215eae29f7670ec0",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_09_sensitivity.svg",
+      "size": 7753,
+      "sha256": "4baf7bf9eadf5d58c729cb198e2041b25f7a8ca01b3acc652ea8c9c01fd8ab18",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_10_lexicographic_stages.pdf",
+      "size": 12701,
+      "sha256": "b5879629fbeea15f6bd4555efb353cbf231c427db2bbd654d7255773a252153e",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_10_lexicographic_stages.png",
+      "size": 193975,
+      "sha256": "bdde3355d5f115a7d14d73e909454c398d01add435f9b63d2290be0bfa79dd09",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_10_lexicographic_stages.svg",
+      "size": 17319,
+      "sha256": "4cf0db4f82e88e92dd60513e4fd5d8eda6b3c82a1404547fba9fc9bcdb122e42",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_S2_solver_cost.pdf",
+      "size": 19108,
+      "sha256": "d68a6a530d94c0913b7b27e50b75b7e4555c027fb4f826c3c7c41b032f186d6e",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_S2_solver_cost.png",
+      "size": 140265,
+      "sha256": "506fe049bb1392dfdd46ed5f706986993606b39cb5f5734536eb16c83dc9efd2",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/figures/Fig_Q1_S2_solver_cost.svg",
+      "size": 28999,
+      "sha256": "913068392d003ad69c4adb7d9d5a9ea22ac65ebefa0c962eb2745f6bd92a24e0",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/q1_3a_audit.json",
+      "size": 2983,
+      "sha256": "a6958091dc3d3342e776c60dcac4603424379b8bad42b33a920f2cdc49705681",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/q1_3a_audit_report.md",
+      "size": 790,
+      "sha256": "5c7b4a2e9376903dc265b824ffe1ef3687d939bcfbc8ea8a941be7ba3c435a21",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/q1_capacity.csv",
+      "size": 8867,
+      "sha256": "991766832648c67755c87707bf6a6b30ef00c31319558ce1604580df06c74b69",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/q1_capacity.json",
+      "size": 7521,
+      "sha256": "bcf5b471078f70cab52a5baacf974e16f2e39fc0f91639c00edb1357ec3990fa",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/q1_capacity_report.md",
+      "size": 8932,
+      "sha256": "db01969a70cb67aa61d3cb6e327cb02a2cc339403506f4491788b844b00a6139",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/q1_final.json",
+      "size": 2624,
+      "sha256": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/q1_final_report.md",
+      "size": 2732,
+      "sha256": "953af8f2c1408132376f1389a1df339b69ba175f7550f31e32d27e37bd38df19",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/q1_lexicographic_stages.csv",
+      "size": 209,
+      "sha256": "2984b11ba0a48729d0a8d01638f55a486d01cd2456e03e0649ee071c346a643d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/q1_method_comparison.csv",
+      "size": 462,
+      "sha256": "1f76ad9d355153eac67b51b920da40d101dd4130b89dafc199da338292bc7253",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/q1_method_times.json",
+      "size": 147,
+      "sha256": "67edab88e21b21fc258354e3a343c37c94f98d4120c9e29662c9ea9acc9e892d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/q1_physics_audit.csv",
+      "size": 3308,
+      "sha256": "710ebbdd664c0119c4a8940e6ef1f9ad0f10b2d58972115502ca41cf55215899",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/q1_physics_audit.json",
+      "size": 1972,
+      "sha256": "2ba93772933bcc02c61e1ea84aecd4567af98c46ee92e103afc273e86cd2cc7e",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/q1_physics_audit_report.md",
+      "size": 3042,
+      "sha256": "e65eca2d5f00601da26102d1b32d1c8fc3dbc8786fd2aee98b1e95641e311681",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/q1_physics_energy_checks.csv",
+      "size": 13249,
+      "sha256": "42b38e27af9896baeacd243fa31a968e4c441a78d4daf400b8909174fdd07891",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/q1_service_summary.csv",
+      "size": 1602,
+      "sha256": "5f229524c0983b5520f1996d8ee57ebc6f1e6a5677fcf409ba4ec90c232d79e2",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/q1_solution_boxes.csv",
+      "size": 5487,
+      "sha256": "636c1a06e9cf764f94b4a5f2dff62a720918c353ad11ee0b95d829d544705280",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/q1_solution_trips.csv",
+      "size": 5506,
+      "sha256": "aa6ba6616a6b5e9d02a4453184962a2ccc65c8e73531f002367f00e39b3ba83a",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q1/results/q1_solver_status.csv",
+      "size": 2081,
+      "sha256": "a54071741035a2ca207cc68157d61bfa40062f49c76c5f8130881c514c6f6f3a",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/code/q2/__init__.py",
+      "size": 236,
+      "sha256": "11cb1cac9c2ad2005e23ed0ea683c72d973eddbdd16c51795983b8c69e8cbe06",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/code/q2/alns_solver.py",
+      "size": 28648,
+      "sha256": "46da909ba05e7d0becc7f14e16b1bfc7c8ede5af4421b67455d052d8fc3c2028",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/code/q2/audit_q2_a.py",
+      "size": 5744,
+      "sha256": "0c4af64f2392f6d8d8e33868bda583fabb7e88c3f47112bee47a63fc5bf52ecf",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/code/q2/audit_q2_b.py",
+      "size": 5140,
+      "sha256": "498f5404adadd571dc35406fdc11f98914da6d2c492204a5395b3ff82b8c7d02",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/code/q2/baselines.py",
+      "size": 1528,
+      "sha256": "eb8aa7bc1ce2102b246ce1c1ad07491df6d0cc8a0c79e6517a15dd5d108adc1d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/code/q2/deadlines.py",
+      "size": 2395,
+      "sha256": "8cb9d2aed41ba4356fa4b49436eddde58122439cdcd3c842a5e3cc2b0b324236",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/code/q2/exact_benchmark.py",
+      "size": 12784,
+      "sha256": "e33f7da02104a213e9781510207ad227e4a5bf7206b600047a31915a7d895394",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/code/q2/local_search.py",
+      "size": 557,
+      "sha256": "f30d4e7824244f364c23e4555289f6b04b4fa7933526e6b438161ba494811581",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/code/q2/models.py",
+      "size": 5511,
+      "sha256": "a0a7a890a1b40dbb21de1c2de24317fb92cffe465301a69812f0995c1f29a229",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/code/q2/normalization.py",
+      "size": 2194,
+      "sha256": "72306827e57c4614200d3ec90519353cc474a7a37d5d0d23546532101def81c0",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/code/q2/operators_destroy.py",
+      "size": 1474,
+      "sha256": "80d1059b9a3ce6821c836e5bf5e810f3b888065fdc71126fc118e8e9e96f9453",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/code/q2/operators_repair.py",
+      "size": 963,
+      "sha256": "6e9074b7332252c753bfabd910b0ea0324012686901b38ed8d39de90090bcd5f",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/code/q2/plot_q2_results.py",
+      "size": 28941,
+      "sha256": "38bb1ee3e7bda95bebbca07b9e87e23ca81bbaf9328553ab64cefb16ddfedd04",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/code/q2/route_evaluator.py",
+      "size": 6387,
+      "sha256": "2d77fcebaed4ab0105792c72c6319a560e6cdc07e3284914f3a50b7d5062a116",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/code/q2/run_q2.py",
+      "size": 23128,
+      "sha256": "bf1be83cf4558977ae507b004593542fb3946f1fd661c57131492e7341f0e7fd",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/code/q2/schedule_decoder.py",
+      "size": 18515,
+      "sha256": "28d1b7aa85b1ad2dab1f96d7241877d99d884fa51bf0e4283cb57da79f66863e",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/code/q2/test_route_evaluator.py",
+      "size": 10310,
+      "sha256": "88b6cb17d225f27511922a5f0496706cee2c99191dd6e14793c4606a23ab36b1",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/code/q2/validate_q2.py",
+      "size": 7919,
+      "sha256": "5dc76f12898d9102746baa09ed10928ac406a65a0fc7aec7513c7ae711fa8757",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/README.md",
+      "size": 2514,
+      "sha256": "ea7756f1d287d1ce94c27025700aa97176b6530a3817ca0c9fb6bccc940bbfdd",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/requirements.txt",
+      "size": 154,
+      "sha256": "09b334c8b8be7e0092de675cbf5d6e90d82127155c8800cfa746138c66c532d9",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_01_method_comparison.pdf",
+      "size": 28416,
+      "sha256": "7241ba2e0037636378cf77953c439633b9a2cd8c3de5772cd0699c6720f05e91",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_01_method_comparison.png",
+      "size": 245130,
+      "sha256": "b91fa2d9a9ccf1bf6da22250a0d44d2168705372992ecdf0b18ecb052e6d1364",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_01_method_comparison.svg",
+      "size": 47255,
+      "sha256": "be68744545363d3b2262652d6aa741ed11de77f1f0b8e2236c1015304dcba5b3",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_02_global_pareto.pdf",
+      "size": 32069,
+      "sha256": "72b42e7fb5dd5653e1c55ab8de85526d3dcffef0b43beb17b7c508f61455bfae",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_02_global_pareto.png",
+      "size": 215495,
+      "sha256": "86bb7ccbeaf5abbb04166440002c1ecb51e45736f1233dec2229816eed8c97b5",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_02_global_pareto.svg",
+      "size": 35081,
+      "sha256": "03a28c2b6a7379e15cdcb8c6bddd3b138b045761918ddc5ef4c57db8272857bf",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_03_multiseed_stability.pdf",
+      "size": 42160,
+      "sha256": "801d6268e9a7b842cdfaf1b5a270fd3b360835277bd0084566bb434ecdde21bf",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_03_multiseed_stability.png",
+      "size": 317216,
+      "sha256": "db8e958f200fb324988e8ad106e6f33d553ba988136f631555b4de813de3f2be",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_03_multiseed_stability.svg",
+      "size": 51137,
+      "sha256": "da7faf5f5acfbfd358d4cda08ad582376530c489cdb6b3baf86f0189147de9a2",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_04_route_structure_map.pdf",
+      "size": 26373,
+      "sha256": "2266b7ad7b4fc23828337a7610469200c969f610f27ebc7bf9150082ca8ffaa3",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_04_route_structure_map.png",
+      "size": 310248,
+      "sha256": "05610fdec428a699c305c2f0ee0a473e46c49a38df376735712a0795435ab849",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_04_route_structure_map.svg",
+      "size": 17681,
+      "sha256": "eedc5ba4374989df0458f91543ce4ec84f9504708ee5b896ff45b9bf3f2d256e",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_05_uav_gantt.pdf",
+      "size": 24679,
+      "sha256": "90080f92a13223fb783ded3d6c431b43401d072d23b4901e890d661cd7905eed",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_05_uav_gantt.png",
+      "size": 139834,
+      "sha256": "5111537ba0df2a913e9c272f98bbdd1ffe69ff3561e910b37c2d938d420aa05b",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_05_uav_gantt.svg",
+      "size": 15793,
+      "sha256": "0725b47cc4716295e3798651f1b41e3fece49ec591a3f4b720f39618598a728b",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_06_battery_timeline.pdf",
+      "size": 18245,
+      "sha256": "c8d6912f57eb9225327787379ec1ace361cd3442ecb55716da1436f90768f8b7",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_06_battery_timeline.png",
+      "size": 179966,
+      "sha256": "ef67778d0362d5b953e30f89f693b14ceb21b90f5fab1844fd63a05687bdb6b7",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_06_battery_timeline.svg",
+      "size": 35631,
+      "sha256": "1b90206de0f32eccb0f9ece275b18b0ea5a30e32f8e2210eb2df6b8b34b20384",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_07_delivery_timeliness.pdf",
+      "size": 27236,
+      "sha256": "90a8ae96aea9acda05a4d0520dc700765466c08b0471e09c83c6e7b093756ec4",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_07_delivery_timeliness.png",
+      "size": 190814,
+      "sha256": "a25e5e04c76fb27c1d11776378aa6fac93261bd2e2b5b658d84f8882bfdd7a3f",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_07_delivery_timeliness.svg",
+      "size": 38553,
+      "sha256": "b0d51076c296065ebbce80b89c053d6834403adabbe353bf7d1c7cbcf212437d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_08_multistop_examples.pdf",
+      "size": 24771,
+      "sha256": "75ed15e30483123444e6b88ef9185f6c785dca228af915cbeeddee1317f59230",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_08_multistop_examples.png",
+      "size": 256094,
+      "sha256": "16854079d4506cc749f339864d0f116920f9955979c8a400f24ac081c5e8b50a",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_08_multistop_examples.svg",
+      "size": 8611,
+      "sha256": "bb5dfa0b5efba9e5c2211d64bbb578767c3cdfdac12480fbbee243a7fdb10250",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_09_exact_benchmark.pdf",
+      "size": 35417,
+      "sha256": "e4404b05cca6320c149a2232ac6ae0b91c018d8f681fa66c65483cda3df6a070",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_09_exact_benchmark.png",
+      "size": 243458,
+      "sha256": "727cfa36cce86f67dece995b7844611d09b4302e3f7e6e3782145655bd824230",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/figures/Fig_Q2_09_exact_benchmark.svg",
+      "size": 17670,
+      "sha256": "56e9ac42bb376ff6638f4bfd6f3f4e71e38123c04181d46486aab97956a127fb",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_b_route_audit.json",
+      "size": 661,
+      "sha256": "1ccfa3aa5576627ae54b7e813393cecf0e64552fb23f0917071f0082f8fd5701",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_b_route_audit.md",
+      "size": 1247,
+      "sha256": "81e893a5224535155eda28efb9d18ac38f6cdefa7c159bf630b5c76aabaae985",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_b_route_cases.csv",
+      "size": 4048,
+      "sha256": "bac1181b599a2c4e3725d80eb8310e4c6520ddfa085b99fdbe925450a8525858",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_battery_reuse_audit.csv",
+      "size": 910,
+      "sha256": "3cc867712cbb04a53e690ecfbcfa1d5f2bc6b2d9aefeb553e07469289c03ca51",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_battery_timeline.csv",
+      "size": 2985,
+      "sha256": "24f572363ced32cad056ce0f428b577faf6b2f96e1512a660335dd0e29e07a3d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_c_schedule_audit.json",
+      "size": 1658,
+      "sha256": "57978eb86bbf45acbff7f0d8d8a6a3cfa4b2f0f2e11150482fef25867dc7c88b",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_c_schedule_audit.md",
+      "size": 357,
+      "sha256": "65ad74faf2feb290f42d5a989b6f1f869d2810674407eaad0411895f3010c830",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_code_donor_audit.md",
+      "size": 4660,
+      "sha256": "b22608471175275536087d49cafd6de19cfc12fbaaaa73cb745e9a685ef96725",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_constraint_registry.md",
+      "size": 4269,
+      "sha256": "e846523cddcc228b52931f999510bcb5b9d390d4864fa339b7c73f6304357272",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_data_audit.json",
+      "size": 2135,
+      "sha256": "3de2a4d729e3526c405d0856672301deb82e30fd161ca26587d2b7fdee4be5c7",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_data_audit.md",
+      "size": 1046,
+      "sha256": "0fdc605e971f4d4e51d5cdc6e2859afe498cc3efc1a52eb2bba080c0d2914c4e",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_exact_validation.csv",
+      "size": 1590,
+      "sha256": "11ba8a68c6091f18026df14651de9230808fb66ad4f22ebc6990421d1d0da939",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_final.json",
+      "size": 15329,
+      "sha256": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_final_report.md",
+      "size": 4720,
+      "sha256": "8b1c03e34b6e8152f3a6126ac1d426f58da40dcba5fce6b5cb20652961124d3d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_method_comparison.csv",
+      "size": 601,
+      "sha256": "b419f6369263472c436146699923bc0914093ec414edf6cf2c5a2bfb99eba51c",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_multiseed.csv",
+      "size": 1492,
+      "sha256": "f32268eb587644f9241440142aaee652aff3224e7a25d97cf426cbfe52fe99ef",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_multistop_audit.csv",
+      "size": 2645,
+      "sha256": "d90aead71b2b9375008891f5fc0496f8f3ac88977d1746459cdf972915184c1d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_operator_stats.csv",
+      "size": 3891,
+      "sha256": "1d394562f5d361c8614d933e57340cfc91fc0036077778e5d8fdd3aeb5948512",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_pareto.csv",
+      "size": 900,
+      "sha256": "a577b306e7baa8b7ee67dc6fdb358bf9fbe3b8ac7380df3e2ea79e6e55104def",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_runtime_profile.json",
+      "size": 326,
+      "sha256": "aab16894fcc8a14d75c955ea5ef53fb668bcd5b97af41046b479e231b2aeb818",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_solution_boxes.csv",
+      "size": 4555,
+      "sha256": "eec2593ba985faf3d9366949f00eb409d78d694b8e63934f34fda21be3df24f1",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_solution_stops.csv",
+      "size": 1624,
+      "sha256": "4c3368fcfe08bc323cf22dd5e7bfba2fe2cbb2a0dd8361a8ef8bea09f6bf03c6",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_solution_trips.csv",
+      "size": 5761,
+      "sha256": "c53ee8c1b6e9453af0f8def2dca1cea4765d099b89698ecbd8b6aa2317561c14",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q2/results/q2_uav_timeline.csv",
+      "size": 1138,
+      "sha256": "b1cd40428b7716bf992bbf7022deec3414b6a14b5e8fe1468d92c83fca643613",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/__init__.py",
+      "size": 400,
+      "sha256": "d3eabd677d4bded73103718e4577579937fbb6aa8b3aa4da02a49c41a75fef9d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/audit_q3_a.py",
+      "size": 34809,
+      "sha256": "982fd1739775150644b971c015bdc09ea8ab875d804cbbf8cc056d792ebb75c4",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/audit_q3_final.py",
+      "size": 8802,
+      "sha256": "cea93d47928fe853a2ab813627ab33979036c6a0a76ac89ff2e5eee6d4a1305e",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/c2_bottleneck.py",
+      "size": 4163,
+      "sha256": "ab4140b8c60e989bd40feaa5188257c2839e5e40ae1b5fdf7976eb277f2cce88",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/c2_seed_builder.py",
+      "size": 13755,
+      "sha256": "890ab24b5ebc746efb2aba1a8618c728cbf43e0cc4f973246bf95095bc3c73ab",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/c2_start_time_repair.py",
+      "size": 6797,
+      "sha256": "035a59213f4f33fea745171791b7a70d02546d14a5f31792c04cdd2ece4d7c7f",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/communication.py",
+      "size": 9916,
+      "sha256": "760cbf3c0fba2e2bfe2a3025b571910e47b96da9dbc502cbabc5f07ca821eba5",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/communication_intervals.py",
+      "size": 6824,
+      "sha256": "586e201473b46c3b5eacd892ce4b7e3af70a12814de70271415ca98080951d75",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/data_q3.py",
+      "size": 7719,
+      "sha256": "edad9ae30789b47031b9980669d386217f7a83b1e33ad47382647e856179a693",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/exact_joint_benchmark.py",
+      "size": 250,
+      "sha256": "d62942c2051822d7de12ab91fe85f4c0be19b3469cc91bdfb81dac565cbf4c09",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/formal_joint.py",
+      "size": 4844,
+      "sha256": "aa0e1b644a32377d4b2ce0e68e95681a24b13ac283b9cf17c5cd63ed69837805",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/generate_q3_figures.py",
+      "size": 15922,
+      "sha256": "d0b7024392d09aa9594bbbe2e4e28a1a8c2731ba6ad49cd694702100a8c11129",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/joint_alns.py",
+      "size": 200,
+      "sha256": "fe06993882033d324ea6ca20a90a5a2e73efa942fddcd1510a8742ed93127e65",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/joint_cache.py",
+      "size": 2538,
+      "sha256": "3794100e95f34e303072d6e9336329bf34d0c6f55183bd170c3aab522ee6ce7e",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/joint_decoder.py",
+      "size": 219,
+      "sha256": "740ba30bd4b375532c867358043614dfdd95cd8b56a516bfeee93c5025973ec9",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/joint_models.py",
+      "size": 1128,
+      "sha256": "d9dc19f8caef1ab8329333b18ff141be68a141650c16c7a95ccc3c22a047f810",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/joint_objective.py",
+      "size": 4236,
+      "sha256": "d5501237a021d980ce1980da65960271d6a8ef7c31aefa465f14f840aa94961e",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/joint_operators.py",
+      "size": 1765,
+      "sha256": "2a094b66826870c80037c78f36ee662fb6e310b0977605320416df9090389bb2",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/joint_solver.py",
+      "size": 260,
+      "sha256": "6dae1746a876ded73b73de9498a89b11c6860d3ef98dc483a3e28fd0be9f8537",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/joint_validator.py",
+      "size": 6832,
+      "sha256": "f0ad62bccf0c81709fbf4734ca40e2c4b033bd2d04f5724b5ca115fcb03bb0c8",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/q3_final.py",
+      "size": 11065,
+      "sha256": "5847359c8b0aee6d95e557a1e55b029ad51a5a313033ae4b4f9cd02f2ee6359f",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/relay_candidates.py",
+      "size": 4971,
+      "sha256": "7b407fb67ccdbd774d7eb699f5bbba18e7b15965386e98f5213000238a260cd1",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/relay_cover.py",
+      "size": 3804,
+      "sha256": "ce16769b8756e08a8eecd1ec63eedb6730b84121760504a210a6d99813af1d51",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/relay_decoder_protocol.py",
+      "size": 1659,
+      "sha256": "a70113cb6dcc9d017b83233b0ff1249b35ebf563051f902e404ad1d9840ea35c",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/relay_demand.py",
+      "size": 5231,
+      "sha256": "9b7b213663193b535005f85b72f3ba0dad2d603e613fc7257b28a69ab9d2373f",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/relay_evaluator.py",
+      "size": 7423,
+      "sha256": "eef56a72e48025534543a5addec217b353dbafa26e9aae6472cf9519b4353d85",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/relay_schedule_decoder.py",
+      "size": 27221,
+      "sha256": "2ae588480a6783814b142645afaba6c1854bb01f0e7eb44c0722617624e17c12",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/run_q3.py",
+      "size": 490,
+      "sha256": "ba058400b15a54163f04e2c557006113dbe1d1b0c9c2425ded5810cd33554fa8",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/run_q3_b.py",
+      "size": 6562,
+      "sha256": "153468e0078d71ad5f32506c3c7a9777b2663593b800f2272be4083c99c0aba7",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/run_q3_c.py",
+      "size": 1740,
+      "sha256": "42cb47aede3f7f3e937a9e8374cf0db8f9a9e7e33b5dcd91ccf6d490dbe870df",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/run_q3_c2.py",
+      "size": 9810,
+      "sha256": "fb3a4506064ffc81d2cbe9cc165c9743ecc74f666826c2009ace357d8b5dd097",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/run_q3_c2b.py",
+      "size": 2195,
+      "sha256": "995fbd0866db407108f482b50b05bdbd6f1bf887355b537c82be5bfc10da95cd",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/run_q3_final.py",
+      "size": 6903,
+      "sha256": "e44f1b1af0f0a619f731dd548e2b699d122593554ca96257b213d66250e27f64",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/terrain_los.py",
+      "size": 2360,
+      "sha256": "18fbda086fec47cefece85073b678f218ed934ddb486425346eae610efc0229a",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/trajectory.py",
+      "size": 5862,
+      "sha256": "cb9eed4a4bc5eac8612cac165488ba8988f43a06e155216d7306ae53e6365f57",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/transport_adapter.py",
+      "size": 4049,
+      "sha256": "5cfebdf3801da3efdbec194daf83e49913cb1ed1ae2eac5cea5713e0f0ae39a5",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/validate_q3_b.py",
+      "size": 11703,
+      "sha256": "fe3e2932efd061cb0e0ce5c17cc1a2a4c0dc1122c7ca79e6547b89eaf3a92e0a",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/validate_q3_c.py",
+      "size": 11177,
+      "sha256": "f63031ce7906ecec709bb29e33c47cca5541f0fe04cb3c99bcb6bca03c752492",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/validate_q3_c2.py",
+      "size": 3895,
+      "sha256": "f9587bcfbe20b7b0c176f1f8afa831317f47d3e493b7b9b16fa8ff44e85ce7d9",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/validate_q3_comm.py",
+      "size": 709,
+      "sha256": "abe3ea7c717c07a51dc69673461ddd2e63798ad0d17f10b0a094e5daa4343703",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/write_q3_freeze_report.py",
+      "size": 7261,
+      "sha256": "4bd72d4a172e76e3e31d66b669d191e91b6ffce3443f20c2e8a892f95b543599",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/code/q3/write_q3_tables.py",
+      "size": 4528,
+      "sha256": "6b25826bd33e790474edb015fc4ab32c65358bbb4e37b97598e04810915b78e7",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/README.md",
+      "size": 1781,
+      "sha256": "550a8de6d7b1fb81aa2d9deced812b05eae78a67a2e56a473eb4911e03a7b821",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/requirements.txt",
+      "size": 122,
+      "sha256": "9eb2ef99eb42d10e395a2989e1b289b3e3ee7dfcad630ceb8e6d7fe9688fca2a",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.pdf",
+      "size": 40128,
+      "sha256": "4cc051637d60dbf6637110655560741cae88f37c6f9e1315e6e5892635a42275",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.png",
+      "size": 63463,
+      "sha256": "2aa6b0c99c85cf7e763661f90cd9fa3d831fa37186d75a67d7ef0c48e4ebd538",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.svg",
+      "size": 19513,
+      "sha256": "602f2b2ef5eddbe9ac66a1c7e1fcd1b45d89ca8815724a8fa0c04c59ecfa1d72",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.tiff",
+      "size": 25225406,
+      "sha256": "086d62a9366c451d7eb0f5a4c3222bfbda3edbf91660d49425a1d89cba6ea10a",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.pdf",
+      "size": 39983,
+      "sha256": "47e15fa959f0c26312302d08bc2ce1a9951654768815be1baf87249fdde04f3e",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.png",
+      "size": 61450,
+      "sha256": "29c92cf320c72c0f13480a63af6d35d411928e39497353708af06b3427df3892",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.svg",
+      "size": 27769,
+      "sha256": "0b5858caf3f3abc67761a9335080e1018e1b232d0203cb2494498223dece8375",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.tiff",
+      "size": 28314206,
+      "sha256": "963b3dfabec0b237990953468122d7efe2ac672766d6587cbc78be50e342444d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/figures/Fig_Q3_03_search_validation.pdf",
+      "size": 38921,
+      "sha256": "44c6a52c2a1eedda005d009fe175119bde201398b9ad602c8900d2442ed1f669",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/figures/Fig_Q3_03_search_validation.png",
+      "size": 60454,
+      "sha256": "9d5b0600c64d55a074053373db4258be18f60f1929916149b00497c4eb109a10",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/figures/Fig_Q3_03_search_validation.svg",
+      "size": 13981,
+      "sha256": "80de53c62d75a8319b652ae9c95bcc95528c1e75d9eb7346609cf2a7616b4ebb",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/figures/Fig_Q3_03_search_validation.tiff",
+      "size": 25740206,
+      "sha256": "441e7acea4acae0068b39cddf9ef30416f7f03ff5fdbf9f7349c2b85fb553d14",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_a_final.json",
+      "size": 1777,
+      "sha256": "fd66251a548f45354fe894ff7107d9785d5cb8b295dc50b19939c5efc8c43416",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_a_report.md",
+      "size": 20011,
+      "sha256": "fe9aea36cc46dbff8e665c6bb354f8eddf001f0a7135b71c3463c8796e623e73",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_b_candidate_pruning.csv",
+      "size": 2813,
+      "sha256": "69b6133917531d153b0547e976870b2e81b3bceb40a15b51a3ad9bd44c5c141d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_b_candidate_spacing_sensitivity.csv",
+      "size": 335,
+      "sha256": "c15a21d854c9da37401b7db75d6acc086169a817f8af7b2b67fcd8a440a4b63d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_b_coverage_audit.csv",
+      "size": 716,
+      "sha256": "07f003bee4a3b46f3123fc9679a07b43b2bb98cb6683c7c78f5502c0065a1c05",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_b_coverage_matrix.csv",
+      "size": 170008,
+      "sha256": "cb5699dbd14c97d4b82acc757051e57ba29c18dfe6bd534e0812406f40d4d67a",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_b_energy_component_timeline.csv",
+      "size": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_b_exact_validation.csv",
+      "size": 278,
+      "sha256": "9c3bf5c1cf53679f81d733f96179365139a2f22d6b014784c769db2b0d7a0de1",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_b_final.json",
+      "size": 1607,
+      "sha256": "656dfffed6761332694538793fc12e4f3666c1661715d042042c271734b85ec2",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_b_full_replay.csv",
+      "size": 817,
+      "sha256": "563605c44b8fa574aec9b7c233bcd616881e78851f270db5d04d72a924507de9",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_b_relay_services.csv",
+      "size": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_b_relay_sorties.csv",
+      "size": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_b_relay_uav_timeline.csv",
+      "size": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_b_report.md",
+      "size": 1591,
+      "sha256": "a0bc67e2d5a98123691d2cb905d53f8f8bd4026e781500099d93fbf65582fa2d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_b_resource_audit.csv",
+      "size": 440,
+      "sha256": "7d78c48c341272a5bf908910037f9ff150a699c548e77bfbcd4c18b39604fef0",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_b_service_options.csv",
+      "size": 252794,
+      "sha256": "1b6745485d70ac72e8a40f4f15ccbc792eb224b0f672509afef16fe7ce2dad13",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_b_solver_status.json",
+      "size": 241,
+      "sha256": "6f54eef23509cf5de13ab116f00f5953543ffd5990b88eb72bc828b518bf18ae",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_blind_interval_validation.csv",
+      "size": 1368,
+      "sha256": "d98159ac5f002540d78834eee03ef445f78b8673bb9a0fb4f6e76bfe286e588b",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_blind_intervals.csv",
+      "size": 35241,
+      "sha256": "255387a810f9ce7d0a8a6e03ec882d85704f589865e939119a73035c6df0cffe",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2_baseline_blind_intervals.csv",
+      "size": 2409,
+      "sha256": "227462d558bf8c84dede07563f278e8e366b7834a2389185fa695c22a8a42676",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2_baseline_bottleneck.json",
+      "size": 5739,
+      "sha256": "79535e7caea3bec71bfa7f0cd204e9b9a1eb404aeb3ddeb51465a91e899ff9dd",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2_baseline_overlap_matrix.csv",
+      "size": 1675,
+      "sha256": "2d6308863ce4a5457891a135df18be904b2df979c8137b3d6963b7c220602d56",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2_baseline_relay_pressure.csv",
+      "size": 113,
+      "sha256": "a8cba6eab299373c0eafaed5a324e5288332e6197137e4f8c05d04b3a6772154",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2_communication_audit.csv",
+      "size": 493,
+      "sha256": "f1c92ca80320ab8a09057b983e82f31e039119a7a637cd5282d30f5bda01aaf6",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2_energy_component_timeline.csv",
+      "size": 1823,
+      "sha256": "8345f2fcce9bf72dfd6be8b7864f7fd9c6329c192df4e8e362dc60b7948da7ac",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2_feasible_seed.json",
+      "size": 86810,
+      "sha256": "817b791722256002feef7c1d536b945f102d03965a479a49b022c42c9c3ffde4",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2_feasible_seed_report.md",
+      "size": 245,
+      "sha256": "c14ef5c89cc0424dd25b76bf77ab5726bfc9d693ff445be918dd00769d894a81",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2_joint_resource_audit.csv",
+      "size": 412,
+      "sha256": "2bc3b0bba840975c0d217130d048aff5de54c5b4038506a745dcf7fa5e54a3d2",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2_relay_services.csv",
+      "size": 755,
+      "sha256": "29b2306da5e616d522ea997177b13c6621602b8520b6abc3ed754e12f80f46c7",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2_relay_sorties.csv",
+      "size": 1823,
+      "sha256": "8345f2fcce9bf72dfd6be8b7864f7fd9c6329c192df4e8e362dc60b7948da7ac",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2_relay_uav_timeline.csv",
+      "size": 1823,
+      "sha256": "8345f2fcce9bf72dfd6be8b7864f7fd9c6329c192df4e8e362dc60b7948da7ac",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2_transport_battery_timeline.csv",
+      "size": 17841,
+      "sha256": "205cb2e47bd6242b7b1e61a4bf7bbcf8f781f7714108da88979b0de592cf0038",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2_transport_boxes.csv",
+      "size": 4574,
+      "sha256": "f81c1ad1796f80a81c059df9dd8e1cdf388859538e59b10be8c605f9ad3f1ea4",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2_transport_trips.csv",
+      "size": 17841,
+      "sha256": "205cb2e47bd6242b7b1e61a4bf7bbcf8f781f7714108da88979b0de592cf0038",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2_transport_uav_timeline.csv",
+      "size": 17841,
+      "sha256": "205cb2e47bd6242b7b1e61a4bf7bbcf8f781f7714108da88979b0de592cf0038",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2a_repair_audit.json",
+      "size": 9874,
+      "sha256": "26b657fe2d5f1b8c374f6a46ff5c07746172b724f6dd39027c1afd8f5ebb2a3c",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2a_summary.md",
+      "size": 335,
+      "sha256": "23c1815f962fef9802c3534b18c043e277a7c59bcfa5d8e79b983dda55af7726",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2a_validation.json",
+      "size": 73421,
+      "sha256": "11c03d1f8bb8031a30b131e398ea0653d0aeb15566186377bf21311b4f470622",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2b_results.json",
+      "size": 253802,
+      "sha256": "52cb7f8b3e62fdc95042a25500a57dc2244b7849596adb5ec5cf278da301a733",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2b_summary.md",
+      "size": 317,
+      "sha256": "10a057b271d0baef377849b2293f606d76dff8cddefafc84c45eb3eb4413d7b4",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c2b_validation.json",
+      "size": 22104,
+      "sha256": "5577d1034a64cd4d4c040918c9f29ba3f55ff05712580750214e57c481a8c24b",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c_framework_report.md",
+      "size": 719,
+      "sha256": "1a277f76176b41e6d7780fdf0a4d7a20d31e6e5436ce54a3ee8584a71c554936",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_c_framework_validation.json",
+      "size": 2028,
+      "sha256": "5c2d970d289caf92fe452ee1399c64e804baea73200efe561969f0109dba24d7",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_candidate_validation.csv",
+      "size": 39344,
+      "sha256": "629c7beb1d37d472a65ef470e1e28e4ecb8ed2ccd7ba273b50926eea364e36e8",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_comm_unit_tests.csv",
+      "size": 4681,
+      "sha256": "73861f48d2cfc519a09195c2c19906e3830422cd139723f9ba3d403567e7c749",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_data_audit.json",
+      "size": 3423,
+      "sha256": "21d2a63949570aa87358ce24ab786298595f4fa6b165dc2643767ecd0a2511bc",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_data_audit.md",
+      "size": 2668,
+      "sha256": "794b1edd2e69dbe7adb0fd2601516d997487079094acfb6074e33f813a56ecd3",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_direct_coverage_audit.csv",
+      "size": 1409,
+      "sha256": "f31cd620e2e939a5e83bdcdeb333d99aea021c93cd9ab6e2e74d46056163e522",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_dt_sensitivity.csv",
+      "size": 1838,
+      "sha256": "7c45936d04a12158ac176cdf7e4b7836dd2f916e4d843c654c1741f29ccf0d3d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_failure_taxonomy.json",
+      "size": 1809,
+      "sha256": "703a6a3560835cfc1cf8d657419ee4381f419cab9efa81226fcdeeb602d8a643",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_final.json",
+      "size": 103284,
+      "sha256": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_final_audit.json",
+      "size": 29299,
+      "sha256": "00cc81e5c0504a10e03a45578ffcee4ba09fc0d229e4c68856ae1e476f5ba5c3",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/Q3_FREEZE_REPORT.md",
+      "size": 3465,
+      "sha256": "96980c1c417af8736bbf5a31bf6a9c57cdda51424f8b1a6ad500184ab8e1629d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_los_endpoint_buffer_sensitivity.csv",
+      "size": 1819,
+      "sha256": "2ca0c69da705e85e8694d2371a65e7abac54041483dba51b0cc902fbfa68e89e",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_q2baseline_alltrip_direct_audit.csv",
+      "size": 1801,
+      "sha256": "67bdddbda535dfdfe3ae2690c0a3a89b11ba7b1abd788bda4a0c1bb4bd7c26e2",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_relay_candidate_audit.csv",
+      "size": 23785,
+      "sha256": "82da1e31f2303f91af7a635244fd9ccd165009f2a7df28489bbc7b7f28228e86",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/q3_reproduction_report.json",
+      "size": 41973,
+      "sha256": "f1021e8464cca6efa664aa9b3e43b76c655692b869df27e153dfa477a595dab7",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/tables/Q3_Formal_Tables.md",
+      "size": 588,
+      "sha256": "0b916054c10e84cf121955cc73fecc37d1b1b612997d56736d18fa43bcb32df3",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/tables/Q3_Table_01_FinalSolution.csv",
+      "size": 309,
+      "sha256": "4e5b59f8bbba6a743d59ab3b0e8e59f769f19315cde1c814371369407ef61997",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/tables/Q3_Table_02_ConstraintAudit.csv",
+      "size": 1577,
+      "sha256": "a0f720164468c8c6d3a39921bcfb5699ad64f87ad0199e9ddbccce4abc4e4b6f",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/tables/Q3_Table_03_FeasiblePool.csv",
+      "size": 994,
+      "sha256": "d3590ebca31e7c1a565ba9fe45d73ef43a25263cfa03f3dc74b9bf37785f64bb",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q3/results/tables/q3_table_manifest.json",
+      "size": 329,
+      "sha256": "6db64fd79a1582b14e537a4b59bbf8213ba4bebadc1048a70a4589cd7a582b35",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/code/q4/__init__.py",
+      "size": 71,
+      "sha256": "55250d5d71376f8a5e006c3bcfb58106c7f021268186bc16ffff1846b971b405",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/code/q4/audit_q4_final.py",
+      "size": 8061,
+      "sha256": "07c2a11640185706c9a80c7b0b425cce25d6a6c28e803889ad77082aca701431",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/code/q4/compare_q3_upstream_for_q4.py",
+      "size": 10470,
+      "sha256": "a1a4c137ba4ca55275432fcf41ca0d536587c223f75ccb44ef95cf0794de5ec4",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/code/q4/compare_q4_reproduction.py",
+      "size": 6001,
+      "sha256": "976706ab59beef44b2cd0d37f498139b477f22162e4b9ae26812f16bbf652449",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/code/q4/generate_q4_figures.py",
+      "size": 6114,
+      "sha256": "aa856a3579a7e16d8798c34548bc6a844968798cb92a93faac1960d812f09069",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/code/q4/generate_q4_tables.py",
+      "size": 2843,
+      "sha256": "30f16cc68b79a1fae7b06d5d20dfe40c7d02bf1f1301750f8a52e7cf7e627511",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/code/q4/problem_audit.py",
+      "size": 7296,
+      "sha256": "d48f8dfa22896e64f9fb1dcd5a08d6ec56f207e993696b54b3ae809225e5ca1f",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/code/q4/q3_adapter.py",
+      "size": 5476,
+      "sha256": "0af91bb967d0eb4b46a79e27f965804aa91a93c62e3d801f03ae538de203e608",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/code/q4/q4_final.py",
+      "size": 5516,
+      "sha256": "684bba2243496b170521128806d8e9eb186134fa224cc0acc6dd5f7f4e181367",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/code/q4/q4_model.py",
+      "size": 11766,
+      "sha256": "8f3d8c12bc9f59b7ae3ab26e4461f7f710e675a66f5a669aef63074d83b9aceb",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/code/q4/q4_small_cases.py",
+      "size": 2763,
+      "sha256": "fb5c674f7c364520edb2911ad7ab1f47d2cb5e02dad91e84c12ebc4d489e226b",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/code/q4/refresh_q4_upstream.py",
+      "size": 2474,
+      "sha256": "ac446d517a062a5063b85dcd668791edaddd252296c7cd02aa0a9c4ae3c133f6",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/code/q4/run_q4_final.py",
+      "size": 3387,
+      "sha256": "8db552d35c76bb693175064af59fd18c8cef41f71038b928afa27a65af68759c",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/code/q4/run_q4_model.py",
+      "size": 8132,
+      "sha256": "664f93913af5504a441f084f70946cd4bf134d55430c007a7eea6d1c7422fa04",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/code/q4/validate_q3_to_q4_interface.py",
+      "size": 4582,
+      "sha256": "2690ed9e4a45eb5e088e13c9d3e8b0cba85dcbde21de77422f75436bc9d92bd1",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/code/q4/validate_q4.py",
+      "size": 2763,
+      "sha256": "7ca7a13ed40f58e12b7819607eca6b5b7a4e5c141ffec843e2bd42b058ee5496",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/code/q4/write_q4_freeze_report.py",
+      "size": 4555,
+      "sha256": "c10943e2315578b8e660d281b6fcb82a0dd3bfb9d45aba961299e7f4c246b909",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/README.md",
+      "size": 1228,
+      "sha256": "f9e0e3cc72190b1d04280cdf398a5116216499db03fabdddbbb5d5576d53c1ee",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/figures/Fig_Q4_01_resource_configuration.pdf",
+      "size": 33392,
+      "sha256": "545be5dc72652d596c8b4b88683ef32f7bac501fb5be22c845a9b68908a6eb1f",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/figures/Fig_Q4_01_resource_configuration.png",
+      "size": 36685,
+      "sha256": "1a4c08cc957c69ad88c0979e470723b30b585d61f10fd66ea4e8e43b49ba7c8c",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/figures/Fig_Q4_01_resource_configuration.svg",
+      "size": 13628,
+      "sha256": "e1e9f7c7dfdb74f634789c191f69a378c08fc17011e9915ed0e606f0799ec30e",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/figures/Fig_Q4_01_resource_configuration.tiff",
+      "size": 28411978,
+      "sha256": "7e842463e633bbd8210ba3c1b51852db76788649f8ec977b9e005d5dbd47588b",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/figures/Fig_Q4_02_workload_balance.pdf",
+      "size": 38121,
+      "sha256": "8a9eed0c98f4f46b16008d71c0908e695a64ca53ad5149c53272a2aceb8f0f17",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/figures/Fig_Q4_02_workload_balance.png",
+      "size": 48844,
+      "sha256": "6bc356d06a375c5afc6d5211efc57c37be685d22becaa5f21c5e16a75680f2fd",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/figures/Fig_Q4_02_workload_balance.svg",
+      "size": 12821,
+      "sha256": "555e4d6084b225a5700df88bdaef67828429a5a97abbe51271b469c72fb3c416",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/figures/Fig_Q4_02_workload_balance.tiff",
+      "size": 28379238,
+      "sha256": "0149ca55afd3960f6cd73b580740d00493dd9240be81997f5c48436a6de1888a",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/figures/Fig_Q4_03_partition_structure.pdf",
+      "size": 32483,
+      "sha256": "a94fa5dbb57503f394d6b556d3abd0a1338e570dab8720c817e965d42e9e5140",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/figures/Fig_Q4_03_partition_structure.png",
+      "size": 33953,
+      "sha256": "a0e1afbc8174a1fbf738b0d7b76eb1e42757cd5e44ca39e31c83679955792020",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/figures/Fig_Q4_03_partition_structure.svg",
+      "size": 13813,
+      "sha256": "2a71eb4e322bdfea454270b796eac9644265583ea3ae7652c29a5c1bad24d900",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/figures/Fig_Q4_03_partition_structure.tiff",
+      "size": 29453338,
+      "sha256": "03e22c2b8ef14f252d39ddd50262a679a476c0e0200164b7454d7c1b4dbe4530",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/q4_a_problem_definition.json",
+      "size": 4478,
+      "sha256": "44039997b283ac29d96d91276b4decde847368aaf2f54eacad2d21fce086eb0b",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/q4_a_report.md",
+      "size": 278,
+      "sha256": "1e39b1f77f9ad4bddcb21fe3fb364561c123582d74e2bf7458535ad02a9ef9e5",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/q4_a_state_interface.json",
+      "size": 97794,
+      "sha256": "458500572550c8a152a135bbcb973fffc2333b36e49c82c394461c3a16333495",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/q4_baseline.json",
+      "size": 5454,
+      "sha256": "e7490b45348c808b140b98fa8fd0f6d4cd6e57db71a09abe5eb6dd98ccce7b2d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/q4_baseline_report.md",
+      "size": 140,
+      "sha256": "a1d3535d311584664dfe980565ab72e4a72036ac41ebc46b0d743af42fb29519",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/q4_baseline_validation.json",
+      "size": 967,
+      "sha256": "f4e916a8f14ddef94f5f966552dbededfc6300ed52b494d25bb240bf15fbe026",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/q4_failure_taxonomy.json",
+      "size": 49,
+      "sha256": "8dcdccbed6329413c716844f63e1e3e57a3eeaeee87819bc54371b5c26174b2f",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/q4_final.json",
+      "size": 134270,
+      "sha256": "70361a3df8d37bcc01c8d476b8f1b8a55f0a3d45aaa2127f64b93ea3e9cb61d3",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/q4_final_audit.json",
+      "size": 4897,
+      "sha256": "8e5800e6f7c77396f869195c432a63a73da47bb71ad335ce5ae7af29c227383f",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/Q4_FREEZE_REPORT.md",
+      "size": 1443,
+      "sha256": "12ff7b455ff75f088c5c752b776e2010bf206044ce4c9e86915087dc756a8046",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/q4_problem_audit.json",
+      "size": 7255,
+      "sha256": "a4e8dac6911e43cb249217a6ba1a86ce4511fac4f8dfc3d82faf21d31a535d79",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/q4_problem_audit.md",
+      "size": 1905,
+      "sha256": "cd55eecee1ace9eb0be26bcad6e462e48487a284eb8f8e88ddda4daa324e299a",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/q4_q3_interface_validation.json",
+      "size": 105462,
+      "sha256": "3ab8edc3ca67c676311ae696faa56485f08e51b12a7a0df6873a991f145336d9",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/q4_q3_upstream_refresh_audit.json",
+      "size": 2679,
+      "sha256": "3cf20fbb7605a1e63587a9a131fcad55da632de6130689c8aa468ccdd9633cf1",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/q4_q3_upstream_refresh_revalidation.json",
+      "size": 8007,
+      "sha256": "9bc8e3c1f934f6f6513e3ae73505e73afa87674bd76de7021eca3a1d2cc3c6cd",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/q4_reproduction_comparison.json",
+      "size": 3236,
+      "sha256": "731fed156fed3fbb9c5024e2f952837485433de810fdc275bb0d2fbccb068eaa",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/q4_reproduction_report.json",
+      "size": 12072,
+      "sha256": "4d9d195b7765c24cb507b9f588279f4594431fcfcc3994214c9186805f013230",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/q4_small_case_validation.json",
+      "size": 933,
+      "sha256": "d7c6290c6ec31d46b6accfd70ac8f8008eb2bf5b47ddfc5ba2bf324b84c8fff3",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/tables/Q4_Formal_Tables.md",
+      "size": 268,
+      "sha256": "5defb5832e87d4d2127304bc623f504962fae6cbc98215ad43cfadc9db21d06e",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/tables/Q4_Table_01_SelectedConfigurations.csv",
+      "size": 1264,
+      "sha256": "2baf56623d4fde1df26105c565845811f6146cac3a42cd3ac59aa86b1889c109",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/tables/Q4_Table_02_GroupResources.csv",
+      "size": 861,
+      "sha256": "154b15cd7e303abe7b2eabdf123a0ec9fc2fa3dec8254d559c68394299866fb4",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/implementation/q4/results/tables/q4_table_manifest.json",
+      "size": 300,
+      "sha256": "6b2ade09d422aebb263ae495943198129a61e4001b283bac3cafe70ceb550499",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/pyproject.toml",
+      "size": 301,
+      "sha256": "2939b05683311755b2bb240ea8daac1d1d45e53b6addf370aea9af68a96e537a",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "code/README.md",
+      "size": 143,
+      "sha256": "b290cec6f335a133abb9cfafa2037fcd29a42c3fbb23b7d48577aa45dafb7205",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_01_capacity_map.pdf",
+      "size": 26306,
+      "sha256": "f9a78b29a1be3093c1b7300099d0e6855b4fba97408da987ce40115fef5186a8",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_01_capacity_map.png",
+      "size": 425743,
+      "sha256": "caee520625194f63f83b77dd6f9a131e9d3677d2e3442927581766b015106d05",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_01_capacity_map.svg",
+      "size": 61835,
+      "sha256": "94ef847179b9106c641feaf4ed4da78153fee1e57002fc0d01783663a0edf68b",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_02_flight_envelope.pdf",
+      "size": 22138,
+      "sha256": "9cd46fdcda7248df3c2e80621ce748e1e470c5d1c3b7603b7faba0b7025d8c73",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_02_flight_envelope.png",
+      "size": 404863,
+      "sha256": "cd859b8196a9e9ff8aca3fb153d10f52539307435d4076fbe3f5984b348fe973",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_02_flight_envelope.svg",
+      "size": 36137,
+      "sha256": "a82b1497743dc06de53064ab0cabd7d6eb7d88eb7bed6e5ccf1ab3de6761b93d",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_03_batch_plan.pdf",
+      "size": 18850,
+      "sha256": "c5ac2ec79350b79580bceef9c0db698cc0868e9a5d961f68686d5df448250288",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_03_batch_plan.png",
+      "size": 307542,
+      "sha256": "959e162d71b49f1600c18e453663dc0aa641eba45deb9ca9ebc4d62c863861f2",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_03_batch_plan.svg",
+      "size": 37521,
+      "sha256": "942281c1572b4f2e1ef7138e22089160350fc7d53f7c57ee4cd5766af10e06f5",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_04_service_allocation.pdf",
+      "size": 16364,
+      "sha256": "2afb37a671d7779211bcea50dae4e4e85b74d8ed938b2ae263b2ed4893b9ed55",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_04_service_allocation.png",
+      "size": 277976,
+      "sha256": "feddbb74779cbbe8d8a405b065f80b40d8de805a5ba55f0cfe6d6d35466369f6",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_04_service_allocation.svg",
+      "size": 23851,
+      "sha256": "d7220f8b573ad9c61b63d0227591305f77fbf3e20dae285a77f798148c279ad9",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_05_method_comparison.pdf",
+      "size": 16607,
+      "sha256": "dd7b1c441c81176942c116edaa5370b17ae7de917d9b6bc0afb3c00229d8da42",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_05_method_comparison.png",
+      "size": 205748,
+      "sha256": "fc3873a84dcba6681ef8accce64a6c405690af12614b2aff193eef7481354ef7",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_05_method_comparison.svg",
+      "size": 26644,
+      "sha256": "d918342def01d281f49f5620cbcc94e61f7168bb5fc3e4c98afc9713967bc8f1",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_06_utilization_tradeoff.pdf",
+      "size": 16867,
+      "sha256": "f1a92627ca31742bc00d496f519531756b134706f41ae4834b51862fb447caed",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_06_utilization_tradeoff.png",
+      "size": 273692,
+      "sha256": "9de7f588591e2fc13a233fcaf3328b0882bdb5098f560c7fe755de77f2f81d3b",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_06_utilization_tradeoff.svg",
+      "size": 35937,
+      "sha256": "0469921bf058b9cb19fa98291e1111107d9e6400e161f5d22a885f1857fa01be",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_07_energy_margin.pdf",
+      "size": 15133,
+      "sha256": "bd0397d91ba93e492bdc07975ee42ff1069b4ead27ba3d103e563e5848d74e63",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_07_energy_margin.png",
+      "size": 245369,
+      "sha256": "28800651d1361f49f8513d52f12cc934fbe48e721b4b67c07d7f202dcf47d3b9",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_07_energy_margin.svg",
+      "size": 22992,
+      "sha256": "cb4edd5f997170125c46d0d878f2b4f3283d3c94f945e2a41bfd8973e7855e3c",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_08_service_tradeoff.pdf",
+      "size": 23126,
+      "sha256": "28ba2244cb95fa57a03cfc8df19c3afdf4a0cba8fdaf1d901d0130c3eb3f40f1",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_08_service_tradeoff.png",
+      "size": 250178,
+      "sha256": "c96d7d6c18e4023828a8c40dca252940db19a90b469ee4f055823c982ac10a31",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_08_service_tradeoff.svg",
+      "size": 28746,
+      "sha256": "e1b1598bef2975bec4d0192b7c013be036f650d0b524a08a5247297fdee6f718",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_09_sensitivity.pdf",
+      "size": 15186,
+      "sha256": "659f9be8186f90a9af7d5d10b92d71328afee1737f91e766b29280097d64642c",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_09_sensitivity.png",
+      "size": 101478,
+      "sha256": "bba5cb794ae209960233c1119f99fcff303bebc72c4936aa215eae29f7670ec0",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_09_sensitivity.svg",
+      "size": 7753,
+      "sha256": "4baf7bf9eadf5d58c729cb198e2041b25f7a8ca01b3acc652ea8c9c01fd8ab18",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_10_lexicographic_stages.pdf",
+      "size": 12701,
+      "sha256": "b5879629fbeea15f6bd4555efb353cbf231c427db2bbd654d7255773a252153e",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_10_lexicographic_stages.png",
+      "size": 193975,
+      "sha256": "bdde3355d5f115a7d14d73e909454c398d01add435f9b63d2290be0bfa79dd09",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_10_lexicographic_stages.svg",
+      "size": 17319,
+      "sha256": "4cf0db4f82e88e92dd60513e4fd5d8eda6b3c82a1404547fba9fc9bcdb122e42",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_S2_solver_cost.pdf",
+      "size": 19108,
+      "sha256": "d68a6a530d94c0913b7b27e50b75b7e4555c027fb4f826c3c7c41b032f186d6e",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_S2_solver_cost.png",
+      "size": 140265,
+      "sha256": "506fe049bb1392dfdd46ed5f706986993606b39cb5f5734536eb16c83dc9efd2",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q1/Fig_Q1_S2_solver_cost.svg",
+      "size": 28999,
+      "sha256": "913068392d003ad69c4adb7d9d5a9ea22ac65ebefa0c962eb2745f6bd92a24e0",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_01_method_comparison.pdf",
+      "size": 28416,
+      "sha256": "7241ba2e0037636378cf77953c439633b9a2cd8c3de5772cd0699c6720f05e91",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_01_method_comparison.png",
+      "size": 245130,
+      "sha256": "b91fa2d9a9ccf1bf6da22250a0d44d2168705372992ecdf0b18ecb052e6d1364",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_01_method_comparison.svg",
+      "size": 47255,
+      "sha256": "be68744545363d3b2262652d6aa741ed11de77f1f0b8e2236c1015304dcba5b3",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_02_global_pareto.pdf",
+      "size": 32069,
+      "sha256": "72b42e7fb5dd5653e1c55ab8de85526d3dcffef0b43beb17b7c508f61455bfae",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_02_global_pareto.png",
+      "size": 215495,
+      "sha256": "86bb7ccbeaf5abbb04166440002c1ecb51e45736f1233dec2229816eed8c97b5",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_02_global_pareto.svg",
+      "size": 35081,
+      "sha256": "03a28c2b6a7379e15cdcb8c6bddd3b138b045761918ddc5ef4c57db8272857bf",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_03_multiseed_stability.pdf",
+      "size": 42160,
+      "sha256": "801d6268e9a7b842cdfaf1b5a270fd3b360835277bd0084566bb434ecdde21bf",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_03_multiseed_stability.png",
+      "size": 317216,
+      "sha256": "db8e958f200fb324988e8ad106e6f33d553ba988136f631555b4de813de3f2be",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_03_multiseed_stability.svg",
+      "size": 51137,
+      "sha256": "da7faf5f5acfbfd358d4cda08ad582376530c489cdb6b3baf86f0189147de9a2",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_04_route_structure_map.pdf",
+      "size": 26373,
+      "sha256": "2266b7ad7b4fc23828337a7610469200c969f610f27ebc7bf9150082ca8ffaa3",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_04_route_structure_map.png",
+      "size": 310248,
+      "sha256": "05610fdec428a699c305c2f0ee0a473e46c49a38df376735712a0795435ab849",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_04_route_structure_map.svg",
+      "size": 17681,
+      "sha256": "eedc5ba4374989df0458f91543ce4ec84f9504708ee5b896ff45b9bf3f2d256e",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_05_uav_gantt.pdf",
+      "size": 24679,
+      "sha256": "90080f92a13223fb783ded3d6c431b43401d072d23b4901e890d661cd7905eed",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_05_uav_gantt.png",
+      "size": 139834,
+      "sha256": "5111537ba0df2a913e9c272f98bbdd1ffe69ff3561e910b37c2d938d420aa05b",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_05_uav_gantt.svg",
+      "size": 15793,
+      "sha256": "0725b47cc4716295e3798651f1b41e3fece49ec591a3f4b720f39618598a728b",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_06_battery_timeline.pdf",
+      "size": 18245,
+      "sha256": "c8d6912f57eb9225327787379ec1ace361cd3442ecb55716da1436f90768f8b7",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_06_battery_timeline.png",
+      "size": 179966,
+      "sha256": "ef67778d0362d5b953e30f89f693b14ceb21b90f5fab1844fd63a05687bdb6b7",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_06_battery_timeline.svg",
+      "size": 35631,
+      "sha256": "1b90206de0f32eccb0f9ece275b18b0ea5a30e32f8e2210eb2df6b8b34b20384",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_07_delivery_timeliness.pdf",
+      "size": 27236,
+      "sha256": "90a8ae96aea9acda05a4d0520dc700765466c08b0471e09c83c6e7b093756ec4",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_07_delivery_timeliness.png",
+      "size": 190814,
+      "sha256": "a25e5e04c76fb27c1d11776378aa6fac93261bd2e2b5b658d84f8882bfdd7a3f",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_07_delivery_timeliness.svg",
+      "size": 38553,
+      "sha256": "b0d51076c296065ebbce80b89c053d6834403adabbe353bf7d1c7cbcf212437d",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_08_multistop_examples.pdf",
+      "size": 24771,
+      "sha256": "75ed15e30483123444e6b88ef9185f6c785dca228af915cbeeddee1317f59230",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_08_multistop_examples.png",
+      "size": 256094,
+      "sha256": "16854079d4506cc749f339864d0f116920f9955979c8a400f24ac081c5e8b50a",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_08_multistop_examples.svg",
+      "size": 8611,
+      "sha256": "bb5dfa0b5efba9e5c2211d64bbb578767c3cdfdac12480fbbee243a7fdb10250",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_09_exact_benchmark.pdf",
+      "size": 35417,
+      "sha256": "e4404b05cca6320c149a2232ac6ae0b91c018d8f681fa66c65483cda3df6a070",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_09_exact_benchmark.png",
+      "size": 243458,
+      "sha256": "727cfa36cce86f67dece995b7844611d09b4302e3f7e6e3782145655bd824230",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q2/Fig_Q2_09_exact_benchmark.svg",
+      "size": 17670,
+      "sha256": "56e9ac42bb376ff6638f4bfd6f3f4e71e38123c04181d46486aab97956a127fb",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q3/Fig_Q3_01_joint_solution_cost.pdf",
+      "size": 40128,
+      "sha256": "4cc051637d60dbf6637110655560741cae88f37c6f9e1315e6e5892635a42275",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q3/Fig_Q3_01_joint_solution_cost.png",
+      "size": 63463,
+      "sha256": "2aa6b0c99c85cf7e763661f90cd9fa3d831fa37186d75a67d7ef0c48e4ebd538",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q3/Fig_Q3_01_joint_solution_cost.svg",
+      "size": 19513,
+      "sha256": "602f2b2ef5eddbe9ac66a1c7e1fcd1b45d89ca8815724a8fa0c04c59ecfa1d72",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q3/Fig_Q3_01_joint_solution_cost.tiff",
+      "size": 25225406,
+      "sha256": "086d62a9366c451d7eb0f5a4c3222bfbda3edbf91660d49425a1d89cba6ea10a",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q3/Fig_Q3_02_temporal_coordination.pdf",
+      "size": 39983,
+      "sha256": "47e15fa959f0c26312302d08bc2ce1a9951654768815be1baf87249fdde04f3e",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q3/Fig_Q3_02_temporal_coordination.png",
+      "size": 61450,
+      "sha256": "29c92cf320c72c0f13480a63af6d35d411928e39497353708af06b3427df3892",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q3/Fig_Q3_02_temporal_coordination.svg",
+      "size": 27769,
+      "sha256": "0b5858caf3f3abc67761a9335080e1018e1b232d0203cb2494498223dece8375",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q3/Fig_Q3_02_temporal_coordination.tiff",
+      "size": 28314206,
+      "sha256": "963b3dfabec0b237990953468122d7efe2ac672766d6587cbc78be50e342444d",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q3/Fig_Q3_03_search_validation.pdf",
+      "size": 38921,
+      "sha256": "44c6a52c2a1eedda005d009fe175119bde201398b9ad602c8900d2442ed1f669",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q3/Fig_Q3_03_search_validation.png",
+      "size": 60454,
+      "sha256": "9d5b0600c64d55a074053373db4258be18f60f1929916149b00497c4eb109a10",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q3/Fig_Q3_03_search_validation.svg",
+      "size": 13981,
+      "sha256": "80de53c62d75a8319b652ae9c95bcc95528c1e75d9eb7346609cf2a7616b4ebb",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q3/Fig_Q3_03_search_validation.tiff",
+      "size": 25740206,
+      "sha256": "441e7acea4acae0068b39cddf9ef30416f7f03ff5fdbf9f7349c2b85fb553d14",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q4/Fig_Q4_01_resource_configuration.pdf",
+      "size": 33392,
+      "sha256": "545be5dc72652d596c8b4b88683ef32f7bac501fb5be22c845a9b68908a6eb1f",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q4/Fig_Q4_01_resource_configuration.png",
+      "size": 36685,
+      "sha256": "1a4c08cc957c69ad88c0979e470723b30b585d61f10fd66ea4e8e43b49ba7c8c",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q4/Fig_Q4_01_resource_configuration.svg",
+      "size": 13628,
+      "sha256": "e1e9f7c7dfdb74f634789c191f69a378c08fc17011e9915ed0e606f0799ec30e",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q4/Fig_Q4_01_resource_configuration.tiff",
+      "size": 28411978,
+      "sha256": "7e842463e633bbd8210ba3c1b51852db76788649f8ec977b9e005d5dbd47588b",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q4/Fig_Q4_02_workload_balance.pdf",
+      "size": 38121,
+      "sha256": "8a9eed0c98f4f46b16008d71c0908e695a64ca53ad5149c53272a2aceb8f0f17",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q4/Fig_Q4_02_workload_balance.png",
+      "size": 48844,
+      "sha256": "6bc356d06a375c5afc6d5211efc57c37be685d22becaa5f21c5e16a75680f2fd",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q4/Fig_Q4_02_workload_balance.svg",
+      "size": 12821,
+      "sha256": "555e4d6084b225a5700df88bdaef67828429a5a97abbe51271b469c72fb3c416",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q4/Fig_Q4_02_workload_balance.tiff",
+      "size": 28379238,
+      "sha256": "0149ca55afd3960f6cd73b580740d00493dd9240be81997f5c48436a6de1888a",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q4/Fig_Q4_03_partition_structure.pdf",
+      "size": 32483,
+      "sha256": "a94fa5dbb57503f394d6b556d3abd0a1338e570dab8720c817e965d42e9e5140",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q4/Fig_Q4_03_partition_structure.png",
+      "size": 33953,
+      "sha256": "a0e1afbc8174a1fbf738b0d7b76eb1e42757cd5e44ca39e31c83679955792020",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q4/Fig_Q4_03_partition_structure.svg",
+      "size": 13813,
+      "sha256": "2a71eb4e322bdfea454270b796eac9644265583ea3ae7652c29a5c1bad24d900",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "figures/q4/Fig_Q4_03_partition_structure.tiff",
+      "size": 29453338,
+      "sha256": "03e22c2b8ef14f252d39ddd50262a679a476c0e0200164b7454d7c1b4dbe4530",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/absolute_path_audit.md",
+      "size": 199,
+      "sha256": "f7ff530f3e02dd22c95bda2659dd64f07b2c3b79d95b26a4866c39229da66a58",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/audit_project_final.py",
+      "size": 37675,
+      "sha256": "3c0ef2b2a95e497988d652bb3a726b47ed0b209a04d8ebf5d8503bbf498c9a11",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/cross_question_interface_audit.json",
+      "size": 782,
+      "sha256": "2a91054ae9e5b591ebd16839111315ad16772dc4204e0864a604a952f7bed554",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/energy_consistency_audit.json",
+      "size": 280,
+      "sha256": "ef352f1c15232bc1cf7d975237b07d8e9ae33bc654c5873d9b37ef46b12a7c1c",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/environment_manifest.md",
+      "size": 1119,
+      "sha256": "48fe9176b6a3397d16054ab0ba0b3ad4e0b54d690c93b974a16fd91fd72a34fb",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/final_figure_manifest.json",
+      "size": 56372,
+      "sha256": "a8cbab1944a3138d9e0d6ff45b5d879683887a7b62da9789998f0da4f5c81c70",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/final_table_manifest.json",
+      "size": 2995,
+      "sha256": "1a5de359ff8114db13552acacdca37b012597b5fef47cdcee98e1fb41b516237",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/formal_source_manifest.json",
+      "size": 2536,
+      "sha256": "8ef6cef4e2ed73a8e99cdb16593bc8d6f382db6f2009b149a1533b4c7a5976c3",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/freeze_status_manifest.json",
+      "size": 509,
+      "sha256": "c0455198ff5ef5ee13ed6efbf2f246ecd79b33d82ed815bd707bd5d6567af791",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/git_revision_manifest.json",
+      "size": 1524,
+      "sha256": "48c34fd1e89efc8999dbb05943fc91ba209c86d7185adddfca399cbbb01ad2f1",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/global_parameter_audit.json",
+      "size": 496,
+      "sha256": "65346f38df5cfb4c028b353bdd83477d6af9078aebb2b529090d5994ebbaac77",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/hard_constraint_matrix.csv",
+      "size": 4354,
+      "sha256": "6f4467dc1a5bc0ef7f96001c69d8b69ec71c205a281ab4eb72aba53fba4e0106",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/id_consistency_audit.csv",
+      "size": 587,
+      "sha256": "8b4ef245f5fd25399ba5d39659185e9841b0a2685b98b18f930e7f521739556c",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/input_data_manifest.json",
+      "size": 5717,
+      "sha256": "62b56491441776067e33b9da4febfa33b36e4e26f8ead74e48c489293debbd90",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/numeric_format_policy.md",
+      "size": 260,
+      "sha256": "aeaaa5a78eb8a5a89aa34301f74e50f0648e3a1901d0fd7b2075ed3a10a6eceb",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/objective_definition_audit.md",
+      "size": 893,
+      "sha256": "e84660954a9ed1d1926247d2816c33cd49fa0b06bba5e3309af14361b0ea0aee",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/PROJECT_FINAL_AUDIT.json",
+      "size": 799,
+      "sha256": "98202c9e58eabf58101c7f153107d3d1b7b531258730e04f2d69508af31b0c67",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/PROJECT_FINAL_AUDIT.md",
+      "size": 627,
+      "sha256": "88ede70a5597bb59b35048ceb0eaeadb7069764f710a0a2cbc3365a69b53f715",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/repo_inventory.json",
+      "size": 210797,
+      "sha256": "955a35874006da4ecaef18e0d69d5b478f4b27c593492ff961619d566b283c10",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/repo_inventory.md",
+      "size": 187,
+      "sha256": "62fbf777b221d2f0acf223bf5a6a9fcb2c02ef3e7a36033ef56c633620456372",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/stale_artifact_report.json",
+      "size": 3008,
+      "sha256": "3c34a46bcad0572353ccf42c05abd8e6a4324c5e8d101e759f61bfc21bc17d1e",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/timeline_consistency_audit.json",
+      "size": 325,
+      "sha256": "c8054697a0dd48cf5aad04383af22341ac4cbef386c8e1e50b12a0a0102806d5",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "manifests/validator_independence_audit.md",
+      "size": 732,
+      "sha256": "903834ebc450662b64b9ec692bb32ec1bf4b8b841c44f7252d0007ae0af1d245",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "README.md",
+      "size": 487,
+      "sha256": "c40f114ecd43da43ca27ae6db2c8e24abb9157716dd3c974989f834cba0fbadb",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "REPRODUCE.md",
+      "size": 680,
+      "sha256": "dd6d3202ad3441febade35db25a1fba6efeb55e688f81bd1c458a6f237315ae6",
+      "formal_or_auxiliary": "AUXILIARY"
+    },
+    {
+      "file": "results/q1/q1_3a_audit.json",
+      "size": 2983,
+      "sha256": "a6958091dc3d3342e776c60dcac4603424379b8bad42b33a920f2cdc49705681",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q1/q1_3a_audit_report.md",
+      "size": 790,
+      "sha256": "5c7b4a2e9376903dc265b824ffe1ef3687d939bcfbc8ea8a941be7ba3c435a21",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q1/q1_capacity.csv",
+      "size": 8867,
+      "sha256": "991766832648c67755c87707bf6a6b30ef00c31319558ce1604580df06c74b69",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q1/q1_capacity.json",
+      "size": 7521,
+      "sha256": "bcf5b471078f70cab52a5baacf974e16f2e39fc0f91639c00edb1357ec3990fa",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q1/q1_capacity_report.md",
+      "size": 8932,
+      "sha256": "db01969a70cb67aa61d3cb6e327cb02a2cc339403506f4491788b844b00a6139",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q1/q1_final.json",
+      "size": 2624,
+      "sha256": "322beb195cdfd4dee51399a9b8b62fc81cc49dd7d258978add5c9955368f94d4",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q1/q1_final_report.md",
+      "size": 2732,
+      "sha256": "953af8f2c1408132376f1389a1df339b69ba175f7550f31e32d27e37bd38df19",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q1/q1_lexicographic_stages.csv",
+      "size": 209,
+      "sha256": "2984b11ba0a48729d0a8d01638f55a486d01cd2456e03e0649ee071c346a643d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q1/q1_method_comparison.csv",
+      "size": 462,
+      "sha256": "1f76ad9d355153eac67b51b920da40d101dd4130b89dafc199da338292bc7253",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q1/q1_method_times.json",
+      "size": 147,
+      "sha256": "67edab88e21b21fc258354e3a343c37c94f98d4120c9e29662c9ea9acc9e892d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q1/q1_physics_audit.csv",
+      "size": 3308,
+      "sha256": "710ebbdd664c0119c4a8940e6ef1f9ad0f10b2d58972115502ca41cf55215899",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q1/q1_physics_audit.json",
+      "size": 1972,
+      "sha256": "2ba93772933bcc02c61e1ea84aecd4567af98c46ee92e103afc273e86cd2cc7e",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q1/q1_physics_audit_report.md",
+      "size": 3042,
+      "sha256": "e65eca2d5f00601da26102d1b32d1c8fc3dbc8786fd2aee98b1e95641e311681",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q1/q1_physics_energy_checks.csv",
+      "size": 13249,
+      "sha256": "42b38e27af9896baeacd243fa31a968e4c441a78d4daf400b8909174fdd07891",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q1/q1_service_summary.csv",
+      "size": 1602,
+      "sha256": "5f229524c0983b5520f1996d8ee57ebc6f1e6a5677fcf409ba4ec90c232d79e2",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q1/q1_solution_boxes.csv",
+      "size": 5487,
+      "sha256": "636c1a06e9cf764f94b4a5f2dff62a720918c353ad11ee0b95d829d544705280",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q1/q1_solution_trips.csv",
+      "size": 5506,
+      "sha256": "aa6ba6616a6b5e9d02a4453184962a2ccc65c8e73531f002367f00e39b3ba83a",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q1/q1_solver_status.csv",
+      "size": 2081,
+      "sha256": "a54071741035a2ca207cc68157d61bfa40062f49c76c5f8130881c514c6f6f3a",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_b_route_audit.json",
+      "size": 661,
+      "sha256": "1ccfa3aa5576627ae54b7e813393cecf0e64552fb23f0917071f0082f8fd5701",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_b_route_audit.md",
+      "size": 1247,
+      "sha256": "81e893a5224535155eda28efb9d18ac38f6cdefa7c159bf630b5c76aabaae985",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_b_route_cases.csv",
+      "size": 4048,
+      "sha256": "bac1181b599a2c4e3725d80eb8310e4c6520ddfa085b99fdbe925450a8525858",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_battery_reuse_audit.csv",
+      "size": 910,
+      "sha256": "3cc867712cbb04a53e690ecfbcfa1d5f2bc6b2d9aefeb553e07469289c03ca51",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_battery_timeline.csv",
+      "size": 2985,
+      "sha256": "24f572363ced32cad056ce0f428b577faf6b2f96e1512a660335dd0e29e07a3d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_c_schedule_audit.json",
+      "size": 1658,
+      "sha256": "57978eb86bbf45acbff7f0d8d8a6a3cfa4b2f0f2e11150482fef25867dc7c88b",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_c_schedule_audit.md",
+      "size": 357,
+      "sha256": "65ad74faf2feb290f42d5a989b6f1f869d2810674407eaad0411895f3010c830",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_code_donor_audit.md",
+      "size": 4660,
+      "sha256": "b22608471175275536087d49cafd6de19cfc12fbaaaa73cb745e9a685ef96725",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_constraint_registry.md",
+      "size": 4269,
+      "sha256": "e846523cddcc228b52931f999510bcb5b9d390d4864fa339b7c73f6304357272",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_data_audit.json",
+      "size": 2135,
+      "sha256": "3de2a4d729e3526c405d0856672301deb82e30fd161ca26587d2b7fdee4be5c7",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_data_audit.md",
+      "size": 1046,
+      "sha256": "0fdc605e971f4d4e51d5cdc6e2859afe498cc3efc1a52eb2bba080c0d2914c4e",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_exact_validation.csv",
+      "size": 1590,
+      "sha256": "11ba8a68c6091f18026df14651de9230808fb66ad4f22ebc6990421d1d0da939",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_final.json",
+      "size": 15329,
+      "sha256": "41a8f9a7504e7f361e2dd30857fd0f729d9fcfb17e42fdd504035a1cadf12aa3",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_final_report.md",
+      "size": 4720,
+      "sha256": "8b1c03e34b6e8152f3a6126ac1d426f58da40dcba5fce6b5cb20652961124d3d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_method_comparison.csv",
+      "size": 601,
+      "sha256": "b419f6369263472c436146699923bc0914093ec414edf6cf2c5a2bfb99eba51c",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_multiseed.csv",
+      "size": 1492,
+      "sha256": "f32268eb587644f9241440142aaee652aff3224e7a25d97cf426cbfe52fe99ef",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_multistop_audit.csv",
+      "size": 2645,
+      "sha256": "d90aead71b2b9375008891f5fc0496f8f3ac88977d1746459cdf972915184c1d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_operator_stats.csv",
+      "size": 3891,
+      "sha256": "1d394562f5d361c8614d933e57340cfc91fc0036077778e5d8fdd3aeb5948512",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_pareto.csv",
+      "size": 900,
+      "sha256": "a577b306e7baa8b7ee67dc6fdb358bf9fbe3b8ac7380df3e2ea79e6e55104def",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_runtime_profile.json",
+      "size": 326,
+      "sha256": "aab16894fcc8a14d75c955ea5ef53fb668bcd5b97af41046b479e231b2aeb818",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_solution_boxes.csv",
+      "size": 4555,
+      "sha256": "eec2593ba985faf3d9366949f00eb409d78d694b8e63934f34fda21be3df24f1",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_solution_stops.csv",
+      "size": 1624,
+      "sha256": "4c3368fcfe08bc323cf22dd5e7bfba2fe2cbb2a0dd8361a8ef8bea09f6bf03c6",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_solution_trips.csv",
+      "size": 5761,
+      "sha256": "c53ee8c1b6e9453af0f8def2dca1cea4765d099b89698ecbd8b6aa2317561c14",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q2/q2_uav_timeline.csv",
+      "size": 1138,
+      "sha256": "b1cd40428b7716bf992bbf7022deec3414b6a14b5e8fe1468d92c83fca643613",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_a_final.json",
+      "size": 1777,
+      "sha256": "fd66251a548f45354fe894ff7107d9785d5cb8b295dc50b19939c5efc8c43416",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_a_report.md",
+      "size": 20011,
+      "sha256": "fe9aea36cc46dbff8e665c6bb354f8eddf001f0a7135b71c3463c8796e623e73",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_b_candidate_pruning.csv",
+      "size": 2813,
+      "sha256": "69b6133917531d153b0547e976870b2e81b3bceb40a15b51a3ad9bd44c5c141d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_b_candidate_spacing_sensitivity.csv",
+      "size": 335,
+      "sha256": "c15a21d854c9da37401b7db75d6acc086169a817f8af7b2b67fcd8a440a4b63d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_b_coverage_audit.csv",
+      "size": 716,
+      "sha256": "07f003bee4a3b46f3123fc9679a07b43b2bb98cb6683c7c78f5502c0065a1c05",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_b_coverage_matrix.csv",
+      "size": 170008,
+      "sha256": "cb5699dbd14c97d4b82acc757051e57ba29c18dfe6bd534e0812406f40d4d67a",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_b_energy_component_timeline.csv",
+      "size": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_b_exact_validation.csv",
+      "size": 278,
+      "sha256": "9c3bf5c1cf53679f81d733f96179365139a2f22d6b014784c769db2b0d7a0de1",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_b_final.json",
+      "size": 1607,
+      "sha256": "656dfffed6761332694538793fc12e4f3666c1661715d042042c271734b85ec2",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_b_full_replay.csv",
+      "size": 817,
+      "sha256": "563605c44b8fa574aec9b7c233bcd616881e78851f270db5d04d72a924507de9",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_b_relay_services.csv",
+      "size": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_b_relay_sorties.csv",
+      "size": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_b_relay_uav_timeline.csv",
+      "size": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_b_report.md",
+      "size": 1591,
+      "sha256": "a0bc67e2d5a98123691d2cb905d53f8f8bd4026e781500099d93fbf65582fa2d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_b_resource_audit.csv",
+      "size": 440,
+      "sha256": "7d78c48c341272a5bf908910037f9ff150a699c548e77bfbcd4c18b39604fef0",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_b_service_options.csv",
+      "size": 252794,
+      "sha256": "1b6745485d70ac72e8a40f4f15ccbc792eb224b0f672509afef16fe7ce2dad13",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_b_solver_status.json",
+      "size": 241,
+      "sha256": "6f54eef23509cf5de13ab116f00f5953543ffd5990b88eb72bc828b518bf18ae",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_blind_interval_validation.csv",
+      "size": 1368,
+      "sha256": "d98159ac5f002540d78834eee03ef445f78b8673bb9a0fb4f6e76bfe286e588b",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_blind_intervals.csv",
+      "size": 35241,
+      "sha256": "255387a810f9ce7d0a8a6e03ec882d85704f589865e939119a73035c6df0cffe",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2_baseline_blind_intervals.csv",
+      "size": 2409,
+      "sha256": "227462d558bf8c84dede07563f278e8e366b7834a2389185fa695c22a8a42676",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2_baseline_bottleneck.json",
+      "size": 5739,
+      "sha256": "79535e7caea3bec71bfa7f0cd204e9b9a1eb404aeb3ddeb51465a91e899ff9dd",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2_baseline_overlap_matrix.csv",
+      "size": 1675,
+      "sha256": "2d6308863ce4a5457891a135df18be904b2df979c8137b3d6963b7c220602d56",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2_baseline_relay_pressure.csv",
+      "size": 113,
+      "sha256": "a8cba6eab299373c0eafaed5a324e5288332e6197137e4f8c05d04b3a6772154",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2_communication_audit.csv",
+      "size": 493,
+      "sha256": "f1c92ca80320ab8a09057b983e82f31e039119a7a637cd5282d30f5bda01aaf6",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2_energy_component_timeline.csv",
+      "size": 1823,
+      "sha256": "8345f2fcce9bf72dfd6be8b7864f7fd9c6329c192df4e8e362dc60b7948da7ac",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2_feasible_seed.json",
+      "size": 86810,
+      "sha256": "817b791722256002feef7c1d536b945f102d03965a479a49b022c42c9c3ffde4",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2_feasible_seed_report.md",
+      "size": 245,
+      "sha256": "c14ef5c89cc0424dd25b76bf77ab5726bfc9d693ff445be918dd00769d894a81",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2_joint_resource_audit.csv",
+      "size": 412,
+      "sha256": "2bc3b0bba840975c0d217130d048aff5de54c5b4038506a745dcf7fa5e54a3d2",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2_relay_services.csv",
+      "size": 755,
+      "sha256": "29b2306da5e616d522ea997177b13c6621602b8520b6abc3ed754e12f80f46c7",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2_relay_sorties.csv",
+      "size": 1823,
+      "sha256": "8345f2fcce9bf72dfd6be8b7864f7fd9c6329c192df4e8e362dc60b7948da7ac",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2_relay_uav_timeline.csv",
+      "size": 1823,
+      "sha256": "8345f2fcce9bf72dfd6be8b7864f7fd9c6329c192df4e8e362dc60b7948da7ac",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2_transport_battery_timeline.csv",
+      "size": 17841,
+      "sha256": "205cb2e47bd6242b7b1e61a4bf7bbcf8f781f7714108da88979b0de592cf0038",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2_transport_boxes.csv",
+      "size": 4574,
+      "sha256": "f81c1ad1796f80a81c059df9dd8e1cdf388859538e59b10be8c605f9ad3f1ea4",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2_transport_trips.csv",
+      "size": 17841,
+      "sha256": "205cb2e47bd6242b7b1e61a4bf7bbcf8f781f7714108da88979b0de592cf0038",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2_transport_uav_timeline.csv",
+      "size": 17841,
+      "sha256": "205cb2e47bd6242b7b1e61a4bf7bbcf8f781f7714108da88979b0de592cf0038",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2a_repair_audit.json",
+      "size": 9874,
+      "sha256": "26b657fe2d5f1b8c374f6a46ff5c07746172b724f6dd39027c1afd8f5ebb2a3c",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2a_summary.md",
+      "size": 335,
+      "sha256": "23c1815f962fef9802c3534b18c043e277a7c59bcfa5d8e79b983dda55af7726",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2a_validation.json",
+      "size": 73421,
+      "sha256": "11c03d1f8bb8031a30b131e398ea0653d0aeb15566186377bf21311b4f470622",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2b_results.json",
+      "size": 253802,
+      "sha256": "52cb7f8b3e62fdc95042a25500a57dc2244b7849596adb5ec5cf278da301a733",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2b_summary.md",
+      "size": 317,
+      "sha256": "10a057b271d0baef377849b2293f606d76dff8cddefafc84c45eb3eb4413d7b4",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c2b_validation.json",
+      "size": 22104,
+      "sha256": "5577d1034a64cd4d4c040918c9f29ba3f55ff05712580750214e57c481a8c24b",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c_framework_report.md",
+      "size": 719,
+      "sha256": "1a277f76176b41e6d7780fdf0a4d7a20d31e6e5436ce54a3ee8584a71c554936",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_c_framework_validation.json",
+      "size": 2028,
+      "sha256": "5c2d970d289caf92fe452ee1399c64e804baea73200efe561969f0109dba24d7",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_candidate_validation.csv",
+      "size": 39344,
+      "sha256": "629c7beb1d37d472a65ef470e1e28e4ecb8ed2ccd7ba273b50926eea364e36e8",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_comm_unit_tests.csv",
+      "size": 4681,
+      "sha256": "73861f48d2cfc519a09195c2c19906e3830422cd139723f9ba3d403567e7c749",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_data_audit.json",
+      "size": 3423,
+      "sha256": "21d2a63949570aa87358ce24ab786298595f4fa6b165dc2643767ecd0a2511bc",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_data_audit.md",
+      "size": 2668,
+      "sha256": "794b1edd2e69dbe7adb0fd2601516d997487079094acfb6074e33f813a56ecd3",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_direct_coverage_audit.csv",
+      "size": 1409,
+      "sha256": "f31cd620e2e939a5e83bdcdeb333d99aea021c93cd9ab6e2e74d46056163e522",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_dt_sensitivity.csv",
+      "size": 1838,
+      "sha256": "7c45936d04a12158ac176cdf7e4b7836dd2f916e4d843c654c1741f29ccf0d3d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_failure_taxonomy.json",
+      "size": 1809,
+      "sha256": "703a6a3560835cfc1cf8d657419ee4381f419cab9efa81226fcdeeb602d8a643",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_final.json",
+      "size": 103284,
+      "sha256": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_final_audit.json",
+      "size": 29299,
+      "sha256": "00cc81e5c0504a10e03a45578ffcee4ba09fc0d229e4c68856ae1e476f5ba5c3",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/Q3_FREEZE_REPORT.md",
+      "size": 3465,
+      "sha256": "96980c1c417af8736bbf5a31bf6a9c57cdda51424f8b1a6ad500184ab8e1629d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_los_endpoint_buffer_sensitivity.csv",
+      "size": 1819,
+      "sha256": "2ca0c69da705e85e8694d2371a65e7abac54041483dba51b0cc902fbfa68e89e",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_q2baseline_alltrip_direct_audit.csv",
+      "size": 1801,
+      "sha256": "67bdddbda535dfdfe3ae2690c0a3a89b11ba7b1abd788bda4a0c1bb4bd7c26e2",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_relay_candidate_audit.csv",
+      "size": 23785,
+      "sha256": "82da1e31f2303f91af7a635244fd9ccd165009f2a7df28489bbc7b7f28228e86",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/q3_reproduction_report.json",
+      "size": 41973,
+      "sha256": "f1021e8464cca6efa664aa9b3e43b76c655692b869df27e153dfa477a595dab7",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/tables/Q3_Formal_Tables.md",
+      "size": 588,
+      "sha256": "0b916054c10e84cf121955cc73fecc37d1b1b612997d56736d18fa43bcb32df3",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/tables/Q3_Table_01_FinalSolution.csv",
+      "size": 309,
+      "sha256": "4e5b59f8bbba6a743d59ab3b0e8e59f769f19315cde1c814371369407ef61997",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/tables/Q3_Table_02_ConstraintAudit.csv",
+      "size": 1577,
+      "sha256": "a0f720164468c8c6d3a39921bcfb5699ad64f87ad0199e9ddbccce4abc4e4b6f",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/tables/Q3_Table_03_FeasiblePool.csv",
+      "size": 994,
+      "sha256": "d3590ebca31e7c1a565ba9fe45d73ef43a25263cfa03f3dc74b9bf37785f64bb",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q3/tables/q3_table_manifest.json",
+      "size": 329,
+      "sha256": "6db64fd79a1582b14e537a4b59bbf8213ba4bebadc1048a70a4589cd7a582b35",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/q4_a_problem_definition.json",
+      "size": 4478,
+      "sha256": "44039997b283ac29d96d91276b4decde847368aaf2f54eacad2d21fce086eb0b",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/q4_a_report.md",
+      "size": 278,
+      "sha256": "1e39b1f77f9ad4bddcb21fe3fb364561c123582d74e2bf7458535ad02a9ef9e5",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/q4_a_state_interface.json",
+      "size": 97794,
+      "sha256": "458500572550c8a152a135bbcb973fffc2333b36e49c82c394461c3a16333495",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/q4_baseline.json",
+      "size": 5454,
+      "sha256": "e7490b45348c808b140b98fa8fd0f6d4cd6e57db71a09abe5eb6dd98ccce7b2d",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/q4_baseline_report.md",
+      "size": 140,
+      "sha256": "a1d3535d311584664dfe980565ab72e4a72036ac41ebc46b0d743af42fb29519",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/q4_baseline_validation.json",
+      "size": 967,
+      "sha256": "f4e916a8f14ddef94f5f966552dbededfc6300ed52b494d25bb240bf15fbe026",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/q4_failure_taxonomy.json",
+      "size": 49,
+      "sha256": "8dcdccbed6329413c716844f63e1e3e57a3eeaeee87819bc54371b5c26174b2f",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/q4_final.json",
+      "size": 134270,
+      "sha256": "70361a3df8d37bcc01c8d476b8f1b8a55f0a3d45aaa2127f64b93ea3e9cb61d3",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/q4_final_audit.json",
+      "size": 4897,
+      "sha256": "8e5800e6f7c77396f869195c432a63a73da47bb71ad335ce5ae7af29c227383f",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/Q4_FREEZE_REPORT.md",
+      "size": 1443,
+      "sha256": "12ff7b455ff75f088c5c752b776e2010bf206044ce4c9e86915087dc756a8046",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/q4_problem_audit.json",
+      "size": 7255,
+      "sha256": "a4e8dac6911e43cb249217a6ba1a86ce4511fac4f8dfc3d82faf21d31a535d79",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/q4_problem_audit.md",
+      "size": 1905,
+      "sha256": "cd55eecee1ace9eb0be26bcad6e462e48487a284eb8f8e88ddda4daa324e299a",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/q4_q3_interface_validation.json",
+      "size": 105462,
+      "sha256": "3ab8edc3ca67c676311ae696faa56485f08e51b12a7a0df6873a991f145336d9",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/q4_q3_upstream_refresh_audit.json",
+      "size": 2679,
+      "sha256": "3cf20fbb7605a1e63587a9a131fcad55da632de6130689c8aa468ccdd9633cf1",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/q4_q3_upstream_refresh_revalidation.json",
+      "size": 8007,
+      "sha256": "9bc8e3c1f934f6f6513e3ae73505e73afa87674bd76de7021eca3a1d2cc3c6cd",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/q4_reproduction_comparison.json",
+      "size": 3236,
+      "sha256": "731fed156fed3fbb9c5024e2f952837485433de810fdc275bb0d2fbccb068eaa",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/q4_reproduction_report.json",
+      "size": 12072,
+      "sha256": "4d9d195b7765c24cb507b9f588279f4594431fcfcc3994214c9186805f013230",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/q4_small_case_validation.json",
+      "size": 933,
+      "sha256": "d7c6290c6ec31d46b6accfd70ac8f8008eb2bf5b47ddfc5ba2bf324b84c8fff3",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/tables/Q4_Formal_Tables.md",
+      "size": 268,
+      "sha256": "5defb5832e87d4d2127304bc623f504962fae6cbc98215ad43cfadc9db21d06e",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/tables/Q4_Table_01_SelectedConfigurations.csv",
+      "size": 1264,
+      "sha256": "2baf56623d4fde1df26105c565845811f6146cac3a42cd3ac59aa86b1889c109",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/tables/Q4_Table_02_GroupResources.csv",
+      "size": 861,
+      "sha256": "154b15cd7e303abe7b2eabdf123a0ec9fc2fa3dec8254d559c68394299866fb4",
+      "formal_or_auxiliary": "FORMAL"
+    },
+    {
+      "file": "results/q4/tables/q4_table_manifest.json",
+      "size": 300,
+      "sha256": "6b2ade09d422aebb263ae495943198129a61e4001b283bac3cafe70ceb550499",
+      "formal_or_auxiliary": "FORMAL"
+    }
+  ]
+}

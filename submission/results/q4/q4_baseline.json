@@ -1,0 +1,253 @@
+{
+  "candidate_id": "Q4-BASE-ALL",
+  "parent_id": "C2A-BASE",
+  "operator": "unpartitioned_q3_reference",
+  "changed_variables": {
+    "component_groups": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    ]
+  },
+  "unchanged_frozen_variables": [
+    "transport_state",
+    "transport_schedule",
+    "relay_schedule",
+    "fleet",
+    "battery_configuration",
+    "communication_relation"
+  ],
+  "state_signature": "a4d920eb3863259af4eb69aac3899e320a6428d46017081d9b511728820a0b16",
+  "upstream_q3_reference": "C2A-BASE",
+  "n_groups": 1,
+  "groups": [
+    {
+      "group_id": "G1",
+      "components": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "service_areas": [
+        "S001",
+        "S002",
+        "S003",
+        "S004",
+        "S005",
+        "S006",
+        "S007",
+        "S008",
+        "S009",
+        "S010",
+        "S011",
+        "S012",
+        "S013",
+        "S014",
+        "S015"
+      ],
+      "transport_trip_ids": [
+        "T001",
+        "T002",
+        "T003",
+        "T004",
+        "T005",
+        "T006",
+        "T007",
+        "T008",
+        "T009",
+        "T010",
+        "T011",
+        "T012",
+        "T013",
+        "T014",
+        "T015",
+        "T016",
+        "T017",
+        "T018",
+        "T019",
+        "T020",
+        "T021",
+        "T022",
+        "T023",
+        "T024",
+        "T025"
+      ],
+      "relay_sortie_ids": [
+        "RS-001",
+        "RS-002",
+        "RS-003",
+        "RS-004",
+        "RS-005",
+        "RS-006"
+      ],
+      "resources": {
+        "transport_uavs": [
+          "U01",
+          "U02",
+          "U03",
+          "U04",
+          "U05",
+          "U06",
+          "U07",
+          "U08"
+        ],
+        "batteries": [
+          "BAT-A-01",
+          "BAT-A-02",
+          "BAT-A-03",
+          "BAT-A-04",
+          "BAT-A-05",
+          "BAT-A-06",
+          "BAT-B-01",
+          "BAT-B-02",
+          "BAT-B-03",
+          "BAT-B-04",
+          "BAT-C-01",
+          "BAT-C-02",
+          "BAT-C-03",
+          "BAT-C-04"
+        ],
+        "relay_uavs": [
+          "R01",
+          "R02"
+        ],
+        "relay_energy_components": [
+          "EC-01",
+          "EC-02",
+          "EC-03",
+          "EC-04",
+          "EC-06"
+        ],
+        "transport_uavs_by_type": {
+          "A": 4,
+          "B": 2,
+          "C": 2
+        },
+        "batteries_by_type": {
+          "A": 6,
+          "B": 4,
+          "C": 4
+        }
+      },
+      "workload_s": 64834.28365062774,
+      "transport_workload_s": 35896.642832170495,
+      "relay_workload_s": 28937.64081845724
+    }
+  ],
+  "resource_requirements": {
+    "transport_uavs_by_type": {
+      "A": 4,
+      "B": 2,
+      "C": 2
+    },
+    "batteries_by_type": {
+      "A": 6,
+      "B": 4,
+      "C": 4
+    },
+    "relay_uavs_by_type": {
+      "R": 2
+    },
+    "relay_energy_by_type": {
+      "R": 5
+    }
+  },
+  "inventory": {
+    "transport_uavs_by_type": {
+      "A": 4,
+      "B": 2,
+      "C": 2
+    },
+    "batteries_by_type": {
+      "A": 6,
+      "B": 4,
+      "C": 4
+    },
+    "relay_uavs_by_type": {
+      "R": 2
+    },
+    "relay_energy_by_type": {
+      "R": 6
+    }
+  },
+  "shortages": {
+    "transport_uavs_by_type:A": 0,
+    "transport_uavs_by_type:B": 0,
+    "transport_uavs_by_type:C": 0,
+    "batteries_by_type:A": 0,
+    "batteries_by_type:B": 0,
+    "batteries_by_type:C": 0,
+    "relay_uavs_by_type:R": 0,
+    "relay_energy_by_type:R": 0
+  },
+  "workload": {
+    "max_s": 64834.28365062774,
+    "min_s": 64834.28365062774,
+    "imbalance_ratio": 1.0
+  },
+  "objective": {
+    "total_resource_units": 29,
+    "total_shortage_units": 0,
+    "imbalance_ratio": 1.0,
+    "max_group_workload_s": 64834.28365062774,
+    "group_workload_range_s": 0.0
+  },
+  "hard_constraint_checks": {
+    "all_services_assigned_once": true,
+    "all_groups_nonempty": true,
+    "multi_stop_trips_single_group": true,
+    "frozen_q3_tasks_preserved": true,
+    "resource_counts_recomputed": true
+  },
+  "validator_status": "PASS",
+  "validator_result": {
+    "candidate_id": "Q4-BASE-ALL",
+    "state_signature": "a4d920eb3863259af4eb69aac3899e320a6428d46017081d9b511728820a0b16",
+    "status": "PASS",
+    "checks": {
+      "state_signature_matches": true,
+      "group_count_matches": true,
+      "groups_match": true,
+      "resource_requirements_match": true,
+      "shortages_match": true,
+      "objective_matches": true,
+      "hard_constraints_recomputed": true,
+      "upstream_reference_matches": true
+    },
+    "recomputed_objective": {
+      "total_resource_units": 29,
+      "total_shortage_units": 0,
+      "imbalance_ratio": 1.0,
+      "max_group_workload_s": 64834.28365062774,
+      "group_workload_range_s": 0.0
+    },
+    "recomputed_shortages": {
+      "transport_uavs_by_type:A": 0,
+      "transport_uavs_by_type:B": 0,
+      "transport_uavs_by_type:C": 0,
+      "batteries_by_type:A": 0,
+      "batteries_by_type:B": 0,
+      "batteries_by_type:C": 0,
+      "relay_uavs_by_type:R": 0,
+      "relay_energy_by_type:R": 0
+    }
+  }
+}

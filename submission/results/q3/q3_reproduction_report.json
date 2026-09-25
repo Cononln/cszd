@@ -1,0 +1,1087 @@
+{
+  "status": "PASS",
+  "results_dir": "D:\\Users\\29919\\Documents\\科研\\cszd-q3c-formal\\implementation\\q3\\results",
+  "c2a": {
+    "status": "PASS",
+    "generated_raw_count": 9,
+    "noop_removed_count": 4,
+    "duplicate_removed_count": 0,
+    "unique_candidate_count": 5,
+    "candidate_count": 5,
+    "joint_feasible_count": 4
+  },
+  "c2b": {
+    "status": "PASS",
+    "generated_raw_count": 4,
+    "noop_removed_count": 2,
+    "duplicate_removed_count": 0,
+    "unique_candidate_count": 2,
+    "candidate_count": 2,
+    "joint_feasible_count": 1
+  },
+  "selected_solution_id": "C2A-BASE",
+  "selected_state_signature": "ee2466c245db4dc12ee6f8d7d31151776c81aa7d2e53d336a8e97aa6805e76ef",
+  "figures": {
+    "status": "PASS",
+    "backend": "python-matplotlib",
+    "source": "q3_final.json",
+    "source_sha256": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81",
+    "artifacts": [
+      "Fig_Q3_01_joint_solution_cost.alignment.json",
+      "Fig_Q3_01_joint_solution_cost.alignment.svg",
+      "Fig_Q3_01_joint_solution_cost.pdf",
+      "Fig_Q3_01_joint_solution_cost.png",
+      "Fig_Q3_01_joint_solution_cost.svg",
+      "Fig_Q3_01_joint_solution_cost.tiff",
+      "Fig_Q3_02_temporal_coordination.alignment.json",
+      "Fig_Q3_02_temporal_coordination.alignment.svg",
+      "Fig_Q3_02_temporal_coordination.pdf",
+      "Fig_Q3_02_temporal_coordination.png",
+      "Fig_Q3_02_temporal_coordination.svg",
+      "Fig_Q3_02_temporal_coordination.tiff",
+      "Fig_Q3_03_search_validation.alignment.json",
+      "Fig_Q3_03_search_validation.alignment.svg",
+      "Fig_Q3_03_search_validation.pdf",
+      "Fig_Q3_03_search_validation.png",
+      "Fig_Q3_03_search_validation.svg",
+      "Fig_Q3_03_search_validation.tiff",
+      "Q3_Figure_Contract.md"
+    ],
+    "source_preflight": {
+      "source": "D:\\Users\\29919\\Documents\\科研\\cszd-q3c-formal\\implementation\\q3\\code\\q3\\generate_q3_figures.py",
+      "backend": "python",
+      "summary": {
+        "ready": true,
+        "strict": false,
+        "counts": {
+          "PASS": 21,
+          "WARN": 0,
+          "FAIL": 0
+        }
+      },
+      "findings": [
+        {
+          "check_id": "SOURCE-SYNTAX",
+          "level": "PASS",
+          "message": "Python source parses successfully",
+          "evidence": []
+        },
+        {
+          "check_id": "FONT-FAMILY",
+          "level": "PASS",
+          "message": "A publication-safe sans-serif family is configured",
+          "evidence": [
+            "Arial",
+            "Liberation Sans",
+            "sans-serif"
+          ]
+        },
+        {
+          "check_id": "FONT-SIZE",
+          "level": "PASS",
+          "message": "All detected text sizes are at least 5 pt (minimum 5.6 pt)",
+          "evidence": []
+        },
+        {
+          "check_id": "FONT-GLYPH-FLOOR",
+          "level": "PASS",
+          "message": "No mathtext superscript/subscript expression detected",
+          "evidence": []
+        },
+        {
+          "check_id": "LEGEND-LABEL-CASE",
+          "level": "PASS",
+          "message": "Detected literal legend labels start with display-style capitalization",
+          "evidence": []
+        },
+        {
+          "check_id": "COLOR-MAP",
+          "level": "PASS",
+          "message": "No rainbow/jet/hsv color mapping detected",
+          "evidence": []
+        },
+        {
+          "check_id": "EDITABLE-TEXT",
+          "level": "PASS",
+          "message": "SVG and PDF editable-text settings are configured",
+          "evidence": []
+        },
+        {
+          "check_id": "EXPORT-VECTOR",
+          "level": "PASS",
+          "message": "Both SVG and PDF exports are present",
+          "evidence": []
+        },
+        {
+          "check_id": "EXPORT-RASTER",
+          "level": "PASS",
+          "message": "TIFF raster export is present",
+          "evidence": []
+        },
+        {
+          "check_id": "RASTER-DPI",
+          "level": "PASS",
+          "message": "A raster export of at least 600 dpi is configured",
+          "evidence": [
+            "600"
+          ]
+        },
+        {
+          "check_id": "FINAL-WIDTH",
+          "level": "PASS",
+          "message": "Detected width 181.6 mm matches a common journal column width",
+          "evidence": []
+        },
+        {
+          "check_id": "DATA-SAMPLING",
+          "level": "PASS",
+          "message": "No high-confidence row-sampling operation detected",
+          "evidence": []
+        },
+        {
+          "check_id": "DATA-EXCLUSION",
+          "level": "PASS",
+          "message": "No high-confidence missing-data exclusion detected",
+          "evidence": []
+        },
+        {
+          "check_id": "DEMO-DATA",
+          "level": "PASS",
+          "message": "No obvious simulated-data generator detected",
+          "evidence": []
+        },
+        {
+          "check_id": "LOG-GUARD",
+          "level": "PASS",
+          "message": "No logarithmic transform or axis detected",
+          "evidence": []
+        },
+        {
+          "check_id": "INTERP-MONOTONIC",
+          "level": "PASS",
+          "message": "No NumPy interpolation requiring an increasing x-grid detected",
+          "evidence": []
+        },
+        {
+          "check_id": "UNCERTAINTY-ENCODING",
+          "level": "PASS",
+          "message": "No stochastic aggregate requiring a variability audit was inferred",
+          "evidence": []
+        },
+        {
+          "check_id": "ROTATION-ANCHOR",
+          "level": "PASS",
+          "message": "No rotated Matplotlib text detected",
+          "evidence": []
+        },
+        {
+          "check_id": "ANNOTATION-WORKAROUND",
+          "level": "PASS",
+          "message": "No high-risk hard-coded label height or opaque white text mask detected",
+          "evidence": []
+        },
+        {
+          "check_id": "PANEL-ALIGNMENT-GATE",
+          "level": "PASS",
+          "message": "Render-time panel-alignment gate is wired into the plotting source",
+          "evidence": [
+            "require_matplotlib_panel_alignment("
+          ]
+        },
+        {
+          "check_id": "BACKEND-EXCLUSIVE",
+          "level": "PASS",
+          "message": "No obvious cross-backend plotting reference found for python",
+          "evidence": []
+        }
+      ],
+      "exit_code": 0
+    },
+    "pdf_qa": [
+      {
+        "figure": "Fig_Q3_01_joint_solution_cost.pdf",
+        "status": "PASS",
+        "pdf_text": {
+          "pdf": "D:\\Users\\29919\\Documents\\科研\\cszd-q3c-formal\\implementation\\q3\\results\\figures\\Fig_Q3_01_joint_solution_cost.pdf",
+          "auditable": true,
+          "minimum_required_pt": 5.0,
+          "minimum_found_pt": 6.0,
+          "text_run_count": 37,
+          "below_minimum_count": 0,
+          "below_minimum": [],
+          "warnings": []
+        },
+        "collision": {
+          "pdf": "D:\\Users\\29919\\Documents\\科研\\cszd-q3c-formal\\implementation\\q3\\results\\figures\\Fig_Q3_01_joint_solution_cost.pdf",
+          "auditable": true,
+          "verdict": "PASS",
+          "page_count": 1,
+          "visible_text_box_count": 37,
+          "text_trace_count": 37,
+          "stroke_path_count": 34,
+          "filled_region_count": 38,
+          "image_region_count": 0,
+          "summary": {
+            "fail": 0,
+            "warn": 0,
+            "contained_fill_overlays": 0,
+            "contained_image_overlays": 0
+          },
+          "thresholds": {
+            "text_inset_pt": 0.6,
+            "min_overlap_ratio": 0.05,
+            "clipping_tolerance_pt": 0.5
+          },
+          "findings": []
+        },
+        "collision_exit_code": 0,
+        "artifacts": []
+      },
+      {
+        "figure": "Fig_Q3_02_temporal_coordination.pdf",
+        "status": "PASS",
+        "pdf_text": {
+          "pdf": "D:\\Users\\29919\\Documents\\科研\\cszd-q3c-formal\\implementation\\q3\\results\\figures\\Fig_Q3_02_temporal_coordination.pdf",
+          "auditable": true,
+          "minimum_required_pt": 5.0,
+          "minimum_found_pt": 6.0,
+          "text_run_count": 30,
+          "below_minimum_count": 0,
+          "below_minimum": [],
+          "warnings": []
+        },
+        "collision": {
+          "pdf": "D:\\Users\\29919\\Documents\\科研\\cszd-q3c-formal\\implementation\\q3\\results\\figures\\Fig_Q3_02_temporal_coordination.pdf",
+          "auditable": true,
+          "verdict": "PASS",
+          "page_count": 1,
+          "visible_text_box_count": 30,
+          "text_trace_count": 30,
+          "stroke_path_count": 26,
+          "filled_region_count": 87,
+          "image_region_count": 0,
+          "summary": {
+            "fail": 0,
+            "warn": 0,
+            "contained_fill_overlays": 0,
+            "contained_image_overlays": 0
+          },
+          "thresholds": {
+            "text_inset_pt": 0.6,
+            "min_overlap_ratio": 0.05,
+            "clipping_tolerance_pt": 0.5
+          },
+          "findings": []
+        },
+        "collision_exit_code": 0,
+        "artifacts": []
+      },
+      {
+        "figure": "Fig_Q3_03_search_validation.pdf",
+        "status": "PASS",
+        "pdf_text": {
+          "pdf": "D:\\Users\\29919\\Documents\\科研\\cszd-q3c-formal\\implementation\\q3\\results\\figures\\Fig_Q3_03_search_validation.pdf",
+          "auditable": true,
+          "minimum_required_pt": 5.0,
+          "minimum_found_pt": 5.6,
+          "text_run_count": 24,
+          "below_minimum_count": 0,
+          "below_minimum": [],
+          "warnings": []
+        },
+        "collision": {
+          "pdf": "D:\\Users\\29919\\Documents\\科研\\cszd-q3c-formal\\implementation\\q3\\results\\figures\\Fig_Q3_03_search_validation.pdf",
+          "auditable": true,
+          "verdict": "PASS",
+          "page_count": 1,
+          "visible_text_box_count": 24,
+          "text_trace_count": 24,
+          "stroke_path_count": 20,
+          "filled_region_count": 28,
+          "image_region_count": 0,
+          "summary": {
+            "fail": 0,
+            "warn": 0,
+            "contained_fill_overlays": 0,
+            "contained_image_overlays": 0
+          },
+          "thresholds": {
+            "text_inset_pt": 0.6,
+            "min_overlap_ratio": 0.05,
+            "clipping_tolerance_pt": 0.5
+          },
+          "findings": []
+        },
+        "collision_exit_code": 0,
+        "artifacts": []
+      }
+    ],
+    "qa_runtime": "scientific plotting skill"
+  },
+  "tables": {
+    "status": "PASS",
+    "source": "q3_final.json",
+    "source_sha256": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81",
+    "artifacts": [
+      "Q3_Table_01_FinalSolution.csv",
+      "Q3_Table_02_ConstraintAudit.csv",
+      "Q3_Table_03_FeasiblePool.csv",
+      "Q3_Formal_Tables.md"
+    ],
+    "table_count": 3
+  },
+  "final_audit": {
+    "phase": "Q3-final-audit",
+    "status": "PASS",
+    "checks": {
+      "q2_frozen_files_untouched": true,
+      "independent_validator_pass": true,
+      "all_hard_constraints_pass": true,
+      "full_communication_zero_outage": true,
+      "source_numbers_consistent": true,
+      "schedule_csv_complete": true,
+      "no_formal_optimizer_entered": true,
+      "single_formal_source_declared": true,
+      "failure_taxonomy_present": true,
+      "no_noop_candidates": true,
+      "candidate_state_signatures_unique": true,
+      "feasible_pool_state_signatures_unique": true,
+      "candidate_counts_recomputed": true,
+      "failure_taxonomy_semantically_valid": true,
+      "formal_figure_manifest_present": true,
+      "formal_table_manifest_present": true,
+      "figures_read_only_q3_final": true,
+      "tables_read_only_q3_final": true,
+      "figure_qa_pass": true,
+      "all_manifest_artifacts_present": true
+    },
+    "independent_validation": {
+      "phase": "Q3-C-C2-independent-validation",
+      "status": "PASS",
+      "checks": {
+        "seed_declares_pass": true,
+        "q2_transport_replay_pass": true,
+        "q3b_real_decoder_pass": true,
+        "q3b_independent_validator_pass": true,
+        "joint_independent_validator_pass": true,
+        "zero_communication_outage": true
+      },
+      "transport": {
+        "phase": "Q2-E",
+        "status": "PASS",
+        "checks": {
+          "all_boxes_delivered_once": true,
+          "missing_boxes": true,
+          "duplicate_boxes": true,
+          "no_split_boxes": true,
+          "unknown_boxes": true,
+          "mass_pass": true,
+          "volume_pass": true,
+          "energy_pass": true,
+          "return_reserve_pass": true,
+          "route_energy_recomputed": true,
+          "delivery_recomputed": true,
+          "first_deadlines_pass": true,
+          "medical_deadlines_pass": true,
+          "uav_type_pass": true,
+          "uav_overlap_zero": true,
+          "battery_type_pass": true,
+          "battery_count_pass": true,
+          "battery_overlap_zero": true,
+          "soc_pass": true,
+          "charge_pass": true,
+          "charge_before_reuse_pass": true,
+          "solver_validator_consistent": true
+        },
+        "metrics": {
+          "WTD": 2919779.443347478,
+          "Cmax_s": 23738.870393305344,
+          "total_energy_kwh": 70.11816756700782,
+          "n_trips": 25.0
+        },
+        "solver_metrics": {
+          "WTD": 2919779.4433474788,
+          "Cmax_s": 23738.870393305344,
+          "total_energy_kwh": 70.1181675670078,
+          "n_trips": 25.0,
+          "total_operation_time_s": 45796.642832170495
+        },
+        "n_trips": 25,
+        "n_boxes": 80,
+        "delivered_records": 80,
+        "solver_status": "C2_START_TIME_REPAIR",
+        "solver_stage_statuses": {
+          "WTD": "C2_START_TIME_REPAIR",
+          "Cmax": "C2_START_TIME_REPAIR"
+        },
+        "solver_grid_metrics": {},
+        "battery_reuse_audit": [
+          {
+            "battery_id": "BAT-A-01",
+            "previous_trip": "T001",
+            "previous_charge_end": 2192.508647086876,
+            "next_trip": "T024",
+            "next_start": 5940.0,
+            "margin_s": 3747.491352913124,
+            "pass": true
+          },
+          {
+            "battery_id": "BAT-C-01",
+            "previous_trip": "T002",
+            "previous_charge_end": 11158.821215676608,
+            "next_trip": "T005",
+            "next_start": 16000.0,
+            "margin_s": 4841.178784323392,
+            "pass": true
+          },
+          {
+            "battery_id": "BAT-A-03",
+            "previous_trip": "T004",
+            "previous_charge_end": 4744.880481214958,
+            "next_trip": "T016",
+            "next_start": 8000.0,
+            "margin_s": 3255.1195187850417,
+            "pass": true
+          },
+          {
+            "battery_id": "BAT-B-02",
+            "previous_trip": "T022",
+            "previous_charge_end": 3566.7344167506444,
+            "next_trip": "T006",
+            "next_start": 5000.0,
+            "margin_s": 1433.2655832493556,
+            "pass": true
+          },
+          {
+            "battery_id": "BAT-C-03",
+            "previous_trip": "T007",
+            "previous_charge_end": 15681.509520914227,
+            "next_trip": "T011",
+            "next_start": 22000.0,
+            "margin_s": 6318.490479085773,
+            "pass": true
+          },
+          {
+            "battery_id": "BAT-C-02",
+            "previous_trip": "T013",
+            "previous_charge_end": 11892.78548274402,
+            "next_trip": "T009",
+            "next_start": 19000.0,
+            "margin_s": 7107.214517255979,
+            "pass": true
+          },
+          {
+            "battery_id": "BAT-A-02",
+            "previous_trip": "T012",
+            "previous_charge_end": 2191.8995403542476,
+            "next_trip": "T010",
+            "next_start": 6000.0,
+            "margin_s": 3808.1004596457524,
+            "pass": true
+          },
+          {
+            "battery_id": "BAT-B-01",
+            "previous_trip": "T018",
+            "previous_charge_end": 3605.9895902492817,
+            "next_trip": "T015",
+            "next_start": 4300.0,
+            "margin_s": 694.0104097507183,
+            "pass": true
+          },
+          {
+            "battery_id": "BAT-B-01",
+            "previous_trip": "T015",
+            "previous_charge_end": 8214.263481053256,
+            "next_trip": "T025",
+            "next_start": 18000.0,
+            "margin_s": 9785.736518946744,
+            "pass": true
+          },
+          {
+            "battery_id": "BAT-B-04",
+            "previous_trip": "T021",
+            "previous_charge_end": 6110.427468054169,
+            "next_trip": "T017",
+            "next_start": 16000.0,
+            "margin_s": 9889.57253194583,
+            "pass": true
+          },
+          {
+            "battery_id": "BAT-B-03",
+            "previous_trip": "T023",
+            "previous_charge_end": 5613.032821388202,
+            "next_trip": "T020",
+            "next_start": 14000.0,
+            "margin_s": 8386.967178611798,
+            "pass": true
+          }
+        ]
+      },
+      "relay": {
+        "decoder_status": "PASS",
+        "baseline_status": "FEASIBLE",
+        "solver_status": "OPTIMAL",
+        "metrics": {
+          "demand_count": 19,
+          "candidate_count": 135,
+          "service_option_count": 735,
+          "candidate_coverable_count": 19,
+          "scheduled_covered_count": 19,
+          "relay_sortie_count": 6,
+          "relay_energy_kwh": 8.247976791529863,
+          "relay_cmax_s": 24147.775014499995,
+          "joint_cmax_s": 24147.775014499995,
+          "runtime_s": 54.9399240000057
+        }
+      },
+      "relay_validation": {
+        "status": "PASS",
+        "decoder_validation_status": "PASS",
+        "decoder_checks": {
+          "all_demands_candidate_coverable": true,
+          "exact_validation_pass": true,
+          "service_option_space_complete": true,
+          "status_mapping_pass": true
+        },
+        "checks": {
+          "all_demands_candidate_coverable": true,
+          "all_demands_scheduled_covered": true,
+          "relay_uav_overlap_zero": true,
+          "energy_component_overlap_zero": true,
+          "charging_pass": true,
+          "arrival_timing_pass": true,
+          "reserve_pass": true,
+          "full_trajectory_communication_feasible": true,
+          "exact_validation_pass": true,
+          "service_option_space_complete": true,
+          "status_mapping_pass": true
+        },
+        "coverage_audit": [
+          {
+            "demand_id": "D-T004-01",
+            "candidate_coverable": true,
+            "n_covering_candidates": 17,
+            "scheduled_covered": true,
+            "selected_sortie_id": "RS-002",
+            "full_replay_covered": true
+          },
+          {
+            "demand_id": "D-T005-01",
+            "candidate_coverable": true,
+            "n_covering_candidates": 17,
+            "scheduled_covered": true,
+            "selected_sortie_id": "RS-005",
+            "full_replay_covered": true
+          },
+          {
+            "demand_id": "D-T006-01",
+            "candidate_coverable": true,
+            "n_covering_candidates": 7,
+            "scheduled_covered": true,
+            "selected_sortie_id": "RS-004",
+            "full_replay_covered": true
+          },
+          {
+            "demand_id": "D-T007-01",
+            "candidate_coverable": true,
+            "n_covering_candidates": 7,
+            "scheduled_covered": true,
+            "selected_sortie_id": "RS-004",
+            "full_replay_covered": true
+          },
+          {
+            "demand_id": "D-T008-01",
+            "candidate_coverable": true,
+            "n_covering_candidates": 6,
+            "scheduled_covered": true,
+            "selected_sortie_id": "RS-003",
+            "full_replay_covered": true
+          },
+          {
+            "demand_id": "D-T009-01",
+            "candidate_coverable": true,
+            "n_covering_candidates": 6,
+            "scheduled_covered": true,
+            "selected_sortie_id": "RS-005",
+            "full_replay_covered": true
+          },
+          {
+            "demand_id": "D-T010-01",
+            "candidate_coverable": true,
+            "n_covering_candidates": 34,
+            "scheduled_covered": true,
+            "selected_sortie_id": "RS-004",
+            "full_replay_covered": true
+          },
+          {
+            "demand_id": "D-T011-01",
+            "candidate_coverable": true,
+            "n_covering_candidates": 34,
+            "scheduled_covered": true,
+            "selected_sortie_id": "RS-006",
+            "full_replay_covered": true
+          },
+          {
+            "demand_id": "D-T014-01",
+            "candidate_coverable": true,
+            "n_covering_candidates": 19,
+            "scheduled_covered": true,
+            "selected_sortie_id": "RS-002",
+            "full_replay_covered": true
+          },
+          {
+            "demand_id": "D-T015-01",
+            "candidate_coverable": true,
+            "n_covering_candidates": 11,
+            "scheduled_covered": true,
+            "selected_sortie_id": "RS-003",
+            "full_replay_covered": true
+          },
+          {
+            "demand_id": "D-T016-01",
+            "candidate_coverable": true,
+            "n_covering_candidates": 49,
+            "scheduled_covered": true,
+            "selected_sortie_id": "RS-004",
+            "full_replay_covered": true
+          },
+          {
+            "demand_id": "D-T017-01",
+            "candidate_coverable": true,
+            "n_covering_candidates": 9,
+            "scheduled_covered": true,
+            "selected_sortie_id": "RS-005",
+            "full_replay_covered": true
+          },
+          {
+            "demand_id": "D-T018-01",
+            "candidate_coverable": true,
+            "n_covering_candidates": 24,
+            "scheduled_covered": true,
+            "selected_sortie_id": "RS-001",
+            "full_replay_covered": true
+          },
+          {
+            "demand_id": "D-T020-01",
+            "candidate_coverable": true,
+            "n_covering_candidates": 11,
+            "scheduled_covered": true,
+            "selected_sortie_id": "RS-005",
+            "full_replay_covered": true
+          },
+          {
+            "demand_id": "D-T021-01",
+            "candidate_coverable": true,
+            "n_covering_candidates": 14,
+            "scheduled_covered": true,
+            "selected_sortie_id": "RS-001",
+            "full_replay_covered": true
+          },
+          {
+            "demand_id": "D-T022-01",
+            "candidate_coverable": true,
+            "n_covering_candidates": 63,
+            "scheduled_covered": true,
+            "selected_sortie_id": "RS-001",
+            "full_replay_covered": true
+          },
+          {
+            "demand_id": "D-T023-01",
+            "candidate_coverable": true,
+            "n_covering_candidates": 18,
+            "scheduled_covered": true,
+            "selected_sortie_id": "RS-001",
+            "full_replay_covered": true
+          },
+          {
+            "demand_id": "D-T024-01",
+            "candidate_coverable": true,
+            "n_covering_candidates": 14,
+            "scheduled_covered": true,
+            "selected_sortie_id": "RS-004",
+            "full_replay_covered": true
+          },
+          {
+            "demand_id": "D-T025-01",
+            "candidate_coverable": true,
+            "n_covering_candidates": 11,
+            "scheduled_covered": true,
+            "selected_sortie_id": "RS-006",
+            "full_replay_covered": true
+          }
+        ],
+        "small_exact": {
+          "B-Small-1": {
+            "solver_status": "OPTIMAL",
+            "sortie_count": 2,
+            "energy_kwh": 2.2,
+            "completion_s": 660,
+            "expected_status": "OPTIMAL",
+            "expected_sortie_count": 2,
+            "pass": true
+          },
+          "B-Small-2": {
+            "solver_status": "OPTIMAL",
+            "sortie_count": 1,
+            "energy_kwh": 1.1,
+            "completion_s": 260,
+            "expected_status": "OPTIMAL",
+            "expected_sortie_count": 1,
+            "pass": true
+          },
+          "B-Small-3": {
+            "solver_status": "INFEASIBLE",
+            "sortie_count": null,
+            "energy_kwh": null,
+            "completion_s": null,
+            "expected_status": "INFEASIBLE",
+            "expected_sortie_count": null,
+            "pass": true
+          },
+          "B-Small-4": {
+            "solver_status": "INFEASIBLE",
+            "sortie_count": null,
+            "energy_kwh": null,
+            "completion_s": null,
+            "expected_status": "INFEASIBLE",
+            "expected_sortie_count": null,
+            "pass": true
+          }
+        },
+        "metrics": {
+          "demand_count": 19,
+          "candidate_count": 135,
+          "service_option_count": 735,
+          "candidate_coverable_count": 19,
+          "scheduled_covered_count": 19,
+          "relay_sortie_count": 6,
+          "relay_energy_kwh": 8.247976791529863,
+          "relay_cmax_s": 24147.775014499995,
+          "joint_cmax_s": 24147.775014499995,
+          "runtime_s": 54.9399240000057
+        },
+        "reason": null,
+        "full_replay_audit": [
+          {
+            "trip_id": "T001",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T002",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T003",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T004",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T005",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T006",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T007",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T008",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T009",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T010",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T011",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T012",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T013",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T014",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T015",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T016",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T017",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T018",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T019",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T020",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T021",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T022",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T023",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T024",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          },
+          {
+            "trip_id": "T025",
+            "outage_samples": 0,
+            "outage_duration_s": 0.0,
+            "communication_feasible": true
+          }
+        ],
+        "decoder_status": "PASS",
+        "baseline_status": "FEASIBLE",
+        "solver_status": "OPTIMAL"
+      },
+      "joint": {
+        "status": "PASS",
+        "checks": {
+          "all_boxes_once": true,
+          "hard_deadlines": true,
+          "mass": true,
+          "volume": true,
+          "transport_reserve": true,
+          "transport_uav_overlap": true,
+          "battery_overlap": true,
+          "battery_soc_recharge": true,
+          "relay_uav_overlap": true,
+          "energy_component_overlap": true,
+          "relay_reserve": true,
+          "relay_charge": true,
+          "arrival_timing": true,
+          "full_communication": true
+        },
+        "reason": null
+      }
+    },
+    "delivery_checks": {
+      "formal_figure_manifest_present": true,
+      "formal_table_manifest_present": true,
+      "figures_read_only_q3_final": true,
+      "tables_read_only_q3_final": true,
+      "figure_qa_pass": true,
+      "all_manifest_artifacts_present": true
+    },
+    "require_deliverables": true,
+    "changed_files_since_c1": [
+      "implementation/q3/README.md",
+      "implementation/q3/code/q3/audit_q3_final.py",
+      "implementation/q3/code/q3/c2_bottleneck.py",
+      "implementation/q3/code/q3/c2_seed_builder.py",
+      "implementation/q3/code/q3/c2_start_time_repair.py",
+      "implementation/q3/code/q3/generate_q3_figures.py",
+      "implementation/q3/code/q3/q3_final.py",
+      "implementation/q3/code/q3/run_q3_c2.py",
+      "implementation/q3/code/q3/run_q3_c2b.py",
+      "implementation/q3/code/q3/run_q3_final.py",
+      "implementation/q3/code/q3/validate_q3_c2.py",
+      "implementation/q3/code/q3/write_q3_freeze_report.py",
+      "implementation/q3/code/q3/write_q3_tables.py",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_01_joint_solution_cost.alignment.json",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_01_joint_solution_cost.alignment.svg",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_01_joint_solution_cost.collision-audit.json",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_01_joint_solution_cost.pdf",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_01_joint_solution_cost.png",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_01_joint_solution_cost.svg",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_01_joint_solution_cost.tiff",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_02_temporal_coordination.alignment.json",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_02_temporal_coordination.alignment.svg",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_02_temporal_coordination.collision-audit.json",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_02_temporal_coordination.pdf",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_02_temporal_coordination.png",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_02_temporal_coordination.svg",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_02_temporal_coordination.tiff",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_03_search_validation.alignment.json",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_03_search_validation.alignment.svg",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_03_search_validation.collision-audit.json",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_03_search_validation.pdf",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_03_search_validation.png",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_03_search_validation.svg",
+      "implementation/q3/reproducibility/clean_results/figures/Fig_Q3_03_search_validation.tiff",
+      "implementation/q3/reproducibility/clean_results/figures/Q3_Figure_Contract.md",
+      "implementation/q3/reproducibility/clean_results/figures/q3_figure_manifest.json",
+      "implementation/q3/reproducibility/clean_results/q3_c2_baseline_blind_intervals.csv",
+      "implementation/q3/reproducibility/clean_results/q3_c2_baseline_bottleneck.json",
+      "implementation/q3/reproducibility/clean_results/q3_c2_baseline_overlap_matrix.csv",
+      "implementation/q3/reproducibility/clean_results/q3_c2_baseline_relay_pressure.csv",
+      "implementation/q3/reproducibility/clean_results/q3_c2_candidate_log.csv",
+      "implementation/q3/reproducibility/clean_results/q3_c2_communication_audit.csv",
+      "implementation/q3/reproducibility/clean_results/q3_c2_energy_component_timeline.csv",
+      "implementation/q3/reproducibility/clean_results/q3_c2_feasible_seed.json",
+      "implementation/q3/reproducibility/clean_results/q3_c2_feasible_seed_report.md",
+      "implementation/q3/reproducibility/clean_results/q3_c2_joint_resource_audit.csv",
+      "implementation/q3/reproducibility/clean_results/q3_c2_relay_services.csv",
+      "implementation/q3/reproducibility/clean_results/q3_c2_relay_sorties.csv",
+      "implementation/q3/reproducibility/clean_results/q3_c2_relay_uav_timeline.csv",
+      "implementation/q3/reproducibility/clean_results/q3_c2_transport_battery_timeline.csv",
+      "implementation/q3/reproducibility/clean_results/q3_c2_transport_boxes.csv",
+      "implementation/q3/reproducibility/clean_results/q3_c2_transport_trips.csv",
+      "implementation/q3/reproducibility/clean_results/q3_c2_transport_uav_timeline.csv",
+      "implementation/q3/reproducibility/clean_results/q3_c2a_candidates.json",
+      "implementation/q3/reproducibility/clean_results/q3_c2a_repair_audit.json",
+      "implementation/q3/reproducibility/clean_results/q3_c2a_summary.md",
+      "implementation/q3/reproducibility/clean_results/q3_c2a_validation.json",
+      "implementation/q3/reproducibility/clean_results/q3_c2b_candidate_log.csv",
+      "implementation/q3/reproducibility/clean_results/q3_c2b_candidates.json",
+      "implementation/q3/reproducibility/clean_results/q3_c2b_results.json",
+      "implementation/q3/reproducibility/clean_results/q3_c2b_summary.md",
+      "implementation/q3/reproducibility/clean_results/q3_c2b_validation.json",
+      "implementation/q3/reproducibility/clean_results/q3_failure_taxonomy.json",
+      "implementation/q3/reproducibility/clean_results/q3_feasible_pool.json",
+      "implementation/q3/reproducibility/clean_results/q3_final.json",
+      "implementation/q3/reproducibility/clean_results/q3_final_audit.json",
+      "implementation/q3/reproducibility/clean_results/q3_reproduction_report.json",
+      "implementation/q3/reproducibility/clean_results/tables/Q3_Formal_Tables.md",
+      "implementation/q3/reproducibility/clean_results/tables/Q3_Table_01_FinalSolution.csv",
+      "implementation/q3/reproducibility/clean_results/tables/Q3_Table_02_ConstraintAudit.csv",
+      "implementation/q3/reproducibility/clean_results/tables/Q3_Table_03_FeasiblePool.csv",
+      "implementation/q3/reproducibility/clean_results/tables/q3_table_manifest.json",
+      "implementation/q3/results/Q3_FREEZE_REPORT.md",
+      "implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.alignment.json",
+      "implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.alignment.svg",
+      "implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.collision-audit.json",
+      "implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.pdf",
+      "implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.png",
+      "implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.svg",
+      "implementation/q3/results/figures/Fig_Q3_01_joint_solution_cost.tiff",
+      "implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.alignment.json",
+      "implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.alignment.svg",
+      "implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.collision-audit.json",
+      "implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.pdf",
+      "implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.png",
+      "implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.svg",
+      "implementation/q3/results/figures/Fig_Q3_02_temporal_coordination.tiff",
+      "implementation/q3/results/figures/Fig_Q3_03_search_validation.alignment.json",
+      "implementation/q3/results/figures/Fig_Q3_03_search_validation.alignment.svg",
+      "implementation/q3/results/figures/Fig_Q3_03_search_validation.collision-audit.json",
+      "implementation/q3/results/figures/Fig_Q3_03_search_validation.pdf",
+      "implementation/q3/results/figures/Fig_Q3_03_search_validation.png",
+      "implementation/q3/results/figures/Fig_Q3_03_search_validation.svg",
+      "implementation/q3/results/figures/Fig_Q3_03_search_validation.tiff",
+      "implementation/q3/results/figures/Q3_Figure_Contract.md",
+      "implementation/q3/results/figures/q3_figure_manifest.json",
+      "implementation/q3/results/q3_c2_baseline_blind_intervals.csv",
+      "implementation/q3/results/q3_c2_baseline_bottleneck.json",
+      "implementation/q3/results/q3_c2_baseline_overlap_matrix.csv",
+      "implementation/q3/results/q3_c2_baseline_relay_pressure.csv",
+      "implementation/q3/results/q3_c2_candidate_log.csv",
+      "implementation/q3/results/q3_c2_communication_audit.csv",
+      "implementation/q3/results/q3_c2_energy_component_timeline.csv",
+      "implementation/q3/results/q3_c2_feasible_seed.json",
+      "implementation/q3/results/q3_c2_feasible_seed_report.md",
+      "implementation/q3/results/q3_c2_joint_resource_audit.csv",
+      "implementation/q3/results/q3_c2_relay_services.csv",
+      "implementation/q3/results/q3_c2_relay_sorties.csv",
+      "implementation/q3/results/q3_c2_relay_uav_timeline.csv",
+      "implementation/q3/results/q3_c2_transport_battery_timeline.csv",
+      "implementation/q3/results/q3_c2_transport_boxes.csv",
+      "implementation/q3/results/q3_c2_transport_trips.csv",
+      "implementation/q3/results/q3_c2_transport_uav_timeline.csv",
+      "implementation/q3/results/q3_c2a_candidates.json",
+      "implementation/q3/results/q3_c2a_repair_audit.json",
+      "implementation/q3/results/q3_c2a_summary.md",
+      "implementation/q3/results/q3_c2a_validation.json",
+      "implementation/q3/results/q3_c2b_candidate_log.csv",
+      "implementation/q3/results/q3_c2b_candidates.json",
+      "implementation/q3/results/q3_c2b_results.json",
+      "implementation/q3/results/q3_c2b_summary.md",
+      "implementation/q3/results/q3_c2b_validation.json",
+      "implementation/q3/results/q3_failure_taxonomy.json",
+      "implementation/q3/results/q3_feasible_pool.json",
+      "implementation/q3/results/q3_final.json",
+      "implementation/q3/results/q3_final_audit.json",
+      "implementation/q3/results/q3_reproduction_report.json",
+      "implementation/q3/results/tables/Q3_Formal_Tables.md",
+      "implementation/q3/results/tables/Q3_Table_01_FinalSolution.csv",
+      "implementation/q3/results/tables/Q3_Table_02_ConstraintAudit.csv",
+      "implementation/q3/results/tables/Q3_Table_03_FeasiblePool.csv",
+      "implementation/q3/results/tables/q3_table_manifest.json"
+    ],
+    "forbidden_changed_files": [],
+    "selected_solution_id": "C2A-BASE"
+  }
+}

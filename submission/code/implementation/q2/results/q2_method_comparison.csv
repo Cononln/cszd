@@ -1,0 +1,5 @@
+﻿method,status,runtime_s,validator_status,n_multistop_trips,max_stops,mean_stops_per_trip,WTD,Cmax_s,total_energy_kwh,n_trips,total_operation_time_s
+Q2_single_stop_baseline,PASS,12.062239599996246,PASS,0.0,1.0,1.0,128236.58210649711,14992.463451786198,95.35881824993719,31.0,
+Q1_formal_structure,FAIL,0.036632100003771484,FAIL,0.0,1.0,1.0,nan,nan,nan,nan,
+Legacy_random_neighborhood,FAIL,0.015512800018768758,FAIL,4.0,2.0,1.1379310344827587,nan,nan,nan,nan,
+Formal_Adaptive_ALNS,PASS,12.26913160001277,PASS,5.0,2.0,1.2,6228.862797380436,9612.3086367231,70.1181675670078,25.0,45796.642832170495

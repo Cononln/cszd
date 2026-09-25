@@ -1,0 +1,71 @@
+{
+  "phase": "Q1-3",
+  "objective_order": [
+    "n_trips",
+    "total_energy_kwh",
+    "total_operation_time_s"
+  ],
+  "objective_note": "旧版实体调度/首批/WTD/Cmax 目标已按题意移除；本版为词典序三目标，见 §52 说明",
+  "status": "PASS",
+  "checks": {
+    "all_boxes_assigned": true,
+    "no_duplicate_boxes": true,
+    "no_missing_boxes": true,
+    "no_extra_boxes": true,
+    "all_mass_constraints_pass": true,
+    "all_qmax_constraints_pass": true,
+    "all_volume_constraints_pass": true,
+    "all_energy_constraints_pass": true,
+    "all_energy_identities_pass": true,
+    "all_operation_time_checks_pass": true,
+    "all_solver_stages_optimal": true
+  },
+  "failures": [],
+  "assigned_boxes": 80,
+  "duplicate_boxes": 0,
+  "missing_boxes": 0,
+  "extra_boxes": 0,
+  "split_boxes": 0,
+  "split_definition": "逐箱清单以完整 box ID 为最小不可拆单元；拆分通过重复分配/派生 ID 检查间接验证",
+  "metrics": {
+    "method": "formal",
+    "feasible": true,
+    "n_trips": 18,
+    "total_energy_kwh": 59.08291742366984,
+    "total_operation_time_s": 32804.128230148934,
+    "avg_payload_utilization": 0.8211792089604986,
+    "avg_volume_utilization": 0.7717929984779301,
+    "max_trip_energy_kwh": 6.149595578174152,
+    "min_energy_margin_kwh": 0.25040442182584854,
+    "solve_time_s": 44.26354193687439
+  },
+  "optimality": {
+    "total_stages": 45,
+    "optimal_stages": 45,
+    "feasible_only_stages": 0,
+    "unknown_stages": 0,
+    "infeasible_stages": 0,
+    "all_stages_optimal": true
+  },
+  "optimality_wording": "精确词典序最优",
+  "theoretical_trip_lower_bound": 18,
+  "theoretical_bound_note": "按各服务区质量/体积分别取整求和的诊断下界，不约束正式解",
+  "formal_better_or_equal_baseline_lex": true,
+  "sensitivity_qmax_scale": [
+    {
+      "epsilon": 0.01,
+      "trips_violated": 0,
+      "note": "固定方案鲁棒性检查：仅判断当前最优方案对安全边界收紧的鲁棒性，不代表每个安全余量水平下重新优化后的最优结果"
+    },
+    {
+      "epsilon": 0.03,
+      "trips_violated": 1,
+      "note": "固定方案鲁棒性检查：仅判断当前最优方案对安全边界收紧的鲁棒性，不代表每个安全余量水平下重新优化后的最优结果"
+    },
+    {
+      "epsilon": 0.05,
+      "trips_violated": 1,
+      "note": "固定方案鲁棒性检查：仅判断当前最优方案对安全边界收紧的鲁棒性，不代表每个安全余量水平下重新优化后的最优结果"
+    }
+  ]
+}

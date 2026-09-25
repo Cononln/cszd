@@ -1,0 +1,2 @@
+﻿status,checks,reason
+PASS,"{""all_boxes_once"": true, ""hard_deadlines"": true, ""mass"": true, ""volume"": true, ""transport_reserve"": true, ""transport_uav_overlap"": true, ""battery_overlap"": true, ""battery_soc_recharge"": true, ""relay_uav_overlap"": true, ""energy_component_overlap"": true, ""relay_reserve"": true, ""relay_charge"": true, ""arrival_timing"": true, ""full_communication"": true}",

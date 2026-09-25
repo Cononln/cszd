@@ -1,0 +1,13 @@
+﻿trip_id,dt_s,fail_sample_count,covered_fail_sample_count,false_included_pass_samples,interval_count,expected_interval_count,duration_from_intervals_s,duration_from_samples_s,duration_error_s,duration_tolerance_s,ordered,sorted,non_overlapping,envelope_coverage,pass
+Q2BASE-01,5.0,0,0,0,0,0,0.0,0.0,0.0,5.0,True,True,True,True,True
+Q2BASE-01,2.0,0,0,0,0,0,0.0,0.0,0.0,2.0,True,True,True,True,True
+Q2BASE-01,1.0,0,0,0,0,0,0.0,0.0,0.0,1.0,True,True,True,True,True
+Q2BASE-02,5.0,207,207,0,1,1,1020.4076514058476,1020.4076514058476,0.0,5.0,True,True,True,True,True
+Q2BASE-02,2.0,513,513,0,1,1,1018.4076514058476,1018.4076514058476,0.0,2.0,True,True,True,True,True
+Q2BASE-02,1.0,1024,1024,0,1,1,1019.4076514058476,1019.4076514058476,0.0,1.0,True,True,True,True,True
+Q2BASE-03,5.0,261,261,0,1,1,1284.270471840418,1284.270471840418,0.0,5.0,True,True,True,True,True
+Q2BASE-03,2.0,644,644,0,1,1,1282.270471840418,1282.270471840418,0.0,2.0,True,True,True,True,True
+Q2BASE-03,1.0,1287,1287,0,1,1,1283.270471840418,1283.270471840418,0.0,1.0,True,True,True,True,True
+Q2BASE-04,5.0,245,245,0,1,1,1213.0822765884627,1213.0822765884627,0.0,5.0,True,True,True,True,True
+Q2BASE-04,2.0,609,609,0,1,1,1211.0822765884627,1211.0822765884627,0.0,2.0,True,True,True,True,True
+Q2BASE-04,1.0,1215,1215,0,1,1,1211.0822765884627,1211.0822765884627,0.0,1.0,True,True,True,True,True

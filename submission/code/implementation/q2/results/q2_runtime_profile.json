@@ -1,0 +1,14 @@
+{
+  "route_cache": {
+    "hits": 303164,
+    "misses": 53895,
+    "maxsize": 20000,
+    "currsize": 20000
+  },
+  "seed_workers": 1,
+  "cp_workers": 4,
+  "parallel_fallback_reason": "ProcessPool unavailable: PermissionError",
+  "wall_time_total_s": 147.58508300001267,
+  "completed_seeds": 8,
+  "failed_seeds": 0
+}

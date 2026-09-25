@@ -1,0 +1,51 @@
+{
+  "phase": "Q3-B",
+  "decoder_status": "PASS",
+  "decoder_validation_status": "PASS",
+  "baseline_status": "INFEASIBLE_PROVEN_ON_DISCRETE_CANDIDATE_SET",
+  "solver_status": "INFEASIBLE",
+  "candidate_spacing_m": 1500.0,
+  "all_demands_candidate_coverable": true,
+  "all_demands_scheduled_covered": false,
+  "full_trajectory_communication_feasible": false,
+  "relay_uav_overlap_zero": true,
+  "energy_component_overlap_zero": true,
+  "charging_pass": true,
+  "reserve_pass": true,
+  "exact_validation_pass": true,
+  "metrics": {
+    "demand_count": 19,
+    "candidate_count": 135,
+    "service_option_count": 990,
+    "candidate_coverable_count": 19,
+    "runtime_s": 28.566870899987407
+  },
+  "candidate_spacing_sensitivity": [
+    {
+      "candidate_spacing_m": 1500.0,
+      "candidate_count": 135,
+      "service_option_count": 990,
+      "solver_status": "INFEASIBLE",
+      "baseline_status": "INFEASIBLE_PROVEN_ON_DISCRETE_CANDIDATE_SET",
+      "runtime_s": 28.566870899987407
+    },
+    {
+      "candidate_spacing_m": 1000.0,
+      "candidate_count": 270,
+      "service_option_count": 2114,
+      "solver_status": "INFEASIBLE",
+      "baseline_status": "INFEASIBLE_PROVEN_ON_DISCRETE_CANDIDATE_SET",
+      "runtime_s": 68.24814029998379
+    },
+    {
+      "candidate_spacing_m": 750.0,
+      "candidate_count": 449,
+      "service_option_count": 3460,
+      "solver_status": "UNKNOWN",
+      "baseline_status": "UNRESOLVED",
+      "runtime_s": 178.20983780000824
+    }
+  ],
+  "q3_a_regression": "PASS",
+  "q3_c_formal_optimization_entered": "NO"
+}

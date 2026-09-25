@@ -1,0 +1,85 @@
+{
+  "phase": "Q2-C",
+  "status": "PASS",
+  "solver_status": "WTD:OPTIMAL;Cmax:OPTIMAL",
+  "stage_statuses": {
+    "WTD": "OPTIMAL",
+    "Cmax": "OPTIMAL"
+  },
+  "solver_grid_metrics": {
+    "WTD_stage1_grid": 6228.2,
+    "WTD_stage2_grid": 6228.2,
+    "WTD_stage1_locked": 1.0,
+    "Cmax_grid_s": 9612.4
+  },
+  "checks": {
+    "uav_type": true,
+    "uav_overlap": true,
+    "battery_overlap": true,
+    "battery_type": true,
+    "soc": true,
+    "charge_before_reuse": true
+  },
+  "charge_audit": {
+    "A": {
+      "soc": [
+        0.0,
+        0.45,
+        0.89,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "charge_time_s": [
+        1800.0,
+        1215.0,
+        643.0,
+        629.9999999999998,
+        315.0000000000003,
+        0.0
+      ],
+      "pass": true
+    },
+    "B": {
+      "soc": [
+        0.0,
+        0.45,
+        0.89,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "charge_time_s": [
+        2400.0,
+        1620.0,
+        857.3333333333334,
+        839.9999999999998,
+        420.00000000000034,
+        0.0
+      ],
+      "pass": true
+    },
+    "C": {
+      "soc": [
+        0.0,
+        0.45,
+        0.89,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "charge_time_s": [
+        3000.0,
+        2025.0000000000002,
+        1071.6666666666667,
+        1049.9999999999995,
+        525.0000000000005,
+        0.0
+      ],
+      "pass": true
+    },
+    "status": "PASS"
+  },
+  "n_trips": 25,
+  "note": "For the 80-box fixed-route schedule, FEASIBLE means best-known valid schedule; it is not a global optimality claim."
+}

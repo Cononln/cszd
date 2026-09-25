@@ -1,0 +1,8 @@
+{
+  "solver_status": "INFEASIBLE",
+  "decoder_status": "PASS",
+  "baseline_status": "INFEASIBLE_PROVEN_ON_DISCRETE_CANDIDATE_SET",
+  "reason": "joint_solver_infeasible",
+  "service_option_count": 990,
+  "option_space_complete": true
+}

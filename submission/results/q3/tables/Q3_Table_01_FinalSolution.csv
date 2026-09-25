@@ -1,0 +1,9 @@
+﻿metric,value,unit
+Weighted delivery time,2919779.443347478,kg·s
+Transport makespan,23738.870393305344,s
+Joint makespan,24147.775014499995,s
+Transport energy,70.11816756700782,kWh
+Relay energy,8.247976791529863,kWh
+Total energy,78.36614435853768,kWh
+Transport trips,25,count
+Relay sorties,6,count
