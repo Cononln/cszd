@@ -4,8 +4,8 @@
     "method": "C2 validated temporal repair + bounded C2-B",
     "candidate_spacing_m": 1500.0,
     "formal_optimizer_entered": false,
-    "git_revision": "94154eb01e06a40abb5df8a4d1044019b92ae7b3",
-    "q3_final_schema": "1.1"
+    "git_revision": "c7880a36e1f5e9efb39f0d6d6be9d38b9638d80a",
+    "q3_final_schema": "1.2"
   },
   "q2_frozen_reference": {
     "state_source": "implementation/q2/results/q2_solution_trips.csv + boxes.csv",
@@ -13,19 +13,31 @@
   },
   "q3_method_version": "C2-A/C2-B validated seed builder",
   "c2a_summary": {
-    "candidate_count": 9,
-    "joint_feasible_count": 8,
+    "generated_raw_count": 9,
+    "noop_removed_count": 4,
+    "duplicate_removed_count": 0,
+    "unique_candidate_count": 5,
+    "candidate_count": 5,
+    "joint_feasible_count": 4,
     "status": "PASS"
   },
   "c2b_summary": {
-    "candidate_count": 4,
-    "joint_feasible_count": 2,
+    "generated_raw_count": 4,
+    "noop_removed_count": 2,
+    "duplicate_removed_count": 0,
+    "unique_candidate_count": 2,
+    "candidate_count": 2,
+    "joint_feasible_count": 1,
     "status": "PASS"
   },
   "selected_solution": {
     "solution_id": "C2A-BASE",
+    "parent_id": "Q2-FORMAL",
+    "stage": "C2-A",
     "repair_stage": "C2-A",
     "operator": "baseline_wave_repair",
+    "state_signature": "ee2466c245db4dc12ee6f8d7d31151776c81aa7d2e53d336a8e97aa6805e76ef",
+    "validator_status": "PASS",
     "objective": {
       "WTD": 2919779.443347478,
       "joint_Cmax_s": 24147.775014499995,
@@ -389,7 +401,8 @@
             ]
           }
         }
-      ]
+      ],
+      "unassigned": []
     },
     "schedule": {
       "status": "FEASIBLE",
@@ -1899,7 +1912,7 @@
         "relay_energy_kwh": 8.247976791529863,
         "relay_cmax_s": 24147.775014499995,
         "joint_cmax_s": 24147.775014499995,
-        "runtime_s": 73.23875150000094
+        "runtime_s": 80.32635909999954
       },
       "checks": {
         "all_demands_candidate_coverable": true,
@@ -2071,8 +2084,8 @@
           "sortie_id": "RS-001",
           "option_id": "SO-00595",
           "candidate_id": "P0113",
-          "relay_id": "R01",
-          "energy_component_id": "EC-04",
+          "relay_id": "R02",
+          "energy_component_id": "EC-02",
           "demand_ids": [
             "D-T022-01",
             "D-T018-01",
@@ -2094,8 +2107,8 @@
           "sortie_id": "RS-002",
           "option_id": "SO-00228",
           "candidate_id": "P0045",
-          "relay_id": "R02",
-          "energy_component_id": "EC-06",
+          "relay_id": "R01",
+          "energy_component_id": "EC-01",
           "demand_ids": [
             "D-T004-01",
             "D-T014-01"
@@ -2115,8 +2128,8 @@
           "sortie_id": "RS-003",
           "option_id": "SO-00478",
           "candidate_id": "P0088",
-          "relay_id": "R02",
-          "energy_component_id": "EC-01",
+          "relay_id": "R01",
+          "energy_component_id": "EC-06",
           "demand_ids": [
             "D-T008-01",
             "D-T015-01"
@@ -2136,8 +2149,8 @@
           "sortie_id": "RS-004",
           "option_id": "SO-00102",
           "candidate_id": "P0027",
-          "relay_id": "R01",
-          "energy_component_id": "EC-02",
+          "relay_id": "R02",
+          "energy_component_id": "EC-03",
           "demand_ids": [
             "D-T006-01",
             "D-T010-01",
@@ -2184,7 +2197,7 @@
           "option_id": "SO-00068",
           "candidate_id": "P0024",
           "relay_id": "R01",
-          "energy_component_id": "EC-03",
+          "energy_component_id": "EC-04",
           "demand_ids": [
             "D-T025-01",
             "D-T011-01"
@@ -2206,8 +2219,8 @@
           "sortie_id": "RS-001",
           "option_id": "SO-00595",
           "candidate_id": "P0113",
-          "relay_id": "R01",
-          "energy_component_id": "EC-04",
+          "relay_id": "R02",
+          "energy_component_id": "EC-02",
           "demand_ids": [
             "D-T022-01",
             "D-T018-01",
@@ -2229,8 +2242,8 @@
           "sortie_id": "RS-002",
           "option_id": "SO-00228",
           "candidate_id": "P0045",
-          "relay_id": "R02",
-          "energy_component_id": "EC-06",
+          "relay_id": "R01",
+          "energy_component_id": "EC-01",
           "demand_ids": [
             "D-T004-01",
             "D-T014-01"
@@ -2250,8 +2263,8 @@
           "sortie_id": "RS-003",
           "option_id": "SO-00478",
           "candidate_id": "P0088",
-          "relay_id": "R02",
-          "energy_component_id": "EC-01",
+          "relay_id": "R01",
+          "energy_component_id": "EC-06",
           "demand_ids": [
             "D-T008-01",
             "D-T015-01"
@@ -2271,8 +2284,8 @@
           "sortie_id": "RS-004",
           "option_id": "SO-00102",
           "candidate_id": "P0027",
-          "relay_id": "R01",
-          "energy_component_id": "EC-02",
+          "relay_id": "R02",
+          "energy_component_id": "EC-03",
           "demand_ids": [
             "D-T006-01",
             "D-T010-01",
@@ -2319,7 +2332,7 @@
           "option_id": "SO-00068",
           "candidate_id": "P0024",
           "relay_id": "R01",
-          "energy_component_id": "EC-03",
+          "energy_component_id": "EC-04",
           "demand_ids": [
             "D-T025-01",
             "D-T011-01"
@@ -2338,7 +2351,7 @@
       ],
       "relay_services": [
         {
-          "relay_id": "R01",
+          "relay_id": "R02",
           "option_id": "SO-00595",
           "candidate_id": "P0113",
           "lon": 109.27135709756021,
@@ -2348,7 +2361,7 @@
           "service_end_s": 3872.466705146261
         },
         {
-          "relay_id": "R02",
+          "relay_id": "R01",
           "option_id": "SO-00228",
           "candidate_id": "P0045",
           "lon": 109.21278607038295,
@@ -2358,7 +2371,7 @@
           "service_end_s": 2999.079410648509
         },
         {
-          "relay_id": "R02",
+          "relay_id": "R01",
           "option_id": "SO-00478",
           "candidate_id": "P0088",
           "lon": 109.24207158397158,
@@ -2368,7 +2381,7 @@
           "service_end_s": 5864.34501329219
         },
         {
-          "relay_id": "R01",
+          "relay_id": "R02",
           "option_id": "SO-00102",
           "candidate_id": "P0027",
           "lon": 109.19814331358863,
@@ -2926,7 +2939,7 @@
         "relay_energy_kwh": 8.247976791529863,
         "relay_cmax_s": 24147.775014499995,
         "joint_cmax_s": 24147.775014499995,
-        "runtime_s": 73.23875150000094
+        "runtime_s": 80.32635909999954
       },
       "reason": null,
       "full_replay_audit": [
@@ -3108,68 +3121,11 @@
   },
   "alternative_feasible_solutions": [
     {
-      "candidate_id": "C2A-SINGLE-T003-C",
-      "repair_stage": "C2-A",
-      "objective": {
-        "WTD": 2919779.443347478,
-        "joint_Cmax_s": 24147.775014499995,
-        "total_energy_kwh": 78.36614435853768,
-        "transport_n_trips": 25,
-        "relay_sorties": 6,
-        "transport_Cmax_s": 23738.870393305344,
-        "transport_energy_kwh": 70.11816756700782,
-        "relay_energy_kwh": 8.247976791529863
-      },
-      "operator": "single_type_adjustment_T003_C"
-    },
-    {
-      "candidate_id": "C2A-SINGLE-T005-C",
-      "repair_stage": "C2-A",
-      "objective": {
-        "WTD": 2919779.443347478,
-        "joint_Cmax_s": 24147.775014499995,
-        "total_energy_kwh": 78.36614435853768,
-        "transport_n_trips": 25,
-        "relay_sorties": 6,
-        "transport_Cmax_s": 23738.870393305344,
-        "transport_energy_kwh": 70.11816756700782,
-        "relay_energy_kwh": 8.247976791529863
-      },
-      "operator": "single_type_adjustment_T005_C"
-    },
-    {
-      "candidate_id": "C2A-SINGLE-T009-C",
-      "repair_stage": "C2-A",
-      "objective": {
-        "WTD": 2919779.443347478,
-        "joint_Cmax_s": 24147.775014499995,
-        "total_energy_kwh": 78.36614435853768,
-        "transport_n_trips": 25,
-        "relay_sorties": 6,
-        "transport_Cmax_s": 23738.870393305344,
-        "transport_energy_kwh": 70.11816756700782,
-        "relay_energy_kwh": 8.247976791529863
-      },
-      "operator": "single_type_adjustment_T009_C"
-    },
-    {
-      "candidate_id": "C2A-SINGLE-T023-B",
-      "repair_stage": "C2-A",
-      "objective": {
-        "WTD": 2919779.443347478,
-        "joint_Cmax_s": 24147.775014499995,
-        "total_energy_kwh": 78.36614435853768,
-        "transport_n_trips": 25,
-        "relay_sorties": 6,
-        "transport_Cmax_s": 23738.870393305344,
-        "transport_energy_kwh": 70.11816756700782,
-        "relay_energy_kwh": 8.247976791529863
-      },
-      "operator": "single_type_adjustment_T023_B"
-    },
-    {
-      "candidate_id": "C2A-SINGLE-T014-C",
-      "repair_stage": "C2-A",
+      "solution_id": "C2A-SINGLE-T014-C",
+      "parent_id": "Q2-FORMAL",
+      "stage": "C2-A",
+      "operator": "single_type_adjustment_T014_C",
+      "state_signature": "8bebb8e2007c18bf5ae17c968a7317f049a178d158e10ece2e1637f2602acfab",
       "objective": {
         "WTD": 2919779.443347478,
         "joint_Cmax_s": 24147.775014499995,
@@ -3180,11 +3136,14 @@
         "transport_energy_kwh": 71.24970562867448,
         "relay_energy_kwh": 8.247976791529863
       },
-      "operator": "single_type_adjustment_T014_C"
+      "validator_status": "PASS"
     },
     {
-      "candidate_id": "C2A-SINGLE-T015-C",
-      "repair_stage": "C2-A",
+      "solution_id": "C2A-SINGLE-T015-C",
+      "parent_id": "Q2-FORMAL",
+      "stage": "C2-A",
+      "operator": "single_type_adjustment_T015_C",
+      "state_signature": "9ce29dde94b62987d1d74d577965a1a0c25d6ebe8322e60a8139ab77d3ef3d12",
       "objective": {
         "WTD": 2919779.443347478,
         "joint_Cmax_s": 24147.775014499995,
@@ -3195,11 +3154,14 @@
         "transport_energy_kwh": 72.48431594051044,
         "relay_energy_kwh": 8.272833382812461
       },
-      "operator": "single_type_adjustment_T015_C"
+      "validator_status": "PASS"
     },
     {
-      "candidate_id": "C2A-SINGLE-T016-C",
-      "repair_stage": "C2-A",
+      "solution_id": "C2A-SINGLE-T016-C",
+      "parent_id": "Q2-FORMAL",
+      "stage": "C2-A",
+      "operator": "single_type_adjustment_T016_C",
+      "state_signature": "2db51a037dad5211c574ab679324d820b1dbc229d59bf739f28d32efd562dfa4",
       "objective": {
         "WTD": 2937216.165255878,
         "joint_Cmax_s": 24147.775014499995,
@@ -3210,26 +3172,14 @@
         "transport_energy_kwh": 71.54118482278952,
         "relay_energy_kwh": 8.247976791529863
       },
-      "operator": "single_type_adjustment_T016_C"
+      "validator_status": "PASS"
     },
     {
-      "candidate_id": "C2B-COMB-03",
-      "repair_stage": "C2-B",
-      "objective": {
-        "WTD": 2937216.165255878,
-        "joint_Cmax_s": 24147.775014499995,
-        "total_energy_kwh": 79.78916161431938,
-        "transport_n_trips": 25,
-        "relay_sorties": 6,
-        "transport_Cmax_s": 23738.870393305344,
-        "transport_energy_kwh": 71.54118482278952,
-        "relay_energy_kwh": 8.247976791529863
-      },
-      "operator": "combination_T023-B+T016-C"
-    },
-    {
-      "candidate_id": "C2B-COMB-02",
-      "repair_stage": "C2-B",
+      "solution_id": "C2B-COMB-02",
+      "parent_id": "Q2-FORMAL",
+      "stage": "C2-B",
+      "operator": "combination_T015-C+T016-C",
+      "state_signature": "6d642abf871850a9f7761c4f22a6f90adc5f24f827b0ff1f6d1028313941781d",
       "objective": {
         "WTD": 2937216.165255878,
         "joint_Cmax_s": 24147.775014499995,
@@ -3240,33 +3190,111 @@
         "transport_energy_kwh": 73.90733319629214,
         "relay_energy_kwh": 8.272833382812461
       },
-      "operator": "combination_T015-C+T016-C"
+      "validator_status": "PASS"
+    }
+  ],
+  "feasible_pool": [
+    {
+      "solution_id": "C2A-BASE",
+      "parent_id": "Q2-FORMAL",
+      "stage": "C2-A",
+      "operator": "baseline_wave_repair",
+      "state_signature": "ee2466c245db4dc12ee6f8d7d31151776c81aa7d2e53d336a8e97aa6805e76ef",
+      "objective": {
+        "WTD": 2919779.443347478,
+        "joint_Cmax_s": 24147.775014499995,
+        "total_energy_kwh": 78.36614435853768,
+        "transport_n_trips": 25,
+        "relay_sorties": 6,
+        "transport_Cmax_s": 23738.870393305344,
+        "transport_energy_kwh": 70.11816756700782,
+        "relay_energy_kwh": 8.247976791529863
+      },
+      "validator_status": "PASS"
+    },
+    {
+      "solution_id": "C2A-SINGLE-T014-C",
+      "parent_id": "Q2-FORMAL",
+      "stage": "C2-A",
+      "operator": "single_type_adjustment_T014_C",
+      "state_signature": "8bebb8e2007c18bf5ae17c968a7317f049a178d158e10ece2e1637f2602acfab",
+      "objective": {
+        "WTD": 2919779.443347478,
+        "joint_Cmax_s": 24147.775014499995,
+        "total_energy_kwh": 79.49768242020434,
+        "transport_n_trips": 25,
+        "relay_sorties": 6,
+        "transport_Cmax_s": 23738.870393305344,
+        "transport_energy_kwh": 71.24970562867448,
+        "relay_energy_kwh": 8.247976791529863
+      },
+      "validator_status": "PASS"
+    },
+    {
+      "solution_id": "C2A-SINGLE-T015-C",
+      "parent_id": "Q2-FORMAL",
+      "stage": "C2-A",
+      "operator": "single_type_adjustment_T015_C",
+      "state_signature": "9ce29dde94b62987d1d74d577965a1a0c25d6ebe8322e60a8139ab77d3ef3d12",
+      "objective": {
+        "WTD": 2919779.443347478,
+        "joint_Cmax_s": 24147.775014499995,
+        "total_energy_kwh": 80.7571493233229,
+        "transport_n_trips": 25,
+        "relay_sorties": 6,
+        "transport_Cmax_s": 23738.870393305344,
+        "transport_energy_kwh": 72.48431594051044,
+        "relay_energy_kwh": 8.272833382812461
+      },
+      "validator_status": "PASS"
+    },
+    {
+      "solution_id": "C2A-SINGLE-T016-C",
+      "parent_id": "Q2-FORMAL",
+      "stage": "C2-A",
+      "operator": "single_type_adjustment_T016_C",
+      "state_signature": "2db51a037dad5211c574ab679324d820b1dbc229d59bf739f28d32efd562dfa4",
+      "objective": {
+        "WTD": 2937216.165255878,
+        "joint_Cmax_s": 24147.775014499995,
+        "total_energy_kwh": 79.78916161431938,
+        "transport_n_trips": 25,
+        "relay_sorties": 6,
+        "transport_Cmax_s": 23738.870393305344,
+        "transport_energy_kwh": 71.54118482278952,
+        "relay_energy_kwh": 8.247976791529863
+      },
+      "validator_status": "PASS"
+    },
+    {
+      "solution_id": "C2B-COMB-02",
+      "parent_id": "Q2-FORMAL",
+      "stage": "C2-B",
+      "operator": "combination_T015-C+T016-C",
+      "state_signature": "6d642abf871850a9f7761c4f22a6f90adc5f24f827b0ff1f6d1028313941781d",
+      "objective": {
+        "WTD": 2937216.165255878,
+        "joint_Cmax_s": 24147.775014499995,
+        "total_energy_kwh": 82.18016657910461,
+        "transport_n_trips": 25,
+        "relay_sorties": 6,
+        "transport_Cmax_s": 23738.870393305344,
+        "transport_energy_kwh": 73.90733319629214,
+        "relay_energy_kwh": 8.272833382812461
+      },
+      "validator_status": "PASS"
     }
   ],
   "failure_statistics": {
-    "candidate_count": 13,
-    "validator_pass_count": 10,
-    "failure_count": 3,
+    "candidate_count": 7,
+    "validator_pass_count": 5,
+    "failure_count": 2,
     "failures": [
       {
         "source": "C2-A",
         "candidate_id": "C2A-SINGLE-T009-B",
         "joint_status": "UNRESOLVED",
-        "violations": {
-          "transport": [
-            "mass_pass",
-            "volume_pass",
-            "route_energy_recomputed"
-          ],
-          "relay": [],
-          "joint": []
-        },
-        "failure_reason": null
-      },
-      {
-        "source": "C2-B",
-        "candidate_id": "C2B-COMB-01",
-        "joint_status": "UNRESOLVED",
+        "state_signature": "9b43e48f08e0507d6f2ef3bfb7c9dc4c06b90f15e6445f52d40d841dd37b3576",
         "violations": {
           "transport": [
             "mass_pass",
@@ -3282,6 +3310,7 @@
         "source": "C2-B",
         "candidate_id": "C2B-COMB-04",
         "joint_status": "UNRESOLVED",
+        "state_signature": "e0df182e457e2ffd8080bd2dff869b38a2d76163e5dd28e6c389e6b321801e07",
         "violations": {
           "transport": [
             "mass_pass",
@@ -3297,35 +3326,58 @@
   },
   "failure_taxonomy": {
     "counts": {
-      "transport:mass_pass": 3,
-      "transport:route_energy_recomputed": 3,
-      "transport:volume_pass": 3
+      "TRANSPORT_MASS_VIOLATION": 2,
+      "TRANSPORT_ROUTE_ENERGY_INCONSISTENCY": 2,
+      "TRANSPORT_VOLUME_VIOLATION": 2
     },
     "candidate_failures": [
       {
         "candidate_id": "C2A-SINGLE-T009-B",
-        "categories": [
-          "transport:mass_pass",
-          "transport:volume_pass",
-          "transport:route_energy_recomputed"
-        ],
-        "failure_reason": null
-      },
-      {
-        "candidate_id": "C2B-COMB-01",
-        "categories": [
-          "transport:mass_pass",
-          "transport:volume_pass",
-          "transport:route_energy_recomputed"
+        "state_signature": "9b43e48f08e0507d6f2ef3bfb7c9dc4c06b90f15e6445f52d40d841dd37b3576",
+        "evidence": [
+          {
+            "category": "TRANSPORT_MASS_VIOLATION",
+            "source_check": "mass_pass",
+            "source_value": false,
+            "constraint_family": "transport"
+          },
+          {
+            "category": "TRANSPORT_VOLUME_VIOLATION",
+            "source_check": "volume_pass",
+            "source_value": false,
+            "constraint_family": "transport"
+          },
+          {
+            "category": "TRANSPORT_ROUTE_ENERGY_INCONSISTENCY",
+            "source_check": "route_energy_recomputed",
+            "source_value": false,
+            "constraint_family": "transport"
+          }
         ],
         "failure_reason": null
       },
       {
         "candidate_id": "C2B-COMB-04",
-        "categories": [
-          "transport:mass_pass",
-          "transport:volume_pass",
-          "transport:route_energy_recomputed"
+        "state_signature": "e0df182e457e2ffd8080bd2dff869b38a2d76163e5dd28e6c389e6b321801e07",
+        "evidence": [
+          {
+            "category": "TRANSPORT_MASS_VIOLATION",
+            "source_check": "mass_pass",
+            "source_value": false,
+            "constraint_family": "transport"
+          },
+          {
+            "category": "TRANSPORT_VOLUME_VIOLATION",
+            "source_check": "volume_pass",
+            "source_value": false,
+            "constraint_family": "transport"
+          },
+          {
+            "category": "TRANSPORT_ROUTE_ENERGY_INCONSISTENCY",
+            "source_check": "route_energy_recomputed",
+            "source_value": false,
+            "constraint_family": "transport"
+          }
         ],
         "failure_reason": null
       }

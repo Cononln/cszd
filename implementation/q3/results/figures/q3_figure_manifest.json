@@ -2,7 +2,7 @@
   "status": "PASS",
   "backend": "python-matplotlib",
   "source": "q3_final.json",
-  "source_sha256": "280327471544e5e1c9ab4014788d8df457ef48035adadb767d4be7552ac8f9f2",
+  "source_sha256": "d02c491620a20879f83913c87d8724d208236e047fe3c2aac6b14e42741d4d81",
   "artifacts": [
     "Fig_Q3_01_joint_solution_cost.alignment.json",
     "Fig_Q3_01_joint_solution_cost.alignment.svg",
@@ -261,7 +261,7 @@
         "auditable": true,
         "minimum_required_pt": 5.0,
         "minimum_found_pt": 5.6,
-        "text_run_count": 25,
+        "text_run_count": 24,
         "below_minimum_count": 0,
         "below_minimum": [],
         "warnings": []
@@ -271,10 +271,10 @@
         "auditable": true,
         "verdict": "PASS",
         "page_count": 1,
-        "visible_text_box_count": 25,
-        "text_trace_count": 25,
-        "stroke_path_count": 21,
-        "filled_region_count": 29,
+        "visible_text_box_count": 24,
+        "text_trace_count": 24,
+        "stroke_path_count": 20,
+        "filled_region_count": 28,
         "image_region_count": 0,
         "summary": {
           "fail": 0,
